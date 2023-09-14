@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://dl4rm01g0u1ea"]
+
+[ext_resource type="Shader" path="res://_Production/Shaders/heightShader.shader.gdshader" id="1_3oad2"]
+
+[resource]
+shader = ExtResource("1_3oad2")
+shader_parameter/waterColor = Vector4(0, 0, 1, 1)
+shader_parameter/landColor = Vector4(0, 1, 0, 1)
+shader_parameter/hillColor = Vector4(1, 0, 0, 1)

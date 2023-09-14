@@ -7,6 +7,7 @@ namespace FT.Terrain;
 public partial class GenerateTerrain : Node
 {
 	[Export] private TerrainGenerationData _tgd;
+	[Export] private Shader _shader;
 
 	public override void _Ready()
 	{
@@ -20,14 +21,14 @@ public partial class GenerateTerrain : Node
 		Vector3[] vertexNormals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
 		
 		// Generate Colors
-		Color[] vertexColor = new TerrainColors().SetVertexColor((uint)vertices.Length, vertices.Select(vertex => vertex.Y).ToArray());
+		//Color[] vertexColor = new TerrainColors().SetVertexColor((uint)vertices.Length, vertices.Select(vertex => vertex.Y).ToArray());
 		
 		// Generate Terrain
-		GenerateMesh(vertices, indices, vertexNormals, vertexColor);
+		GenerateMesh(vertices, indices, vertexNormals);
 		GenerateWireframeMesh(new GenerateWireframe().GenerateAndConnectWireframeMesh(_tgd.Rows, _tgd.Cols, vertices));
 	}
 	
-	private void GenerateMesh(Vector3[] vertices, int[] indices, Vector3[] vertexNormals, Color[] vertexColor)
+	private void GenerateMesh(Vector3[] vertices, int[] indices, Vector3[] vertexNormals)
 	{
 		MeshInstance3D meshInstance = new();
 		AddChild(meshInstance);
@@ -39,7 +40,6 @@ public partial class GenerateTerrain : Node
 		arrays[(int)Mesh.ArrayType.Vertex] = vertices;
 		arrays[(int)Mesh.ArrayType.Index] = indices;
 		arrays[(int)Mesh.ArrayType.Normal] = vertexNormals;
-		arrays[(int)Mesh.ArrayType.Color] = vertexColor;
 
 		// Create the mesh surface
 		ArrayMesh arrayMesh = new();
@@ -49,9 +49,9 @@ public partial class GenerateTerrain : Node
 		meshInstance.Mesh = arrayMesh;
 
 		// Create a new StandardMaterial3D and set it as the surface material
-		StandardMaterial3D material = new();
-		material.VertexColorUseAsAlbedo = true;
-		meshInstance.SetSurfaceOverrideMaterial(0, material);
+		ShaderMaterial shaderMaterial = new();
+		shaderMaterial.Shader = _shader;
+		meshInstance.SetSurfaceOverrideMaterial(0, shaderMaterial);
 	}
 
 	private void GenerateWireframeMesh(Mesh arrayMesh)

@@ -1,2 +1,4 @@
+Shader
+ShaderMaterial
 TerrainGenerationData
 Resource

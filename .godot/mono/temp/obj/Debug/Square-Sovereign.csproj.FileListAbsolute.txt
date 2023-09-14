@@ -1,0 +1,17 @@
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\bin\Debug\Square-Sovereign.deps.json
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\bin\Debug\Square-Sovereign.runtimeconfig.json
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\bin\Debug\Square-Sovereign.dll
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\bin\Debug\Square-Sovereign.pdb
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\Square-Sovereign.csproj.AssemblyReference.cache
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\Square-Sovereign.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\Square-Sovereign.AssemblyInfoInputs.cache
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\Square-Sovereign.AssemblyInfo.cs
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\Square-Sovereign.csproj.CoreCompileInputs.cache
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\Square-Sovereign.csproj.CopyComplete
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\Square-Sovereign.dll
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\refint\Square-Sovereign.dll
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\Square-Sovereign.pdb
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\Square-Sovereign.genruntimeconfig.cache
+C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\.godot\mono\temp\obj\Debug\ref\Square-Sovereign.dll

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="TerrainGenerationData" load_steps=2 format=3 uid="uid://cdepm6jh8ak1"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/TerrainGenerationData.cs" id="1_fyax7"]
+
+[resource]
+script = ExtResource("1_fyax7")
+Seed = 123456789
+CellSize = 5
+Rows = 20
+Cols = 20

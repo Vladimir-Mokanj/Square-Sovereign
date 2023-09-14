@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://btfwjjf0otwe1"]
+[gd_scene load_steps=3 format=3 uid="uid://bo644rrf7oc8v"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/Terrain/GenerateTerrain.cs" id="1_osug0"]
+[ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://_Production/Scripts/Data/DebugTerrainData.tres" id="2_286pr"]
 
 [node name="Node3D" type="Node3D"]
 
@@ -16,5 +17,4 @@ light_volumetric_fog_energy = 0.0
 
 [node name="TerrainGeneration" type="Node3D" parent="."]
 script = ExtResource("1_osug0")
-_rows = 20
-_cols = 20
+_tgd = ExtResource("2_286pr")

@@ -1,36 +1,33 @@
+using System.Linq;
+using FT.Data;
 using Godot;
 
 namespace FT.Terrain;
 
 public partial class GenerateTerrain : Node
 {
-	[Export] private bool isRandomColor;
+	[Export] private TerrainGenerationData _tgd;
 
-	[Export] private int _seed = 123456789;
-	[Export] private ushort _cellSize = 5;
-	[Export] private ushort _rows = 10;
-	[Export] private ushort _cols = 10;
-	
 	public override void _Ready()
 	{
 		// Generate vertices
-		Vector3[] vertices = new TerrainVertices(_cellSize).GenerateVertexPositions(_rows, _cols, _seed);
+		Vector3[] vertices = new TerrainVertices(_tgd.CellSize).GenerateVertexPositions(_tgd.Rows, _tgd.Cols, _tgd.Seed);
 		
 		// Generate indices
-		int[] indices = new TerrainIndices().GenerateConnections(_rows, _cols);
+		int[] indices = new TerrainIndices().GenerateConnections(_tgd.Rows, _tgd.Cols);
 
 		// Generate normals
-		Vector3[] normals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
+		Vector3[] vertexNormals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
 		
 		// Generate Colors
-		Color[] vertexColor = new TerrainColors().SetVertexColor((uint)vertices.Length, isRandomColor);
+		Color[] vertexColor = new TerrainColors().SetVertexColor((uint)vertices.Length, vertices.Select(vertex => vertex.Y).ToArray());
 		
 		// Generate Terrain
-		GenerateMesh(vertices, indices, normals, vertexColor);
-		GenerateWireframeMesh(new GenerateWireframe().GenerateAndConnectWireframeMesh(_rows, _cols, vertices));
+		GenerateMesh(vertices, indices, vertexNormals, vertexColor);
+		GenerateWireframeMesh(new GenerateWireframe().GenerateAndConnectWireframeMesh(_tgd.Rows, _tgd.Cols, vertices));
 	}
 	
-	private void GenerateMesh(Vector3[] vertices, int[] indices, Vector3[] normals, Color[] vertexColor)
+	private void GenerateMesh(Vector3[] vertices, int[] indices, Vector3[] vertexNormals, Color[] vertexColor)
 	{
 		MeshInstance3D meshInstance = new();
 		AddChild(meshInstance);
@@ -41,7 +38,7 @@ public partial class GenerateTerrain : Node
 			
 		arrays[(int)Mesh.ArrayType.Vertex] = vertices;
 		arrays[(int)Mesh.ArrayType.Index] = indices;
-		arrays[(int)Mesh.ArrayType.Normal] = normals;
+		arrays[(int)Mesh.ArrayType.Normal] = vertexNormals;
 		arrays[(int)Mesh.ArrayType.Color] = vertexColor;
 
 		// Create the mesh surface

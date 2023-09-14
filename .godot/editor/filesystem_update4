@@ -1,5 +1,11 @@
-res://_Production/Scripts/Terrain/TerrainIndices.cs
+res://Resources/Terrain/DebugTerrainData.cs
 res://_Production/Scripts/Terrain/GenerateTerrain.cs
 res://_Production/_Scenes/TestScene.tscn
-res://_Production/Scripts/Terrain/GenerateWireframe.cs
-res://_Production/Scripts/Terrain/TerrainNormals.cs
+res://Resources/Terrain/Test.gd
+res://Resources/Terrain/testscript.gd
+res://Resources/Terrain/TerrainData.cs
+res://Resources/Terrain/Testing.tres
+res://Resources/Terrain/TestGD.gd
+res://_Production/Scripts/s.gd
+res://_Production/Scripts/Data/TerrainGenerationData.cs
+res://_Production/Scripts/Data/DebugTerrainData.tres

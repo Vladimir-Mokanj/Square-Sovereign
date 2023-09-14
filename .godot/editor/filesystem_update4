@@ -2,3 +2,4 @@ res://_Production/Shaders/heightShader.shader.gdshader
 res://_Production/_Scenes/TestScene.tscn
 res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Terrain/GenerateTerrain.cs
+res://_Production/Shaders/heightShader.gdshader

@@ -7,9 +7,9 @@ public class TerrainTexture
 	public Vector2[] GenerateUVs(ushort rows, ushort cols)
 	{
 		Vector2[] uvs = new Vector2[(rows + 1) * (cols + 1)];
-		uint index = 0;
-		for (ushort x = 0; x <= rows; x++)
-			for (ushort z = 0; z <= cols; z++)
+		ushort index = 0;
+		for (byte x = 0; x <= rows; x++)
+			for (byte z = 0; z <= cols; z++)
 			{
 				uvs[index] = new Vector2(x, z);
 				index++;
@@ -18,16 +18,16 @@ public class TerrainTexture
 		return uvs;
 	}
 	
-	public Color[] SetVertexColor(uint vertexCount, float[] vertexHeight)
+	public Color[] SetVertexColor(ushort vertexCount, float[] vertexHeight)
 	{
 		Color[] vertices = new Color[vertexCount];
-		for (uint i = 0; i < vertexCount; i++)
+		for (ushort i = 0; i < vertexCount; i++)
 			vertices[i] =  SetVertexColor(vertexHeight[i]);
 		
 		return vertices;
 	}
 
-	private Color SetVertexColor(float vertexHeight) =>
+	private static Color SetVertexColor(float vertexHeight) =>
 		vertexHeight switch
 		{
 			< 0 => Colors.Aqua,

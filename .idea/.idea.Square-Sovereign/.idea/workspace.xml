@@ -6,27 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateTerrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateTerrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/TerrainGenerationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/TerrainGenerationData.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateWireframe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateWireframe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainColors.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainIndices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainIndices.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainTexture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainTexture.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainVertices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainVertices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Shaders/heightShader.gdshader" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Shaders/heightShader.gdshader" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +98,8 @@
       <workItem from="1694717797760" duration="4408000" />
       <workItem from="1694727037755" duration="1616000" />
       <workItem from="1694762907941" duration="10139000" />
-      <workItem from="1694792347320" duration="1439000" />
+      <workItem from="1694792347320" duration="2990000" />
+      <workItem from="1694795456264" duration="455000" />
     </task>
     <servers />
   </component>

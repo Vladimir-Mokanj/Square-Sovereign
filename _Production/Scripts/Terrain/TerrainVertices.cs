@@ -11,15 +11,15 @@ public class TerrainVertices
 		_cellSize = cellSize;
 	}
 	
-	public Vector3[] GenerateVertexPositions(ushort rows, ushort cols, int seed)
+	public Vector3[] GenerateVertexPositions(byte rows, byte cols, int seed)
 	{
 		FastNoiseLite noise = new();
 		noise.Seed = seed;
 		
 		Vector3[] vertices = new Vector3[(rows + 1) * (cols + 1)];
-		uint index = 0;
-		for (ushort x = 0; x <= rows; x++)
-			for (ushort z = 0; z <= cols; z++)
+		ushort index = 0;
+		for (byte x = 0; x <= rows; x++)
+			for (byte z = 0; z <= cols; z++)
 			{
 				vertices[index] = new Vector3(x * _cellSize, GenerateVertexHeight(noise.GetNoise2D(x, z) + 1), z * _cellSize);
 				index++;

@@ -1,4 +1,3 @@
-using System.Linq;
 using FT.Data;
 using Godot;
 
@@ -19,16 +18,18 @@ public partial class GenerateTerrain : Node
 
 		// Generate normals
 		Vector3[] vertexNormals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
-		
-		// Generate Colors
-		//Color[] vertexColor = new TerrainColors().SetVertexColor((uint)vertices.Length, vertices.Select(vertex => vertex.Y).ToArray());
+
+		// Generate UVs
+		Vector2[] uvs = new TerrainTexture().GenerateUVs(_tgd.Rows, _tgd.Cols);
 		
 		// Generate Terrain
-		GenerateMesh(vertices, indices, vertexNormals);
-		GenerateWireframeMesh(new GenerateWireframe().GenerateAndConnectWireframeMesh(_tgd.Rows, _tgd.Cols, vertices));
+		GenerateMesh(vertices, indices, vertexNormals, uvs);
+		
+		if (_tgd.HasWireframe)
+			GenerateWireframeMesh(new GenerateWireframe().GenerateAndConnectWireframeMesh(_tgd.Rows, _tgd.Cols, vertices));
 	}
 	
-	private void GenerateMesh(Vector3[] vertices, int[] indices, Vector3[] vertexNormals)
+	private void GenerateMesh(Vector3[] vertices, int[] indices, Vector3[] vertexNormals, Vector2[] uvs)
 	{
 		MeshInstance3D meshInstance = new();
 		AddChild(meshInstance);
@@ -40,6 +41,7 @@ public partial class GenerateTerrain : Node
 		arrays[(int)Mesh.ArrayType.Vertex] = vertices;
 		arrays[(int)Mesh.ArrayType.Index] = indices;
 		arrays[(int)Mesh.ArrayType.Normal] = vertexNormals;
+		arrays[(int)Mesh.ArrayType.TexUV] = uvs;
 
 		// Create the mesh surface
 		ArrayMesh arrayMesh = new();
@@ -51,6 +53,10 @@ public partial class GenerateTerrain : Node
 		// Create a new StandardMaterial3D and set it as the surface material
 		ShaderMaterial shaderMaterial = new();
 		shaderMaterial.Shader = _shader;
+		shaderMaterial.SetShaderParameter("waterTexture", _tgd.WaterTexture);
+		shaderMaterial.SetShaderParameter("dirtTexture", _tgd.DirtTexture);
+		shaderMaterial.SetShaderParameter("stoneTexture", _tgd.StoneTexture);
+		
 		meshInstance.SetSurfaceOverrideMaterial(0, shaderMaterial);
 	}
 

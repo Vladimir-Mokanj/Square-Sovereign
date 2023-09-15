@@ -1,8 +1,12 @@
+//uniform vec4 waterColor = vec4(0.0, 0.0, 1.0, 1.0); // Blue at the lowest point
+//uniform vec4 landColor = vec4(0.0, 1.0, 0.0, 1.0); // Green at the middle point
+//uniform vec4 hillColor = vec4(1.0, 0.0, 0.0, 1.0);  // Red at the highest point
+
 shader_type spatial;
 
-uniform vec4 waterColor = vec4(0.0, 0.0, 1.0, 1.0); // Blue at the lowest point
-uniform vec4 landColor = vec4(0.0, 1.0, 0.0, 1.0); // Green at the middle point
-uniform vec4 hillColor = vec4(1.0, 0.0, 0.0, 1.0);  // Red at the highest point
+uniform sampler2D waterTexture;
+uniform sampler2D dirtTexture;
+uniform sampler2D stoneTexture;
 
 varying float y_coord;
 
@@ -11,6 +15,10 @@ void vertex() {
 }
 
 void fragment() {
-    ALBEDO = (y_coord < 0.0f) ? waterColor.rgb : ((y_coord > 0.0f) 
-							  ? hillColor.rgb : landColor.rgb);
+	if (y_coord < 0.0) 
+		ALBEDO = texture(waterTexture, UV).rgb;
+    else if (y_coord > 0.0) 
+		ALBEDO = texture(stoneTexture, UV).rgb;
+    else 
+        ALBEDO = texture(dirtTexture, UV).rgb;
 }

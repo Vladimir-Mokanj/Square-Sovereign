@@ -1,3 +1,4 @@
+using System.Linq;
 using FT.Data;
 using Godot;
 
@@ -14,7 +15,7 @@ public partial class GenerateTerrain : Node
 		Vector3[] vertices = new TerrainVertices(_tgd.CellSize).GenerateVertexPositions(_tgd.Rows, _tgd.Cols, _tgd.Seed);
 		
 		// Generate indices
-		int[] indices = new TerrainIndices().GenerateConnections(_tgd.Rows, _tgd.Cols);
+		int[] indices = new TerrainIndices().GenerateConnections(_tgd.Rows, _tgd.Cols, vertices.Select(vertex => vertex.Y).ToArray());
 
 		// Generate normals
 		Vector3[] vertexNormals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
@@ -56,6 +57,7 @@ public partial class GenerateTerrain : Node
 		shaderMaterial.SetShaderParameter("waterTexture", _tgd.WaterTexture);
 		shaderMaterial.SetShaderParameter("dirtTexture", _tgd.DirtTexture);
 		shaderMaterial.SetShaderParameter("stoneTexture", _tgd.StoneTexture);
+		shaderMaterial.SetShaderParameter("cellSize", _tgd.CellSize);
 		
 		meshInstance.SetSurfaceOverrideMaterial(0, shaderMaterial);
 	}

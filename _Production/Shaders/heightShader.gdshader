@@ -7,6 +7,7 @@ shader_type spatial;
 uniform sampler2D waterTexture;
 uniform sampler2D dirtTexture;
 uniform sampler2D stoneTexture;
+uniform float cellSize;
 
 varying float y_coord;
 
@@ -15,9 +16,9 @@ void vertex() {
 }
 
 void fragment() {
-	if (y_coord < 0.0) 
+	if (y_coord < cellSize - 0.01f) 
 		ALBEDO = texture(waterTexture, UV).rgb;
-    else if (y_coord > 0.0) 
+    else if (y_coord > cellSize + 0.01f) 
 		ALBEDO = texture(stoneTexture, UV).rgb;
     else 
         ALBEDO = texture(dirtTexture, UV).rgb;

@@ -15,7 +15,7 @@ public class TerrainVertices
 	{
 		FastNoiseLite noise = new();
 		noise.Seed = seed;
-
+		
 		Vector3[] vertices = new Vector3[(rows + 1) * (cols + 1)];
 		uint index = 0;
 		for (ushort x = 0; x <= rows; x++)
@@ -31,8 +31,8 @@ public class TerrainVertices
 	private float GenerateVertexHeight(float height) =>
 		height switch
 		{
-			< 0.8f => -_cellSize,
-			< 0.9f => 0,
-			_ => _cellSize
+			< 0.8f => 0,
+			< 0.9f => _cellSize,
+			_ => 2 * _cellSize
 		};
 }

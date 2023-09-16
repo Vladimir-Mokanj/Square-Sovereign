@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.godot/editor/DebugTerrainData.tres-folding-89ef7b43c4f875db310d14f920b13b66.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/DebugTerrainData.tres-folding-89ef7b43c4f875db310d14f920b13b66.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
@@ -15,11 +18,8 @@
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/TerrainGenerationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/TerrainGenerationData.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateWireframe.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateWireframe.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainIndices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainIndices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainTexture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainTexture.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainVertices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainVertices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/55/3352612e/FastNoiseLite.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,6 +103,7 @@
       <workItem from="1694762907941" duration="10139000" />
       <workItem from="1694792347320" duration="2990000" />
       <workItem from="1694795456264" duration="455000" />
+      <workItem from="1694851202706" duration="9205000" />
     </task>
     <servers />
   </component>

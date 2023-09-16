@@ -4,3 +4,4 @@ res://_Production/Shaders/heightShader.gdshader
 res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Terrain/GenerateTerrain.cs
 res://_Production/Scripts/Player/PlayerController.cs
+res://_Production/Scripts/Managers/GameManager.cs

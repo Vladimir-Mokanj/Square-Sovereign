@@ -1,46 +1,36 @@
-using System.Collections.Generic;
 using System.Linq;
 using FT.Data;
-using FT.Managers;
 using Godot;
 
 namespace FT.Terrain;
 
-public partial class GenerateTerrain : Node
+public class GenerateTerrain
 {
-	[Export] private TerrainGenerationData _tgd;
-	[Export] private Shader _shader;
+	private readonly Vector3[] vertices;
+	private readonly int[] indices;
+	private readonly Vector3[] vertexNormals;
+	private readonly Vector2[] uvs;
 
-	public CellManager _cellManager;
-	
-	public override void _Ready()
+	public GenerateTerrain(TerrainGenerationData tgd)
 	{
-		_cellManager = new CellManager(_tgd.Rows, _tgd.Cols);
-		
-		// Generate vertices
-		Vector3[] vertices = new TerrainVertices(_tgd.CellSize).GenerateVertexPositions(_tgd.Rows, _tgd.Cols, _tgd.Seed);
-		
-		// Generate indices
-		int[] indices = new TerrainIndices().GenerateConnections(_tgd.Rows, _tgd.Cols, ref _cellManager, vertices.Select(vertex => vertex.Y).ToArray());
-
-		// Generate normals
-		Vector3[] vertexNormals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
-
-		// Generate UVs
-		Vector2[] uvs = new TerrainTexture().GenerateUVs(_tgd.Rows, _tgd.Cols);
-
-		// Generate Terrain
-		GenerateMesh(vertices, indices, vertexNormals, uvs);
-		
-		if (_tgd.HasWireframe)
-			GenerateWireframeMesh(new GenerateWireframe().GenerateAndConnectWireframeMesh(_tgd.Rows, _tgd.Cols, vertices));
+		vertices = new TerrainVertices(tgd.CellSize).GenerateVertexPositions(tgd.Rows, tgd.Cols, tgd.Seed);
+		indices = new TerrainIndices().GenerateConnections(tgd.Rows, tgd.Cols, vertices.Select(vertex => vertex.Y).ToArray());
+		vertexNormals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
+		uvs = new TerrainTexture().GenerateUVs(tgd.Rows, tgd.Cols);
 	}
 	
-	private void GenerateMesh(Vector3[] vertices, int[] indices, Vector3[] vertexNormals, Vector2[] uvs)
+	public void GenerateMesh(Node parentNode, TerrainGenerationData tgd)
 	{
 		MeshInstance3D meshInstance = new();
-		AddChild(meshInstance);
 
+		meshInstance.Mesh = GenerateArrayMesh();
+		meshInstance.SetSurfaceOverrideMaterial(0, GenerateShaderMaterial(tgd));
+		
+		parentNode.AddChild(meshInstance);
+	}
+
+	private ArrayMesh GenerateArrayMesh()
+	{
 		// Set the arrays into Godot's Array object
 		Godot.Collections.Array arrays = new();
 		arrays.Resize((int)Mesh.ArrayType.Max);
@@ -53,68 +43,19 @@ public partial class GenerateTerrain : Node
 		// Create the mesh surface
 		ArrayMesh arrayMesh = new();
 		arrayMesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, arrays);
-			
-		// Assign the ArrayMesh to the MeshInstance
-		meshInstance.Mesh = arrayMesh;
 
-		// Create a new StandardMaterial3D and set it as the surface material
-		ShaderMaterial shaderMaterial = new();
-		shaderMaterial.Shader = _shader;
-		shaderMaterial.SetShaderParameter("waterTexture", _tgd.WaterTexture);
-		shaderMaterial.SetShaderParameter("dirtTexture", _tgd.DirtTexture);
-		shaderMaterial.SetShaderParameter("stoneTexture", _tgd.StoneTexture);
-		shaderMaterial.SetShaderParameter("cellSize", _tgd.CellSize);
-		
-		meshInstance.SetSurfaceOverrideMaterial(0, shaderMaterial);
-		
-		// Create and configure CollisionShape
-		CollisionShape3D collisionShape = new();
-		ConcavePolygonShape3D shape = new();
-		shape.Data = CreateTriangleListFromGrid(vertices, _tgd.Rows, _tgd.Cols); 
-		collisionShape.Shape = shape;
-
-		// Create StaticBody and add CollisionShape as a child
-		StaticBody3D staticBody = new();
-		AddChild(staticBody);
-		staticBody.AddChild(collisionShape);
-	}
-
-	private void GenerateWireframeMesh(Mesh arrayMesh)
-	{
-		MeshInstance3D wireframeMesh = new();
-		AddChild(wireframeMesh);
-		
-		wireframeMesh.Mesh = arrayMesh;
+		return arrayMesh;
 	}
 	
-	private Vector3[] CreateTriangleListFromGrid(Vector3[] gridVertices, int rows, int cols)
+	private ShaderMaterial GenerateShaderMaterial(TerrainGenerationData tgd)
 	{
-		List<Vector3> triangleList = new();
-    
-		// Loop over each cell in the grid
-		for (int x = 0; x < rows; x++)
-		{
-			for (int z = 0; z < cols; z++)
-			{
-				// Compute indices for the four corners of the current grid cell
-				int topLeft = x * (cols + 1) + z;
-				int topRight = topLeft + 1;
-				int bottomLeft = (x + 1) * (cols + 1) + z;
-				int bottomRight = bottomLeft + 1;
+		ShaderMaterial shaderMaterial = new();
+		shaderMaterial.Shader = tgd.Shader;
+		shaderMaterial.SetShaderParameter(nameof(tgd.WaterTexture), tgd.WaterTexture);
+		shaderMaterial.SetShaderParameter(nameof(tgd.DirtTexture), tgd.DirtTexture);
+		shaderMaterial.SetShaderParameter(nameof(tgd.StoneTexture), tgd.StoneTexture);
+		shaderMaterial.SetShaderParameter(nameof(tgd.CellSize), tgd.CellSize);
 
-				// Create two triangles to fill the grid cell
-				// Triangle 1 (top-left, bottom-left, top-right)
-				triangleList.Add(gridVertices[topLeft]);
-				triangleList.Add(gridVertices[bottomLeft]);
-				triangleList.Add(gridVertices[topRight]);
-
-				// Triangle 2 (top-right, bottom-left, bottom-right)
-				triangleList.Add(gridVertices[topRight]);
-				triangleList.Add(gridVertices[bottomLeft]);
-				triangleList.Add(gridVertices[bottomRight]);
-			}
-		}
-    
-		return triangleList.ToArray();
+		return shaderMaterial;
 	}
 }

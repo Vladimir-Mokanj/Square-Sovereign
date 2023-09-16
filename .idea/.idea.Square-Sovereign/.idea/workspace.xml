@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
@@ -20,9 +21,10 @@
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/TerrainGenerationData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/TerrainGenerationData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Player/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Player/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateTerrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateTerrain.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainIndices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainIndices.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainTexture.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainTexture.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +52,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "cell-manager",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",

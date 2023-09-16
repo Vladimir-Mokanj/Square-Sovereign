@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations;
 using Godot;
 
 namespace FT.Data;
@@ -6,10 +5,8 @@ namespace FT.Data;
 [GlobalClass]
 public partial class TerrainGenerationData : Resource
 {
-    [ExportCategory("Debug")] 
-    [Export] public bool HasWireframe { get; private set; } = true;
-    
-    [ExportCategory("Textures")]
+    [ExportCategory("Textures/Shader")]
+    [Export] public Shader Shader { get; private set; }
     [Export] public CompressedTexture2D WaterTexture { get; private set; }
     [Export] public CompressedTexture2D DirtTexture { get; private set; }
     [Export] public CompressedTexture2D StoneTexture { get; private set; }

@@ -17,21 +17,4 @@ public class TerrainTexture
 
 		return uvs;
 	}
-	
-	public Color[] SetVertexColor(ushort vertexCount, float[] vertexHeight)
-	{
-		Color[] vertices = new Color[vertexCount];
-		for (ushort i = 0; i < vertexCount; i++)
-			vertices[i] =  SetVertexColor(vertexHeight[i]);
-		
-		return vertices;
-	}
-
-	private static Color SetVertexColor(float vertexHeight) =>
-		vertexHeight switch
-		{
-			< 0 => Colors.Aqua,
-			> 0 => Colors.Brown,
-			_ => Colors.Green
-		};
 }

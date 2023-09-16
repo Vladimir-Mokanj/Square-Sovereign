@@ -7,7 +7,7 @@
 
 [resource]
 script = ExtResource("1_fyax7")
-HasWireframe = true
+HasWireframe = false
 WaterTexture = ExtResource("3_quqbx")
 DirtTexture = ExtResource("1_r7oy8")
 StoneTexture = ExtResource("2_6xq2d")

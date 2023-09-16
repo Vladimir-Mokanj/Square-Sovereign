@@ -1,3 +1,6 @@
+using FT.Managers;
+using Godot;
+
 namespace FT.Terrain;
 
 public class TerrainIndices
@@ -12,7 +15,7 @@ public class TerrainIndices
 		indices[idx++] = b;
 	}
 
-	public int[] GenerateConnections(byte rows, byte cols, float[] yHeight)
+	public int[] GenerateConnections(byte rows, byte cols, ref CellManager cellManager, float[] yHeight)
 	{
 		int[] indices = new int[rows * cols * 6];
 		
@@ -25,6 +28,8 @@ public class TerrainIndices
 					bl = tl + cols + 1,
 					br = tl + cols + 2;
 
+				
+				cellManager.InitializeCell(x, z, new[] { yHeight[tl], yHeight[tr], yHeight[bl], yHeight[br] });
 				if (IsGreater(yHeight[br], yHeight[tl], yHeight[tr], yHeight[bl]) ||
 					IsGreater(yHeight[tl], yHeight[tr], yHeight[br], yHeight[bl]) ||
 					IsSmaller(yHeight[br], yHeight[tr], yHeight[tl], yHeight[bl]) ||
@@ -36,7 +41,7 @@ public class TerrainIndices
 
 				AssignIndices(indices, ref index, bl, tr, tl, br);
 			}
-		
+
 		return indices;
 	}
 	

@@ -1,17 +1,18 @@
-[gd_resource type="Resource" script_class="TerrainGenerationData" load_steps=5 format=3 uid="uid://cdepm6jh8ak1"]
+[gd_resource type="Resource" script_class="TerrainGenerationData" load_steps=6 format=3 uid="uid://cdepm6jh8ak1"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/Data/TerrainGenerationData.cs" id="1_fyax7"]
 [ext_resource type="Texture2D" uid="uid://dc1d0ig70k8yw" path="res://_Production/Art/2D/Textures/Dirt_Texture.jpg" id="1_r7oy8"]
 [ext_resource type="Texture2D" uid="uid://746dqrlohief" path="res://_Production/Art/2D/Textures/Stone_Texture.jpg" id="2_6xq2d"]
+[ext_resource type="Shader" path="res://_Production/Shaders/heightShader.gdshader" id="2_ln7kq"]
 [ext_resource type="Texture2D" uid="uid://ylmlw42h2p4o" path="res://_Production/Art/2D/Textures/Water_Texture.jpg" id="3_quqbx"]
 
 [resource]
 script = ExtResource("1_fyax7")
-HasWireframe = true
+Shader = ExtResource("2_ln7kq")
 WaterTexture = ExtResource("3_quqbx")
 DirtTexture = ExtResource("1_r7oy8")
 StoneTexture = ExtResource("2_6xq2d")
 Seed = 123456789
-CellSize = 8
+CellSize = 16
 Rows = 20
 Cols = 20

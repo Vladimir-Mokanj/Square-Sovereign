@@ -1,2 +1,12 @@
+PanelContainer
+Label
+HBoxContainer
+Control
+Container
+Panel
+BoxContainer
+RichTextLabel
+TextEdit
+Node
 MeshInstance3D
 CanvasLayer

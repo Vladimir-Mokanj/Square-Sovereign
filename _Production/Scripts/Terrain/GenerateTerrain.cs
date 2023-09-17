@@ -1,41 +1,45 @@
+using System;
 using System.Linq;
 using FT.Data;
 using Godot;
 
 namespace FT.Terrain;
 
-public partial class GenerateTerrain : Node
+public class GenerateTerrain
 {
-	[Export] private TerrainGenerationData _tgd;
-	[Export] private Shader _shader;
+	private readonly TerrainGenerationData _tgd;
+	
+	private readonly Vector3[] vertices;
+	private readonly int[] indices;
+	private readonly Vector3[] vertexNormals;
+	private readonly Vector2[] uvs;
 
-	public override void _Ready()
+	public GenerateTerrain(ref TerrainGenerationData tgd)
 	{
-		// Generate vertices
-		Vector3[] vertices = new TerrainVertices(_tgd.CellSize).GenerateVertexPositions(_tgd.Rows, _tgd.Cols, _tgd.Seed);
+		_tgd = tgd;
 		
-		// Generate indices
-		int[] indices = new TerrainIndices().GenerateConnections(_tgd.Rows, _tgd.Cols, vertices.Select(vertex => vertex.Y).ToArray());
-
-		// Generate normals
-		Vector3[] vertexNormals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
-
-		// Generate UVs
-		Vector2[] uvs = new TerrainTexture().GenerateUVs(_tgd.Rows, _tgd.Cols);
-		
-		// Generate Terrain
-		GenerateMesh(vertices, indices, vertexNormals, uvs);
-		
-		if (_tgd.HasWireframe)
-			GenerateWireframeMesh(new GenerateWireframe().GenerateAndConnectWireframeMesh(_tgd.Rows, _tgd.Cols, vertices));
+		vertices = new TerrainVertices(tgd.CellSize).GenerateVertexPositions(tgd.Rows, tgd.Cols, tgd.Seed);
+		indices = new TerrainIndices().GenerateConnections(tgd.Rows, tgd.Cols, vertices.Select(vertex => vertex.Y).ToArray());
+		vertexNormals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
+		uvs = new TerrainTexture().GenerateUVs(tgd.Rows, tgd.Cols);
 	}
 	
-	private void GenerateMesh(Vector3[] vertices, int[] indices, Vector3[] vertexNormals, Vector2[] uvs)
+	/// Get highest possible y vertex of every cell  
+	public byte[] GetCellMaxYVertexHeight => FindHighestYVertexOfTheCell();
+	
+	/// Generate the procedural terrain
+	/// <param name="parentNode">Parent node for the generated mesh</param>
+	public void GenerateMesh(Node parentNode)
 	{
 		MeshInstance3D meshInstance = new();
-		AddChild(meshInstance);
+		meshInstance.Mesh = GenerateArrayMesh();
+		meshInstance.SetSurfaceOverrideMaterial(0, GenerateShaderMaterial());
+		
+		parentNode.AddChild(meshInstance);
+	}
 
-		// Set the arrays into Godot's Array object
+	private ArrayMesh GenerateArrayMesh()
+	{
 		Godot.Collections.Array arrays = new();
 		arrays.Resize((int)Mesh.ArrayType.Max);
 			
@@ -43,30 +47,48 @@ public partial class GenerateTerrain : Node
 		arrays[(int)Mesh.ArrayType.Index] = indices;
 		arrays[(int)Mesh.ArrayType.Normal] = vertexNormals;
 		arrays[(int)Mesh.ArrayType.TexUV] = uvs;
-
-		// Create the mesh surface
+		
 		ArrayMesh arrayMesh = new();
 		arrayMesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, arrays);
-			
-		// Assign the ArrayMesh to the MeshInstance
-		meshInstance.Mesh = arrayMesh;
 
-		// Create a new StandardMaterial3D and set it as the surface material
+		return arrayMesh;
+	}
+	
+	private ShaderMaterial GenerateShaderMaterial()
+	{
 		ShaderMaterial shaderMaterial = new();
-		shaderMaterial.Shader = _shader;
-		shaderMaterial.SetShaderParameter("waterTexture", _tgd.WaterTexture);
-		shaderMaterial.SetShaderParameter("dirtTexture", _tgd.DirtTexture);
-		shaderMaterial.SetShaderParameter("stoneTexture", _tgd.StoneTexture);
-		shaderMaterial.SetShaderParameter("cellSize", _tgd.CellSize);
-		
-		meshInstance.SetSurfaceOverrideMaterial(0, shaderMaterial);
+		shaderMaterial.Shader = _tgd.Shader;
+		shaderMaterial.SetShaderParameter(nameof(_tgd.WaterTexture), _tgd.WaterTexture);
+		shaderMaterial.SetShaderParameter(nameof(_tgd.DirtTexture), _tgd.DirtTexture);
+		shaderMaterial.SetShaderParameter(nameof(_tgd.StoneTexture), _tgd.StoneTexture);
+		shaderMaterial.SetShaderParameter(nameof(_tgd.CellSize), _tgd.CellSize);
+
+		return shaderMaterial;
 	}
 
-	private void GenerateWireframeMesh(Mesh arrayMesh)
+	private byte[] FindHighestYVertexOfTheCell()
 	{
-		MeshInstance3D wireframeMesh = new();
-		AddChild(wireframeMesh);
+		byte[] cellHeight = new byte[_tgd.Rows * _tgd.Cols];
+		Array.Fill(cellHeight, _tgd.CellSize);
 		
-		wireframeMesh.Mesh = arrayMesh;
+		for (byte x = 0; x < _tgd.Rows; x++)
+		for (byte z = 0; z < _tgd.Cols; z++)
+		{
+			int index = x * _tgd.Cols + z;
+			int tl = x * (_tgd.Cols + 1) + z,
+				tr = tl + 1,
+				bl = tl + _tgd.Cols + 1,
+				br = tl + _tgd.Cols + 2;
+				
+			foreach (float height in new[]{vertices[tl].Y, vertices[tr].Y, vertices[bl].Y, vertices[br].Y})
+			{
+				if (Math.Abs(height - _tgd.CellSize) < 0.05f)
+					continue;
+
+				cellHeight[index] = (byte)height;
+			}
+		}
+
+		return cellHeight;
 	}
 }

@@ -21,8 +21,8 @@ public static class ExtentionTools
         MeshInstance3D node = new();
         // Create a new SphereMesh and set its parameters
         SphereMesh sphere = new();
-        sphere.Radius = 0.2f;
-        sphere.Height = 0.2f;
+        sphere.Radius = 0.1f;
+        sphere.Height = 0.1f;
 
         // Assign the SphereMesh to the MeshInstance3D
         node.Mesh = sphere;

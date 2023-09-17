@@ -43,7 +43,7 @@ public partial class GameManager : Node
             return;
         }
 
-        if (_currentRowCol.row.Value != _oldRowCol.row || _currentRowCol.col.Value != _oldRowCol.col)
+        if (_currentRowCol.row.Value == _oldRowCol.row && _currentRowCol.col.Value == _oldRowCol.col)
         {
             GD.Print($"SAME SQUARE CLICKED: ROW: {_oldRowCol.row}, COL: {_oldRowCol.col}");
             return;

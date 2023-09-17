@@ -20,7 +20,7 @@ public class CellManager
     /// <param name="rows">Terrain Rows</param>
     /// <param name="heights">Vertex Y Heights Array</param>
     /// <param name="cellSize">Size of the square</param>
-    public void InitializeCells(byte rows, float[] heights, float cellSize)
+    public void InitializeCells(byte rows, byte[] heights, float cellSize)
     {
         for (byte x = 0; x < rows; x++)
             for (byte z = 0; z < _cols; z++)

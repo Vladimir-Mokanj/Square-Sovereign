@@ -19,10 +19,11 @@ light_volumetric_fog_energy = 0.0
 
 [node name="Managers" type="Node" parent="."]
 
-[node name="GameManager" type="Node" parent="Managers" node_paths=PackedStringArray("_camera")]
+[node name="GameManager" type="Node" parent="Managers" node_paths=PackedStringArray("_camera", "_debugTestUi")]
 script = ExtResource("3_coj1k")
 _tgd = ExtResource("2_286pr")
 _camera = NodePath("../../Camera3D")
+_debugTestUi = NodePath("../../PlayerUI/DebugUI")
 
 [node name="PlayerUI" type="Control" parent="."]
 layout_mode = 3
@@ -39,6 +40,7 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 60.0
 grow_horizontal = 2
+scale = Vector2(0.99829, 1)
 mouse_filter = 2
 theme_override_constants/separation = 50
 alignment = 1

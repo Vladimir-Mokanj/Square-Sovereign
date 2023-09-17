@@ -12,7 +12,7 @@ public static class ExtensionTools
         if (!string.IsNullOrEmpty(nodeGroup))
             node.AddToGroup(nodeGroup);
 
-        parent?.AddChild(node);
+        parent?.CallDeferred("add_child", node);
         return node;
     }
 }

@@ -6,25 +6,31 @@ namespace FT.Terrain;
 
 public class GenerateTerrain
 {
+	private readonly TerrainGenerationData _tgd;
+	
 	private readonly Vector3[] vertices;
 	private readonly int[] indices;
 	private readonly Vector3[] vertexNormals;
 	private readonly Vector2[] uvs;
 
-	public GenerateTerrain(TerrainGenerationData tgd)
+	public GenerateTerrain(ref TerrainGenerationData tgd)
 	{
+		_tgd = tgd;
+		
 		vertices = new TerrainVertices(tgd.CellSize).GenerateVertexPositions(tgd.Rows, tgd.Cols, tgd.Seed);
 		indices = new TerrainIndices().GenerateConnections(tgd.Rows, tgd.Cols, vertices.Select(vertex => vertex.Y).ToArray());
 		vertexNormals = new TerrainNormals().GenerateVertexNormals(vertices.Length);
 		uvs = new TerrainTexture().GenerateUVs(tgd.Rows, tgd.Cols);
 	}
 	
-	public void GenerateMesh(Node parentNode, TerrainGenerationData tgd)
+	public float[] GetYHeights => vertices.Select(vertex => vertex.Y).ToArray();
+
+	public void GenerateMesh(Node parentNode)
 	{
 		MeshInstance3D meshInstance = new();
 
 		meshInstance.Mesh = GenerateArrayMesh();
-		meshInstance.SetSurfaceOverrideMaterial(0, GenerateShaderMaterial(tgd));
+		meshInstance.SetSurfaceOverrideMaterial(0, GenerateShaderMaterial());
 		
 		parentNode.AddChild(meshInstance);
 	}
@@ -47,14 +53,14 @@ public class GenerateTerrain
 		return arrayMesh;
 	}
 	
-	private ShaderMaterial GenerateShaderMaterial(TerrainGenerationData tgd)
+	private ShaderMaterial GenerateShaderMaterial()
 	{
 		ShaderMaterial shaderMaterial = new();
-		shaderMaterial.Shader = tgd.Shader;
-		shaderMaterial.SetShaderParameter(nameof(tgd.WaterTexture), tgd.WaterTexture);
-		shaderMaterial.SetShaderParameter(nameof(tgd.DirtTexture), tgd.DirtTexture);
-		shaderMaterial.SetShaderParameter(nameof(tgd.StoneTexture), tgd.StoneTexture);
-		shaderMaterial.SetShaderParameter(nameof(tgd.CellSize), tgd.CellSize);
+		shaderMaterial.Shader = _tgd.Shader;
+		shaderMaterial.SetShaderParameter(nameof(_tgd.WaterTexture), _tgd.WaterTexture);
+		shaderMaterial.SetShaderParameter(nameof(_tgd.DirtTexture), _tgd.DirtTexture);
+		shaderMaterial.SetShaderParameter(nameof(_tgd.StoneTexture), _tgd.StoneTexture);
+		shaderMaterial.SetShaderParameter(nameof(_tgd.CellSize), _tgd.CellSize);
 
 		return shaderMaterial;
 	}

@@ -8,7 +8,6 @@
 
 [resource]
 script = ExtResource("1_fyax7")
-HasWireframe = true
 Shader = ExtResource("2_ln7kq")
 WaterTexture = ExtResource("3_quqbx")
 DirtTexture = ExtResource("1_r7oy8")

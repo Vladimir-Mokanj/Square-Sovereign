@@ -38,16 +38,10 @@ public partial class GameManager : Node
 
         _currentRowCol = _raycast.GetRowCol(mouseButtonEvent.Position);
         if (!_currentRowCol.row.HasValue || !_currentRowCol.col.HasValue)
-        {
-            GD.Print("NO SQUARE CLICKED");
             return;
-        }
-
+        
         if (_currentRowCol.row.Value == _oldRowCol.row && _currentRowCol.col.Value == _oldRowCol.col)
-        {
-            GD.Print($"SAME SQUARE CLICKED: ROW: {_oldRowCol.row}, COL: {_oldRowCol.col}");
             return;
-        }
 
         _oldRowCol = ((byte row, byte col))_currentRowCol;
         _debugTestUi.AssignValues(_cellManager.GetCellData(_oldRowCol.row, _oldRowCol.col));

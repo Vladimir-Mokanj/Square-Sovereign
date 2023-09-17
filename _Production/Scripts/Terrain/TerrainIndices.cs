@@ -1,5 +1,3 @@
-using FT.Managers;
-
 namespace FT.Terrain;
 
 public class TerrainIndices
@@ -14,7 +12,7 @@ public class TerrainIndices
 		indices[idx++] = b;
 	}
 
-	public int[] GenerateConnections(byte rows, byte cols/*, ref CellManager cellManager*/, float[] yHeight)
+	public int[] GenerateConnections(byte rows, byte cols, float[] yHeight)
 	{
 		int[] indices = new int[rows * cols * 6];
 		

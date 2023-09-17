@@ -42,14 +42,14 @@ public class CellManager
     /// <param name="row">Square Row</param>
     /// <param name="col">Square Col</param>
     /// <returns>Item1: TerrainType, Item2: ResourceType, Item3: IsOccupied</returns>
-    public (TerrainType, ResourceType, bool) GetCellData(int row, int col)
+    public (TerrainType TerrainType, ResourceType ResourceType, bool IsOccupied) GetCellData(byte row, byte col)
     {
         byte packedData = _cells[row * _cols + col];
         TerrainType terrainType = (TerrainType)((packedData >> 5) & 0x7);
         ResourceType resourceType = (ResourceType)((packedData >> 1) & 0xF);
         bool isOccupied = (packedData & 0x1) != 0;
         
-        return (terrainType, resourceType, isOccupied);
+        return (TerrainType: terrainType, ResourceType: resourceType, IsOccupied: isOccupied);
     }
     
     private static byte PackData(TerrainType terrainType, ResourceType resourceType, bool isOccupied) => 

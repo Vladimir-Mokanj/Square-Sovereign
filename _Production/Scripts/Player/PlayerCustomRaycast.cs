@@ -1,4 +1,6 @@
 using System;
+using FT.Data;
+using FT.Tools;
 using Godot;
 
 namespace FT.Player;
@@ -7,8 +9,10 @@ public class PlayerCustomRaycast
 {
     private readonly Camera3D _camera;
     private readonly float[] _yHeights;
-    private readonly float _cellSize; 
-
+    private readonly float _cellSize;
+    private readonly byte _rows;
+    private readonly byte _cols;
+    
     private readonly float _maxT;
     private readonly float _step;
     private Vector3 _direction;
@@ -16,33 +20,37 @@ public class PlayerCustomRaycast
     private Vector3 _rayPosition;
     
 
-    public PlayerCustomRaycast(byte rows, byte cols, ushort cellSize, Camera3D camera/*, float[] yHeights*/)
+    public PlayerCustomRaycast(ref TerrainGenerationData tgd, Camera3D camera/*, float[] yHeights*/)
     {
         _camera = camera;
         //_yHeights = yHeights;
-        _cellSize = cellSize;
+        _cellSize = tgd.CellSize;
+        _rows = tgd.Rows;
+        _cols = tgd.Cols;
         
-        _maxT = Math.Max(rows * cellSize, cols * cellSize);
-        _step = cellSize / 2.0f;
+        _maxT = Math.Max((tgd.Rows + tgd.Rows) * tgd.CellSize, (tgd.Cols + tgd.Cols) * tgd.CellSize);
+        _step = tgd.CellSize / 2.0f;
     }
 
-    public /*(float row, float col)*/ void GetRowCol(float mouseXPosition, float mouseYPosition)
+    public (byte? row, byte? col) GetRowCol(Vector2 mousePosition)
     {
-        _direction = _camera.Position - _camera.ProjectPosition(new Vector2(mouseXPosition, mouseYPosition), _camera.Far);
+        _direction = _camera.ProjectRayNormal(mousePosition);
         float t = 0;
         while (t < _maxT)
         {
             _scaledDirection = _direction * t;
             _rayPosition = _camera.Position + _scaledDirection;
-
+            
             int row = Mathf.FloorToInt(_rayPosition.X / _cellSize);
             int col = Mathf.FloorToInt(_rayPosition.Z / _cellSize);
             
-            GD.Print($"Row: {row}, Col: {col}");
-            
+            if (row >= 0 && row < _rows && col >= 0 && col < _cols)
+                if (Math.Abs(_rayPosition.Y) < _cellSize)
+                    return ((byte)row, (byte)col);
+                    
             t += _step;
         }
         
-        //return (-1, -1);
+        return (null, null);
     }
 }

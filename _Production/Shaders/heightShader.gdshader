@@ -15,7 +15,7 @@ void fragment() {
 	if (y_coord < CellSize - 0.01f) 
 		ALBEDO = texture(WaterTexture, UV).rgb;
     else if (y_coord > CellSize + 0.01f) 
-		ALBEDO = texture(DirtTexture, UV).rgb;
+		ALBEDO = texture(StoneTexture, UV).rgb;
     else 
-        ALBEDO = texture(StoneTexture, UV).rgb;
+        ALBEDO = texture(DirtTexture, UV).rgb;
 }

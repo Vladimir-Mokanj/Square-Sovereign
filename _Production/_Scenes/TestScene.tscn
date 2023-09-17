@@ -18,6 +18,7 @@ light_volumetric_fog_energy = 0.0
 
 [node name="Managers" type="Node" parent="."]
 
-[node name="GameManager" type="Node" parent="Managers"]
+[node name="GameManager" type="Node" parent="Managers" node_paths=PackedStringArray("_camera")]
 script = ExtResource("3_coj1k")
 _tgd = ExtResource("2_286pr")
+_camera = NodePath("../../Camera3D")

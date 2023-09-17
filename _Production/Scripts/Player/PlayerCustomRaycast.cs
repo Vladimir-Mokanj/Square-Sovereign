@@ -49,10 +49,7 @@ public class PlayerCustomRaycast
             {
                 int index = row * _cols + col;
                 if (Math.Abs(_rayPosition.Y - _yHeights[index]) < _step)
-                {
-                    GD.Print(_yHeights[index]);
                     return ((byte)row, (byte)col);
-                }
             }
                     
             t += _step;

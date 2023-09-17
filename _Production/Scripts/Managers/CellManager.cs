@@ -11,13 +11,17 @@ public class CellManager
 {
     private readonly byte[] _cells;
     private readonly byte _cols;
-
+    
     public CellManager(byte rows, byte cols)
     {
         _cells = new byte[rows * cols];
         _cols = cols;
     }
-
+    
+    /// Generate all of the cell data
+    /// <param name="rows">Terrain Rows</param>
+    /// <param name="heights">Vertex Y Heights Array</param>
+    /// <param name="cellSize">Size of the square</param>
     public void InitializeCells(byte rows, float[] heights, float cellSize)
     {
         for (byte x = 0; x < rows; x++)
@@ -32,14 +36,27 @@ public class CellManager
                 
                 (TerrainType, ResourceType) terrainData = SetTerrainData(new[]{heights[tl], heights[tr], heights[bl], heights[br]}, cellSize);
                 _cells[index] = PackData(terrainData.Item1, terrainData.Item2, terrainData.Item1 != TerrainType.LAND);
-                GD.Print(GetCellData(x, z));
             }
     }
 
-    private byte PackData(TerrainType terrainType, ResourceType resourceType, bool isOccupied) => 
+    /// Get the cell data of the currently selected square (cell)
+    /// <param name="row">Square Row</param>
+    /// <param name="col">Square Col</param>
+    /// <returns>Item1: TerrainType, Item2: ResourceType, Item3: IsOccupied</returns>
+    public (TerrainType, ResourceType, bool) GetCellData(int row, int col)
+    {
+        byte packedData = _cells[row * _cols + col];
+        TerrainType terrainType = (TerrainType)((packedData >> 5) & 0x7);
+        ResourceType resourceType = (ResourceType)((packedData >> 1) & 0xF);
+        bool isOccupied = (packedData & 0x1) != 0;
+        
+        return (terrainType, resourceType, isOccupied);
+    }
+    
+    private static byte PackData(TerrainType terrainType, ResourceType resourceType, bool isOccupied) => 
         (byte)(((byte)terrainType << 5) | ((byte)resourceType << 1) | (isOccupied ? 1 : 0));
 
-    private (TerrainType, ResourceType) SetTerrainData(IEnumerable<float> heights, float cellSize)
+    private static (TerrainType, ResourceType) SetTerrainData(IEnumerable<float> heights, float cellSize)
     {
         bool hasResource = Random.Shared.Next(0, 100) < 5;
         foreach (float height in heights)
@@ -51,15 +68,5 @@ public class CellManager
         }
         
         return (TerrainType.LAND, hasResource ? ResourceType.WOOD : ResourceType.NONE);
-    }
-    
-    public (TerrainType, ResourceType, bool) GetCellData(int row, int col)
-    {
-        byte packedData = _cells[row * _cols + col];
-        TerrainType terrainType = (TerrainType)((packedData >> 5) & 0x7);
-        ResourceType resourceType = (ResourceType)((packedData >> 1) & 0xF);
-        bool isOccupied = (packedData & 0x1) != 0;
-        
-        return (terrainType, resourceType, isOccupied);
     }
 }

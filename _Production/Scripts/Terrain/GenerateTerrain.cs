@@ -23,12 +23,14 @@ public class GenerateTerrain
 		uvs = new TerrainTexture().GenerateUVs(tgd.Rows, tgd.Cols);
 	}
 	
+	/// Get heights of all of the vertices
 	public float[] GetYHeights => vertices.Select(vertex => vertex.Y).ToArray();
-
+	
+	/// Generate the procedural terrain
+	/// <param name="parentNode">Parent node for the generated mesh</param>
 	public void GenerateMesh(Node parentNode)
 	{
 		MeshInstance3D meshInstance = new();
-
 		meshInstance.Mesh = GenerateArrayMesh();
 		meshInstance.SetSurfaceOverrideMaterial(0, GenerateShaderMaterial());
 		
@@ -37,7 +39,6 @@ public class GenerateTerrain
 
 	private ArrayMesh GenerateArrayMesh()
 	{
-		// Set the arrays into Godot's Array object
 		Godot.Collections.Array arrays = new();
 		arrays.Resize((int)Mesh.ArrayType.Max);
 			
@@ -45,8 +46,7 @@ public class GenerateTerrain
 		arrays[(int)Mesh.ArrayType.Index] = indices;
 		arrays[(int)Mesh.ArrayType.Normal] = vertexNormals;
 		arrays[(int)Mesh.ArrayType.TexUV] = uvs;
-
-		// Create the mesh surface
+		
 		ArrayMesh arrayMesh = new();
 		arrayMesh.AddSurfaceFromArrays(Mesh.PrimitiveType.Triangles, arrays);
 

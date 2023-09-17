@@ -68,27 +68,30 @@ public class GenerateTerrain
 
 	private float[] FindHighestYVertexOfTheCell()
 	{
-		float[] cellHeight = new float[_tgd.Rows * _tgd.Cols];
-		Array.Fill(cellHeight, _tgd.CellSize);
-		
-		for (byte x = 0; x < _tgd.Rows; x++)
-			for (byte z = 0; z < _tgd.Cols; z++)
-			{
-				int index = x * _tgd.Cols + z;
-				int tl = x * (_tgd.Cols + 1) + z,
-					tr = tl + 1,
-					bl = tl + _tgd.Cols + 1,
-					br = tl + _tgd.Cols + 2;
-				
-				foreach (float height in new[]{vertices[tl].Y, vertices[tr].Y, vertices[bl].Y, vertices[br].Y})
-				{
-					if (Math.Abs(height - _tgd.CellSize) < 0.05f)
-						continue;
+		const float tolerance = 0.05f;
+		int rows = _tgd.Rows;
+		int cols = _tgd.Cols;
+		float cellSize = _tgd.CellSize;
+    
+		float[] cellHeight = new float[rows * cols];
+		Array.Fill(cellHeight, cellSize);
 
-					cellHeight[index] = height;
+		int[] offsets = {0, 1, cols + 1, cols + 2};
+		for (byte x = 0, idx = 0; x < rows; x++)
+			for (byte z = 0; z < cols; z++, idx++)
+			{
+				int tl = x * (cols + 1) + z;
+				foreach (int offset in offsets)
+				{
+					float height = vertices[tl + offset].Y;
+					if (!(Math.Abs(height - cellSize) >= tolerance)) 
+						continue;
+					
+					cellHeight[idx] = height;
+					break;
 				}
 			}
-
+		
 		return cellHeight;
 	}
 }

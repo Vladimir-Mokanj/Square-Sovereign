@@ -18,7 +18,6 @@ public class PlayerCustomRaycast
     private Vector3 _scaledDirection;
     private Vector3 _rayPosition;
     
-
     public PlayerCustomRaycast(ref TerrainGenerationData tgd, Camera3D camera, float[] yHeights)
     {
         _camera = camera;

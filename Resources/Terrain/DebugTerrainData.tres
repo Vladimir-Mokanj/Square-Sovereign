@@ -15,4 +15,4 @@ StoneTexture = ExtResource("2_6xq2d")
 Seed = 123456789
 CellSize = 8
 Rows = 20
-Cols = 20
+Cols = 10

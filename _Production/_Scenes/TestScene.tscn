@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=4 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://Resources/Terrain/DebugTerrainData.tres" id="2_286pr"]
 [ext_resource type="Script" path="res://_Production/Scripts/Managers/GameManager.cs" id="3_coj1k"]
+[ext_resource type="Script" path="res://_Production/Scripts/UI/DebugTestUI.cs" id="3_udlc0"]
 
 [node name="Node3D" type="Node3D" groups=["RootNode"]]
 
@@ -22,3 +23,59 @@ light_volumetric_fog_energy = 0.0
 script = ExtResource("3_coj1k")
 _tgd = ExtResource("2_286pr")
 _camera = NodePath("../../Camera3D")
+
+[node name="PlayerUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="DebugUI" type="HBoxContainer" parent="PlayerUI" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel")]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 60.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/separation = 50
+alignment = 1
+script = ExtResource("3_udlc0")
+_terrainTypeLabel = NodePath("TerrainTypeContainer/TerrainTypeLabel")
+_resourceTypeLabel = NodePath("ResourceTypeContainer/ResourceTypeLabel")
+_isOccupiedLabel = NodePath("IsOccupiedContainer/IsOccupedLabel")
+
+[node name="TerrainTypeContainer" type="PanelContainer" parent="PlayerUI/DebugUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TerrainTypeLabel" type="Label" parent="PlayerUI/DebugUI/TerrainTypeContainer"]
+layout_mode = 2
+text = "Terrain Type: Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="ResourceTypeContainer" type="PanelContainer" parent="PlayerUI/DebugUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResourceTypeLabel" type="Label" parent="PlayerUI/DebugUI/ResourceTypeContainer"]
+layout_mode = 2
+text = "Terrain Type: Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="IsOccupiedContainer" type="PanelContainer" parent="PlayerUI/DebugUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="IsOccupedLabel" type="Label" parent="PlayerUI/DebugUI/IsOccupiedContainer"]
+layout_mode = 2
+text = "Terrain Type: Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true

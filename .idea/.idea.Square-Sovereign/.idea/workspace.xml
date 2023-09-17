@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Managers/CellManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Managers/CellManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Player/PlayerCustomRaycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Player/PlayerCustomRaycast.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,28 +45,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "cell-manager",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;cell-manager&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Vladimir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Vladimir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Vladimir\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Vladimir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Vladimir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Vladimir\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Executable.Player">
     <configuration name="Editor" type="RunExe" factoryName=".NET Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Downloads/Godot_v4.1.1-stable_mono_win64/Godot_v4.1.1-stable_mono_win64/Godot_v4.1.1-stable_mono_win64.exe" />

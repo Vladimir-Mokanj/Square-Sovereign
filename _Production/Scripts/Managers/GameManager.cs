@@ -2,6 +2,7 @@ using FT.Data;
 using FT.Player;
 using FT.Terrain;
 using FT.Tools;
+using FT.UI;
 using Godot;
 
 namespace FT.Managers;
@@ -13,6 +14,10 @@ public partial class GameManager : Node
     
     private CellManager _cellManager;
     private PlayerCustomRaycast _raycast;
+
+    [Export] private DebugTestUI _debugTestUi;
+    private (byte? row, byte? col) _currentRowCol = (null, null);
+    private (byte row, byte col) _oldRowCol = (0, 0);
     
     public override void _Ready()
     {
@@ -31,15 +36,20 @@ public partial class GameManager : Node
         if (@event is not InputEventMouseButton { Pressed: true, ButtonIndex: MouseButton.Left } mouseButtonEvent)
             return;
 
-        (byte? Row, byte? Col) rowCol = _raycast.GetRowCol(mouseButtonEvent.Position);
-        if (rowCol.Item1 == null)
+        _currentRowCol = _raycast.GetRowCol(mouseButtonEvent.Position);
+        if (!_currentRowCol.row.HasValue || !_currentRowCol.col.HasValue)
         {
             GD.Print("NO SQUARE CLICKED");
             return;
         }
-        
-        GD.Print($"Row: {rowCol.Row}, Col: {rowCol.Col}");
-        (TerrainType terrainType, ResourceType resourceType, bool isOccupied) cellData = _cellManager.GetCellData(rowCol.Item1!.Value, rowCol.Item2!.Value);
-        GD.Print($"Terrain Type: {cellData.terrainType}, Resource Type: {cellData.resourceType}, Is Occupied: {cellData.isOccupied}");
+
+        if (_currentRowCol.row.Value != _oldRowCol.row || _currentRowCol.col.Value != _oldRowCol.col)
+        {
+            GD.Print($"SAME SQUARE CLICKED: ROW: {_oldRowCol.row}, COL: {_oldRowCol.col}");
+            return;
+        }
+
+        _oldRowCol = ((byte row, byte col))_currentRowCol;
+        _debugTestUi.AssignValues(_cellManager.GetCellData(_oldRowCol.row, _oldRowCol.col));
     }
 }

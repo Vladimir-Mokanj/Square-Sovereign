@@ -1,6 +1,5 @@
 using System;
 using FT.Data;
-using FT.Tools;
 using Godot;
 
 namespace FT.Player;
@@ -20,10 +19,10 @@ public class PlayerCustomRaycast
     private Vector3 _rayPosition;
     
 
-    public PlayerCustomRaycast(ref TerrainGenerationData tgd, Camera3D camera/*, float[] yHeights*/)
+    public PlayerCustomRaycast(ref TerrainGenerationData tgd, Camera3D camera, float[] yHeights)
     {
         _camera = camera;
-        //_yHeights = yHeights;
+        _yHeights = yHeights;
         _cellSize = tgd.CellSize;
         _rows = tgd.Rows;
         _cols = tgd.Cols;
@@ -32,7 +31,7 @@ public class PlayerCustomRaycast
         _step = tgd.CellSize / 2.0f;
     }
 
-    public (byte? row, byte? col) GetRowCol(Vector2 mousePosition)
+    public (byte?, byte?) GetRowCol(Vector2 mousePosition)
     {
         _direction = _camera.ProjectRayNormal(mousePosition);
         float t = 0;
@@ -45,8 +44,11 @@ public class PlayerCustomRaycast
             int col = Mathf.FloorToInt(_rayPosition.Z / _cellSize);
             
             if (row >= 0 && row < _rows && col >= 0 && col < _cols)
-                if (Math.Abs(_rayPosition.Y) < _cellSize)
+            {
+                int index = row * _cols + col;
+                if (Math.Abs(_rayPosition.Y - _yHeights[index]) < _cellSize)
                     return ((byte)row, (byte)col);
+            }
                     
             t += _step;
         }

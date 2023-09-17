@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using FT.Data;
 using Godot;
@@ -23,8 +24,8 @@ public class GenerateTerrain
 		uvs = new TerrainTexture().GenerateUVs(tgd.Rows, tgd.Cols);
 	}
 	
-	/// Get heights of all of the vertices
-	public float[] GetYHeights => vertices.Select(vertex => vertex.Y).ToArray();
+	/// Get highest possible y vertex of every cell  
+	public float[] GetCellMaxYVertexHeight => FindHighestYVertexOfTheCell();
 	
 	/// Generate the procedural terrain
 	/// <param name="parentNode">Parent node for the generated mesh</param>
@@ -63,5 +64,31 @@ public class GenerateTerrain
 		shaderMaterial.SetShaderParameter(nameof(_tgd.CellSize), _tgd.CellSize);
 
 		return shaderMaterial;
+	}
+
+	private float[] FindHighestYVertexOfTheCell()
+	{
+		float[] cellHeight = new float[_tgd.Rows * _tgd.Cols];
+		Array.Fill(cellHeight, _tgd.CellSize);
+		
+		for (byte x = 0; x < _tgd.Rows; x++)
+			for (byte z = 0; z < _tgd.Cols; z++)
+			{
+				int index = x * _tgd.Cols + z;
+				int tl = x * (_tgd.Cols + 1) + z,
+					tr = tl + 1,
+					bl = tl + _tgd.Cols + 1,
+					br = tl + _tgd.Cols + 2;
+				
+				foreach (float height in new[]{vertices[tl].Y, vertices[tr].Y, vertices[bl].Y, vertices[br].Y})
+				{
+					if (Math.Abs(height - _tgd.CellSize) < 0.05f)
+						continue;
+
+					cellHeight[index] = height;
+				}
+			}
+
+		return cellHeight;
 	}
 }

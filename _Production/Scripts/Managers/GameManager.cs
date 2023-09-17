@@ -20,10 +20,9 @@ public partial class GameManager : Node
         generateTerrain.GenerateMesh(ExtentionTools.CreateNode<Node3D>("Terrain", "Terrain", GetTree().GetFirstNodeInGroup("RootNode")));
 
         _cellManager = new CellManager(_tgd.Rows, _tgd.Cols);
-        _cellManager.InitializeCells(_tgd.Rows, generateTerrain.GetYHeights, _tgd.CellSize);
+        _cellManager.InitializeCells(_tgd.Rows, generateTerrain.GetCellMaxYVertexHeight, _tgd.CellSize);
 
-        _raycast = new PlayerCustomRaycast(ref _tgd, _camera);
-
+        _raycast = new PlayerCustomRaycast(ref _tgd, _camera, generateTerrain.GetCellMaxYVertexHeight);
     }
     
     
@@ -32,11 +31,14 @@ public partial class GameManager : Node
         if (@event is not InputEventMouseButton { Pressed: true, ButtonIndex: MouseButton.Left } mouseButtonEvent)
             return;
 
-        (byte?, byte?) rowCol = _raycast.GetRowCol(mouseButtonEvent.Position);
+        (byte? Row, byte? Col) rowCol = _raycast.GetRowCol(mouseButtonEvent.Position);
         if (rowCol.Item1 == null)
+        {
             GD.Print("NO SQUARE CLICKED");
+            return;
+        }
         
-        GD.Print($"Row: {rowCol.Item1}, Col: {rowCol.Item2}");
+        GD.Print($"Row: {rowCol.Row}, Col: {rowCol.Col}");
         (TerrainType terrainType, ResourceType resourceType, bool isOccupied) cellData = _cellManager.GetCellData(rowCol.Item1!.Value, rowCol.Item2!.Value);
         GD.Print($"Terrain Type: {cellData.terrainType}, Resource Type: {cellData.resourceType}, Is Occupied: {cellData.isOccupied}");
     }

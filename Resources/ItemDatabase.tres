@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="ItemDatabase" load_steps=2 format=3 uid="uid://bmyu3ku1lnguo"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="1_a561g"]
+
+[resource]
+script = ExtResource("1_a561g")
+MyProperty = 0

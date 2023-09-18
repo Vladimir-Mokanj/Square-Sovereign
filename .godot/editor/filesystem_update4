@@ -1,7 +1,9 @@
-res://_Production/_Scenes/TestScene.tscn
-res://_Production/Shaders/heightShader.gdshader
-res://Resources/Terrain/DebugTerrainData.tres
+res://addons/data_importer/DataImporter.cs
+res://_Production/Scripts/Data/ItemDatabase.cs
 res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Managers/GameManager.cs
 res://_Production/Scripts/Player/PlayerController.cs
 res://_Production/Scripts/UI/DebugTestUI.cs
+res://_Production/_Scenes/TestScene.tscn
+res://_Production/Shaders/heightShader.gdshader
+res://Resources/Terrain/DebugTerrainData.tres

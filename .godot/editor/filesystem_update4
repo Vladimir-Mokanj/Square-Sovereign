@@ -1,9 +1,8 @@
 res://addons/data_importer/DataImporter.cs
+res://addons/data_importer/DataSheetLoader.cs
 res://_Production/Scripts/Data/Item.cs
 res://_Production/Scripts/Data/ItemBase.cs
 res://_Production/Scripts/Data/ItemDatabase.cs
-res://_Production/Scripts/Data/Item/Building.cs
-res://_Production/Scripts/Data/Item/Resource.cs
 res://_Production/Scripts/Data/Item/Unit.cs
 res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Managers/GameManager.cs

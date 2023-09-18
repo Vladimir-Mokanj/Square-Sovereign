@@ -16,7 +16,7 @@ public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
 
     public static IEnumerable<Type> GetAllItemTypes() => 
         typeof(Item).Assembly.GetTypes().Where(type => type.IsSubclassOf(typeof(Item))).ToList();
-
+    
     public static void LoadImportedData(DataTable csvFile, Type dataType) => Database.Load(csvFile, dataType);
 
     private void Load(DataTable csvFile, Type dataType)

@@ -26,7 +26,8 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         
         public int GetHashCode(T obj) => obj.GetHashCode();
     }
-    
+
+    private List<T> temporaryList = new();
     protected void Load(List<T> values, T[] targets, string targetsPath, Func<T, bool> filter)
     {
         if (!values.Any())
@@ -60,27 +61,45 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         {
             string itemType = item.GetType().Name;
             string itemName = item.Name.Replace(" ", "");
-            return Path.Combine("res://Resources/Items/", itemType, $"{itemName}.tres");
+            GD.Print(Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres"));
+            return Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres");
         }
         
         ItemEqualityComparer comparer = new();
-        //Dictionary<T, string> itemPaths = targets.Where(filter)
-        //    .ToDictionary(item => item, item => GetItemPath(item as Item));
+        Dictionary<T, string> itemPaths = targets.Where(filter)
+            .ToDictionary(item => item, item => GetItemPath(item as Item));
             
         List<(T item, string)> itemsToAdd = values.Except(targets, comparer)
             .Select(item => (item, CreateItemPath(item))).ToList();
 
-        //var itemsToUpdate = values.Intersect(targets, comparer)
-        //    .Select(item => (item, itemPaths[item])).ToList();
+        List<(T item, string)> itemsToUpdate = values.Intersect(targets, comparer)
+            .Select(item => (item, itemPaths[item])).ToList();
         //    
         //var itemsToDelete = targets.Where(filter).Except(values, comparer)
         //    .Select(item => (item, itemPaths[item])).ToList();
         
-        foreach ((T item, string path) in itemsToAdd)
+        foreach ((T item, string path) in itemsToUpdate)
         {
-            GD.Print("Creating " + path);
-            if (ResourceSaver.Save(item, path) == Error.Ok)
-                targets[0] = (T)ResourceLoader.Load(path);
+            Item serializedItem = ResourceLoader.Load(path) as Item;
+            if (item == null)
+                continue;
+            
+            for (int i = 0; i < _items.Length; ++i)
+            {
+                if (_items[i] == null || _items[i].Name != serializedItem.Name) 
+                    continue;
+                
+                GD.Print("Updating " + serializedItem.GetType());
+                _items[i] = serializedItem;
+                break;
+            }
         }
+        
+        //List<Item> savedItems = itemsToAdd.Select(itemAndPath =>
+        //    {
+        //        (T item, string path) = itemAndPath;
+        //        return ResourceSaver.Save(item, path) == Error.Ok ? (Item)ResourceLoader.Load(path) : null;
+        //    }).Where(item => item != null).ToList();
+        //_items = _items.Where(item => item != null).Concat(savedItems).ToArray();
     }
 }

@@ -18,10 +18,10 @@ public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
         typeof(Item).Assembly.GetTypes().Where(type => type.IsSubclassOf(typeof(Item))).ToList();
 
     public static void LoadImportedData(DataTable csvFile, Type dataType) => Database.Load(csvFile, dataType);
-    
-    public void Load(DataTable csvFile, Type dataType)
+
+    private void Load(DataTable csvFile, Type dataType)
     {
-        string indexPath = "res://Resources/";
+        const string indexPath = "res://Resources/";
         
         string allItemsPath = Path.Combine(indexPath, "Items");
         string itemsPath = Path.Combine(allItemsPath, dataType.Name);

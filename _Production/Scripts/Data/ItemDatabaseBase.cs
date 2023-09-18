@@ -15,7 +15,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
     public static TI Database => _database ??= GD.Load("Resources/" + typeof(TI).Name + ".tres") as TI;
     private static TI _database;
     
-    private class ItemEqualityComparer<T> : IEqualityComparer<T> where T : ItemBase
+    private class ItemEqualityComparer : IEqualityComparer<T>
     {
         public bool Equals(T x, T y)
         {
@@ -27,7 +27,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         public int GetHashCode(T obj) => obj.GetHashCode();
     }
     
-    protected void Load<T>(List<T> values, T[] targets, string targetsPath, Func<T, bool> filter) where T : ItemBase
+    protected void Load(List<T> values, T[] targets, string targetsPath, Func<T, bool> filter)
     {
         if (!values.Any())
             return;
@@ -38,8 +38,6 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
             GD.PrintErr("Assertion failed: types.Count should be 1 but is " + types.Count);
             return;
         }
-
-        Type firstType = types.First();
         
         string CreateItemPath(T item)
         {
@@ -65,7 +63,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
             return Path.Combine("res://Resources/Items/", itemType, $"{itemName}.tres");
         }
         
-        var comparer = new ItemEqualityComparer<T>();
+        ItemEqualityComparer comparer = new();
         //Dictionary<T, string> itemPaths = targets.Where(filter)
         //    .ToDictionary(item => item, item => GetItemPath(item as Item));
             
@@ -81,58 +79,8 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         foreach ((T item, string path) in itemsToAdd)
         {
             GD.Print("Creating " + path);
-
-            if (item is Resource resource)
-            {
-                // Save the resource
-                if (ResourceSaver.Save(resource, path) == Error.Ok)
-                {
-                    GD.Print("Successfully saved at " + path);
-
-                    // Load the resource
-                    if (ResourceLoader.Load(path) is T loadedResource)
-                    {
-                        targets[0] = loadedResource;
-                        GD.Print("Successfully loaded from " + path);
-                    }
-                    else
-                    {
-                        GD.PrintErr("Failed to load asset at " + path);
-                    }
-                }
-                else
-                {
-                    GD.PrintErr("Failed to save asset at " + path);
-                }
-            }
-            else
-            {
-                GD.PrintErr("Item is not a Resource: " + path);
-            }
+            if (ResourceSaver.Save(item, path) == Error.Ok)
+                targets[0] = (T)ResourceLoader.Load(path);
         }
-        
-        
-        //foreach ((T item, string path) in itemsToAdd)
-        //{
-        //    GD.Print("Creating " + path);
-        //    if (item is Resource resource)
-        //    {
-        //        ResourceSaver.Save(resource, path);
-        //        continue;
-        //    }
-        //    
-        //    GD.PrintErr("Failed to load asset at " + path);
-        //}
-        //
-        //foreach ((T _, string path) in itemsToAdd)
-        //{
-        //    if (ResourceLoader.Load(path) is T loadedResource)
-        //    {
-        //        targets.Add(loadedResource);
-        //        continue;
-        //    }
-        //    
-        //    GD.PrintErr("Failed to load asset at " + path);
-        //}
     }
 }

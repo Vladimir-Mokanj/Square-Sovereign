@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/ItemDatabase.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ItemDatabase.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Building.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Resource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Tools/CSVReader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Tools/CSVReader.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Tools/DataSheetLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Tools/DataSheetLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +112,7 @@
       <workItem from="1695025221592" duration="4890000" />
       <workItem from="1695038424568" duration="8773000" />
       <workItem from="1695063738213" duration="1905000" />
+      <workItem from="1695071432388" duration="349000" />
     </task>
     <servers />
   </component>
@@ -143,14 +129,7 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/_Production/Scripts/Tools/CSVReader.cs</url>
           <line>79</line>
-          <properties documentPath="C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\_Production\Scripts\Tools\CSVReader.cs" initialLine="79" containingFunctionPresentation="Method 'ReadRow'">
-            <startOffsets>
-              <option value="2301" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2313" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\_Production\Scripts\Tools\CSVReader.cs" initialLine="79" containingFunctionPresentation="Method 'ReadRow'" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

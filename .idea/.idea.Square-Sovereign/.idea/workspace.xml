@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.godot/editor/DataSheetLoader.cs-folding-6531ed8b2113294bc1fd43c29a9d94e3.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Tools/DataSheetLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Building.cs-folding-2993180e17df06268833677a70ecfbd1.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Resource.cs-folding-277f39ecc1ec402593fbdff643e0ad8b.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Unit.cs-folding-7568a474554bc8d028df252550ed4d12.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Building.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Resource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Unit.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/ItemDatabase.tres-folding-4292c730d888e428999b0d3cf4dd928d.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/ItemDatabase.tres-folding-4292c730d888e428999b0d3cf4dd928d.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/ItemDatabase.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ItemDatabase.tres" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Tools/DataSheetLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Tools/DataSheetLoader.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +130,7 @@
       <workItem from="1695019136539" duration="38000" />
       <workItem from="1695019686705" duration="4697000" />
       <workItem from="1695025221592" duration="4890000" />
-      <workItem from="1695038424568" duration="7398000" />
+      <workItem from="1695038424568" duration="8773000" />
     </task>
     <servers />
   </component>

@@ -2,6 +2,7 @@ using Godot;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace FT.Tools;
 
@@ -9,14 +10,41 @@ public class DataSheetLoader
 {
     private readonly List<IEnumerator> _downloadRequests = new();
 
+    public DataSheetLoader() => StartProcessDownloads();
+
+    private void StartProcessDownloads()
+    {
+        Thread processDownloadsThread = new(ProcessDownloads);
+        processDownloadsThread.Start();
+    }
+    
+    private void ProcessDownloads()
+    {
+        while (true)
+        {
+            _downloadRequests.RemoveAll(request => !MoveNext(request));
+            if (_downloadRequests.Count == 0)
+                break;
+
+            Thread.Sleep(100);
+        }
+    }
+    
+    private bool MoveNext(IEnumerator enumerator)
+    {
+        return enumerator.MoveNext();
+    }
+    
     public void DownloadMultiple(List<(string, Action<byte[]>)> requests)
     {
-        foreach ((string uri, Action<byte[]> onData) in requests) 
+        foreach ((string uri, Action<byte[]> onData) in requests)
             _downloadRequests.Add(GetRequest(uri, onData));
     }
     
     private IEnumerator GetRequest(string uri, Action<byte[]> onData)
     {
+        GD.PrintErr("An error occurred: ");
+        
         HttpClient httpClient = new();
 
         // Start connecting to the host
@@ -54,6 +82,7 @@ public class DataSheetLoader
             yield break;
         }
         
+        GD.Print("I AM HERE");
         onData?.Invoke(httpClient.ReadResponseBodyChunk());
     }
 }

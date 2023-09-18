@@ -5,45 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.godot/editor/CustomNode.cs-folding-659338053e158d2d26dcac40d7c03b88.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/DataImportDocker.cs-folding-ca498ff43f72abcef6eb360d753df01e.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/DataImporter.cs-folding-9cb2b5c435a77ef30e659fa04c23f834.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/DataImporter.gd-folding-90721922f6fc04d686d51223eb38d1e3.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/DataImporter.gd-folding-ad1372f812fb63035fe64dae1b4b6814.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ImportDataDock.cs-folding-50d7b2e050a7203d5efd8ae5611f0d92.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ItemBaseResource.cs-folding-4add206d3a5be6ccf6c40d8617331986.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ItemDatabase.tres-folding-4292c730d888e428999b0d3cf4dd928d.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ItemDatabase.tres-folding-60e4993eae95ba2d098ce2c534aec5e9.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/MyButton.cs-folding-61f95c7e1e4e1199a40d8835b9e11fed.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/MyButton.gd-folding-3b4551c878922496b4449b77a63a0c55.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/custom_node.gd-folding-1e73300e1d4b6b0d710cd803276cb1ea.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/plugin.cs-folding-95bbd56d3d30b976e19fc141e5f0e767.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/icon.png-270984c4e710b055721af5ac154dcf6e.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/icon.png-270984c4e710b055721af5ac154dcf6e.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/icon.png-815ad9e68968cc56fc0bb96718eb7bef.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/icon.png-815ad9e68968cc56fc0bb96718eb7bef.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/icon.png-c4ab53c8de56c841e4e0ec0ce15ba952.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/icon.png-c4ab53c8de56c841e4e0ec0ce15ba952.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/making_plugins-custom_node_icon.png-8a7f7e09b553c05aa1f023e40691d5e4.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/making_plugins-custom_node_icon.png-8a7f7e09b553c05aa1f023e40691d5e4.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/making_plugins-custom_node_icon.png-af820dd156860c003c9b170a53427ada.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/making_plugins-custom_node_icon.png-af820dd156860c003c9b170a53427ada.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/making_plugins-custom_node_icon.png-e44ae0012523a40f310f84bdbc218b0c.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/making_plugins-custom_node_icon.png-e44ae0012523a40f310f84bdbc218b0c.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/ItemDatabase.tres" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/icon.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Object" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Object" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/CSVReader.cs-folding-c7d3b7a9c03674caa00ba3b7f334b8d4.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Item.cs-folding-0f4cc745562960a2818e323eae5cb1f7.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/ItemBase.cs-folding-6d0b512fdffe51f614f4cec8db497435.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/ItemDatabaseBase.cs-folding-aae85989cc8b9995753d794ef1224210.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Tools/CSVReader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/ItemDatabase.tres-folding-4292c730d888e428999b0d3cf4dd928d.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/ItemDatabase.tres-folding-4292c730d888e428999b0d3cf4dd928d.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Resource" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/recent_dirs" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/recent_dirs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/script_editor_cache.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/script_editor_cache.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/global_script_class_cache.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/global_script_class_cache.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
@@ -53,9 +27,9 @@
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/uid_cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/uid_cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/ItemDatabase.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ItemDatabase.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +43,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/55/3352612e/FastNoiseLite.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/65/389bbc38/Node.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/ca/b8f0e30a/SceneTree.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/ItemIndex.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/NetworkIndex.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/Tools/CSV/CSVReader.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -152,7 +129,8 @@
       <workItem from="1695018997496" duration="62000" />
       <workItem from="1695019136539" duration="38000" />
       <workItem from="1695019686705" duration="4697000" />
-      <workItem from="1695025221592" duration="4871000" />
+      <workItem from="1695025221592" duration="4890000" />
+      <workItem from="1695038424568" duration="5023000" />
     </task>
     <servers />
   </component>

@@ -1,14 +1,9 @@
-using System.Collections.Generic;
 using Godot;
 
-[GlobalClass]
-public partial class ItemDatabase : Resource
-{
-    private static List<string> itemDatabase = new();
-    public static IReadOnlyList<string> Database => itemDatabase;
+namespace FT.Data;
 
-    public static void ase()
-    {
-        GD.Print($"My property value is: {Database.Count}");
-    }
+[Tool]
+public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
+{
+
 }

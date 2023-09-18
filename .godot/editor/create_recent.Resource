@@ -1,5 +1,5 @@
+Resource
 ItemDatabase
 Shader
 ShaderMaterial
 TerrainGenerationData
-Resource

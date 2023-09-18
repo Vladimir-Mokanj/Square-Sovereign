@@ -1,8 +1,10 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bmyu3ku1lnguo"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://bmyu3ku1lnguo"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="1_a561g"]
+[ext_resource type="Resource" uid="uid://ootgaytgp84q" path="res://Resources/Items/Unit/Unit_PrimalArcher.tres" id="1_efmqd"]
+[ext_resource type="Resource" uid="uid://bqbfvhd08uvr" path="res://Resources/Items/Unit/Unit_ClubMan.tres" id="2_x20x8"]
 
 [resource]
 script = ExtResource("1_a561g")
 _spreadsheetId = "1p4E7VJH4C_pD-b-xlXRijAjn7Q29zmo6Av0JlZX6SYw"
-_items = []
+_items = [ExtResource("1_efmqd"), ExtResource("2_x20x8"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bqbfvhd08uvr"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Unit.cs" id="1_21xg3"]
+
+[resource]
+script = ExtResource("1_21xg3")
+DisplayName = "Club Man"
+PrefabName = "ClubMan_Prefab"
+SpriteName = "ClubMan_Sprite"
+MaxStackAmount = 0
+Name = "ClubMan"

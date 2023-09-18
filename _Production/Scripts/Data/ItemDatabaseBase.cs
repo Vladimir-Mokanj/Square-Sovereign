@@ -27,7 +27,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         public int GetHashCode(T obj) => obj.GetHashCode();
     }
     
-    protected void Load<T>(List<T> values, List<T> targets, string targetsPath, Func<T, bool> filter) where T : ItemBase
+    protected void Load<T>(List<T> values, T[] targets, string targetsPath, Func<T, bool> filter) where T : ItemBase
     {
         if (!values.Any())
             return;
@@ -38,8 +38,9 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
             GD.PrintErr("Assertion failed: types.Count should be 1 but is " + types.Count);
             return;
         }
+
+        Type firstType = types.First();
         
-        Type type = types.First();
         string CreateItemPath(T item)
         {
             string itemName = $"{item.GetType().Name}_{item.Name.Replace(" ", "")}.tres";
@@ -76,27 +77,62 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         //    
         //var itemsToDelete = targets.Where(filter).Except(values, comparer)
         //    .Select(item => (item, itemPaths[item])).ToList();
+        
         foreach ((T item, string path) in itemsToAdd)
         {
             GD.Print("Creating " + path);
+
             if (item is Resource resource)
             {
-                ResourceSaver.Save(resource, path);
-                continue;
+                // Save the resource
+                if (ResourceSaver.Save(resource, path) == Error.Ok)
+                {
+                    GD.Print("Successfully saved at " + path);
+
+                    // Load the resource
+                    if (ResourceLoader.Load(path) is T loadedResource)
+                    {
+                        targets[0] = loadedResource;
+                        GD.Print("Successfully loaded from " + path);
+                    }
+                    else
+                    {
+                        GD.PrintErr("Failed to load asset at " + path);
+                    }
+                }
+                else
+                {
+                    GD.PrintErr("Failed to save asset at " + path);
+                }
             }
-            
-            GD.PrintErr("Failed to load asset at " + path);
+            else
+            {
+                GD.PrintErr("Item is not a Resource: " + path);
+            }
         }
         
-        foreach ((T _, string path) in itemsToAdd)
-        {
-            if (ResourceLoader.Load(path) is T loadedResource)
-            {
-                targets.Add(loadedResource);
-                continue;
-            }
-            
-            GD.PrintErr("Failed to load asset at " + path);
-        }
+        
+        //foreach ((T item, string path) in itemsToAdd)
+        //{
+        //    GD.Print("Creating " + path);
+        //    if (item is Resource resource)
+        //    {
+        //        ResourceSaver.Save(resource, path);
+        //        continue;
+        //    }
+        //    
+        //    GD.PrintErr("Failed to load asset at " + path);
+        //}
+        //
+        //foreach ((T _, string path) in itemsToAdd)
+        //{
+        //    if (ResourceLoader.Load(path) is T loadedResource)
+        //    {
+        //        targets.Add(loadedResource);
+        //        continue;
+        //    }
+        //    
+        //    GD.PrintErr("Failed to load asset at " + path);
+        //}
     }
 }

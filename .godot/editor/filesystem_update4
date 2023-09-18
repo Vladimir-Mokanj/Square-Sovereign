@@ -12,3 +12,4 @@ res://_Production/_Scenes/TestScene.tscn
 res://_Production/Shaders/heightShader.gdshader
 res://Resources/Terrain/DebugTerrainData.tres
 res://Resources/ItemDatabase.tres
+res://Resources/Items/Unit/Unit_PrimalArcher.tres

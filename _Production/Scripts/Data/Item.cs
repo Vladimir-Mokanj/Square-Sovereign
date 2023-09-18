@@ -15,6 +15,8 @@ public partial class Item : ItemBase
     {
         Name = data.Parse<string>(nameof(Name));
         DisplayName = data.Parse<string>(nameof(DisplayName));
+        PrefabName = data.Parse<string>(nameof(PrefabName));
+        SpriteName = data.Parse<string>(nameof(SpriteName));
         MaxStackAmount = data.Parse<int>(nameof(MaxStackAmount));
     }
 }

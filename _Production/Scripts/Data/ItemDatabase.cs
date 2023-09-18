@@ -31,7 +31,7 @@ public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
         foreach (DataRow dataRow in csvFile.Rows)
             items.AddIfNotNull(CreateItem(dataRow, dataType));
         
-        Load(items, _items.ToList(), itemsPath, x => x.GetType() == dataType);
+        Load(items, _items, itemsPath, x => x.GetType() == dataType);
     }
 
     private static Item CreateItem(DataRow dataRow, Type type)

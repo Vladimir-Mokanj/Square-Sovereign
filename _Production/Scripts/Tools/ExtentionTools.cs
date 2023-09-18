@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using Godot;
 
 namespace FT.Tools;
@@ -14,6 +17,19 @@ public static class ExtentionTools
 
         parent?.CallDeferred(method: "add_child", node);
         return node;
+    }
+    
+    public static void AddIfNotNull<T>(this List<T> self, T value)
+    {
+        if (value == null)
+            return;
+        self.Add(value);
+    }
+    
+    public static T Parse<T>(this DataRow self, string name)
+    {
+        TypeConverter typeConverter = TypeDescriptor.GetConverter(typeof(T));
+        return (T)typeConverter.ConvertFromInvariantString(self[name].ToString());
     }
     
     public static void CreateMeshNode(Vector3 pos, Node parent)

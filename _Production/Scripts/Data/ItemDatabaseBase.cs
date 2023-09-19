@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Godot;
+using FileAccess = System.IO.FileAccess;
 
 namespace FT.Data;
 
@@ -87,18 +89,25 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
            ResourceSaver.Save(item, path);
        }
 
+       const string pathToTres = "res://Resources/ItemDatabase.tres";
        foreach ((T item, string path) in itemsToDelete)
        {
-           for (int i = 0; i < _items.Length; ++i)
-           {
-               if (_items[i] == null || _items[i].Name != item.Name) 
-                   continue;
+           int index = Array.FindIndex(_items, i => i?.Name == item.Name);
+           if (index == -1) 
+               continue;
 
-               GD.PrintErr($"Deleting: {path}");
-               _items[i] = null;
-               File.Delete(ProjectSettings.GlobalizePath(path));
-               break;
-           }
+           _items[index] = null;
+
+           string globalizedPath = ProjectSettings.GlobalizePath(path);
+           if (File.Exists(globalizedPath))
+               File.Delete(globalizedPath);
+
+           string globalizedPathToTres = ProjectSettings.GlobalizePath(pathToTres);
+           string content = File.ReadAllText(globalizedPathToTres);
+           string pattern = $@"\[\w+_resource type=""Resource"".*path=""{Regex.Escape(path)}"".*\]";
+           string newContent = Regex.Replace(content, pattern, "");
+
+           File.WriteAllText(globalizedPathToTres, newContent);
        }
        
         List<Item> savedItems = itemsToAdd.Select(itemAndPath =>
@@ -107,11 +116,5 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
                 return ResourceSaver.Save(item, path) == Error.Ok ? (Item)ResourceLoader.Load(path) : null;
             }).Where(item => item != null).ToList();
         _items = _items.Where(item => item != null).Concat(savedItems).ToArray();
-        
-        //foreach ((T _, string path) in itemsToDelete)
-        //{
-        //    GD.PrintErr($"Deleting: {path}");
-        //    File.Delete(ProjectSettings.GlobalizePath(path));
-        //}
     }
 }

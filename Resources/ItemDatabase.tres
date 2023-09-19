@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="1_a561g"]
 [ext_resource type="Resource" uid="uid://ddtw03u7myymt" path="res://Resources/Items/Unit/Unit_ClubMan.tres" id="1_yiwwc"]
-[ext_resource type="Resource" uid="uid://dladqf2ckohxx" path="res://Resources/Items/Unit/Unit_PrimalArcher.tres" id="2_dbul2"]
+[ext_resource type="Resource" uid="uid://cju3yng3yu5ky" path="res://Resources/Items/Unit/Unit_PrimalArcher.tres" id="2_p5fmu"]
 
 [resource]
 script = ExtResource("1_a561g")
 _spreadsheetId = "1p4E7VJH4C_pD-b-xlXRijAjn7Q29zmo6Av0JlZX6SYw"
-_items = [ExtResource("1_yiwwc"), ExtResource("2_dbul2")]
+_items = [ExtResource("1_yiwwc"), ExtResource("2_p5fmu")]

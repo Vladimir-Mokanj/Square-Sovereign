@@ -63,11 +63,12 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
             string itemName = item.Name.Replace(" ", "");
             return Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres");
         }
-        
+
         ItemEqualityComparer comparer = new();
-        Dictionary<T, string> itemPaths = targets.Where(filter)
-            .ToDictionary(item => item, item => GetItemPath(item as Item));
-            
+        Dictionary<T, string> itemPaths = new();
+        foreach (T item in targets.Where(filter))
+            itemPaths.TryAdd(item, GetItemPath(item as Item));
+
         List<(T item, string)> itemsToAdd = values.Except(targets, comparer)
             .Select(item => (item, CreateItemPath(item))).ToList();
 
@@ -76,9 +77,9 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
             
         List<(T item, string)> itemsToDelete = targets.Where(filter).Except(values, comparer)
             .Select(item => (item, itemPaths[item])).ToList();
-        
-       foreach ((T item, string path) in itemsToUpdate)
-       {
+
+        foreach ((T item, string path) in itemsToUpdate)
+        {
            if (!ResourceLoader.Exists(path)) 
                continue;
            
@@ -87,11 +88,11 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
                continue;
            
            ResourceSaver.Save(item, path);
-       }
-
-       const string pathToTres = "res://Resources/ItemDatabase.tres";
-       foreach ((T item, string path) in itemsToDelete)
-       {
+        }
+        
+        const string pathToTres = "res://Resources/ItemDatabase.tres";
+        foreach ((T item, string path) in itemsToDelete)
+        {
            int index = Array.FindIndex(_items, i => i?.Name == item.Name);
            if (index == -1) 
                continue;
@@ -108,7 +109,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
            string newContent = Regex.Replace(content, pattern, "");
 
            File.WriteAllText(globalizedPathToTres, newContent);
-       }
+        }
        
         List<Item> savedItems = itemsToAdd.Select(itemAndPath =>
             {

@@ -21,16 +21,12 @@ public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
 
     private void Load(DataTable csvFile, Type dataType)
     {
-        const string indexPath = "res://Resources/";
-        
-        string allItemsPath = Path.Combine(indexPath, "Items");
-        string itemsPath = Path.Combine(allItemsPath, dataType.Name);
+        string itemsPath = Path.Combine("res://Resources/Items", dataType.Name);
         GD.Print("Target path " + itemsPath);
-
         List<Item> items = new();
         foreach (DataRow dataRow in csvFile.Rows)
             items.AddIfNotNull(CreateItem(dataRow, dataType));
-        
+
         Load(items, _items, itemsPath, x => x.GetType() == dataType);
     }
 

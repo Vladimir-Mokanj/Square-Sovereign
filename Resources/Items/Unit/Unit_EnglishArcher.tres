@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bifrt7go4avw"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Unit.cs" id="1_rnqmu"]
+[ext_resource type="PackedScene" uid="uid://be2214uf275nx" path="res://Resources/Items/Unit/Prefabs/EnglishArcher_Prefab.tscn" id="1_vatdj"]
+
+[resource]
+script = ExtResource("1_rnqmu")
+DisplayName = "English Archer"
+PrefabName = "EnglishArcher_Prefab"
+Prefab = ExtResource("1_vatdj")
+SpriteName = "EnglishArcher_Sprite"
+MaxStackAmount = 1
+Name = "EnglishArcher"

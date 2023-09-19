@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bwnn58wtthm3h"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Building.cs" id="1_u61el"]
+
+[resource]
+script = ExtResource("1_u61el")
+DisplayName = "Farm Plot"
+PrefabName = "FarmPlot_Prefab"
+SpriteName = "FarmPlot_Sprite"
+MaxStackAmount = 1
+Name = "FarmPlot"

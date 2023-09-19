@@ -1,11 +1,13 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ddtw03u7myymt"]
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ddtw03u7myymt"]
 
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Unit.cs" id="1_gc8cl"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Unit.cs" id="1_4hck4"]
+[ext_resource type="PackedScene" uid="uid://cpgcv5vhu8em8" path="res://Resources/Items/Unit/Prefabs/Clubman_Prefab.tscn" id="1_seu6p"]
 
 [resource]
-script = ExtResource("1_gc8cl")
-DisplayName = "Club Man"
-PrefabName = "ClubMan_Prefab"
-SpriteName = "ClubMan_Sprite"
-MaxStackAmount = 113
-Name = "ClubMan"
+script = ExtResource("1_4hck4")
+DisplayName = "Clubman"
+PrefabName = "Clubman_Prefab"
+Prefab = ExtResource("1_seu6p")
+SpriteName = "Clubman_Sprite"
+MaxStackAmount = 1
+Name = "Clubman"

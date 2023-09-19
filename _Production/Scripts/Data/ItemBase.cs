@@ -2,7 +2,6 @@ using Godot;
 
 namespace FT.Data;
 
-[GlobalClass]
 public partial class ItemBase : Resource
 {
     [Export] public string Name { get; protected set; }

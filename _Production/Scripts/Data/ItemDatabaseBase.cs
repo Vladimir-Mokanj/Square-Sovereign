@@ -32,7 +32,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
     {
         if (!values.Any())
             return;
-        
+
         List<Type> types = values.Select(x => x.GetType()).Distinct().ToList();
         if (types.Count != 1)
         {

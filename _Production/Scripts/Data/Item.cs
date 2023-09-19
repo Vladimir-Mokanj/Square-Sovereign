@@ -1,6 +1,9 @@
-using Godot;
+#if TOOLS
 using System.Data;
 using FT.Tools;
+#endif
+
+using Godot;
 
 namespace FT.Data;
 
@@ -13,6 +16,7 @@ public partial class Item : ItemBase
     [Export] public Texture Sprite { get; private set; }
     [Export] public int MaxStackAmount { get; private set; }
 
+#if TOOLS
     public virtual void Setup(DataRow data)
     {
         Name = data.Parse<string>(nameof(Name));
@@ -23,4 +27,5 @@ public partial class Item : ItemBase
         MaxStackAmount = data.Parse<int>(nameof(MaxStackAmount));
         Prefab = GD.Load<PackedScene>($"res://Resources/Items/{GetType().Name}/Prefabs/{PrefabName}.tscn");
     }
+#endif
 }

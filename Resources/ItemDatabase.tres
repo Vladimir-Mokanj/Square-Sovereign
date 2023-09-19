@@ -1,14 +1,15 @@
-[gd_resource type="Resource" script_class="ItemDatabase" load_steps=8 format=3 uid="uid://dbed4jyomodhh"]
+[gd_resource type="Resource" script_class="ItemDatabase" load_steps=9 format=3 uid="uid://dbed4jyomodhh"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="1_a561g"]
-[ext_resource type="Resource" uid="uid://dcuqr5kbjg3cd" path="res://Resources/Items/Building/Building_IronMine.tres" id="3_uu1v4"]
-[ext_resource type="Resource" uid="uid://bwnn58wtthm3h" path="res://Resources/Items/Building/Building_FarmPlot.tres" id="4_mlhh4"]
-[ext_resource type="Resource" uid="uid://ddtw03u7myymt" path="res://Resources/Items/Unit/Unit_Clubman.tres" id="5_7wu2i"]
-[ext_resource type="Resource" uid="uid://kh6pg6cbtrvb" path="res://Resources/Items/Resource/Resource_Ore.tres" id="6_tg61l"]
-[ext_resource type="Resource" uid="uid://bifrt7go4avw" path="res://Resources/Items/Unit/Unit_EnglishArcher.tres" id="6_vv4mk"]
-[ext_resource type="Resource" uid="uid://bnk058p40owst" path="res://Resources/Items/Resource/Resource_Food.tres" id="7_5uy4f"]
+[ext_resource type="Resource" uid="uid://cqc821fssliey" path="res://Resources/Items/Building/Building_IronMine.tres" id="1_thh4v"]
+[ext_resource type="Resource" uid="uid://dpmmwemju8irj" path="res://Resources/Items/Building/Building_FarmPlot.tres" id="2_2cqej"]
+[ext_resource type="Resource" uid="uid://b46i2mgofk1ek" path="res://Resources/Items/Resource/Resource_Ore.tres" id="3_yay2g"]
+[ext_resource type="Resource" uid="uid://bgfcvdfia6ib3" path="res://Resources/Items/Unit/Unit_Clubman.tres" id="5_besuv"]
+[ext_resource type="Resource" uid="uid://cn2g78ilcpgn6" path="res://Resources/Items/Unit/Unit_EnglishArcher.tres" id="6_eitq0"]
+[ext_resource type="Resource" uid="uid://p7ejlf1cepdx" path="res://Resources/Items/Resource/Resource_Food.tres" id="7_5cpgg"]
+[ext_resource type="Resource" uid="uid://bos6qwcwnc8yo" path="res://Resources/Items/Resource/Resource_Wood.tres" id="7_ts3tf"]
 
 [resource]
 script = ExtResource("1_a561g")
 _spreadsheetId = "1p4E7VJH4C_pD-b-xlXRijAjn7Q29zmo6Av0JlZX6SYw"
-_items = [ExtResource("3_uu1v4"), ExtResource("4_mlhh4"), ExtResource("6_vv4mk"), ExtResource("6_tg61l"), ExtResource("7_5uy4f"), ExtResource("5_7wu2i")]
+_items = [ExtResource("1_thh4v"), ExtResource("2_2cqej"), ExtResource("3_yay2g"), ExtResource("5_besuv"), ExtResource("6_eitq0"), ExtResource("7_ts3tf"), ExtResource("7_5cpgg")]

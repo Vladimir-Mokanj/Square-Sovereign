@@ -1,9 +1,9 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bwnn58wtthm3h"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dpmmwemju8irj"]
 
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Building.cs" id="1_u61el"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Building.cs" id="1_djki8"]
 
 [resource]
-script = ExtResource("1_u61el")
+script = ExtResource("1_djki8")
 DisplayName = "Farm Plot"
 PrefabName = "FarmPlot_Prefab"
 SpriteName = "FarmPlot_Sprite"

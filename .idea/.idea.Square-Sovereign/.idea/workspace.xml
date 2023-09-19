@@ -5,64 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_FarmPlot.tres-folding-32ae43bb3e7071d33044fdbc5f8d4bfd.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_FarmPlot.tres-folding-b88666491d1f58616f04877ab075ac4d.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_IronMine.tres-folding-38e8b447ec80cfd49615b6f3585fa714.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_IronMine.tres-folding-9044c219140f8b8d9f88294e12b8273a.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Clubman_Prefab.tscn-folding-144e332d35b795fc9198479116a96170.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/EnglishArcher_Prefab.tscn-editstate-7bec7801ac9a40f395e38018e6f9a913.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/EnglishArcher_Prefab.tscn-folding-7bec7801ac9a40f395e38018e6f9a913.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/EnglishArcher_Prefab.tscn-folding-f1873b3aa88c383e62d93f9ee5873e8b.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Food_Prefab.tscn-folding-7638c6a3b39e8a35a5cadad53144267e.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Material.cs-folding-e907a874e25a17e4ab09411c66c78d5b.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Ore_Prefab.tscn-folding-980d125dfa2ebbeb7e5096afcf7052a2.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Resource_Food.tres-folding-4453e126b0409fa17e2a1849b425b72c.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Resource_Food.tres-folding-99b2377a24ad6a939cbbcadffac8f71d.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Resource_Ore.tres-folding-023538b6f509530973408634427f66da.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Resource_Ore.tres-folding-ce89e2105dbed0b3272cbd67431af2e4.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Resource_Wood.tres-folding-38a8d19c8cc948f157caec03cc33ba09.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Resource_Wood.tres-folding-4599b48c3598c87ce654b71b1f76447f.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Unit_Clubman.tres-folding-44fe54637daa1a1670795c8d08ccdddf.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Unit_Clubman.tres-folding-4c3ec3a279d3b69acbfea976c5cc6f94.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Unit_EnglishArcher.tres-folding-05fe937002b6ef30aa7130f31f91ed50.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Unit_EnglishArcher.tres-folding-1c631ecaf2a2319db268734f7e2d809c.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/EnglishArcher.png-04f3acb2a654bb2ad71f4a3d3ba599d1.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/EnglishArcher.png-04f3acb2a654bb2ad71f4a3d3ba599d1.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/EnglishArcher.png-04f3acb2a654bb2ad71f4a3d3ba599d1.s3tc.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/EnglishArcher_Sprite.png-fb3802892fdf61337228df9567b1713c.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Food_Sprite.png-642b93f88122f16bf0a9b66879d3963f.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Food_Sprite.png-642b93f88122f16bf0a9b66879d3963f.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Ore_Sprite.png-9ce0ee18280e8513f86e07b4aab3b990.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Ore_Sprite.png-9ce0ee18280e8513f86e07b4aab3b990.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/making_plugins-custom_node_icon.png-673ebc6b1c6e390de9ccd8eb4e5447ba.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/making_plugins-custom_node_icon.png-673ebc6b1c6e390de9ccd8eb4e5447ba.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_FarmPlot.tres" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_IronMine.tres" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Icons/Food_Sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Icons/Food_Sprite.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Icons/Ore_Sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Icons/Ore_Sprite.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Prefabs/Food_Prefab.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Prefabs/Ore_Prefab.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Resource_Food.tres" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Resource_Ore.tres" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Unit/Prefabs/Clubman_Prefab.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Unit/Prefabs/EnglishArcher_Prefab.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Unit/Unit_EnglishArcher.tres" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Building.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Resource.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Wood_Prefab.tscn-folding-e1ee5d73e84e1ac67bd2de06bd4d05c9.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/wood_prefab.tscn-folding-d67fa0005f125bb11d7abd261e2dab24.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Wood_Sprite.png-b52de9e6bcaf6fe6f89c8e16a1e8af3a.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Wood_Sprite.png-b52de9e6bcaf6fe6f89c8e16a1e8af3a.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Wood_Sprite.png-b8b839ed0610158024ba590ae344995e.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Wood_Sprite.png-b8b839ed0610158024ba590ae344995e.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Wood_Sprite.png-c91651bf0bd57b08435ada6c77a3adf9.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Wood_Sprite.png-c91651bf0bd57b08435ada6c77a3adf9.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Icons/Wood_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Icons/Wood_Sprite.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Prefabs/wood_prefab.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Resource/Resource_Wood.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Ore_Prefab.tscn-folding-980d125dfa2ebbeb7e5096afcf7052a2.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Ore_Prefab.tscn-folding-980d125dfa2ebbeb7e5096afcf7052a2.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/recent_dirs" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/recent_dirs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/global_script_class_cache.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/global_script_class_cache.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
@@ -70,10 +34,15 @@
       <change beforePath="$PROJECT_DIR$/.godot/uid_cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/uid_cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/ItemDatabase.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ItemDatabase.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_FarmPlot.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_FarmPlot.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_IronMine.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_IronMine.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Resource/Resource_Food.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Resource/Resource_Food.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Resource/Resource_Ore.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Resource/Resource_Ore.tres" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Items/Unit/Unit_ClubMan.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Unit/Unit_ClubMan.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Items/Unit/Unit_PrimalArcher.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Unit/Unit_EnglishArcher.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Unit/Unit_EnglishArcher.tres" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Resource.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Resource.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" afterDir="false" />
     </list>
@@ -90,6 +59,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/55/3352612e/FastNoiseLite.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/65/389bbc38/Node.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/ca/b8f0e30a/SceneTree.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1876245c92164f36b06f67c8515c73e0a23480/ba/ebdba5bf/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2fed2baf483487192964d30b64cb96c2ce00/e3/ab71b9c3/EditorPlugin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/Item.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/ItemIndex.cs" root0="SKIP_HIGHLIGHTING" />

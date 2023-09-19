@@ -14,6 +14,7 @@ res://Resources/Items/Building/Building_IronMine.tres
 res://Resources/Items/Building/Building_FarmPlot.tres
 res://Resources/Items/Resource/Resource_Ore.tres
 res://Resources/Items/Resource/Resource_Food.tres
+res://Resources/Items/Resource/Resource_Wood.tres
 res://Resources/Items/Unit/Unit_Clubman.tres
 res://Resources/Items/Unit/Unit_EnglishArcher.tres
 res://_Production/_Scenes/TestScene.tscn

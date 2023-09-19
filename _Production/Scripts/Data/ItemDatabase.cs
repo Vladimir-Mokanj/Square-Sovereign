@@ -26,7 +26,7 @@ public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
         List<Item> items = new();
         foreach (DataRow dataRow in csvFile.Rows)
             items.AddIfNotNull(CreateItem(dataRow, dataType));
-
+        
         Load(items, _items, itemsPath, x => x.GetType() == dataType);
     }
 

@@ -8,9 +8,7 @@ res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Managers/GameManager.cs
 res://_Production/Scripts/Player/PlayerController.cs
 res://_Production/Scripts/UI/DebugTestUI.cs
-res://Resources/Items\Unit\Unit_PrimalArcher.tres
 res://_Production/_Scenes/TestScene.tscn
 res://_Production/Shaders/heightShader.gdshader
 res://Resources/Terrain/DebugTerrainData.tres
-res://Resources/Items/Unit/Unit_PrimalArcher.tres
 res://Resources/ItemDatabase.tres

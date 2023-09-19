@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Unit_ClubMan.tres-folding-ad475d31ab998fa3947c95bcfa6e3bd8.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Unit_PrimalArcher.tres-folding-2fd1fecba711420023325aeb29d25028.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Unit_PrimalArcher.tres-folding-2fd1fecba711420023325aeb29d25028.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/imported/icon.png-815ad9e68968cc56fc0bb96718eb7bef.ctex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
@@ -18,11 +18,11 @@
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/uid_cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/uid_cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/ItemDatabase.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ItemDatabase.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/ItemDatabase.tres" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Unit/Unit_ClubMan.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Unit/Unit_ClubMan.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Unit/Unit_PrimalArcher.tres" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabase.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/icon.png.import" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +37,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/55/3352612e/FastNoiseLite.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/65/389bbc38/Node.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/ca/b8f0e30a/SceneTree.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2fed2baf483487192964d30b64cb96c2ce00/e3/ab71b9c3/EditorPlugin.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/Item.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/ItemIndex.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/NetworkIndex.cs" root0="SKIP_HIGHLIGHTING" />
@@ -131,6 +132,7 @@
       <workItem from="1695038424568" duration="8773000" />
       <workItem from="1695063738213" duration="1905000" />
       <workItem from="1695071432388" duration="4733000" />
+      <workItem from="1695104767881" duration="8494000" />
     </task>
     <servers />
   </component>

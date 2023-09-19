@@ -8,7 +8,7 @@ using Godot;
 
 namespace FT.Data;
 
-[Tool]
+[GlobalClass, Tool]
 public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
 {
     public string GetDownloadUrl(Type type) => 

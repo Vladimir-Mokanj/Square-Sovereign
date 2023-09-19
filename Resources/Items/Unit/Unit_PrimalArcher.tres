@@ -1,11 +1,11 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ba57qil6dncng"]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dladqf2ckohxx"]
 
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Unit.cs" id="1_an4j7"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Unit.cs" id="1_p13yc"]
 
 [resource]
-script = ExtResource("1_an4j7")
+script = ExtResource("1_p13yc")
 DisplayName = "Primal Archer"
 PrefabName = "PrimalArcher_Prefab"
 SpriteName = "PrimalArcher_Sprite"
-MaxStackAmount = 0
+MaxStackAmount = 25
 Name = "PrimalArcher"

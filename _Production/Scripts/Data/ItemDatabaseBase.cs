@@ -6,7 +6,6 @@ using Godot;
 
 namespace FT.Data;
 
-[GlobalClass]
 public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where TI : ItemDatabaseBase<T, TI>
 {
     [Export] protected string _spreadsheetId;
@@ -27,7 +26,6 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         public int GetHashCode(T obj) => obj.GetHashCode();
     }
 
-    private List<T> temporaryList = new();
     protected void Load(List<T> values, T[] targets, string targetsPath, Func<T, bool> filter)
     {
         if (!values.Any())
@@ -61,7 +59,6 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         {
             string itemType = item.GetType().Name;
             string itemName = item.Name.Replace(" ", "");
-            GD.Print(Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres"));
             return Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres");
         }
         
@@ -74,32 +71,33 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
 
         List<(T item, string)> itemsToUpdate = values.Intersect(targets, comparer)
             .Select(item => (item, itemPaths[item])).ToList();
-        //    
-        //var itemsToDelete = targets.Where(filter).Except(values, comparer)
-        //    .Select(item => (item, itemPaths[item])).ToList();
-        
-        foreach ((T item, string path) in itemsToUpdate)
-        {
-            Item serializedItem = ResourceLoader.Load(path) as Item;
-            if (item == null)
-                continue;
             
-            for (int i = 0; i < _items.Length; ++i)
-            {
-                if (_items[i] == null || _items[i].Name != serializedItem.Name) 
-                    continue;
-                
-                GD.Print("Updating " + serializedItem.GetType());
-                _items[i] = serializedItem;
-                break;
-            }
-        }
+        List<(T item, string)> itemsToDelete = targets.Where(filter).Except(values, comparer)
+            .Select(item => (item, itemPaths[item])).ToList();
         
-        //List<Item> savedItems = itemsToAdd.Select(itemAndPath =>
-        //    {
-        //        (T item, string path) = itemAndPath;
-        //        return ResourceSaver.Save(item, path) == Error.Ok ? (Item)ResourceLoader.Load(path) : null;
-        //    }).Where(item => item != null).ToList();
-        //_items = _items.Where(item => item != null).Concat(savedItems).ToArray();
+       foreach ((T item, string path) in itemsToUpdate)
+       {
+           if (!ResourceLoader.Exists(path)) 
+               continue;
+           
+           int index = Array.FindIndex(_items, x => x?.Name == item.Name);
+           if (index == -1)
+               continue;
+           
+           ResourceSaver.Save(item, path);
+       }
+
+        List<Item> savedItems = itemsToAdd.Select(itemAndPath =>
+            {
+                (T item, string path) = itemAndPath;
+                return ResourceSaver.Save(item, path) == Error.Ok ? (Item)ResourceLoader.Load(path) : null;
+            }).Where(item => item != null).ToList();
+        _items = _items.Where(item => item != null).Concat(savedItems).ToArray();
+        
+        foreach ((T _, string path) in itemsToDelete)
+        {
+            GD.PrintErr($"Deleting: {path}");
+            File.Delete(ProjectSettings.GlobalizePath(path));
+        }
     }
 }

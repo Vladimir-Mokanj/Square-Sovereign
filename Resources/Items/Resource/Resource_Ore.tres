@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Resource.cs" id="3_0ttlu"]
 
 [resource]
+resource_name = "Ore"
 script = ExtResource("3_0ttlu")
 DisplayName = "Iron Ore"
 PrefabName = "Ore_Prefab"

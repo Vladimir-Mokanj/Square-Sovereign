@@ -1,5 +1,6 @@
 res://addons/data_importer/DataImporter.cs
-res://addons/data_importer/DataSheetLoader.cs
+res://addons/data_importer/ReadOnlyInspector.cs
+res://addons/data_importer/Tools/DataSheetLoader.cs
 res://_Production/Scripts/Data/Item.cs
 res://_Production/Scripts/Data/ItemBase.cs
 res://_Production/Scripts/Data/ItemDatabase.cs
@@ -10,14 +11,10 @@ res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Managers/GameManager.cs
 res://_Production/Scripts/Player/PlayerController.cs
 res://_Production/Scripts/UI/DebugTestUI.cs
-res://Resources/Items/Building/Building_IronMine.tres
-res://Resources/Items/Building/Building_FarmPlot.tres
-res://Resources/Items/Resource/Resource_Ore.tres
-res://Resources/Items/Resource/Resource_Food.tres
-res://Resources/Items/Resource/Resource_Wood.tres
-res://Resources/Items/Unit/Unit_Clubman.tres
-res://Resources/Items/Unit/Unit_EnglishArcher.tres
-res://_Production/_Scenes/TestScene.tscn
+res://addons/data_importer/ReadOnlyTexture.tscn
 res://_Production/Shaders/heightShader.gdshader
 res://Resources/Terrain/DebugTerrainData.tres
-res://Resources/ItemDatabase.tres
+res://Resources/Items/Resource/Resource_Wood.tres
+res://Resources/Items/Resource/Resource_Ore.tres
+res://Resources/Items/Resource/Resource_Food.tres
+res://_Production/_Scenes/TestScene.tscn

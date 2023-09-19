@@ -1,11 +1,11 @@
-Node3D
-TextureRect
-Panel
 PanelContainer
-Label
-HBoxContainer
-Control
 Container
+TextureRect
+HBoxContainer
+Label
+Node3D
+Panel
+Control
 BoxContainer
 RichTextLabel
 TextEdit

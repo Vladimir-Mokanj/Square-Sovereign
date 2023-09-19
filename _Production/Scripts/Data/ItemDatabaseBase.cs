@@ -1,10 +1,12 @@
+#if TOOLS
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+#endif 
+
 using Godot;
-using FileAccess = System.IO.FileAccess;
 
 namespace FT.Data;
 
@@ -16,6 +18,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
     public static TI Database => _database ??= GD.Load("Resources/" + typeof(TI).Name + ".tres") as TI;
     private static TI _database;
     
+#if TOOLS
     private class ItemEqualityComparer : IEqualityComparer<T>
     {
         public bool Equals(T x, T y)
@@ -118,4 +121,6 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
             }).Where(item => item != null).ToList();
         _items = _items.Where(item => item != null).Concat(savedItems).ToArray();
     }
+    
+#endif
 }

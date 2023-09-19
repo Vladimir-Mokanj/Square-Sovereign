@@ -5,6 +5,7 @@
 [ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Resource.cs" id="3_3jbdc"]
 
 [resource]
+resource_name = "Food"
 script = ExtResource("3_3jbdc")
 DisplayName = "Food"
 PrefabName = "Food_Prefab"

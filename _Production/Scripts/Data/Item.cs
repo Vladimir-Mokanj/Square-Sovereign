@@ -9,12 +9,12 @@ namespace FT.Data;
 
 public partial class Item : ItemBase
 {
-    [Export] public string DisplayName { get; private set; }
-    [Export] public string PrefabName { get; private set; }
-    [Export] public PackedScene Prefab { get; private set; }
-    [Export] public string SpriteName { get; private set; }
-    [Export] public Texture Sprite { get; private set; }
-    [Export] public int MaxStackAmount { get; private set; }
+    [Export, ReadOnly] public string DisplayName { get; private set; }
+    [Export, ReadOnly] public string PrefabName { get; private set; }
+    [Export, ReadOnly] public PackedScene Prefab { get; private set; }
+    [Export, ReadOnly] public string SpriteName { get; private set; }
+    [Export, ReadOnly] public Texture Sprite { get; private set; }
+    [Export, ReadOnly] public int MaxStackAmount { get; private set; }
 
 #if TOOLS
     public virtual void Setup(DataRow data)

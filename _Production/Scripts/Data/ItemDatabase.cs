@@ -1,9 +1,12 @@
+#if TOOLS
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
 using FT.Tools;
+#endif
+
 using Godot;
 
 namespace FT.Data;
@@ -11,6 +14,7 @@ namespace FT.Data;
 [GlobalClass, Tool]
 public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
 {
+#if TOOLS
     public string GetDownloadUrl(Type type) => 
         $"https://docs.google.com/spreadsheets/d/{_spreadsheetId}/gviz/tq?tqx=out:csv&sheet={type.Name}";
 
@@ -39,4 +43,6 @@ public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
         itemInstance.Setup(dataRow);
         return itemInstance;
     }
+    
+#endif
 }

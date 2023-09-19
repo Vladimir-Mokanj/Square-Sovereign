@@ -87,6 +87,20 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
            ResourceSaver.Save(item, path);
        }
 
+       foreach ((T item, string path) in itemsToDelete)
+       {
+           for (int i = 0; i < _items.Length; ++i)
+           {
+               if (_items[i] == null || _items[i].Name != item.Name) 
+                   continue;
+
+               GD.PrintErr($"Deleting: {path}");
+               _items[i] = null;
+               File.Delete(ProjectSettings.GlobalizePath(path));
+               break;
+           }
+       }
+       
         List<Item> savedItems = itemsToAdd.Select(itemAndPath =>
             {
                 (T item, string path) = itemAndPath;
@@ -94,10 +108,10 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
             }).Where(item => item != null).ToList();
         _items = _items.Where(item => item != null).Concat(savedItems).ToArray();
         
-        foreach ((T _, string path) in itemsToDelete)
-        {
-            GD.PrintErr($"Deleting: {path}");
-            File.Delete(ProjectSettings.GlobalizePath(path));
-        }
+        //foreach ((T _, string path) in itemsToDelete)
+        //{
+        //    GD.PrintErr($"Deleting: {path}");
+        //    File.Delete(ProjectSettings.GlobalizePath(path));
+        //}
     }
 }

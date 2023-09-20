@@ -11,10 +11,13 @@ res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Managers/GameManager.cs
 res://_Production/Scripts/Player/PlayerController.cs
 res://_Production/Scripts/UI/DebugTestUI.cs
-res://addons/data_importer/ReadOnlyTexture.tscn
+res://Resources/Items/Resource/Prefabs/Wood_Prefab.tscn
 res://_Production/Shaders/heightShader.gdshader
 res://Resources/Terrain/DebugTerrainData.tres
-res://Resources/Items/Resource/Resource_Wood.tres
 res://Resources/Items/Resource/Resource_Ore.tres
 res://Resources/Items/Resource/Resource_Food.tres
+res://Resources/Items/Resource/Resource_Wood.tres
+res://Resources/Items/Building/Building_FarmPlot.tres
 res://_Production/_Scenes/TestScene.tscn
+res://addons/data_importer/ReadOnlyTexture.tscn
+res://addons/data_importer/ReadOnlyLabel.tscn

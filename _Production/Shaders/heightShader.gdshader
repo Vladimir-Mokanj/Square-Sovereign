@@ -12,9 +12,9 @@ void vertex() {
 }
 
 void fragment() {
-	if (y_coord < CellSize - 0.01f) 
+	if (y_coord < 0.999f) 
 		ALBEDO = texture(WaterTexture, UV).rgb;
-    else if (y_coord > CellSize + 0.01f) 
+    else if (y_coord > 1.001) 
 		ALBEDO = texture(StoneTexture, UV).rgb;
     else 
         ALBEDO = texture(DirtTexture, UV).rgb;

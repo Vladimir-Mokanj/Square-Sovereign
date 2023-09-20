@@ -19,15 +19,14 @@ public class CellManager
     /// Generate all of the cell data
     /// <param name="rows">Terrain Rows</param>
     /// <param name="heights">Vertex Y Heights Array</param>
-    /// <param name="cellSize">Size of the square</param>
-    public void InitializeCells(byte rows, byte[] heights, float cellSize)
+    public void InitializeCells(byte rows, byte[] heights)
     {
         for (byte x = 0; x < rows; x++)
             for (byte z = 0; z < _cols; z++)
             {
                 int index = x * _cols + z;
                 
-                (TerrainType, ResourceType) terrainData = SetTerrainData(heights[index], cellSize);
+                (TerrainType, ResourceType) terrainData = SetTerrainData(heights[index]);
                 _cells[index] = PackData(terrainData.Item1, terrainData.Item2, terrainData.Item1 != TerrainType.LAND);
             }
     }
@@ -49,11 +48,14 @@ public class CellManager
     private static byte PackData(TerrainType terrainType, ResourceType resourceType, bool isOccupied) => 
         (byte)(((byte)terrainType << 5) | ((byte)resourceType << 1) | (isOccupied ? 1 : 0));
 
-    private static (TerrainType, ResourceType) SetTerrainData(float height, float cellSize)
+    private static (TerrainType, ResourceType) SetTerrainData(float height)
     {
         bool hasResource = Random.Shared.Next(0, 100) < 5;
-        if (height < cellSize) return (TerrainType.WATER, hasResource ? ResourceType.FISH : ResourceType.NONE);
-        if (height > cellSize) return (TerrainType.HILL, hasResource ? ResourceType.METAL : ResourceType.NONE);
-        return (TerrainType.LAND, hasResource ? ResourceType.WOOD : ResourceType.NONE);
+        return height switch
+        {
+            < 1 => (TerrainType.WATER, hasResource ? ResourceType.FISH : ResourceType.NONE),
+            > 1 => (TerrainType.HILL, hasResource ? ResourceType.METAL : ResourceType.NONE),
+            _ => (TerrainType.LAND, hasResource ? ResourceType.WOOD : ResourceType.NONE)
+        };
     }
 }

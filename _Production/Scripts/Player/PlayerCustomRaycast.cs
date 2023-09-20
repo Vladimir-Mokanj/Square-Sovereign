@@ -27,7 +27,7 @@ public class PlayerCustomRaycast
         _cols = tgd.Cols;
 
         _maxT = Math.Max((tgd.Rows + tgd.Rows) * tgd.CellSize, (tgd.Cols + tgd.Cols) * tgd.CellSize);
-        _step = tgd.CellSize / 10.0f;
+        _step = tgd.CellSize / 5.0f;
     }
     
     /// Gets the row and column based on the projected ray towards the mouse position.

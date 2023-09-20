@@ -64,7 +64,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         {
             string itemType = item.GetType().Name;
             string itemName = item.Name.Replace(" ", "");
-            return Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres");
+            return Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres");    // Extend path later on
         }
 
         ItemEqualityComparer comparer = new();
@@ -93,7 +93,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
            ResourceSaver.Save(item, path);
         }
         
-        const string pathToTres = "res://Resources/ItemDatabase.tres";
+        const string pathToTres = "res://Resources/ItemDatabase.tres";  // Ugh, terrible
         foreach ((T item, string path) in itemsToDelete)
         {
            int index = Array.FindIndex(_items, i => i?.Name == item.Name);

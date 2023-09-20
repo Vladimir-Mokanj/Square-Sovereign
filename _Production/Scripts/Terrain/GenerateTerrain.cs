@@ -69,7 +69,7 @@ public class GenerateTerrain
 	private byte[] FindHighestYVertexOfTheCell()
 	{
 		byte[] cellHeight = new byte[_tgd.Rows * _tgd.Cols];
-		Array.Fill(cellHeight, _tgd.CellSize);
+		Array.Fill(cellHeight, value: (byte)1);
 		
 		for (byte x = 0; x < _tgd.Rows; x++)
 		for (byte z = 0; z < _tgd.Cols; z++)
@@ -80,12 +80,12 @@ public class GenerateTerrain
 				bl = tl + _tgd.Cols + 1,
 				br = tl + _tgd.Cols + 2;
 				
-			foreach (float height in new[]{vertices[tl].Y, vertices[tr].Y, vertices[bl].Y, vertices[br].Y})
+			foreach (byte height in new[]{vertices[tl].Y, vertices[tr].Y, vertices[bl].Y, vertices[br].Y})
 			{
-				if (Math.Abs(height - _tgd.CellSize) < 0.05f)
+				if (height == 1)
 					continue;
-
-				cellHeight[index] = (byte)height;
+				
+				cellHeight[index] = height;
 			}
 		}
 

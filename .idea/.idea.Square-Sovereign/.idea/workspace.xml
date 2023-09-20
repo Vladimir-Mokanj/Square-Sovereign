@@ -5,13 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Wood_Prefab.tscn-editstate-e1ee5d73e84e1ac67bd2de06bd4d05c9.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/1be2806ce785909ef020ab96de86c217aa43a5f2.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/4b4b95b477e9bacf36fe02e784db631686f71eb6.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/528ce250f1d5e0b8a91d3021e91268a9d648e3cd.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/9fe82fc62e7e59f3b99c8a82d9180b7411fa3a70.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/a24a5504618e272e28677e2a9bcf9f10a72af814.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/cf4d7dc2cfe7c91e1c27dbc0ef55a89a32a99cf1.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/de2b61a825d8d35dea86478e5c730f416d0e1206.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/ReadOnlyLabel.tscn-editstate-a68457d860f50e3e678d5bb997efd4b6.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/ReadOnlyLabel.tscn-editstate-a68457d860f50e3e678d5bb997efd4b6.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/ReadOnlyTexture.tscn-editstate-8bcfd227d72faaa5722ad37df589999d.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/ReadOnlyTexture.tscn-editstate-8bcfd227d72faaa5722ad37df589999d.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/uid_cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/uid_cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Managers/CellManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Managers/CellManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Managers/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Player/PlayerCustomRaycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Player/PlayerCustomRaycast.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateTerrain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/GenerateTerrain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainVertices.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Terrain/TerrainVertices.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Shaders/heightShader.gdshader" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Shaders/heightShader.gdshader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,9 +46,18 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/1e/0f3a56a0/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/55/3352612e/FastNoiseLite.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/65/389bbc38/Node.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/17ecfff6f7c64ec7aa08ab75932e7df63d0e00/ca/b8f0e30a/SceneTree.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1876245c92164f36b06f67c8515c73e0a23480/ba/ebdba5bf/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c2fed2baf483487192964d30b64cb96c2ce00/e3/ab71b9c3/EditorPlugin.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/Item.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/ItemIndex.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/InventorySystem/NetworkIndex.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/NetworkIdentifier.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/Tools/CSV/CSVReader.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://D:/Work/Unity/Projects/ascend-the-end/Assets/_Production/Scripts/Turing/Tools/CSV/StringConverter.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -43,11 +76,12 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;cell-manager&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;data-importer&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -103,6 +137,18 @@
       <workItem from="1694795456264" duration="455000" />
       <workItem from="1694851202706" duration="21294000" />
       <workItem from="1694933956607" duration="12513000" />
+      <workItem from="1695017541463" duration="625000" />
+      <workItem from="1695018365422" duration="609000" />
+      <workItem from="1695018997496" duration="62000" />
+      <workItem from="1695019136539" duration="38000" />
+      <workItem from="1695019686705" duration="4697000" />
+      <workItem from="1695025221592" duration="4890000" />
+      <workItem from="1695038424568" duration="8773000" />
+      <workItem from="1695063738213" duration="1905000" />
+      <workItem from="1695071432388" duration="4733000" />
+      <workItem from="1695104767881" duration="8494000" />
+      <workItem from="1695152760818" duration="5050000" />
+      <workItem from="1695207563439" duration="6845000" />
     </task>
     <servers />
   </component>
@@ -112,5 +158,17 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/_Production/Scripts/Tools/CSVReader.cs</url>
+          <line>79</line>
+          <properties documentPath="C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\_Production\Scripts\Tools\CSVReader.cs" initialLine="79" containingFunctionPresentation="Method 'ReadRow'" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

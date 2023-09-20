@@ -25,7 +25,7 @@ public partial class GameManager : Node
         generateTerrain.GenerateMesh(ExtentionTools.CreateNode<Node3D>("Terrain", "Terrain", GetTree().GetFirstNodeInGroup("RootNode")));
 
         _cellManager = new CellManager(_tgd.Rows, _tgd.Cols);
-        _cellManager.InitializeCells(_tgd.Rows, generateTerrain.GetCellMaxYVertexHeight, _tgd.CellSize);
+        _cellManager.InitializeCells(_tgd.Rows, generateTerrain.GetCellMaxYVertexHeight);
 
         _raycast = new PlayerCustomRaycast(ref _tgd, _camera, generateTerrain.GetCellMaxYVertexHeight);
     }

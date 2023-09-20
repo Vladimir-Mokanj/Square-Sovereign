@@ -53,7 +53,7 @@ public class TerrainVertices
 		height switch
 		{
 			< 0.86f => 0,
-			< 1.3f => _cellSize,
-			_ => 2 * _cellSize
+			< 1.3f => 1,
+			_ => _cellSize
 		};
 }

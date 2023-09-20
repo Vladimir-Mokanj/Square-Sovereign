@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://p7ejlf1cepdx"]
+
+[ext_resource type="PackedScene" uid="uid://cr0sk052ew8tp" path="res://Resources/Items/Resource/Prefabs/Food_Prefab.tscn" id="1_vgkjm"]
+[ext_resource type="Texture2D" uid="uid://cemjiokomolq7" path="res://Resources/Items/Resource/Icons/Food_Sprite.png" id="2_3w113"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Resource.cs" id="3_3jbdc"]
+
+[resource]
+resource_name = "Food"
+script = ExtResource("3_3jbdc")
+DisplayName = "Food"
+PrefabName = "Food_Prefab"
+Prefab = ExtResource("1_vgkjm")
+SpriteName = "Food_Sprite"
+Sprite = ExtResource("2_3w113")
+MaxStackAmount = 200
+Name = "Food"

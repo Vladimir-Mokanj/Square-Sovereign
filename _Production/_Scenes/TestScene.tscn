@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=10 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://Resources/Terrain/DebugTerrainData.tres" id="2_286pr"]
 [ext_resource type="Script" path="res://_Production/Scripts/Managers/GameManager.cs" id="3_coj1k"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://coaccj8xna8wg" path="res://_Production/Art/2D/UI/BuildingPickUI_Prefab.tscn" id="5_fik5v"]
 [ext_resource type="PackedScene" uid="uid://cy18rrpicu2th" path="res://_Production/Art/2D/UI/BuildingSelectionUI_Prefab.tscn" id="6_gmdyn"]
 [ext_resource type="Script" path="res://_Production/_Scenes/CharacterState.cs" id="7_8y6sf"]
+[ext_resource type="Script" path="res://_Production/_Scenes/BuildingInfo.cs" id="7_186yi"]
+[ext_resource type="Texture2D" uid="uid://dpwjh3qp8q1ye" path="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png" id="8_vs5x6"]
 
 [node name="Node3D" type="Node3D" groups=["RootNode"]]
 
@@ -87,7 +89,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 
-[node name="BuildingScreen" type="Control" parent="PlayerUI" node_paths=PackedStringArray("_buildingSelectionControlNode", "_buildingPickControlNode")]
+[node name="BuildingScreen" type="Control" parent="PlayerUI" node_paths=PackedStringArray("_buildingSelectionControlNode", "_buildingPickControlNode", "_BuildingInfoPanel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -102,6 +104,7 @@ _buildingSelectionUI_Prefab = ExtResource("6_gmdyn")
 _buildingPickUI_Prefab = ExtResource("5_fik5v")
 _buildingSelectionControlNode = NodePath("VBoxContainer/BuildingSelectionHBox")
 _buildingPickControlNode = NodePath("VBoxContainer/BuildingPickHBox")
+_BuildingInfoPanel = NodePath("BuildingInfoPanel")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PlayerUI/BuildingScreen"]
 layout_mode = 1
@@ -114,17 +117,87 @@ grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
+[node name="BuildingPickHBox" type="HBoxContainer" parent="PlayerUI/BuildingScreen/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1
+
 [node name="BuildingSelectionHBox" type="HBoxContainer" parent="PlayerUI/BuildingScreen/VBoxContainer"]
 layout_mode = 2
 mouse_filter = 2
 theme_override_constants/separation = 2
 alignment = 1
 
-[node name="BuildingPickHBox" type="HBoxContainer" parent="PlayerUI/BuildingScreen/VBoxContainer"]
-layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 2
+[node name="BuildingInfoPanel" type="Panel" parent="PlayerUI/BuildingScreen" node_paths=PackedStringArray("_buildingTexture", "_buildingDisplayName", "_buildingDisplayDescription")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -201.0
+offset_bottom = 199.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("7_186yi")
+_buildingTexture = NodePath("BuildingInfoVBox/BuildingTopHBox/BuildingTexture")
+_buildingDisplayName = NodePath("BuildingInfoVBox/BuildingTopHBox/BuildingDisplayName")
+_buildingDisplayDescription = NodePath("BuildingInfoVBox/BuildingDisplayDescription")
+
+[node name="BuildingInfoVBox" type="VBoxContainer" parent="PlayerUI/BuildingScreen/BuildingInfoPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
 alignment = 1
+
+[node name="BuildingTopHBox" type="HBoxContainer" parent="PlayerUI/BuildingScreen/BuildingInfoPanel/BuildingInfoVBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BuildingTexture" type="TextureRect" parent="PlayerUI/BuildingScreen/BuildingInfoPanel/BuildingInfoVBox/BuildingTopHBox"]
+layout_mode = 2
+texture = ExtResource("8_vs5x6")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="BuildingDisplayName" type="Label" parent="PlayerUI/BuildingScreen/BuildingInfoPanel/BuildingInfoVBox/BuildingTopHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Broken Name"
+vertical_alignment = 1
+clip_text = true
+
+[node name="Separator" type="Panel" parent="PlayerUI/BuildingScreen/BuildingInfoPanel/BuildingInfoVBox"]
+modulate = Color(0.996078, 0.415686, 0, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+
+[node name="SeparatorInvisible" type="Panel" parent="PlayerUI/BuildingScreen/BuildingInfoPanel/BuildingInfoVBox"]
+modulate = Color(1, 1, 1, 0)
+visibility_layer = 2
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="BuildingDisplayDescription" type="Label" parent="PlayerUI/BuildingScreen/BuildingInfoPanel/BuildingInfoVBox"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 14
+text = "Broken Text
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true
 
 [node name="Player" type="Node" parent="."]
 

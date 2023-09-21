@@ -6,8 +6,9 @@
 
 [resource]
 script = ExtResource("1_7kxpn")
-TabType = 0
+TabType = 1
 ResourceType = 0
+Description = "The Market: Your one-stop shop for all your impulse buying needs! Come get your health potions, mana crystals, and—wait, is that a rubber chicken?!"
 DisplayName = "Market"
 PrefabName = "Market_Prefab"
 Prefab = ExtResource("1_140b7")

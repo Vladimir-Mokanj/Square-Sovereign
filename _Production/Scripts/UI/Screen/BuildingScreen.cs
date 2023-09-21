@@ -13,6 +13,7 @@ public partial class BuildingScreen : Control
 	[Export] private PackedScene _buildingPickUI_Prefab;
 	[Export] private Control _buildingSelectionControlNode;
 	[Export] private Control _buildingPickControlNode;
+	[Export] private Panel _BuildingInfoPanel;
 
 	private Building _currentBuilding;
 
@@ -30,7 +31,7 @@ public partial class BuildingScreen : Control
 		AddChild(building);
 		return true;
 	}
-
+	
 	public override void _Ready()
 	{
 		List<BuildingUI> createdBuildingUI = InitializeBuildingPicks();
@@ -48,8 +49,12 @@ public partial class BuildingScreen : Control
 				continue;
 			
 			uiItem.InitializeValues(building);
-			uiItem.Pressed += () => _currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
-			uiItem.Visible = building.TabType == BuildingType.ECONOMY;
+			uiItem.Visible = false;
+			uiItem.Pressed += () =>
+			{
+				_currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
+				(_BuildingInfoPanel as BuildingInfo)?.SetDisplayValues(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
+			};
 			
 			_buildingPickControlNode.AddChild(uiItem);
 			buildingsUI.Add(uiItem);
@@ -60,14 +65,24 @@ public partial class BuildingScreen : Control
 
 	private void InitializeBuildingSelection(List<BuildingUI> createdBuildingUI)
 	{
+		BuildingType _buildingType = BuildingType.NONE;
 		foreach (BuildingType type in Enum.GetValues(typeof(BuildingType)))
 		{
+			if (type == BuildingType.NONE)
+				continue;
+
 			if (_buildingSelectionUI_Prefab.Instantiate() is not Button selection)
 				continue;
 			
 			selection.Text = type.ToString();
 			_buildingSelectionControlNode.AddChild(selection);
-			selection!.Pressed += () => createdBuildingUI.ForEach(buildingUi => buildingUi.Visible = ItemDatabase.Get<Building>(buildingUi.ID).TabType == type);
+			selection!.Pressed += () =>
+			{
+				_buildingType = _buildingType.ToString() == selection.Text ? BuildingType.NONE : type;
+				(_BuildingInfoPanel as BuildingInfo)?.SetDisplayValues(null, "", "");
+				if (_buildingType == BuildingType.NONE) _currentBuilding = null;
+				createdBuildingUI.ForEach(buildingUi => buildingUi.Visible = _buildingType == ItemDatabase.Get<Building>(buildingUi.ID).TabType);
+			};
 		}
 	}
 }

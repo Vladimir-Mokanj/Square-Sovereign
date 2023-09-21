@@ -1,7 +1,10 @@
+Panel
+TextureRect
+HBoxContainer
+VBoxContainer
+Label
 Node
 Button
-VBoxContainer
-TextureRect
 Container
 Control
 StaticBody3D
@@ -14,9 +17,6 @@ DirectionalLight3D
 SpotLight3D
 Node3D
 PanelContainer
-HBoxContainer
-Label
-Panel
 BoxContainer
 RichTextLabel
 TextEdit

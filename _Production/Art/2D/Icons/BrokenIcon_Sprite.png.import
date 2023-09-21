@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dn3l0bbwewwjo"
-path="res://.godot/imported/icon.svg-f7b26d1eacc9a9b0dbf3ce28b492e499.ctex"
+uid="uid://dpwjh3qp8q1ye"
+path="res://.godot/imported/BrokenIcon_Sprite.png-f4ba3365ccf3f5995500cc7a77887bfc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_Production/Art/2D/Icons/icon.svg"
-dest_files=["res://.godot/imported/icon.svg-f7b26d1eacc9a9b0dbf3ce28b492e499.ctex"]
+source_file="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png"
+dest_files=["res://.godot/imported/BrokenIcon_Sprite.png-f4ba3365ccf3f5995500cc7a77887bfc.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

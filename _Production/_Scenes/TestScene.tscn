@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=6 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://Resources/Terrain/DebugTerrainData.tres" id="2_286pr"]
 [ext_resource type="Script" path="res://_Production/Scripts/Managers/GameManager.cs" id="3_coj1k"]
-[ext_resource type="Script" path="res://_Production/Scripts/UI/DebugTestUI.cs" id="3_udlc0"]
+[ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/DebugTestUI.cs" id="3_kgi2c"]
+[ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/BuildingScreen.cs" id="4_u5pie"]
+[ext_resource type="PackedScene" uid="uid://dfh01xltbmsfn" path="res://_Production/Art/2D/UI/BuildingUI_Prefab.tscn" id="5_5wte7"]
 
 [node name="Node3D" type="Node3D" groups=["RootNode"]]
 
@@ -23,61 +25,90 @@ light_volumetric_fog_energy = 0.0
 script = ExtResource("3_coj1k")
 _tgd = ExtResource("2_286pr")
 _camera = NodePath("../../Camera3D")
-_debugTestUi = NodePath("../../PlayerUI/DebugUI")
+_debugTestUi = NodePath("../../PlayerUI/DebugScreen/DebugUI")
 
-[node name="PlayerUI" type="Control" parent="."]
+[node name="PlayerUI" type="Node" parent="."]
+
+[node name="DebugScreen" type="Control" parent="PlayerUI"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
 
-[node name="DebugUI" type="HBoxContainer" parent="PlayerUI" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel")]
+[node name="DebugUI" type="HBoxContainer" parent="PlayerUI/DebugScreen" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel")]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 60.0
+offset_bottom = 50.0
 grow_horizontal = 2
 scale = Vector2(0.996728, 1.06324)
 mouse_filter = 2
 theme_override_constants/separation = 50
 alignment = 1
-script = ExtResource("3_udlc0")
+script = ExtResource("3_kgi2c")
 _terrainTypeLabel = NodePath("TerrainTypeContainer/TerrainTypeLabel")
 _resourceTypeLabel = NodePath("ResourceTypeContainer/ResourceTypeLabel")
 _isOccupiedLabel = NodePath("IsOccupiedContainer/IsOccupedLabel")
 
-[node name="TerrainTypeContainer" type="PanelContainer" parent="PlayerUI/DebugUI"]
+[node name="TerrainTypeContainer" type="PanelContainer" parent="PlayerUI/DebugScreen/DebugUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TerrainTypeLabel" type="Label" parent="PlayerUI/DebugUI/TerrainTypeContainer"]
+[node name="TerrainTypeLabel" type="Label" parent="PlayerUI/DebugScreen/DebugUI/TerrainTypeContainer"]
 layout_mode = 2
 text = "Terrain Type: Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 
-[node name="ResourceTypeContainer" type="PanelContainer" parent="PlayerUI/DebugUI"]
+[node name="ResourceTypeContainer" type="PanelContainer" parent="PlayerUI/DebugScreen/DebugUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ResourceTypeLabel" type="Label" parent="PlayerUI/DebugUI/ResourceTypeContainer"]
+[node name="ResourceTypeLabel" type="Label" parent="PlayerUI/DebugScreen/DebugUI/ResourceTypeContainer"]
 layout_mode = 2
 text = "Terrain Type: Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
 
-[node name="IsOccupiedContainer" type="PanelContainer" parent="PlayerUI/DebugUI"]
+[node name="IsOccupiedContainer" type="PanelContainer" parent="PlayerUI/DebugScreen/DebugUI"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="IsOccupedLabel" type="Label" parent="PlayerUI/DebugUI/IsOccupiedContainer"]
+[node name="IsOccupedLabel" type="Label" parent="PlayerUI/DebugScreen/DebugUI/IsOccupiedContainer"]
 layout_mode = 2
 text = "Terrain Type: Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
+
+[node name="BuildingScreen" type="Control" parent="PlayerUI" node_paths=PackedStringArray("_buildingControlNode")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_u5pie")
+_buildingUI_Prefab = ExtResource("5_5wte7")
+_buildingControlNode = NodePath("BuildingsHBox")
+
+[node name="BuildingsHBox" type="HBoxContainer" parent="PlayerUI/BuildingScreen"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -80.0
+offset_right = 76.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.938, 1)
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1

@@ -18,6 +18,8 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
     public static TI Database => _database ??= GD.Load("Resources/" + typeof(TI).Name + ".tres") as TI;
     private static TI _database;
     
+    public TT[] GetAllOfType<TT>() where TT : T => _items.OfType<TT>().ToArray();
+    
 #if TOOLS
     private class ItemEqualityComparer : IEqualityComparer<T>
     {

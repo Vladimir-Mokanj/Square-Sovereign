@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dfh01xltbmsfn"]
+
+[ext_resource type="Texture2D" uid="uid://dpwjh3qp8q1ye" path="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png" id="1_0jxbx"]
+
+[node name="BuildingUI_Prefab" type="PanelContainer"]
+custom_minimum_size = Vector2(80, 80)
+mouse_default_cursor_shape = 3
+
+[node name="BuildingTexture" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_0jxbx")
+expand_mode = 3
+stretch_mode = 5

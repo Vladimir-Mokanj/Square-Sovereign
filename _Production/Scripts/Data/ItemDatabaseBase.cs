@@ -12,18 +12,19 @@ namespace FT.Data;
 
 public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where TI : ItemDatabaseBase<T, TI>
 {
-    [Export] protected string _spreadsheetId;
     [Export] protected Item[] _items;
 
     public static TI Database => _database ??= GD.Load("Resources/" + typeof(TI).Name + ".tres") as TI;
     private static TI _database;
-    
-    public static T Get(int id) => Database._items.FirstOrDefault(item => item.Id == id) as T;
+
+    private static T Get(int id) => Database._items.FirstOrDefault(item => item.Id == id) as T;
     public static TT Get<TT>(int id) where TT : T => Get(id) as TT;
     public static TT[] GetAllOfType<TT>() where TT : T => Database._items.OfType<TT>().ToArray();
     
     
 #if TOOLS
+    [ExportCategory("Editor Only")]
+    [Export] protected string _spreadsheetId;
     private class ItemEqualityComparer : IEqualityComparer<T>
     {
         public bool Equals(T x, T y)

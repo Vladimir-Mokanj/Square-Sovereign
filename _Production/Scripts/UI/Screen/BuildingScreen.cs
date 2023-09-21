@@ -13,7 +13,7 @@ public partial class BuildingScreen : Control
 	[Export] private PackedScene _buildingPickUI_Prefab;
 	[Export] private Control _buildingSelectionControlNode;
 	[Export] private Control _buildingPickControlNode;
-	[Export] private Panel _BuildingInfoPanel;
+	[Export] private BuildingInfo _BuildingInfoPanel;
 
 	private Building _currentBuilding;
 
@@ -53,7 +53,8 @@ public partial class BuildingScreen : Control
 			uiItem.Pressed += () =>
 			{
 				_currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
-				(_BuildingInfoPanel as BuildingInfo)?.SetDisplayValues(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
+				_BuildingInfoPanel?.SetDisplayValues(
+					_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
 			};
 			
 			_buildingPickControlNode.AddChild(uiItem);
@@ -79,8 +80,8 @@ public partial class BuildingScreen : Control
 			selection!.Pressed += () =>
 			{
 				_buildingType = _buildingType.ToString() == selection.Text ? BuildingType.NONE : type;
-				(_BuildingInfoPanel as BuildingInfo)?.SetDisplayValues(null, "", "");
-				if (_buildingType == BuildingType.NONE) _currentBuilding = null;
+				_currentBuilding = null;
+				_BuildingInfoPanel?.SetDisplayValues(null, "", "");
 				createdBuildingUI.ForEach(buildingUi => buildingUi.Visible = _buildingType == ItemDatabase.Get<Building>(buildingUi.ID).TabType);
 			};
 		}

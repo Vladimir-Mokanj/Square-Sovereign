@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Godot;
 using FT.Data;
 using FT.Data.Items;
+using FT.Managers;
 
 namespace FT.UI;
 
@@ -15,16 +16,19 @@ public partial class BuildingScreen : Control
 
 	private Building _currentBuilding;
 
-	public override void _Input(InputEvent @event)
+	public bool BuildStructure(byte row, byte col, byte cellSize, (TerrainType terrainType, ResourceType resourceType, bool isOccupied) data)
 	{
-		if (@event is not InputEventMouseButton { Pressed: true, ButtonIndex: MouseButton.Left })
-			return;
-
 		if (_currentBuilding == null) 
-			return;
-
+			return false;
+		
+		if (_currentBuilding.ResourceType != data.resourceType || data.isOccupied)
+			return false;
+		
 		Node3D building = _currentBuilding.Prefab.Instantiate() as Node3D;
+		building.Position = new Vector3(row * cellSize + cellSize/2.0f, 0, col * cellSize + cellSize/2.0f); 
+		
 		AddChild(building);
+		return true;
 	}
 
 	public override void _Ready()

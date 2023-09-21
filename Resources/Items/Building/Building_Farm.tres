@@ -6,7 +6,8 @@
 
 [resource]
 script = ExtResource("1_54gq8")
-TabType = 0
+TabType = 2
+ResourceType = 2
 DisplayName = "Farm"
 PrefabName = "Farm_Prefab"
 Prefab = ExtResource("1_pytrv")

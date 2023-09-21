@@ -6,7 +6,8 @@
 
 [resource]
 script = ExtResource("1_uc153")
-TabType = 0
+TabType = 2
+ResourceType = 3
 DisplayName = "Iron Mine"
 PrefabName = "IronMine_Prefab"
 Prefab = ExtResource("1_xxkip")

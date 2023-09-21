@@ -1,9 +1,9 @@
+Node
 Button
 VBoxContainer
 TextureRect
 Container
 Control
-Node
 StaticBody3D
 CollisionShape3D
 MeshInstance3D

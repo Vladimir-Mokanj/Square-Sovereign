@@ -1,9 +1,7 @@
-res://Resources/Items/Building/Prefabs/IronMine_Prefab.tscn
+res://_Production/_Scenes/TestScene.tscn
 res://_Production/Shaders/heightShader.gdshader
 res://Resources/Terrain/DebugTerrainData.tres
-res://Resources/Items/Building/Prefabs/FishingDock_Prefab.tscn
-res://_Production/_Scenes/TestScene.tscn
-res://Resources/Items/Building/Prefabs/Farm_Prefab.tscn
+res://_Production/Art/2D/UI/BuildingUI_Prefab.tscn
 res://addons/data_importer/DataImporter.cs
 res://addons/data_importer/ReadOnlyInspector.cs
 res://addons/data_importer/Tools/DataSheetLoader.cs
@@ -14,9 +12,6 @@ res://_Production/Scripts/Data/Item/Building.cs
 res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Managers/GameManager.cs
 res://_Production/Scripts/Player/PlayerController.cs
-res://_Production/Scripts/UI/BuildingScreen.cs
-res://_Production/Scripts/UI/DebugTestUI.cs
-res://_Production/Art/2D/UI/BuildingUI.cs
 res://_Production/Scripts/UI/BuildingUI.cs
 res://_Production/Scripts/UI/Screen/BuildingScreen.cs
 res://_Production/Scripts/UI/Screen/DebugTestUI.cs

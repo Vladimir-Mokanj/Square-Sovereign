@@ -19,8 +19,9 @@ public partial class BuildingScreen : Control
 		Building[] buildings = ItemDatabase.Database.GetAllOfType<Building>();
 		foreach (Building building in buildings)
 		{
-			//Node uiItem = _buildingUI_Prefab.Instantiate();
-			//uiItem.getc
+			BuildingUI uiItem = _buildingUI_Prefab.Instantiate() as BuildingUI;
+			uiItem?.InitializeValues(building);
+			_buildingControlNode.AddChild(uiItem);
 		}
 	}
 }

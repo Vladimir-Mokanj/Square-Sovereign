@@ -1,4 +1,6 @@
 TextureRect
+Container
+Button
 Control
 Node
 StaticBody3D
@@ -11,7 +13,6 @@ DirectionalLight3D
 SpotLight3D
 Node3D
 PanelContainer
-Container
 HBoxContainer
 Label
 Panel

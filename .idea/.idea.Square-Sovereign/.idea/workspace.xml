@@ -5,30 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.godot/editor/BuildingScreen.cs-folding-82843d7bba18f8f2f82d6d004a2d61d1.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/BuildingUI.cs-folding-276efdb99ba0bedc7d9a6d5c900618a3.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/BuildingUI_Prefab.tscn-folding-ee1f3505c746b8138ea31b2734721424.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/BrokenIcon_Sprite.png-5ab81f1809c1602cea5f4b3092b99b23.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/BrokenIcon_Sprite.png-5ab81f1809c1602cea5f4b3092b99b23.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/BrokenIcon_Sprite.png-bc8f5524e3d66bf85d921e11604de5a7.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/BrokenIcon_Sprite.png-bc8f5524e3d66bf85d921e11604de5a7.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/BrokenIcon_Sprite.png-f4ba3365ccf3f5995500cc7a77887bfc.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/BrokenIcon_Sprite.png-f4ba3365ccf3f5995500cc7a77887bfc.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/2f755823522760d64f8133cf5007e515854eb23e.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Art/2D/Icons/BrokenIcon_Sprite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Art/2D/Icons/BrokenIcon_Sprite.png.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/BuildingUI_Prefab.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/UI/BuildingUI.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/DebugTestUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-editstate-deb62ba1414d0eaefb48e5cfa77cf422.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-editstate-deb62ba1414d0eaefb48e5cfa77cf422.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-folding-deb62ba1414d0eaefb48e5cfa77cf422.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-folding-deb62ba1414d0eaefb48e5cfa77cf422.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-editstate-fb5b449036f2b7deba494282445be852.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-editstate-fb5b449036f2b7deba494282445be852.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-folding-fb5b449036f2b7deba494282445be852.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-folding-fb5b449036f2b7deba494282445be852.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-editstate-570654d3fcbf86097ee34c49b494ebfd.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-editstate-570654d3fcbf86097ee34c49b494ebfd.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-folding-570654d3fcbf86097ee34c49b494ebfd.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-folding-570654d3fcbf86097ee34c49b494ebfd.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/ReadOnlyLabel.tscn-editstate-a68457d860f50e3e678d5bb997efd4b6.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/ReadOnlyLabel.tscn-editstate-a68457d860f50e3e678d5bb997efd4b6.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/ReadOnlyTexture.tscn-editstate-8bcfd227d72faaa5722ad37df589999d.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/ReadOnlyTexture.tscn-editstate-8bcfd227d72faaa5722ad37df589999d.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/BuildingUI_Prefab.tscn-editstate-ee1f3505c746b8138ea31b2734721424.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_Farm.tres-folding-2f302ad783c7f8f9f874169edb268419.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_FishingDock.tres-folding-516b0eb6c4afb4ef8f91bcf9a4925aba.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Farm_Sprite.png-2958bbcebc99ec1741f787cd5dd306cd.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Farm_Sprite.png-2958bbcebc99ec1741f787cd5dd306cd.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Farm_Sprite.png-803f75f3040b533eaaa6aa2ebf7f873c.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Farm_Sprite.png-803f75f3040b533eaaa6aa2ebf7f873c.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/FishingDock_Sprite.png-098d3c4af9623ec155b5053b6c5e8773.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/FishingDock_Sprite.png-098d3c4af9623ec155b5053b6c5e8773.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/FishingDock_Sprite.png-5b88e90b2642d7a3ce95f538a729985a.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/FishingDock_Sprite.png-5b88e90b2642d7a3ce95f538a729985a.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/IronMine_Sprite.png-95c9044f69f790a99c8fc0786aace18d.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/IronMine_Sprite.png-95c9044f69f790a99c8fc0786aace18d.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/IronMine_Sprite.png-f1a327e6b14aae7835af4dec777f33ed.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/IronMine_Sprite.png-f1a327e6b14aae7835af4dec777f33ed.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Building/Icons/Farm_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Building/Icons/Farm_Sprite.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Building/Icons/FishingDock_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Building/Icons/FishingDock_Sprite.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Building/Icons/IronMine_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/Building/Icons/IronMine_Sprite.png.import" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
@@ -36,25 +33,22 @@
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/recent_dirs" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/recent_dirs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/imported/icon.svg-f7b26d1eacc9a9b0dbf3ce28b492e499.ctex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/uid_cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/uid_cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Prefabs/Farm_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Prefabs/Farm_Prefab.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Prefabs/FishingDock_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Prefabs/FishingDock_Prefab.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Prefabs/IronMine_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Prefabs/IronMine_Prefab.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Terrain/DebugTerrainData.tres" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Art/2D/Icons/icon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Art/2D/Icons/icon.svg.import" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/DebugTestUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_Farm.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_Farm.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_FishingDock.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_FishingDock.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_IronMine.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_IronMine.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Art/2D/UI/BuildingUI_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/BuildingUI_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/BuildingUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/BuildingUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +163,7 @@
       <workItem from="1695104767881" duration="8494000" />
       <workItem from="1695152760818" duration="5050000" />
       <workItem from="1695207563439" duration="6845000" />
-      <workItem from="1695287601452" duration="1313000" />
+      <workItem from="1695287601452" duration="4538000" />
     </task>
     <servers />
   </component>

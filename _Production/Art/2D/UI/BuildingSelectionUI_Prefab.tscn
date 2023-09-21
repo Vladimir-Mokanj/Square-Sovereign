@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cy18rrpicu2th"]
+
+[node name="BuildingSelectionUI_Prefab" type="Button"]
+custom_minimum_size = Vector2(150, 30)
+offset_right = 8.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 15
+text = "
+"
+text_overrun_behavior = 1
+clip_text = true

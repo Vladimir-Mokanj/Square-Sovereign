@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="ItemDatabase" load_steps=5 format=3 uid="uid://dbed4jyomodhh"]
+[gd_resource type="Resource" script_class="ItemDatabase" load_steps=7 format=3 uid="uid://dbed4jyomodhh"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="1_a561g"]
 [ext_resource type="Resource" uid="uid://cvtj36mhu4pq3" path="res://Resources/Items/Building/Building_IronMine.tres" id="1_ajnnv"]
 [ext_resource type="Resource" uid="uid://cbi3knpmus31c" path="res://Resources/Items/Building/Building_Farm.tres" id="2_f4h5u"]
 [ext_resource type="Resource" uid="uid://drplfnblx1gre" path="res://Resources/Items/Building/Building_FishingDock.tres" id="3_ph8lt"]
+[ext_resource type="Resource" uid="uid://bxkcemp53mb5s" path="res://Resources/Items/Building/Building_Barracks.tres" id="4_fqsi6"]
+[ext_resource type="Resource" uid="uid://da2rdy1f4r141" path="res://Resources/Items/Building/Building_Market.tres" id="5_w2yu8"]
 
 [resource]
 script = ExtResource("1_a561g")
 _spreadsheetId = "1p4E7VJH4C_pD-b-xlXRijAjn7Q29zmo6Av0JlZX6SYw"
-_items = [ExtResource("1_ajnnv"), ExtResource("2_f4h5u"), ExtResource("3_ph8lt")]
+_items = [ExtResource("1_ajnnv"), ExtResource("2_f4h5u"), ExtResource("3_ph8lt"), ExtResource("5_w2yu8"), ExtResource("4_fqsi6")]

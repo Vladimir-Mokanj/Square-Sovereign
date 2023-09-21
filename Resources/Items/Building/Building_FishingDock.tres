@@ -6,6 +6,7 @@
 
 [resource]
 script = ExtResource("1_7fytg")
+TabType = 0
 DisplayName = "Fishing Dock"
 PrefabName = "FishingDock_Prefab"
 Prefab = ExtResource("1_2kp3n")

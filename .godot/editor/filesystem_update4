@@ -18,3 +18,5 @@ res://_Production/Scripts/UI/Screen/BuildingScreen.cs
 res://_Production/Scripts/UI/Screen/DebugTestUI.cs
 res://_Production/Scripts/Player/PlayerController.cs
 res://_Production/Scripts/TBS/GameManager.cs
+res://_Production/Scripts/TBS/BuildingController.cs
+res://_Production/Scripts/TBS/PlayerManager.cs

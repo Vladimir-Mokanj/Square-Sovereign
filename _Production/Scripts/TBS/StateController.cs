@@ -7,7 +7,7 @@ public enum GameState : byte {IDLE, BUILDING, UNIT, ENEMY_TURN}
 
 public partial class StateController : Node
 {
-    public StateParameters StateParameters { get; private set; } = new();
+    private StateParameters _stateParameters;
 
     public override void _Ready()
     {
@@ -17,6 +17,13 @@ public partial class StateController : Node
 
     private void ControlState(InputDataParameters data)
     {
-        StateParameters.BuildingStateID.Set(data.buildingID);
+        _stateParameters.BuildingStateID.Set(data.buildingID);
+    }
+
+    public void Initialize(StateParameters stateParameters)
+    {
+        
+        _stateParameters = stateParameters;
+        _stateParameters.BuildingStateID.Set(20);
     }
 }

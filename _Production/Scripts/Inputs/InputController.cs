@@ -11,11 +11,11 @@ public partial class InputController : Node, IInputController
 
     private InputDataParameters _dataParameters;
     
-    public void Initialize(InputDataParameters dataParameters) =>
+    public void Initialize(InputDataParameters dataParameters) => 
         _dataParameters = dataParameters;
 
     public override void _Process(double delta) => 
-        _inputParameters?.Action.Invoke(_dataParameters);
+        _inputParameters?.Action?.Invoke(_dataParameters);
 }
 
 public interface IInputController

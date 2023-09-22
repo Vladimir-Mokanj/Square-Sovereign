@@ -21,18 +21,21 @@ public partial class PlayerManager : Node
     private readonly ObservableAction<Action<InputDataParameters>> _onDataInitialized = new();
     
     [Export] private TerrainGenerationData _tgd;
-    [Export] private InputController _inputController;
+    
+    private InputController _inputController;
 
-    private InputDataParameters DataParameters { get; set; } = new();
-    private StateParameters StateParameters { get; set; } = new();
+    private InputDataParameters DataParameters { get; } = new();
+    private StateParameters StateParameters { get; }= new();
 
     public override async void _Ready()
     {
         Instance = this;
-
+        
+        Initialize();
+        
         await Task.Delay(TimeSpan.FromSeconds(0.05f));
-        _onStateInitialized?.Action.Invoke(StateParameters);
-        _onDataInitialized?.Action.Invoke(DataParameters);
+        _onDataInitialized.Action?.Invoke(DataParameters);
+        _onStateInitialized.Action?.Invoke(StateParameters);
     }
 
     private void Initialize()
@@ -43,6 +46,7 @@ public partial class PlayerManager : Node
         CellManager cellManager = new(_tgd.Rows, _tgd.Cols);
         cellManager.InitializeCells(_tgd.Rows, generateTerrain.GetCellMaxYVertexHeight);
         
-        _inputController.Initialize(DataParameters);
+        (FindChild(nameof(InputController)) as InputController)?.Initialize(DataParameters);
+        (FindChild(nameof(StateController)) as StateController)?.Initialize(StateParameters); 
     }
 }

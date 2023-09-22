@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=11 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://Resources/Terrain/DebugTerrainData.tres" id="2_286pr"]
 [ext_resource type="Script" path="res://_Production/Scripts/Managers/GameManager.cs" id="3_coj1k"]
@@ -8,16 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cy18rrpicu2th" path="res://_Production/Art/2D/UI/BuildingSelectionUI_Prefab.tscn" id="6_gmdyn"]
 [ext_resource type="Script" path="res://_Production/Scripts/UI/BuildingInfo.cs" id="7_1ritc"]
 [ext_resource type="Texture2D" uid="uid://dpwjh3qp8q1ye" path="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png" id="8_vs5x6"]
-
-[sub_resource type="CSharpScript" id="CSharpScript_dr7o8"]
-script/source = "using Godot;
-
-namespace FT.Player;
-
-public partial class CharacterState : Node
-{
-    
-}"
+[ext_resource type="Script" path="res://_Production/Scripts/Inputs/InputController.cs" id="9_kal1k"]
+[ext_resource type="Script" path="res://_Production/Scripts/TBS/StateController.cs" id="10_ctvlv"]
 
 [node name="Node3D" type="Node3D" groups=["RootNode"]]
 
@@ -138,7 +130,7 @@ mouse_filter = 2
 theme_override_constants/separation = 2
 alignment = 1
 
-[node name="BuildingInfoPanel" type="Panel" parent="PlayerUI/BuildingScreen"]
+[node name="BuildingInfoPanel" type="Panel" parent="PlayerUI/BuildingScreen" node_paths=PackedStringArray("_buildingTexture", "_buildingDisplayName", "_buildingDisplayDescription")]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -151,13 +143,9 @@ offset_bottom = 199.0
 grow_horizontal = 0
 grow_vertical = 2
 script = ExtResource("7_1ritc")
-_buildingTexture = Object(TextureRect,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"clip_contents":false,"custom_minimum_size":Vector2(0, 0),"layout_direction":0,"layout_mode":2,"size_flags_horizontal":1,"size_flags_vertical":1,"size_flags_stretch_ratio":1.0,"auto_translate":true,"localize_numeral_system":true,"tooltip_text":"","focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":0,"mouse_filter":1,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"theme":null,"theme_type_variation":&"","texture":ExtResource("8_vs5x6"),"expand_mode":3,"stretch_mode":5,"flip_h":false,"flip_v":false,"script":null)
-
-_buildingDisplayName = Object(Label,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"clip_contents":false,"custom_minimum_size":Vector2(0, 0),"layout_direction":0,"layout_mode":2,"size_flags_horizontal":3,"size_flags_vertical":4,"size_flags_stretch_ratio":1.0,"auto_translate":true,"localize_numeral_system":true,"tooltip_text":"","focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":0,"mouse_filter":2,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"theme":null,"theme_type_variation":&"","theme_override_font_sizes/font_size":20,"text":"Broken Name","label_settings":null,"horizontal_alignment":0,"vertical_alignment":1,"autowrap_mode":0,"justification_flags":163,"clip_text":true,"text_overrun_behavior":0,"uppercase":false,"tab_stops":PackedFloat32Array(),"lines_skipped":0,"max_lines_visible":-1,"visible_characters":-1,"visible_characters_behavior":0,"visible_ratio":1.0,"text_direction":0,"language":"","structured_text_bidi_override":0,"structured_text_bidi_override_options":[],"script":null)
-
-_buildingDisplayDescription = Object(Label,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"process_physics_priority":0,"process_thread_group":0,"editor_description":"","visible":true,"modulate":Color(1, 1, 1, 1),"self_modulate":Color(1, 1, 1, 1),"show_behind_parent":false,"top_level":false,"clip_children":0,"light_mask":1,"visibility_layer":1,"z_index":0,"z_as_relative":true,"y_sort_enabled":false,"texture_filter":0,"texture_repeat":0,"material":null,"use_parent_material":false,"clip_contents":false,"custom_minimum_size":Vector2(250, 0),"layout_direction":0,"layout_mode":2,"size_flags_horizontal":4,"size_flags_vertical":3,"size_flags_stretch_ratio":1.0,"auto_translate":true,"localize_numeral_system":true,"tooltip_text":"","focus_neighbor_left":NodePath(""),"focus_neighbor_top":NodePath(""),"focus_neighbor_right":NodePath(""),"focus_neighbor_bottom":NodePath(""),"focus_next":NodePath(""),"focus_previous":NodePath(""),"focus_mode":0,"mouse_filter":2,"mouse_force_pass_scroll_events":true,"mouse_default_cursor_shape":0,"shortcut_context":null,"theme":null,"theme_type_variation":&"","theme_override_font_sizes/font_size":14,"text":"Broken Text
-","label_settings":null,"horizontal_alignment":1,"vertical_alignment":0,"autowrap_mode":2,"justification_flags":163,"clip_text":true,"text_overrun_behavior":0,"uppercase":false,"tab_stops":PackedFloat32Array(),"lines_skipped":0,"max_lines_visible":-1,"visible_characters":-1,"visible_characters_behavior":0,"visible_ratio":1.0,"text_direction":0,"language":"","structured_text_bidi_override":0,"structured_text_bidi_override_options":[],"script":null)
-
+_buildingTexture = NodePath("BuildingInfoVBox/BuildingTopHBox/BuildingTexture")
+_buildingDisplayName = NodePath("BuildingInfoVBox/BuildingTopHBox/BuildingDisplayName")
+_buildingDisplayDescription = NodePath("BuildingInfoVBox/BuildingDisplayDescription")
 
 [node name="BuildingInfoVBox" type="VBoxContainer" parent="PlayerUI/BuildingScreen/BuildingInfoPanel"]
 layout_mode = 1
@@ -214,5 +202,8 @@ clip_text = true
 
 [node name="Player" type="Node" parent="."]
 
-[node name="CharacterState" type="Node" parent="Player"]
-script = SubResource("CSharpScript_dr7o8")
+[node name="InputController" type="Node" parent="Player"]
+script = ExtResource("9_kal1k")
+
+[node name="StateController" type="Node" parent="Player"]
+script = ExtResource("10_ctvlv")

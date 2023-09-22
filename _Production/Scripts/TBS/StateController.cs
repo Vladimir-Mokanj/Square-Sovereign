@@ -1,11 +1,12 @@
+using FT.Input;
 using FT.TBS.States;
 using Godot;
 
 namespace FT.TBS;
 
-public partial class PlayerStateController : Node
+public partial class StateController : Node
 {
-    private readonly StateParameters _stateParameters = new();
+    private InputController _inputController;
     
     private IGameState _currentGameState;
     private IdleGameState _idleGameState;
@@ -14,9 +15,11 @@ public partial class PlayerStateController : Node
     
     public override void _Ready()
     {
-        _idleGameState = new IdleGameState(_stateParameters);
-        _unitGameState = new UnitGameState(_stateParameters);
-        _buildingGameState = new BuildingGameState(_stateParameters);
+        _inputController = GetParent().GetNode<InputController>(nameof(InputController));
+
+        _idleGameState = new IdleGameState(_inputController._stateParameters);
+        _unitGameState = new UnitGameState(_inputController._stateParameters);
+        _buildingGameState = new BuildingGameState(_inputController._stateParameters);
     }
 
     public void ChangeState(IGameState newGameState)

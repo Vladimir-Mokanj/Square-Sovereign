@@ -12,10 +12,7 @@ public partial class GameManager : Node
 {
     [Export] private TerrainGenerationData _tgd;
     [Export] private InputController _inputController;
-    //[Export] private BuildingScreen _temp;
-    
-    private StateController _stateController;
-
+    [Export] private BuildingScreen _temp;
 
     [Export] private DebugTestUI _debugTestUi;
 
@@ -24,8 +21,11 @@ public partial class GameManager : Node
         GenerateTerrain generateTerrain = new(_tgd);
         generateTerrain.GenerateMesh(ExtentionTools.CreateNode<Node3D>("Terrain", "Terrain", GetTree().GetFirstNodeInGroup("RootNode")));
 
+        CellManager cellManager = new(_tgd.Rows, _tgd.Cols);
+        cellManager.InitializeCells(_tgd.Rows, generateTerrain.GetCellMaxYVertexHeight);
+        
         _inputController.Initialize(ref _tgd, generateTerrain.GetCellMaxYVertexHeight);
-        _stateController = new StateController(_tgd, _inputController);
+        StateController _stateController = new(_inputController, cellManager);
     }
     
     

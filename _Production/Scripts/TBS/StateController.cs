@@ -15,13 +15,13 @@ public class StateController
     public UnitGameState UnitGameState { get; private set; }
     public BuildingGameState BuildingGameState { get; private set; }
     
-    public StateController(TerrainGenerationData tgd, IInputController _inputController)
+    public StateController(IInputController inputController, CellManager cellManager)
     {
-        _cellManager = new CellManager(tgd.Rows, tgd.Cols);
+        _cellManager = cellManager;
         
-        IdleGameState = new IdleGameState(_inputController, this);
-        UnitGameState = new UnitGameState(_inputController, this);
-        BuildingGameState = new BuildingGameState(_inputController, this);
+        IdleGameState = new IdleGameState(inputController, this);
+        UnitGameState = new UnitGameState(inputController, this);
+        BuildingGameState = new BuildingGameState(inputController, this);
 
         _currentGameState = IdleGameState;
         _currentGameState.EnterState();

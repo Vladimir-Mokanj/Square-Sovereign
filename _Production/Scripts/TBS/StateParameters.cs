@@ -1,13 +1,12 @@
-using Godot;
-using System;
 using FT.Managers;
 using FT.TBS.States;
+using FT.Tools.Observers;
 
 namespace FT.TBS;
 
 public class StateParameters
 {
-    public Action<byte, byte> RowCol { get; set; }
-    public Action<GameState> GameState { get; set; }
-    public Action<(TerrainType, ResourceType, bool)> RaycastData { get; set; }
+    public ObservableProperty<(byte row, byte col)> RowCol { get; } = new();
+    public ObservableProperty<GameState> GameState { get; } = new();
+    public ObservableProperty<(TerrainType, ResourceType, bool)?> RaycastData { get; } = new();
 }

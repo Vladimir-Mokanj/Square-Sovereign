@@ -42,15 +42,15 @@ public partial class BuildingScreen : Control
 		GameManager.Instance.OnGameInitialized += OnStateChanged;
 	}
 
-	private void OnStateChanged(StateParameters stateParameters)
-	{
-		stateParameters.GameState = state =>
-		{
-			if (state == GameState.BUILDING)
-				GD.PrintErr("Yes");
-		};
-	}
+	private void OnStateChanged(StateParameters stateParameters) => 
+		ShowBuildingMenu(stateParameters.GameState);
 
+	private void ShowBuildingMenu(GameState gameState)
+	{
+		Visible = gameState == GameState.BUILDING;
+		_currentBuilding = null;
+	}
+	
 	private List<BuildingUI> InitializeBuildingPicks()
 	{
 		List<BuildingUI> buildingsUI = new();

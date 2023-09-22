@@ -6,10 +6,7 @@ namespace FT.TBS;
 
 public class StateController
 {
-    private (byte row, byte col) _rowCol = (0, 0);
-    
     private readonly CellManager _cellManager;
-    private InputDataParameters _dataParameters = new();
     public StateParameters StateParameters { get; private set; } = new();
     
     private IGameState _currentGameState;
@@ -22,9 +19,9 @@ public class StateController
         _cellManager = cellManager;
         inputController.inputParameters += ControlState;
         
-        IdleGameState = new IdleGameState(inputController, this);
-        UnitGameState = new UnitGameState(inputController, this);
-        BuildingGameState = new BuildingGameState(inputController, this);
+        IdleGameState = new IdleGameState(StateParameters);
+        UnitGameState = new UnitGameState(StateParameters);
+        BuildingGameState = new BuildingGameState(StateParameters);
 
         _currentGameState = IdleGameState;
         _currentGameState.EnterState();
@@ -32,7 +29,7 @@ public class StateController
 
     private void ControlState(InputDataParameters data)
     {
-        //StateParameters.RaycastData = _cellManager.GetCellData(data.RowCol);
+        StateParameters.RaycastData.Set(_cellManager.GetCellData(data.RowCol));
     }
 
     public void ChangeState(IGameState newGameState)

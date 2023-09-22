@@ -5,28 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.godot/editor/IObservableAction.cs-folding-0afe379aa23e94240b1d6d51ff9de0da.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/IObservableProperty.cs-folding-e4762e64c9a3e40fd347b48068c51873.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ObservableAction.cs-folding-e149ac1789b4a038a26f19800f5372fa.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ObservableProperty.cs-folding-c190720b91efe2b5635c3c260202a6e6.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/GameManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Tools/Observers/IObservableAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Tools/Observers/IObservableProperty.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Tools/Observers/ObservableAction.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Tools/Observers/ObservableProperty.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputDataParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputDataParameters.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Managers/CellManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Managers/CellManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Managers/GameManager.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/DebugTestUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/DebugTestUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,6 +145,19 @@
           <line>79</line>
           <properties documentPath="C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\_Production\Scripts\Tools\CSVReader.cs" initialLine="79" containingFunctionPresentation="Method 'ReadRow'" />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs</url>
+          <line>42</line>
+          <properties documentPath="C:\Users\Vladimir\Desktop\Godot\Projects\Square-Sovereign\_Production\Scripts\TBS\StateController.cs" initialLine="42" containingFunctionPresentation="Method 'ChangeState'">
+            <startOffsets>
+              <option value="1410" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1411" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

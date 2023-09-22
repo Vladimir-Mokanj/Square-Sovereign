@@ -1,27 +1,32 @@
+using FT.Data;
 using FT.Input;
+using FT.Managers;
 using FT.TBS.States;
-using Godot;
 
 namespace FT.TBS;
 
-public partial class StateController : Node
+public class StateController
 {
-    private InputController _inputController;
+    private readonly CellManager _cellManager;
+    private InputDataParameters _dataParameters = new();
     
     private IGameState _currentGameState;
-    private IdleGameState _idleGameState;
-    private UnitGameState _unitGameState;
-    private BuildingGameState _buildingGameState;
+    public IdleGameState IdleGameState { get; private set; }
+    public UnitGameState UnitGameState { get; private set; }
+    public BuildingGameState BuildingGameState { get; private set; }
     
-    public override void _Ready()
+    public StateController(TerrainGenerationData tgd, IInputController _inputController)
     {
-        _inputController = GetParent().GetNode<InputController>(nameof(InputController));
+        _cellManager = new CellManager(tgd.Rows, tgd.Cols);
+        
+        IdleGameState = new IdleGameState(_inputController, this);
+        UnitGameState = new UnitGameState(_inputController, this);
+        BuildingGameState = new BuildingGameState(_inputController, this);
 
-        _idleGameState = new IdleGameState(_inputController._stateParameters);
-        _unitGameState = new UnitGameState(_inputController._stateParameters);
-        _buildingGameState = new BuildingGameState(_inputController._stateParameters);
+        _currentGameState = IdleGameState;
+        _currentGameState.EnterState();
     }
-
+    
     public void ChangeState(IGameState newGameState)
     {
         _currentGameState?.ExitState();

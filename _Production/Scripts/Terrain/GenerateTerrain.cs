@@ -14,7 +14,7 @@ public class GenerateTerrain
 	private readonly Vector3[] vertexNormals;
 	private readonly Vector2[] uvs;
 
-	public GenerateTerrain(ref TerrainGenerationData tgd)
+	public GenerateTerrain(TerrainGenerationData tgd)
 	{
 		_tgd = tgd;
 		

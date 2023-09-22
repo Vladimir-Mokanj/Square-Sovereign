@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=10 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://Resources/Terrain/DebugTerrainData.tres" id="2_286pr"]
 [ext_resource type="Script" path="res://_Production/Scripts/Managers/GameManager.cs" id="3_coj1k"]
@@ -9,11 +9,10 @@
 [ext_resource type="Script" path="res://_Production/Scripts/UI/BuildingInfo.cs" id="7_1ritc"]
 [ext_resource type="Texture2D" uid="uid://dpwjh3qp8q1ye" path="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png" id="8_vs5x6"]
 [ext_resource type="Script" path="res://_Production/Scripts/Inputs/InputController.cs" id="9_kal1k"]
-[ext_resource type="Script" path="res://_Production/Scripts/TBS/StateController.cs" id="10_ctvlv"]
 
 [node name="Node3D" type="Node3D" groups=["RootNode"]]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." groups=["MainCamera"]]
 transform = Transform3D(-4.37114e-08, 0.707107, -0.707107, 0, 0.707107, 0.707107, 1, 3.09086e-08, -3.09086e-08, -40, 130, 100)
 fov = 60.0
 far = 500.0
@@ -26,11 +25,10 @@ light_volumetric_fog_energy = 0.0
 
 [node name="Managers" type="Node" parent="."]
 
-[node name="GameManager" type="Node" parent="Managers" node_paths=PackedStringArray("_camera", "_temp", "_debugTestUi")]
+[node name="GameManager" type="Node" parent="Managers" node_paths=PackedStringArray("_inputController", "_debugTestUi")]
 script = ExtResource("3_coj1k")
 _tgd = ExtResource("2_286pr")
-_camera = NodePath("../../Camera3D")
-_temp = NodePath("../../PlayerUI/BuildingScreen")
+_inputController = NodePath("../../Player/InputController")
 _debugTestUi = NodePath("../../PlayerUI/DebugScreen/DebugUI")
 
 [node name="PlayerUI" type="Node" parent="."]
@@ -204,6 +202,3 @@ clip_text = true
 
 [node name="InputController" type="Node" parent="Player"]
 script = ExtResource("9_kal1k")
-
-[node name="StateController" type="Node" parent="Player"]
-script = ExtResource("10_ctvlv")

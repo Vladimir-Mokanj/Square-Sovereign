@@ -1,6 +1,13 @@
+using FT.Input;
+
 namespace FT.TBS.States;
 
 public class BuildingGameState : GameStateBase
 {
-    public BuildingGameState(StateParameters stateParameters) : base(stateParameters, GameState.BUILDING) { }
+    public BuildingGameState(IInputController onInput, StateController stateController) : base(onInput, stateController, GameState.BUILDING) { }
+    
+    protected override void OnInput(InputDataParameters data)
+    {
+
+    }
 }

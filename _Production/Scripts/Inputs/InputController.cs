@@ -1,38 +1,24 @@
 using System;
-using FT.Data;
-using FT.Player;
+using FT.Tools.Observers;
 using Godot;
 
 namespace FT.Input;
 
 public partial class InputController : Node, IInputController
 {
-    public Action<InputDataParameters> inputParameters { get; set; }
+    public IObservableAction<Action<InputDataParameters>> inputParameters => _inputParameters;
+    private readonly ObservableAction<Action<InputDataParameters>> _inputParameters = new();
 
-    private readonly InputDataParameters _dataParameters = new();
-    private PlayerCustomRaycast _raycast;
-
-    public void Initialize(ref TerrainGenerationData tgd, byte[] yHeights ) => 
-        _raycast = new PlayerCustomRaycast(ref tgd, GetTree().GetFirstNodeInGroup("MainCamera") as Camera3D, yHeights);
+    private InputDataParameters _dataParameters;
     
-    public override void _Input(InputEvent @event)
-    {
-        if (@event is InputEventMouseButton { Pressed: true, ButtonIndex: MouseButton.Left })
-            _dataParameters.isMousePressed = true;
+    public void Initialize(InputDataParameters dataParameters) =>
+        _dataParameters = dataParameters;
 
-        if (@event is InputEventMouseMotion mouseMotionEvent)
-            _dataParameters.RowCol = _raycast.GetRowCol(mouseMotionEvent.Position);
-        
-    }
-    
-    public override void _Process(double delta)
-    {
-        inputParameters?.Invoke(_dataParameters);
-        _dataParameters.isMousePressed = false;
-    }
+    public override void _Process(double delta) => 
+        _inputParameters?.Action.Invoke(_dataParameters);
 }
 
 public interface IInputController
 {
-    public Action<InputDataParameters> inputParameters { get; set; }
+    public IObservableAction<Action<InputDataParameters>> inputParameters { get; }
 }

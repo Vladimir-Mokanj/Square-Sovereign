@@ -10,8 +10,8 @@ public partial class DebugTestUI : Node
     [Export] private Label _resourceTypeLabel;
     [Export] private Label _isOccupiedLabel;
 
-    public override void _Ready() => GameManager.Instance.OnGameInitialized += OnStateChanged;
-    private void OnStateChanged(StateParameters stateParameters) => stateParameters.RaycastData.AddObserver(AssignValues);
+    //public override void _Ready() => GameManager.Instance.OnGameInitialized += OnStateChanged;
+    //private void OnStateChanged(StateParameters stateParameters) => stateParameters.RaycastData.AddObserver(AssignValues);
 
     private void AssignValues((TerrainType terrainType, ResourceType resourceType, bool isOccupied)? cellData)
     {

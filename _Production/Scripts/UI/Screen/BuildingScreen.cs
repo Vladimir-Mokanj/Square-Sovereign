@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using Godot;
 using FT.Data;
 using FT.Data.Items;
+using FT.Input;
 using FT.Managers;
 using FT.TBS;
-using FT.TBS.States;
 
 namespace FT.UI;
 
@@ -18,6 +18,21 @@ public partial class BuildingScreen : Control
 	[Export] private BuildingInfo _BuildingInfoPanel;
 
 	private Building _currentBuilding;
+	private InputDataParameters _dataParameters;
+
+	public override void _Ready()
+	{
+		List<BuildingUI> createdBuildingUI = InitializeBuildingPicks();
+		InitializeBuildingSelection(createdBuildingUI);
+
+		PlayerManager.Instance.OnDataInitialized.AddObserver(OnDataInitialized);
+	}
+
+	private void OnDataInitialized(InputDataParameters data)
+	{
+		GD.PrintErr(data.buildingID);
+		_dataParameters = data;
+	}
 
 	public bool BuildStructure(byte row, byte col, byte cellSize, (TerrainType terrainType, ResourceType resourceType, bool isOccupied) data)
 	{
@@ -33,22 +48,12 @@ public partial class BuildingScreen : Control
 		AddChild(building);
 		return true;
 	}
-	
-	public override void _Ready()
-	{
-		List<BuildingUI> createdBuildingUI = InitializeBuildingPicks();
-		InitializeBuildingSelection(createdBuildingUI);
-
-		GameManager.Instance.OnGameInitialized += OnStateChanged;
-	}
-
-	private void OnStateChanged(StateParameters stateParameters) => 
-		ShowBuildingMenu(stateParameters.GameState);
 
 	private void ShowBuildingMenu(GameState gameState)
 	{
 		Visible = gameState == GameState.BUILDING;
-		_currentBuilding = null;
+		if (!Visible)
+			_currentBuilding = null;
 	}
 	
 	private List<BuildingUI> InitializeBuildingPicks()
@@ -66,6 +71,7 @@ public partial class BuildingScreen : Control
 			uiItem.Pressed += () =>
 			{
 				_currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
+				_dataParameters.buildingID = _currentBuilding.Id;
 				_BuildingInfoPanel?.SetDisplayValues(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
 			};
 			

@@ -11,19 +11,17 @@ public partial class StateController : Node
 
     public override void _Ready()
     {
-        IInputController inputController = GetParent().FindChild(nameof(IInputController)) as IInputController;
+        IInputController inputController = GetParent().FindChild(nameof(InputController)) as IInputController;
         inputController?.inputParameters.AddObserver(ControlState);
     }
 
     private void ControlState(InputDataParameters data)
     {
-        _stateParameters.BuildingStateID.Set(data.buildingID);
+        _stateParameters.IsMouseClicked.Set(data.isMousePressed);
     }
 
     public void Initialize(StateParameters stateParameters)
     {
-        
         _stateParameters = stateParameters;
-        _stateParameters.BuildingStateID.Set(20);
     }
 }

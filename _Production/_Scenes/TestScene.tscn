@@ -32,8 +32,9 @@ _tgd = ExtResource("2_286pr")
 [node name="StateController" type="Node" parent="PlayerManager"]
 script = ExtResource("10_ctvlv")
 
-[node name="BuildingController" type="Node" parent="PlayerManager"]
+[node name="BuildingController" type="Node" parent="PlayerManager" node_paths=PackedStringArray("_buildingScreen")]
 script = ExtResource("4_akd0p")
+_buildingScreen = NodePath("../../PlayerUI/BuildingScreen")
 
 [node name="InputController" type="Node" parent="PlayerManager"]
 script = ExtResource("9_kal1k")

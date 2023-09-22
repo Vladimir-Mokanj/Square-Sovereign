@@ -4,5 +4,5 @@ namespace FT.TBS;
 
 public class StateParameters
 {
-    public ObservableProperty<int> BuildingStateID { get; } = new(-1);
+    public ObservableProperty<bool> IsMouseClicked { get; } = new(false);
 }

@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using Godot;
 using FT.Data;
 using FT.Data.Items;
-using FT.Input;
-using FT.Managers;
-using FT.TBS;
 
 namespace FT.UI;
 
@@ -17,46 +14,34 @@ public partial class BuildingScreen : Control
 	[Export] private Control _buildingPickControlNode;
 	[Export] private BuildingInfo _BuildingInfoPanel;
 
-	private Building _currentBuilding;
-	private InputDataParameters _dataParameters;
-
-	public override void _Ready()
+	public void Initialize(Action<int> dataChanged)
 	{
-		List<BuildingUI> createdBuildingUI = InitializeBuildingPicks();
+		List<BuildingUI> createdBuildingUI = InitializeBuildingPicks(dataChanged);
 		InitializeBuildingSelection(createdBuildingUI);
-
-		PlayerManager.Instance.OnDataInitialized.AddObserver(OnDataInitialized);
-	}
-
-	private void OnDataInitialized(InputDataParameters data)
-	{
-		GD.PrintErr(data.buildingID);
-		_dataParameters = data;
-	}
-
-	public bool BuildStructure(byte row, byte col, byte cellSize, (TerrainType terrainType, ResourceType resourceType, bool isOccupied) data)
-	{
-		if (_currentBuilding == null) 
-			return false;
-		
-		if (_currentBuilding.ResourceType != data.resourceType || data.isOccupied)
-			return false;
-		
-		Node3D building = _currentBuilding.Prefab.Instantiate() as Node3D;
-		building.Position = new Vector3(row * cellSize + cellSize/2.0f, 0, col * cellSize + cellSize/2.0f); 
-		
-		AddChild(building);
-		return true;
-	}
-
-	private void ShowBuildingMenu(GameState gameState)
-	{
-		Visible = gameState == GameState.BUILDING;
-		if (!Visible)
-			_currentBuilding = null;
 	}
 	
-	private List<BuildingUI> InitializeBuildingPicks()
+	//public override void _Ready()
+	//{
+	//	List<BuildingUI> createdBuildingUI = InitializeBuildingPicks();
+	//	InitializeBuildingSelection(createdBuildingUI);
+	//}
+
+	//public bool BuildStructure(byte row, byte col, byte cellSize, (TerrainType terrainType, ResourceType resourceType, bool isOccupied) data)
+	//{
+	//	if (_currentBuilding == null) 
+	//		return false;
+	//	
+	//	if (_currentBuilding.ResourceType != data.resourceType || data.isOccupied)
+	//		return false;
+	//	
+	//	Node3D building = _currentBuilding.Prefab.Instantiate() as Node3D;
+	//	building.Position = new Vector3(row * cellSize + cellSize/2.0f, 0, col * cellSize + cellSize/2.0f); 
+	//	
+	//	AddChild(building);
+	//	return true;
+	//}
+	
+	private List<BuildingUI> InitializeBuildingPicks(Action<int> dataChanged)
 	{
 		List<BuildingUI> buildingsUI = new();
 		
@@ -70,8 +55,8 @@ public partial class BuildingScreen : Control
 			uiItem.Visible = false;
 			uiItem.Pressed += () =>
 			{
-				_currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
-				_dataParameters.buildingID = _currentBuilding.Id;
+				Building _currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
+				dataChanged?.Invoke(uiItem.ID);
 				_BuildingInfoPanel?.SetDisplayValues(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
 			};
 			
@@ -100,8 +85,6 @@ public partial class BuildingScreen : Control
 			selection!.Pressed += () =>
 			{
 				_buildingType = _buildingType.ToString() == selection.Text ? BuildingType.NONE : type;
-				_currentBuilding = null;
-				_BuildingInfoPanel?.SetDisplayValues(null, "", "");
 				createdBuildingUI.ForEach(buildingUi => buildingUi.Visible = _buildingType == ItemDatabase.Get<Building>(buildingUi.ID).TabType);
 			};
 		}

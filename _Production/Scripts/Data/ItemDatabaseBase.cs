@@ -12,13 +12,18 @@ namespace FT.Data;
 
 public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where TI : ItemDatabaseBase<T, TI>
 {
-    [Export] protected string _spreadsheetId;
     [Export] protected Item[] _items;
 
     public static TI Database => _database ??= GD.Load("Resources/" + typeof(TI).Name + ".tres") as TI;
     private static TI _database;
-    
+
+    private static T Get(int id) => Database._items.FirstOrDefault(item => item.Id == id) as T;
+    public static TT Get<TT>(int id) where TT : T => Get(id) as TT;
+    public static TT[] GetAllOfType<TT>() where TT : T => Database._items.OfType<TT>().ToArray();
+
 #if TOOLS
+    [ExportCategory("Editor Only")]
+    [Export] protected string _spreadsheetId;
     private class ItemEqualityComparer : IEqualityComparer<T>
     {
         public bool Equals(T x, T y)
@@ -64,7 +69,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
         {
             string itemType = item.GetType().Name;
             string itemName = item.Name.Replace(" ", "");
-            return Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres");
+            return Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres");    // Extend path later on
         }
 
         ItemEqualityComparer comparer = new();
@@ -93,7 +98,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
            ResourceSaver.Save(item, path);
         }
         
-        const string pathToTres = "res://Resources/ItemDatabase.tres";
+        const string pathToTres = "res://Resources/ItemDatabase.tres";  // Ugh, terrible
         foreach ((T item, string path) in itemsToDelete)
         {
            int index = Array.FindIndex(_items, i => i?.Name == item.Name);

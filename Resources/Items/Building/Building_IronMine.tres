@@ -1,11 +1,17 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cqc821fssliey"]
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cvtj36mhu4pq3"]
 
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Building.cs" id="1_kv8b6"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Building.cs" id="1_uc153"]
+[ext_resource type="PackedScene" uid="uid://bj2nr3h48ljja" path="res://Resources/Items/Building/Prefabs/IronMine_Prefab.tscn" id="1_xxkip"]
+[ext_resource type="Texture2D" uid="uid://ck1bjhj7xune3" path="res://Resources/Items/Building/Icons/IronMine_Sprite.png" id="2_pg18h"]
 
 [resource]
-script = ExtResource("1_kv8b6")
+script = ExtResource("1_uc153")
+TabType = 3
+ResourceType = 3
+Description = "Ah, the Iron mine—where rocks go to fulfill their dreams of becoming swords. You know what they say: it's not just a phase, it's a metamorphic lifestyle!"
 DisplayName = "Iron Mine"
 PrefabName = "IronMine_Prefab"
+Prefab = ExtResource("1_xxkip")
 SpriteName = "IronMine_Sprite"
-MaxStackAmount = 1
+Sprite = ExtResource("2_pg18h")
 Name = "IronMine"

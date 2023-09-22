@@ -13,8 +13,7 @@ public partial class Item : ItemBase
     [Export, ReadOnly] public string PrefabName { get; private set; }
     [Export, ReadOnly] public PackedScene Prefab { get; private set; }
     [Export, ReadOnly] public string SpriteName { get; private set; }
-    [Export, ReadOnly] public Texture Sprite { get; private set; }
-    [Export, ReadOnly] public int MaxStackAmount { get; private set; }
+    [Export, ReadOnly] public Texture2D Sprite { get; private set; }
 
 #if TOOLS
     public virtual void Setup(DataRow data)
@@ -22,10 +21,9 @@ public partial class Item : ItemBase
         Name = data.Parse<string>(nameof(Name));
         DisplayName = data.Parse<string>(nameof(DisplayName));
         PrefabName = data.Parse<string>(nameof(PrefabName));
-        SpriteName = data.Parse<string>(nameof(SpriteName));
-        Sprite = GD.Load<Texture>($"res://Resources/Items/{GetType().Name}/Icons/{SpriteName}.png");
-        MaxStackAmount = data.Parse<int>(nameof(MaxStackAmount));
         Prefab = GD.Load<PackedScene>($"res://Resources/Items/{GetType().Name}/Prefabs/{PrefabName}.tscn");
+        SpriteName = data.Parse<string>(nameof(SpriteName));
+        Sprite = GD.Load<Texture2D>($"res://Resources/Items/{GetType().Name}/Icons/{SpriteName}.png");
     }
 #endif
 }

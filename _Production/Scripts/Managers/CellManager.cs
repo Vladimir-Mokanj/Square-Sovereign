@@ -3,7 +3,7 @@ using System;
 namespace FT.Managers;
 
 public enum TerrainType : byte {WATER, LAND, HILL}
-public enum ResourceType : byte {NONE, WOOD, FISH, METAL }
+public enum ResourceType : byte {NONE, FISH, FOOD, METAL }
 
 public class CellManager
 {
@@ -27,7 +27,7 @@ public class CellManager
                 int index = x * _cols + z;
                 
                 (TerrainType, ResourceType) terrainData = SetTerrainData(heights[index]);
-                _cells[index] = PackData(terrainData.Item1, terrainData.Item2, terrainData.Item1 != TerrainType.LAND);
+                _cells[index] = PackData(terrainData.Item1, terrainData.Item2, terrainData.Item1 != TerrainType.LAND && terrainData.Item2 == ResourceType.NONE);
             }
     }
 
@@ -44,7 +44,9 @@ public class CellManager
         
         return (terrainType, resourceType, isOccupied);
     }
-    
+
+    public void SetIsOccupied(byte row, byte col) => _cells[row * _cols + col] |= 0x1;
+
     private static byte PackData(TerrainType terrainType, ResourceType resourceType, bool isOccupied) => 
         (byte)(((byte)terrainType << 5) | ((byte)resourceType << 1) | (isOccupied ? 1 : 0));
 
@@ -55,7 +57,7 @@ public class CellManager
         {
             < 1 => (TerrainType.WATER, hasResource ? ResourceType.FISH : ResourceType.NONE),
             > 1 => (TerrainType.HILL, hasResource ? ResourceType.METAL : ResourceType.NONE),
-            _ => (TerrainType.LAND, hasResource ? ResourceType.WOOD : ResourceType.NONE)
+            _ => (TerrainType.LAND, hasResource ? ResourceType.FOOD : ResourceType.NONE)
         };
     }
 }

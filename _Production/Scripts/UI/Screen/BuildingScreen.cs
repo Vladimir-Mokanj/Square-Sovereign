@@ -53,8 +53,7 @@ public partial class BuildingScreen : Control
 			uiItem.Pressed += () =>
 			{
 				_currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
-				_BuildingInfoPanel?.SetDisplayValues(
-					_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
+				_BuildingInfoPanel?.SetDisplayValues(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
 			};
 			
 			_buildingPickControlNode.AddChild(uiItem);
@@ -67,7 +66,9 @@ public partial class BuildingScreen : Control
 	private void InitializeBuildingSelection(List<BuildingUI> createdBuildingUI)
 	{
 		BuildingType _buildingType = BuildingType.NONE;
-		foreach (BuildingType type in Enum.GetValues(typeof(BuildingType)))
+		
+		BuildingType[] buildingTypes = (BuildingType[]) Enum.GetValues(typeof(BuildingType));
+		foreach (BuildingType type in buildingTypes)
 		{
 			if (type == BuildingType.NONE)
 				continue;

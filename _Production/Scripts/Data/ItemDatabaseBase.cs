@@ -20,8 +20,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
     private static T Get(int id) => Database._items.FirstOrDefault(item => item.Id == id) as T;
     public static TT Get<TT>(int id) where TT : T => Get(id) as TT;
     public static TT[] GetAllOfType<TT>() where TT : T => Database._items.OfType<TT>().ToArray();
-    
-    
+
 #if TOOLS
     [ExportCategory("Editor Only")]
     [Export] protected string _spreadsheetId;

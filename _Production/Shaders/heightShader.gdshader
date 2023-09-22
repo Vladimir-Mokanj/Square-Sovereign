@@ -3,7 +3,6 @@ shader_type spatial;
 uniform sampler2D WaterTexture;
 uniform sampler2D DirtTexture;
 uniform sampler2D StoneTexture;
-uniform float CellSize;
 
 varying float y_coord;
 

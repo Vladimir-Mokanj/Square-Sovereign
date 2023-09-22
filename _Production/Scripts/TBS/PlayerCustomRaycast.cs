@@ -22,12 +22,12 @@ public class PlayerCustomRaycast
     {
         _camera = camera;
         _yHeights = yHeights;
-        _cellSize = tgd.CellSize;
+        _cellSize = 20;
         _rows = tgd.Rows;
         _cols = tgd.Cols;
 
-        _maxT = Math.Max((tgd.Rows + tgd.Rows) * tgd.CellSize, (tgd.Cols + tgd.Cols) * tgd.CellSize);
-        _step = tgd.CellSize / 5.0f;
+        _maxT = Math.Max((tgd.Rows + tgd.Rows) * 20, (tgd.Cols + tgd.Cols) * 20);
+        _step = 20.0f / 5.0f;
     }
     
     /// Gets the row and column based on the projected ray towards the mouse position.

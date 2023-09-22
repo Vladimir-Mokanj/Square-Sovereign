@@ -19,28 +19,7 @@ public partial class BuildingScreen : Control
 		List<BuildingUI> createdBuildingUI = InitializeBuildingPicks(dataChanged);
 		InitializeBuildingSelection(createdBuildingUI);
 	}
-	
-	//public override void _Ready()
-	//{
-	//	List<BuildingUI> createdBuildingUI = InitializeBuildingPicks();
-	//	InitializeBuildingSelection(createdBuildingUI);
-	//}
 
-	//public bool BuildStructure(byte row, byte col, byte cellSize, (TerrainType terrainType, ResourceType resourceType, bool isOccupied) data)
-	//{
-	//	if (_currentBuilding == null) 
-	//		return false;
-	//	
-	//	if (_currentBuilding.ResourceType != data.resourceType || data.isOccupied)
-	//		return false;
-	//	
-	//	Node3D building = _currentBuilding.Prefab.Instantiate() as Node3D;
-	//	building.Position = new Vector3(row * cellSize + cellSize/2.0f, 0, col * cellSize + cellSize/2.0f); 
-	//	
-	//	AddChild(building);
-	//	return true;
-	//}
-	
 	private List<BuildingUI> InitializeBuildingPicks(Action<int> dataChanged)
 	{
 		List<BuildingUI> buildingsUI = new();

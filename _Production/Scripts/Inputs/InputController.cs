@@ -8,8 +8,8 @@ namespace FT.Input;
 public partial class InputController : Node, IInputController
 {
     public Action<InputDataParameters> inputParameters { get; set; }
-    
-    public InputDataParameters _dataParameters { get; private set; } = new();
+
+    private readonly InputDataParameters _dataParameters = new();
     private PlayerCustomRaycast _raycast;
 
     public void Initialize(ref TerrainGenerationData tgd, byte[] yHeights ) => 
@@ -22,6 +22,7 @@ public partial class InputController : Node, IInputController
 
         if (@event is InputEventMouseMotion mouseMotionEvent)
             _dataParameters.RowCol = _raycast.GetRowCol(mouseMotionEvent.Position);
+        
     }
     
     public override void _Process(double delta)

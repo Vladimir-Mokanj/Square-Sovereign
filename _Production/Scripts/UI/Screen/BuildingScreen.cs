@@ -4,6 +4,8 @@ using Godot;
 using FT.Data;
 using FT.Data.Items;
 using FT.Managers;
+using FT.TBS;
+using FT.TBS.States;
 
 namespace FT.UI;
 
@@ -36,6 +38,17 @@ public partial class BuildingScreen : Control
 	{
 		List<BuildingUI> createdBuildingUI = InitializeBuildingPicks();
 		InitializeBuildingSelection(createdBuildingUI);
+
+		GameManager.Instance.OnGameInitialized += OnStateChanged;
+	}
+
+	private void OnStateChanged(StateParameters stateParameters)
+	{
+		stateParameters.GameState = state =>
+		{
+			if (state == GameState.BUILDING)
+				GD.PrintErr("Yes");
+		};
 	}
 
 	private List<BuildingUI> InitializeBuildingPicks()

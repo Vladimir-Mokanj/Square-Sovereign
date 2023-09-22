@@ -1,4 +1,3 @@
-using FT.Data;
 using FT.Input;
 using FT.Managers;
 using FT.TBS.States;
@@ -7,8 +6,11 @@ namespace FT.TBS;
 
 public class StateController
 {
+    private (byte row, byte col) _rowCol = (0, 0);
+    
     private readonly CellManager _cellManager;
     private InputDataParameters _dataParameters = new();
+    public StateParameters StateParameters { get; private set; } = new();
     
     private IGameState _currentGameState;
     public IdleGameState IdleGameState { get; private set; }
@@ -18,6 +20,7 @@ public class StateController
     public StateController(IInputController inputController, CellManager cellManager)
     {
         _cellManager = cellManager;
+        inputController.inputParameters += ControlState;
         
         IdleGameState = new IdleGameState(inputController, this);
         UnitGameState = new UnitGameState(inputController, this);
@@ -26,7 +29,12 @@ public class StateController
         _currentGameState = IdleGameState;
         _currentGameState.EnterState();
     }
-    
+
+    private void ControlState(InputDataParameters data)
+    {
+        //StateParameters.RaycastData = _cellManager.GetCellData(data.RowCol);
+    }
+
     public void ChangeState(IGameState newGameState)
     {
         _currentGameState?.ExitState();

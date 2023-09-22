@@ -35,9 +35,9 @@ public class CellManager
     /// <param name="row">Square Row</param>
     /// <param name="col">Square Col</param>
     /// <returns>Item1: TerrainType, Item2: ResourceType, Item3: IsOccupied</returns>
-    public (TerrainType, ResourceType, bool) GetCellData(byte row, byte col)
+    public (TerrainType, ResourceType, bool) GetCellData((byte row, byte col) rowCol)
     {
-        byte packedData = _cells[row * _cols + col];
+        byte packedData = _cells[rowCol.row * _cols + rowCol.col];
         TerrainType terrainType = (TerrainType)((packedData >> 5) & 0x7);
         ResourceType resourceType = (ResourceType)((packedData >> 1) & 0xF);
         bool isOccupied = (packedData & 0x1) != 0;

@@ -1,12 +1,13 @@
+using System;
 using FT.Data;
 using FT.Input;
-using FT.TBS;
+using FT.Managers;
 using FT.Terrain;
 using FT.Tools;
 using FT.UI;
 using Godot;
 
-namespace FT.Managers;
+namespace FT.TBS;
 
 public partial class GameManager : Node
 {
@@ -15,9 +16,16 @@ public partial class GameManager : Node
     [Export] private BuildingScreen _temp;
 
     [Export] private DebugTestUI _debugTestUi;
+    
+    public static GameManager Instance { get; private set; }
+    public Action<StateParameters> OnGameInitialized { get; set; }
 
+    private StateController _stateController;
+    
     public override void _Ready()
     {
+        Instance = this;
+        
         GenerateTerrain generateTerrain = new(_tgd);
         generateTerrain.GenerateMesh(ExtentionTools.CreateNode<Node3D>("Terrain", "Terrain", GetTree().GetFirstNodeInGroup("RootNode")));
 
@@ -25,9 +33,16 @@ public partial class GameManager : Node
         cellManager.InitializeCells(_tgd.Rows, generateTerrain.GetCellMaxYVertexHeight);
         
         _inputController.Initialize(ref _tgd, generateTerrain.GetCellMaxYVertexHeight);
-        StateController _stateController = new(_inputController, cellManager);
+        _stateController = new StateController(_inputController, cellManager);
     }
-    
+
+    private void GameInitialized()
+    {
+        if (_stateController == null)
+            return;
+        
+        OnGameInitialized?.Invoke(_stateController.StateParameters);
+    }
     
     //public override void _Input(InputEvent @event)
     //{

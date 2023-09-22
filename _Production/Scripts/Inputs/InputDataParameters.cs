@@ -1,5 +1,3 @@
-using Godot;
-
 namespace FT.Input;
 
 public class InputDataParameters

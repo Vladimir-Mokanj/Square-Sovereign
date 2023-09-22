@@ -1,4 +1,5 @@
 using FT.Managers;
+using FT.TBS;
 using Godot;
 
 namespace FT.UI;
@@ -9,7 +10,10 @@ public partial class DebugTestUI : Node
     [Export] private Label _resourceTypeLabel;
     [Export] private Label _isOccupiedLabel;
 
-    public void AssignValues((TerrainType terrainType, ResourceType resourceType, bool isOccupied) cellData)
+    public override void _Ready() => GameManager.Instance.OnGameInitialized += OnStateChanged;
+    private void OnStateChanged(StateParameters stateParameters) => stateParameters.RaycastData += AssignValues;
+
+    private void AssignValues((TerrainType terrainType, ResourceType resourceType, bool isOccupied) cellData)
     {
         _terrainTypeLabel.Text = $"Terrain Type: {cellData.terrainType}";
         _resourceTypeLabel.Text = $"Resource Type: {cellData.resourceType}";

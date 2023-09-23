@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=13 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/PlayerManager.cs" id="1_qv3y3"]
 [ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://Resources/Terrain/DebugTerrainData.tres" id="2_286pr"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/BuildingController.cs" id="4_akd0p"]
 [ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/BuildingScreen.cs" id="4_u5pie"]
 [ext_resource type="PackedScene" uid="uid://coaccj8xna8wg" path="res://_Production/Art/2D/UI/BuildingPickUI_Prefab.tscn" id="5_fik5v"]
+[ext_resource type="Script" path="res://_Production/_Scenes/PlayerUI.cs" id="6_5dwco"]
 [ext_resource type="PackedScene" uid="uid://cy18rrpicu2th" path="res://_Production/Art/2D/UI/BuildingSelectionUI_Prefab.tscn" id="6_gmdyn"]
 [ext_resource type="Script" path="res://_Production/Scripts/UI/BuildingInfo.cs" id="7_1ritc"]
 [ext_resource type="Texture2D" uid="uid://dpwjh3qp8q1ye" path="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png" id="8_vs5x6"]
@@ -32,24 +33,30 @@ _tgd = ExtResource("2_286pr")
 [node name="StateController" type="Node" parent="PlayerManager"]
 script = ExtResource("10_ctvlv")
 
-[node name="BuildingController" type="Node" parent="PlayerManager" node_paths=PackedStringArray("_buildingScreen")]
+[node name="BuildingController" type="Node" parent="PlayerManager"]
 script = ExtResource("4_akd0p")
-_buildingScreen = NodePath("../../PlayerUI/BuildingScreen")
 
 [node name="InputController" type="Node" parent="PlayerManager"]
 script = ExtResource("9_kal1k")
 
-[node name="PlayerUI" type="Node" parent="."]
+[node name="PlayerUI" type="Node" parent="." node_paths=PackedStringArray("DebugTestUi", "BuildingScreen") groups=["PlayerUI"]]
+script = ExtResource("6_5dwco")
+DebugTestUi = NodePath("DebugScreen")
+BuildingScreen = NodePath("BuildingScreen")
 
-[node name="DebugScreen" type="Control" parent="PlayerUI"]
+[node name="DebugScreen" type="Control" parent="PlayerUI" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_kgi2c")
+_terrainTypeLabel = NodePath("DebugUI/TerrainTypeContainer/TerrainTypeLabel")
+_resourceTypeLabel = NodePath("DebugUI/ResourceTypeContainer/ResourceTypeLabel")
+_isOccupiedLabel = NodePath("DebugUI/IsOccupiedContainer/IsOccupedLabel")
 
-[node name="DebugUI" type="HBoxContainer" parent="PlayerUI/DebugScreen" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel")]
+[node name="DebugUI" type="HBoxContainer" parent="PlayerUI/DebugScreen"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -58,10 +65,6 @@ grow_horizontal = 2
 mouse_filter = 2
 theme_override_constants/separation = 50
 alignment = 1
-script = ExtResource("3_kgi2c")
-_terrainTypeLabel = NodePath("TerrainTypeContainer/TerrainTypeLabel")
-_resourceTypeLabel = NodePath("ResourceTypeContainer/ResourceTypeLabel")
-_isOccupiedLabel = NodePath("IsOccupiedContainer/IsOccupedLabel")
 
 [node name="TerrainTypeContainer" type="PanelContainer" parent="PlayerUI/DebugScreen/DebugUI"]
 layout_mode = 2

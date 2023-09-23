@@ -1,9 +1,8 @@
 using FT.Input;
+using FT.Player;
 using Godot;
 
 namespace FT.TBS;
-
-public enum GameState : byte {IDLE, BUILDING, UNIT, ENEMY_TURN} 
 
 public partial class StateController : Node
 {
@@ -18,10 +17,9 @@ public partial class StateController : Node
     private void ControlState(InputDataParameters data)
     {
         _stateParameters.IsMouseClicked.Set(data.isMousePressed);
+        _stateParameters.RowCol.Set(PlayerCustomRaycast.GetRowCol(data.MousePosition));
     }
 
-    public void Initialize(StateParameters stateParameters)
-    {
+    public void Initialize(StateParameters stateParameters) => 
         _stateParameters = stateParameters;
-    }
 }

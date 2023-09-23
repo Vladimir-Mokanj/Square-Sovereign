@@ -10,13 +10,18 @@ public partial class DebugTestUI : Node
     [Export] private Label _resourceTypeLabel;
     [Export] private Label _isOccupiedLabel;
 
-    //public override void _Ready() => GameManager.Instance.OnGameInitialized += OnStateChanged;
-    //private void OnStateChanged(StateParameters stateParameters) => stateParameters.RaycastData.AddObserver(AssignValues);
+    public override void _Ready() => PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateChanged);
+    private void OnStateChanged(StateParameters stateParameters) => stateParameters.RowCol.AddObserver(AssignValues);
 
-    private void AssignValues((TerrainType terrainType, ResourceType resourceType, bool isOccupied)? cellData)
+    private void AssignValues((byte? row, byte? col) value)
     {
-        _terrainTypeLabel.Text = $"Terrain Type: {cellData.Value.terrainType}";
-        _resourceTypeLabel.Text = $"Resource Type: {cellData.Value.resourceType}";
-        _isOccupiedLabel.Text = cellData.Value.isOccupied ? "Is Occupied: True" : "Is Occupied: False";
+        if (!value.row.HasValue || !value.col.HasValue)
+            return;
+
+        UnpackedCellData data = CellManager.GetCellData((value.row.Value, value.col.Value));
+
+        _terrainTypeLabel.Text = $"Terrain Type: {data.terrainType}";
+        _resourceTypeLabel.Text = $"Resource Type: {data.resourceType}";
+        _isOccupiedLabel.Text = data.isOccupied ? "Is Occupied: True" : "Is Occupied: False";
     }
 }

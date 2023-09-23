@@ -16,8 +16,9 @@ public partial class StateController : Node
 
     private void ControlState(InputDataParameters data)
     {
-        _stateParameters.IsMouseClicked.Set(data.isMousePressed);
-        _stateParameters.RowCol.Set(PlayerCustomRaycast.GetRowCol(data.MousePosition));
+        _stateParameters.IsMouseLeftDown.Set(data.isLeftMousePressed);
+        _stateParameters.IsMouseRightDown.Set(data.isRightMousePressed);
+        _stateParameters.RowCol.Set(PlayerCustomRaycast.GetRowCol(data.mousePosition));
     }
 
     public void Initialize(StateParameters stateParameters) => 

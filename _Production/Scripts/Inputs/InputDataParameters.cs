@@ -4,6 +4,7 @@ namespace FT.Input;
 
 public class InputDataParameters
 {
-    public bool isMousePressed { get; set; }
-    public Vector2 MousePosition { get; set; }
+    public Vector2 mousePosition { get; set; }
+    public bool isLeftMousePressed { get; set; }
+    public bool isRightMousePressed { get; set; }
 }

@@ -10,8 +10,12 @@ public partial class DebugTestUI : Node
     [Export] private Label _resourceTypeLabel;
     [Export] private Label _isOccupiedLabel;
 
-    public override void _Ready() => PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateChanged);
-    private void OnStateChanged(StateParameters stateParameters) => stateParameters.RowCol.AddObserver(AssignValues);
+    public override void _Ready() => PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateAssigned);
+    private void OnStateAssigned(StateParameters State)
+    {
+        State.RowCol.AddObserver(AssignValues);
+        State.IsMouseLeftDown.AddObserver(value => { if (value) AssignValues(State.RowCol); });
+    }
 
     private void AssignValues((byte? row, byte? col) value)
     {

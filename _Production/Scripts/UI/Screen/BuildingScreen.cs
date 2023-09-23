@@ -14,13 +14,13 @@ public partial class BuildingScreen : Control
 	[Export] private Control _buildingPickControlNode;
 	[Export] private BuildingInfo _BuildingInfoPanel;
 
-	public void Initialize(Action<int> dataChanged)
+	public void Initialize(Action<int?> dataChanged)
 	{
 		List<BuildingUI> createdBuildingUI = InitializeBuildingPicks(dataChanged);
-		InitializeBuildingSelection(createdBuildingUI);
+		InitializeBuildingSelection(createdBuildingUI, dataChanged);
 	}
 
-	private List<BuildingUI> InitializeBuildingPicks(Action<int> dataChanged)
+	private List<BuildingUI> InitializeBuildingPicks(Action<int?> dataChanged)
 	{
 		List<BuildingUI> buildingsUI = new();
 		
@@ -32,11 +32,17 @@ public partial class BuildingScreen : Control
 			
 			uiItem.InitializeValues(building);
 			uiItem.Visible = false;
-			uiItem.Pressed += () =>
+			uiItem.Pressed += () => dataChanged?.Invoke(uiItem.ID);
+
+			uiItem.MouseEntered += () =>
 			{
 				Building _currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
-				dataChanged?.Invoke(uiItem.ID);
-				_BuildingInfoPanel?.SetDisplayValues(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
+				_BuildingInfoPanel?.ShowDisplayPanel(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
+			};
+			
+			uiItem.MouseExited += () =>
+			{
+				_BuildingInfoPanel?.HideInfoPanel();
 			};
 			
 			_buildingPickControlNode.AddChild(uiItem);
@@ -46,12 +52,10 @@ public partial class BuildingScreen : Control
 		return buildingsUI;
 	}
 
-	private void InitializeBuildingSelection(List<BuildingUI> createdBuildingUI)
+	private void InitializeBuildingSelection(List<BuildingUI> createdBuildingUI, Action<int?> dataChanged)
 	{
 		BuildingType _buildingType = BuildingType.NONE;
-		
-		BuildingType[] buildingTypes = (BuildingType[]) Enum.GetValues(typeof(BuildingType));
-		foreach (BuildingType type in buildingTypes)
+		foreach (BuildingType type in (BuildingType[]) Enum.GetValues(typeof(BuildingType)))
 		{
 			if (type == BuildingType.NONE)
 				continue;
@@ -64,6 +68,7 @@ public partial class BuildingScreen : Control
 			selection!.Pressed += () =>
 			{
 				_buildingType = _buildingType.ToString() == selection.Text ? BuildingType.NONE : type;
+				dataChanged?.Invoke(null);
 				createdBuildingUI.ForEach(buildingUi => buildingUi.Visible = _buildingType == ItemDatabase.Get<Building>(buildingUi.ID).TabType);
 			};
 		}

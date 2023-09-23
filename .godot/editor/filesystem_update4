@@ -18,3 +18,7 @@ res://_Production/Scripts/UI/BuildingUI.cs
 res://_Production/Scripts/UI/Screen/BuildingScreen.cs
 res://_Production/Scripts/UI/Screen/DebugTestUI.cs
 res://_Production/_Scenes/PlayerUI.cs
+res://_Production/Art/2D/UI/Screen/DebugScreenUI.tscn
+res://_Production/Art/2D/UI/Screen/BuildingScreenUI.tscn
+res://_Production/Art/2D/UI/Screen/DebugScreen.tscn
+res://_Production/Art/2D/UI/Screen/BuildingScreen.tscn

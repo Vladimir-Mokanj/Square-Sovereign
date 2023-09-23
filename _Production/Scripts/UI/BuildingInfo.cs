@@ -10,16 +10,16 @@ public partial class BuildingInfo : Panel
 
     public override void _Ready() => Visible = false;
 
-    public void SetDisplayValues(Texture2D texture, string displayName, string displayDescription)
+    public void ShowDisplayPanel(Texture2D texture, string displayName, string displayDescription)
     {
-        bool isVisible = texture != null || !string.IsNullOrEmpty(displayName) || !string.IsNullOrEmpty(displayDescription);
-        Visible = isVisible;
-
-        if (isVisible == false)
-            return;
-
+        Visible = true;
         _buildingTexture.Texture = texture;
         _buildingDisplayName.Text = displayName;
         _buildingDisplayDescription.Text = displayDescription;
+    }
+
+    public void HideInfoPanel()
+    {
+        Visible = false;
     }
 }

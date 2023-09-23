@@ -13,10 +13,11 @@ public partial class InputController : Node, IInputController
 
     public override void _Input(InputEvent @event)
     {
-        _dataParameters.isMousePressed = @event.IsActionPressed("OnPressLeft");
-        
+        _dataParameters.isLeftMousePressed = @event.IsActionPressed("OnPressLeft");
+        _dataParameters.isRightMousePressed = @event.IsActionPressed("OnPressRight");
+            
         if (@event is InputEventMouseMotion mouseMotionEvent)
-            _dataParameters.MousePosition = mouseMotionEvent.Position;
+            _dataParameters.mousePosition = mouseMotionEvent.Position;
     }
 
     public override void _Process(double delta) => 

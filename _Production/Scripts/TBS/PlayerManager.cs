@@ -25,7 +25,7 @@ public partial class PlayerManager : Node
     private InputController _inputController;
 
     private InputDataParameters DataParameters { get; } = new();
-    private StateParameters StateParameters { get; }= new();
+    private StateParameters StateParameters { get; } = new();
 
     public override async void _Ready()
     {
@@ -48,5 +48,6 @@ public partial class PlayerManager : Node
         
         (FindChild(nameof(InputController)) as InputController)?.Initialize(DataParameters);
         (FindChild(nameof(StateController)) as StateController)?.Initialize(StateParameters); 
+        (FindChild(nameof(BuildingController)) as BuildingController)?.Initialize(cellManager); 
     }
 }

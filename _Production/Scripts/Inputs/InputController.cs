@@ -16,15 +16,12 @@ public partial class InputController : Node, IInputController
 
     public override void _Input(InputEvent @event)
     {
-        if (@event is InputEventMouseButton { Pressed: true, ButtonIndex: MouseButton.Left })
-            _dataParameters.isMousePressed = true;
+        _dataParameters.isMousePressed = @event.IsActionPressed("OnPressLeft");
     }
 
     public override void _Process(double delta)
     {
         _inputParameters.Action?.Invoke(_dataParameters);
-        _dataParameters.isMousePressed = false;
-        _dataParameters.buildingID = -1;
     }
 }
 

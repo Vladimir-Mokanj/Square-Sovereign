@@ -15,13 +15,11 @@ public partial class DebugTestUI : Node
 
     private void AssignValues((byte? row, byte? col) value)
     {
-        UnpackedCellData data = new();
         bool isNull = value is { row: not null, col: not null };
-        if (isNull)
-            data = CellManager.GetCellData((value.row.Value, value.col.Value));
+        UnpackedCellData data = isNull ? CellManager.GetCellData((value.row.Value, value.col.Value)) : new UnpackedCellData();
 
         _terrainTypeLabel.Text = $"Terrain Type: {(isNull ? data.terrainType : "Null")}";
         _resourceTypeLabel.Text = $"Resource Type: {(isNull ? data.resourceType : "Null")}";
-        _isOccupiedLabel.Text = isNull ? data.isOccupied ? "Is Occupied: True" : "Is Occupied: False" : "Is Occupied: Null";
+        _isOccupiedLabel.Text = isNull ? (data.isOccupied ? "Is Occupied: True" : "Is Occupied: False") : "Is Occupied: Null";
     }
 }

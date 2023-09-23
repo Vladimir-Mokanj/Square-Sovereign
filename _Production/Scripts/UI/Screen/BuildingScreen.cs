@@ -32,7 +32,6 @@ public partial class BuildingScreen : Control
 			
 			uiItem.InitializeValues(building);
 			uiItem.Visible = false;
-			uiItem.Pressed += () => dataChanged?.Invoke(uiItem.ID);
 
 			uiItem.MouseEntered += () =>
 			{
@@ -40,10 +39,8 @@ public partial class BuildingScreen : Control
 				_BuildingInfoPanel?.ShowDisplayPanel(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
 			};
 			
-			uiItem.MouseExited += () =>
-			{
-				_BuildingInfoPanel?.HideInfoPanel();
-			};
+			uiItem.MouseExited += () => _BuildingInfoPanel?.HideInfoPanel();
+			uiItem.Pressed += () => dataChanged?.Invoke(uiItem.ID);
 			
 			_buildingPickControlNode.AddChild(uiItem);
 			buildingsUI.Add(uiItem);

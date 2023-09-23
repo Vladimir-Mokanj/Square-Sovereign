@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://dah75jl5535af"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/DebugTestUI.cs" id="1_vuwvu"]
+
+[node name="DebugScreen" type="Control" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vuwvu")
+_terrainTypeLabel = NodePath("DebugUI/TerrainTypeContainer/TerrainTypeLabel")
+_resourceTypeLabel = NodePath("DebugUI/ResourceTypeContainer/ResourceTypeLabel")
+_isOccupiedLabel = NodePath("DebugUI/IsOccupiedContainer/IsOccupedLabel")
+
+[node name="DebugUI" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 40.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="TerrainTypeContainer" type="PanelContainer" parent="DebugUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TerrainTypeLabel" type="Label" parent="DebugUI/TerrainTypeContainer"]
+layout_mode = 2
+text = "Terrain Type: Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="ResourceTypeContainer" type="PanelContainer" parent="DebugUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ResourceTypeLabel" type="Label" parent="DebugUI/ResourceTypeContainer"]
+layout_mode = 2
+text = "Terrain Type: Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="IsOccupiedContainer" type="PanelContainer" parent="DebugUI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="IsOccupedLabel" type="Label" parent="DebugUI/IsOccupiedContainer"]
+layout_mode = 2
+text = "Terrain Type: Null"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true

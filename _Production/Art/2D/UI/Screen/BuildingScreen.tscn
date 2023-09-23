@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=3 uid="uid://cma8bvrngsyq5"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/BuildingScreen.cs" id="1_34tpj"]
+[ext_resource type="PackedScene" uid="uid://cy18rrpicu2th" path="res://_Production/Art/2D/UI/BuildingSelectionUI_Prefab.tscn" id="2_8mohe"]
+[ext_resource type="PackedScene" uid="uid://coaccj8xna8wg" path="res://_Production/Art/2D/UI/BuildingPickUI_Prefab.tscn" id="3_5vbpe"]
+[ext_resource type="Script" path="res://_Production/Scripts/UI/BuildingInfo.cs" id="4_q5dv5"]
+[ext_resource type="Texture2D" uid="uid://dpwjh3qp8q1ye" path="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png" id="5_8rjun"]
+
+[node name="BuildingScreen" type="Control" node_paths=PackedStringArray("_buildingSelectionControlNode", "_buildingPickControlNode", "_BuildingInfoPanel")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_34tpj")
+_buildingSelectionUI_Prefab = ExtResource("2_8mohe")
+_buildingPickUI_Prefab = ExtResource("3_5vbpe")
+_buildingSelectionControlNode = NodePath("VBoxContainer/BuildingSelectionHBox")
+_buildingPickControlNode = NodePath("VBoxContainer/BuildingPickHBox")
+_BuildingInfoPanel = NodePath("BuildingInfoPanel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="BuildingPickHBox" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="BuildingSelectionHBox" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="BuildingInfoPanel" type="Panel" parent="." node_paths=PackedStringArray("_buildingTexture", "_buildingDisplayName", "_buildingDisplayDescription")]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -201.0
+offset_bottom = 199.0
+grow_horizontal = 0
+grow_vertical = 2
+script = ExtResource("4_q5dv5")
+_buildingTexture = NodePath("BuildingInfoVBox/BuildingTopHBox/BuildingTexture")
+_buildingDisplayName = NodePath("BuildingInfoVBox/BuildingTopHBox/BuildingDisplayName")
+_buildingDisplayDescription = NodePath("BuildingInfoVBox/BuildingDisplayDescription")
+
+[node name="BuildingInfoVBox" type="VBoxContainer" parent="BuildingInfoPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="BuildingTopHBox" type="HBoxContainer" parent="BuildingInfoPanel/BuildingInfoVBox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="BuildingTexture" type="TextureRect" parent="BuildingInfoPanel/BuildingInfoVBox/BuildingTopHBox"]
+layout_mode = 2
+texture = ExtResource("5_8rjun")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="BuildingDisplayName" type="Label" parent="BuildingInfoPanel/BuildingInfoVBox/BuildingTopHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 20
+text = "Broken Name"
+vertical_alignment = 1
+clip_text = true
+
+[node name="Separator" type="Panel" parent="BuildingInfoPanel/BuildingInfoVBox"]
+modulate = Color(0.996078, 0.415686, 0, 1)
+visibility_layer = 2
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+
+[node name="SeparatorInvisible" type="Panel" parent="BuildingInfoPanel/BuildingInfoVBox"]
+modulate = Color(1, 1, 1, 0)
+visibility_layer = 2
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+
+[node name="BuildingDisplayDescription" type="Label" parent="BuildingInfoPanel/BuildingInfoVBox"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 14
+text = "Broken Text
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+clip_text = true

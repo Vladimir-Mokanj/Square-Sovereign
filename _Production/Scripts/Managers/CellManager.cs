@@ -5,15 +5,31 @@ namespace FT.Managers;
 public enum TerrainType : byte {WATER, LAND, HILL}
 public enum ResourceType : byte {NONE, FISH, FOOD, METAL }
 
+public struct UnpackedCellData
+{
+    public UnpackedCellData(TerrainType terrainType, ResourceType resourceType, bool isOccupied)
+    {
+        this.terrainType = terrainType;
+        this.resourceType = resourceType;
+        this.isOccupied = isOccupied;
+    }
+    
+    public readonly TerrainType terrainType;
+    public readonly ResourceType resourceType;
+    public readonly bool isOccupied;
+}
+
 public class CellManager
 {
     private readonly byte[] _cells;
     private readonly byte _cols;
+    private static CellManager _instance;
     
     public CellManager(byte rows, byte cols)
     {
         _cells = new byte[rows * cols];
         _cols = cols;
+        _instance = this;
     }
     
     /// Generate all of the cell data
@@ -32,20 +48,19 @@ public class CellManager
     }
 
     /// Get the cell data of the currently selected square (cell)
-    /// <param name="row">Square Row</param>
-    /// <param name="col">Square Col</param>
+    /// <param name="rowCol">Square Row amd Col</param>
     /// <returns>Item1: TerrainType, Item2: ResourceType, Item3: IsOccupied</returns>
-    public (TerrainType, ResourceType, bool) GetCellData(byte row, byte col)
+    public static UnpackedCellData GetCellData((byte row, byte col) rowCol)
     {
-        byte packedData = _cells[row * _cols + col];
+        byte packedData = _instance._cells[rowCol.row * _instance._cols + rowCol.col];
         TerrainType terrainType = (TerrainType)((packedData >> 5) & 0x7);
         ResourceType resourceType = (ResourceType)((packedData >> 1) & 0xF);
         bool isOccupied = (packedData & 0x1) != 0;
         
-        return (terrainType, resourceType, isOccupied);
+        return new UnpackedCellData(terrainType, resourceType, isOccupied);
     }
 
-    public void SetIsOccupied(byte row, byte col) => _cells[row * _cols + col] |= 0x1;
+    public static void SetIsOccupied(byte row, byte col) => _instance._cells[row * _instance._cols + col] |= 0x1;
 
     private static byte PackData(TerrainType terrainType, ResourceType resourceType, bool isOccupied) => 
         (byte)(((byte)terrainType << 5) | ((byte)resourceType << 1) | (isOccupied ? 1 : 0));

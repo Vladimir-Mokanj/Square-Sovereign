@@ -19,7 +19,7 @@ public partial class BuildingScreen : Control
 
 	private void OnStateInitialized(StateParameters State)
 	{
-		State.BuildingSelectedID.AddObserver(i => Visible = !i.HasValue);
+		State.BuildingSelectedID.AddObserver(i => { Visible = !i.HasValue; });
 		State.IsMouseRightDown.AddObserver(b => { if (b) Visible = true; });
 	}
 
@@ -42,12 +42,7 @@ public partial class BuildingScreen : Control
 			uiItem.InitializeValues(building);
 			uiItem.Visible = false;
 
-			uiItem.MouseEntered += () =>
-			{
-				Building _currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
-				_infoScreenScreen?.ShowDisplayPanel(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
-			};
-			
+			uiItem.MouseEntered += () => _infoScreenScreen?.ShowDisplayPanel(building.Sprite, building.DisplayName, building.Description);
 			uiItem.MouseExited += () => _infoScreenScreen?.HideInfoPanel();
 			uiItem.Pressed += () => dataChanged?.Invoke(uiItem.ID);
 			

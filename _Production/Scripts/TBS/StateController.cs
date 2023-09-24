@@ -18,7 +18,7 @@ public partial class StateController : Node3D
 
     private void ControlState(InputDataParameters data)
     {
-        if (data.isLeftMousePressed) _state.BuildingSelectedID.Set(PhysicsRaycast(data.mousePosition));
+        if (data.isLeftMousePressed) _state.BuildingSelectedID.Set(PhysicsRaycast(data.mousePosition, _state.BuildingSelectedID.Value));
         if (data.isRightMousePressed) _state.BuildingSelectedID.Set(null);
         
         _state.IsMouseLeftDown.Set(data.isLeftMousePressed);
@@ -29,7 +29,7 @@ public partial class StateController : Node3D
     public void Initialize(StateParameters stateParameters) => 
         _state = stateParameters;
 
-    private int? PhysicsRaycast(Vector2 mousePosition)
+    private int? PhysicsRaycast(Vector2 mousePosition, int? value)
     {
         Camera3D camera = GetViewport().GetCamera3D();
         Vector3 rayTo = camera.ProjectRayOrigin(mousePosition) + camera.ProjectRayNormal(mousePosition) * 1000.0f;
@@ -38,12 +38,12 @@ public partial class StateController : Node3D
         Dictionary hitResult = spaceState.IntersectRay(PhysicsRayQueryParameters3D.Create(camera.GlobalPosition, rayTo));
 
         if (hitResult.Count <= 0)
-            return null;
+            return value;
 
         Node parent = ((Node)hitResult["collider"]).GetParent();
         if (parent != null && int.TryParse(parent.Name.ToString().TakeWhile(c => c != '|').ToArray(), out int objectId))
             return objectId;
 
-        return null;
+        return value;
     }
 }

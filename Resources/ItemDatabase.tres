@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemDatabase" load_steps=9 format=3 uid="uid://dbed4jyomodhh"]
+[gd_resource type="Resource" script_class="ItemDatabase" load_steps=11 format=3 uid="uid://dbed4jyomodhh"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="1_a561g"]
 [ext_resource type="Resource" uid="uid://cvtj36mhu4pq3" path="res://Resources/Items/Building/Building_IronMine.tres" id="1_ajnnv"]
@@ -8,8 +8,10 @@
 [ext_resource type="Resource" uid="uid://da2rdy1f4r141" path="res://Resources/Items/Building/Building_Market.tres" id="5_w2yu8"]
 [ext_resource type="Resource" uid="uid://bjqemfolbu3k4" path="res://Resources/Items/Unit/Unit_Clubman.tres" id="6_xi38y"]
 [ext_resource type="Resource" uid="uid://cm75wd5gf2txv" path="res://Resources/Items/Unit/Unit_Spearman.tres" id="7_0g5mv"]
+[ext_resource type="Resource" uid="uid://du1hxk8rgxrn1" path="res://Resources/Items/Upgrade/Upgrade_ClubDamage.tres" id="8_yjmx6"]
+[ext_resource type="Resource" uid="uid://diycu04be10sx" path="res://Resources/Items/Upgrade/Upgrade_SpearDamage.tres" id="9_i1at1"]
 
 [resource]
 script = ExtResource("1_a561g")
-_items = [ExtResource("1_ajnnv"), ExtResource("2_f4h5u"), ExtResource("3_ph8lt"), ExtResource("5_w2yu8"), ExtResource("4_fqsi6"), ExtResource("6_xi38y"), ExtResource("7_0g5mv")]
+_items = [ExtResource("1_ajnnv"), ExtResource("2_f4h5u"), ExtResource("3_ph8lt"), ExtResource("5_w2yu8"), ExtResource("4_fqsi6"), ExtResource("6_xi38y"), ExtResource("7_0g5mv"), ExtResource("8_yjmx6"), ExtResource("9_i1at1")]
 _spreadsheetId = "1p4E7VJH4C_pD-b-xlXRijAjn7Q29zmo6Av0JlZX6SYw"

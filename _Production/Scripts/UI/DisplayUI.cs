@@ -3,7 +3,7 @@ using Godot;
 
 namespace FT.UI;
 
-public partial class BuildingUI : Button
+public partial class DisplayUI : Button
 {
     public int ID { get; private set; } = -1;
     

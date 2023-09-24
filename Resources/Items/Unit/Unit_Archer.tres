@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://t7tw7dgms58y"]
+
+[ext_resource type="PackedScene" uid="uid://cnnumf21yx3g3" path="res://Resources/Items/Unit/Prefabs/Archer_Prefab.tscn" id="1_5clsb"]
+[ext_resource type="Texture2D" uid="uid://c8ihp514o0j2h" path="res://Resources/Items/Unit/Icons/Archer_Sprite.png" id="2_8i5v4"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Unit.cs" id="3_q6c3p"]
+
+[resource]
+script = ExtResource("3_q6c3p")
+Description = "Master of 'point and shoot', long before cameras existed. The original social distancer, keeping foes at arrow's length since the Bronze Age."
+DisplayName = "Archer"
+PrefabName = "Archer_Prefab"
+Prefab = ExtResource("1_5clsb")
+SpriteName = "Archer_Sprite"
+Sprite = ExtResource("2_8i5v4")
+Name = "Archer"

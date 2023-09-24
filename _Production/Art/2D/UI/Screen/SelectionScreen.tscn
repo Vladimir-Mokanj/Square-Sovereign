@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/SelectionScreen.cs" id="1_yndg0"]
 [ext_resource type="PackedScene" uid="uid://coaccj8xna8wg" path="res://_Production/Art/2D/UI/DisplayUI_Prefab.tscn" id="2_ys1vw"]
 
-[node name="SelectionScreen" type="Control" node_paths=PackedStringArray("_selectionControlNode")]
+[node name="SelectionScreen" type="Control" node_paths=PackedStringArray("_unitContainer", "_upgradeContainer")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,20 +13,39 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_yndg0")
 _displayUI_Prefab = ExtResource("2_ys1vw")
-_selectionControlNode = NodePath("VBoxContainer/BuildingPickHBox")
+_unitContainer = NodePath("UnitContainer")
+_upgradeContainer = NodePath("UpgradeContainer")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="UnitContainer" type="GridContainer" parent="."]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -271.0
+offset_top = -107.0
+offset_right = -1.99976
 grow_horizontal = 2
 grow_vertical = 0
-alignment = 1
-
-[node name="BuildingPickHBox" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
 mouse_filter = 2
-theme_override_constants/separation = 2
-alignment = 1
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1
+columns = 2
+
+[node name="UpgradeContainer" type="GridContainer" parent="."]
+layout_direction = 3
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -268.0
+offset_top = -107.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/h_separation = 1
+theme_override_constants/v_separation = 1

@@ -25,18 +25,18 @@ public partial class BuildingScreen : Control
 
 	public void Initialize(Action<int?> dataChanged)
 	{
-		List<BuildingUI> createdBuildingUI = InitializeBuildingPicks(dataChanged);
+		List<DisplayUI> createdBuildingUI = InitializeBuildingPicks(dataChanged);
 		InitializeBuildingSelection(createdBuildingUI, dataChanged);
 	}
 
-	private List<BuildingUI> InitializeBuildingPicks(Action<int?> dataChanged)
+	private List<DisplayUI> InitializeBuildingPicks(Action<int?> dataChanged)
 	{
-		List<BuildingUI> buildingsUI = new();
+		List<DisplayUI> buildingsUI = new();
 		
 		Building[] buildings = ItemDatabase.GetAllOfType<Building>();
 		foreach (Building building in buildings)
 		{
-			if (_displayUI_Prefab.Instantiate() is not BuildingUI uiItem)
+			if (_displayUI_Prefab.Instantiate() is not DisplayUI uiItem)
 				continue;
 			
 			uiItem.InitializeValues(building);
@@ -53,7 +53,7 @@ public partial class BuildingScreen : Control
 		return buildingsUI;
 	}
 
-	private void InitializeBuildingSelection(List<BuildingUI> createdBuildingUI, Action<int?> dataChanged)
+	private void InitializeBuildingSelection(List<DisplayUI> createdBuildingUI, Action<int?> dataChanged)
 	{
 		BuildingType _buildingType = BuildingType.NONE;
 		foreach (BuildingType type in (BuildingType[]) Enum.GetValues(typeof(BuildingType)))

@@ -53,6 +53,16 @@ public partial class BuildingController : Node
 
             _ghostBuilding = null;
         });
+        State.BuildingSelectedID.AddObserver(RemoveGhostBuilding);
+    }
+
+    private void RemoveGhostBuilding(int? value)
+    {
+        if (!value.HasValue || _ghostBuilding == null)
+            return;
+        
+        RemoveChild(_ghostBuilding);
+        _ghostBuilding = null;
     }
 
     private void PlaceGhostBuilding((byte? row, byte? col) value)

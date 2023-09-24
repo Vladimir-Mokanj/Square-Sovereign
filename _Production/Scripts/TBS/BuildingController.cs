@@ -24,13 +24,16 @@ public partial class BuildingController : Node
 
     private void OnBuildingIdChanged(int? value)
     {
+        if (value == _buildingId)
+            return;
+        
         _buildingId = value;
-        if (_ghostBuilding != null)
-            RemoveChild(_ghostBuilding);
-
         if (!value.HasValue)
             return;
         
+        if (_ghostBuilding != null)
+            RemoveChild(_ghostBuilding);
+
         _ghostBuilding = ItemDatabase.Get<Building>(value.Value).Prefab.Instantiate() as Node3D;
         _ghostBuilding.Visible = false;
         AddChild(_ghostBuilding);

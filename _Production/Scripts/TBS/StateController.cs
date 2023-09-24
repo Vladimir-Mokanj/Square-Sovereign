@@ -6,7 +6,7 @@ namespace FT.TBS;
 
 public partial class StateController : Node
 {
-    private StateParameters _stateParameters;
+    private StateParameters _state;
 
     public override void _Ready()
     {
@@ -16,11 +16,11 @@ public partial class StateController : Node
 
     private void ControlState(InputDataParameters data)
     {
-        _stateParameters.IsMouseLeftDown.Set(data.isLeftMousePressed);
-        _stateParameters.IsMouseRightDown.Set(data.isRightMousePressed);
-        _stateParameters.RowCol.Set(PlayerCustomRaycast.GetRowCol(data.mousePosition));
+        _state.IsMouseLeftDown.Set(data.isLeftMousePressed);
+        _state.IsMouseRightDown.Set(data.isRightMousePressed);
+        _state.RowCol.Set(PlayerCustomRaycast.GetRowCol(data.mousePosition));
     }
 
     public void Initialize(StateParameters stateParameters) => 
-        _stateParameters = stateParameters;
+        _state = stateParameters;
 }

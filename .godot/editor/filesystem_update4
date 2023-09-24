@@ -1,6 +1,3 @@
-res://_Production/_Scenes/TestScene.tscn
-res://_Production/Shaders/heightShader.gdshader
-res://Resources/Terrain/DebugTerrainData.tres
 res://addons/data_importer/DataImporter.cs
 res://addons/data_importer/ReadOnlyInspector.cs
 res://addons/data_importer/Tools/DataSheetLoader.cs
@@ -8,6 +5,7 @@ res://_Production/Scripts/Data/Item.cs
 res://_Production/Scripts/Data/ItemBase.cs
 res://_Production/Scripts/Data/ItemDatabase.cs
 res://_Production/Scripts/Data/Item/Building.cs
+res://_Production/Scripts/Data/Item/Unit.cs
 res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Inputs/InputController.cs
 res://_Production/Scripts/TBS/BuildingController.cs
@@ -18,7 +16,14 @@ res://_Production/Scripts/UI/BuildingUI.cs
 res://_Production/Scripts/UI/Screen/BuildingScreen.cs
 res://_Production/Scripts/UI/Screen/DebugTestUI.cs
 res://_Production/_Scenes/PlayerUI.cs
-res://_Production/Art/2D/UI/Screen/DebugScreenUI.tscn
-res://_Production/Art/2D/UI/Screen/BuildingScreenUI.tscn
+res://Resources/Items/Building/Building_IronMine.tres
+res://Resources/Items/Building/Building_Farm.tres
+res://Resources/Items/Building/Building_FishingDock.tres
+res://Resources/Items/Building/Building_Barracks.tres
+res://Resources/Items/Building/Building_Market.tres
+res://_Production/_Scenes/TestScene.tscn
+res://_Production/Shaders/heightShader.gdshader
+res://Resources/Terrain/DebugTerrainData.tres
+res://Resources/ItemDatabase.tres
 res://_Production/Art/2D/UI/Screen/DebugScreen.tscn
 res://_Production/Art/2D/UI/Screen/BuildingScreen.tscn

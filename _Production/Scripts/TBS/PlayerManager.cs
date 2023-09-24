@@ -39,7 +39,7 @@ public partial class PlayerManager : Node
         CellManager cellManager = new(_tgd.Rows, _tgd.Cols);
         cellManager.InitializeCells(_tgd.Rows, generateTerrain.GetCellMaxYVertexHeight);
         
-        PlayerCustomRaycast raycast = new(_tgd.Rows, _tgd.Cols, GetTree().GetFirstNodeInGroup("MainCamera") as Camera3D, generateTerrain.GetCellMaxYVertexHeight);
+        new PlayerCustomRaycast(_tgd.Rows, _tgd.Cols, GetTree().GetFirstNodeInGroup("MainCamera") as Camera3D, generateTerrain.GetCellMaxYVertexHeight);
 
         (FindChild(nameof(StateController)) as StateController)?.Initialize(StateParameters);
     }

@@ -1,3 +1,4 @@
+MeshInstance3D
 Node
 Panel
 TextureRect
@@ -9,7 +10,6 @@ Container
 Control
 StaticBody3D
 CollisionShape3D
-MeshInstance3D
 MultiMeshInstance3D
 OmniLight3D
 GPUParticlesAttractorVectorField3D

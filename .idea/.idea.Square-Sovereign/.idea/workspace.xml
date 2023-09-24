@@ -5,35 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Clubman_Prefab.tscn-editstate-144e332d35b795fc9198479116a96170.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Spearman_Prefab.tscn-editstate-9fb4f818cf418280ec64d48863d5a2bc.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Spearman_Prefab.tscn-folding-9fb4f818cf418280ec64d48863d5a2bc.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Unit/Prefabs/Clubman_Prefab.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/Unit/Prefabs/Spearman_Prefab.tscn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Unit.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-editstate-d54545fd005b652b05fea8b82bd1e2ec.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-editstate-d54545fd005b652b05fea8b82bd1e2ec.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-folding-d54545fd005b652b05fea8b82bd1e2ec.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-folding-d54545fd005b652b05fea8b82bd1e2ec.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/Clubman_Prefab.tscn-folding-144e332d35b795fc9198479116a96170.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Clubman_Prefab.tscn-folding-144e332d35b795fc9198479116a96170.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-editstate-255497b61ed40cbd2909e1ad2747cc46.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-editstate-255497b61ed40cbd2909e1ad2747cc46.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/uid_cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/uid_cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/PlayerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/DebugTestUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/DebugTestUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +133,7 @@
       <workItem from="1695395484792" duration="2372000" />
       <workItem from="1695397889149" duration="5812000" />
       <workItem from="1695458026911" duration="21376000" />
-      <workItem from="1695549406545" duration="988000" />
+      <workItem from="1695549406545" duration="3497000" />
     </task>
     <servers />
   </component>

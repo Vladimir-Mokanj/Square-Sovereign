@@ -8,6 +8,7 @@ offset_right = 80.0
 offset_bottom = 80.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 theme_override_constants/icon_max_width = 45
 icon = ExtResource("1_0jxbx")
 icon_alignment = 1

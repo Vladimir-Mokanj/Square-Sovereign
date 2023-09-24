@@ -6,7 +6,7 @@ albedo_color = Color(0.172549, 0.317647, 1, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_r27t5"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_b6bvr"]
-size = Vector3(30, 1, 30)
+size = Vector3(20, 1, 20)
 
 [node name="FishingDock_Prefab" type="Node3D"]
 

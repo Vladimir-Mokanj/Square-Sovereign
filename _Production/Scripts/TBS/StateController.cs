@@ -1,6 +1,7 @@
 using System.Linq;
 using FT.Input;
 using FT.Player;
+using FT.UI;
 using Godot;
 using Godot.Collections;
 
@@ -18,16 +19,21 @@ public partial class StateController : Node3D
 
     private void ControlState(InputDataParameters data)
     {
-        if (data.isLeftMousePressed) _state.BuildingSelectedID.Set(PhysicsRaycast(data.mousePosition, _state.BuildingSelectedID.Value));
+        bool isOverButton = IsButtonPressed(data.mousePosition);
+        
+        if (data.isLeftMousePressed && !isOverButton) _state.BuildingSelectedID.Set(PhysicsRaycast(data.mousePosition, _state.BuildingSelectedID.Value));
         if (data.isRightMousePressed) _state.BuildingSelectedID.Set(null);
         
-        _state.IsMouseLeftDown.Set(data.isLeftMousePressed);
+        if (!isOverButton) _state.IsMouseLeftDown.Set(data.isLeftMousePressed);
         _state.IsMouseRightDown.Set(data.isRightMousePressed);
         _state.RowCol.Set(PlayerCustomRaycast.GetRowCol(data.mousePosition));
     }
 
     public void Initialize(StateParameters stateParameters) => 
         _state = stateParameters;
+
+    private bool IsButtonPressed(Vector2 mousePosition) => 
+        GetViewport().GuiGetFocusOwner() is DisplayUI control && control.GetGlobalRect().HasPoint(mousePosition);
 
     private int? PhysicsRaycast(Vector2 mousePosition, int? value)
     {

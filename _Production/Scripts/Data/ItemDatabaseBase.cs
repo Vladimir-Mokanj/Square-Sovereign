@@ -17,7 +17,7 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
     public static TI Database => _database ??= GD.Load("Resources/" + typeof(TI).Name + ".tres") as TI;
     private static TI _database;
 
-    private static T Get(int id) => Database._items.FirstOrDefault(item => item.Id == id) as T;
+    public static T Get(int id) => Database._items.FirstOrDefault(item => item.Id == id) as T;
     public static TT Get<TT>(int id) where TT : T => Get(id) as TT;
     public static TT[] GetAllOfType<TT>() where TT : T => Database._items.OfType<TT>().ToArray();
 

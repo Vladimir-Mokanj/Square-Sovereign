@@ -5,14 +5,63 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.godot/editor/InfoScreen.tscn-editstate-4eda02113e9f239be80e1e61a7bf0fdc.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/InfoScreen.tscn-folding-4eda02113e9f239be80e1e61a7bf0fdc.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/SelectionController.cs-folding-a6fe1f4325cea90db51fc258d44e93ae.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/SelectionScreen.cs-folding-014ccb329c9ac596a486baaa61982dc6.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/SelectionScreen.tscn-editstate-28f5b2e0f8457e75d1143341a2af3b70.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/SelectionScreen.tscn-folding-28f5b2e0f8457e75d1143341a2af3b70.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/DisplayUI_Prefab.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/InfoScreen.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/SelectionScreen.tscn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Scripts/UI/PlayerUI.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/SelectionScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingPickUI_Prefab.tscn-editstate-a12e7fe0f4659938a1c282a83015e22c.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingPickUI_Prefab.tscn-editstate-a12e7fe0f4659938a1c282a83015e22c.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-editstate-d54545fd005b652b05fea8b82bd1e2ec.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-editstate-d54545fd005b652b05fea8b82bd1e2ec.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-folding-d54545fd005b652b05fea8b82bd1e2ec.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-folding-d54545fd005b652b05fea8b82bd1e2ec.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingSelectionUI_Prefab.tscn-editstate-3e8a936b0962e23fa393b7cfa2890da9.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingSelectionUI_Prefab.tscn-editstate-3e8a936b0962e23fa393b7cfa2890da9.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Building_Barracks.tres-folding-a1d55700712f4d7e11f2c9f15820079f.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Building_Barracks.tres-folding-a1d55700712f4d7e11f2c9f15820079f.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-editstate-255497b61ed40cbd2909e1ad2747cc46.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-editstate-255497b61ed40cbd2909e1ad2747cc46.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-editstate-fb5b449036f2b7deba494282445be852.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-editstate-fb5b449036f2b7deba494282445be852.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-folding-fb5b449036f2b7deba494282445be852.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-folding-fb5b449036f2b7deba494282445be852.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-editstate-570654d3fcbf86097ee34c49b494ebfd.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-editstate-570654d3fcbf86097ee34c49b494ebfd.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-editstate-e1ee3db3568268a6dc868a53b998622c.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-editstate-e1ee3db3568268a6dc868a53b998622c.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/uid_cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/uid_cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_Barracks.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_Barracks.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_Farm.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_Farm.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_FishingDock.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_FishingDock.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_IronMine.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_IronMine.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/Building/Building_Market.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/Building/Building_Market.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Art/2D/UI/BuildingPickUI_Prefab.tscn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/BuildingScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/BuildingScreen.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/BuildingInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/InfoScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/BuildingUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/BuildingUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/PlayerUI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,29 +98,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Units-and-Selection",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Units-and-Selection&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\Vladimir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache",
-      "C:\\Users\\Vladimir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache",
-      "C:\\Users\\Vladimir\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\Vladimir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\Vladimir\\AppData\\Roaming\\JetBrains\\Rider2023.1\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\Vladimir\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Executable.Player">
     <configuration name="Editor" type="RunExe" factoryName=".NET Executable">
       <option name="EXE_PATH" value="$USER_HOME$/Downloads/Godot_v4.1.1-stable_mono_win64/Godot_v4.1.1-stable_mono_win64/Godot_v4.1.1-stable_mono_win64.exe" />

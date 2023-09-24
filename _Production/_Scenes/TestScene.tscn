@@ -1,11 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=11 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/PlayerManager.cs" id="1_qv3y3"]
 [ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://Resources/Terrain/DebugTerrainData.tres" id="2_286pr"]
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/BuildingController.cs" id="4_akd0p"]
-[ext_resource type="Script" path="res://_Production/_Scenes/PlayerUI.cs" id="6_5dwco"]
+[ext_resource type="Script" path="res://_Production/Scripts/UI/PlayerUI.cs" id="6_dt4mp"]
 [ext_resource type="PackedScene" uid="uid://dah75jl5535af" path="res://_Production/Art/2D/UI/Screen/DebugScreen.tscn" id="7_v3q85"]
 [ext_resource type="PackedScene" uid="uid://cma8bvrngsyq5" path="res://_Production/Art/2D/UI/Screen/BuildingScreen.tscn" id="8_weerq"]
+[ext_resource type="PackedScene" uid="uid://dopgb14p2rroi" path="res://_Production/Art/2D/UI/Screen/InfoScreen.tscn" id="9_02mao"]
+[ext_resource type="PackedScene" uid="uid://b63nvebsnutyq" path="res://_Production/Art/2D/UI/Screen/SelectionScreen.tscn" id="9_clutq"]
 [ext_resource type="Script" path="res://_Production/Scripts/Inputs/InputController.cs" id="9_kal1k"]
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/StateController.cs" id="10_ctvlv"]
 
@@ -26,7 +28,7 @@ light_volumetric_fog_energy = 0.0
 script = ExtResource("1_qv3y3")
 _tgd = ExtResource("2_286pr")
 
-[node name="StateController" type="Node" parent="PlayerManager"]
+[node name="StateController" type="Node3D" parent="PlayerManager"]
 script = ExtResource("10_ctvlv")
 
 [node name="BuildingController" type="Node" parent="PlayerManager"]
@@ -35,11 +37,18 @@ script = ExtResource("4_akd0p")
 [node name="InputController" type="Node" parent="PlayerManager"]
 script = ExtResource("9_kal1k")
 
-[node name="PlayerUI" type="Node" parent="." node_paths=PackedStringArray("DebugTestUi", "BuildingScreen") groups=["PlayerUI"]]
-script = ExtResource("6_5dwco")
+[node name="PlayerUI" type="Node" parent="." node_paths=PackedStringArray("DebugTestUi", "BuildingScreen", "SelectionScreen") groups=["PlayerUI"]]
+script = ExtResource("6_dt4mp")
 DebugTestUi = NodePath("DebugScreen")
 BuildingScreen = NodePath("BuildingScreen")
+SelectionScreen = NodePath("SelectionScreen")
 
 [node name="DebugScreen" parent="PlayerUI" instance=ExtResource("7_v3q85")]
 
-[node name="BuildingScreen" parent="PlayerUI" instance=ExtResource("8_weerq")]
+[node name="BuildingScreen" parent="PlayerUI" node_paths=PackedStringArray("_infoScreenScreen") instance=ExtResource("8_weerq")]
+_infoScreenScreen = NodePath("../InfoScreen")
+
+[node name="SelectionScreen" parent="PlayerUI" node_paths=PackedStringArray("_infoScreenScreen") instance=ExtResource("9_clutq")]
+_infoScreenScreen = NodePath("../InfoScreen")
+
+[node name="InfoScreen" parent="PlayerUI" instance=ExtResource("9_02mao")]

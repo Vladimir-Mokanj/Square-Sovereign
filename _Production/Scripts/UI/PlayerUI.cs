@@ -9,4 +9,5 @@ public partial class PlayerUI : Node
     #endif
     
     [Export] public BuildingScreen BuildingScreen { get; private set; }
+    [Export] public SelectionScreen SelectionScreen { get; private set; }
 }

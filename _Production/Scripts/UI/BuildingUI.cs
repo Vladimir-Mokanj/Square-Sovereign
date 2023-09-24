@@ -1,5 +1,5 @@
+using FT.Data;
 using Godot;
-using FT.Data.Items;
 
 namespace FT.UI;
 
@@ -7,7 +7,7 @@ public partial class BuildingUI : Button
 {
     public int ID { get; private set; } = -1;
     
-    public void InitializeValues(Building building)
+    public void InitializeValues(Item building)
     {
         Icon = building.Sprite;
         ID = building.Id;

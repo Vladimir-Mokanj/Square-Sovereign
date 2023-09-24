@@ -76,6 +76,8 @@ public partial class BuildingController : Node
             return;
 
         CellManager.SetIsOccupied(value.row.Value, value.col.Value);
+        _ghostBuilding.Name = $"{_buildingId.Value.ToString()}|";
+
         _buildingId = null;
         _ghostBuilding = null;
     }

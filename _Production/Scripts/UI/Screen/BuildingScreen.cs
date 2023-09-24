@@ -3,16 +3,25 @@ using System.Collections.Generic;
 using Godot;
 using FT.Data;
 using FT.Data.Items;
+using FT.TBS;
 
 namespace FT.UI;
 
 public partial class BuildingScreen : Control
 {
 	[Export] private PackedScene _buildingSelectionUI_Prefab;
-	[Export] private PackedScene _buildingPickUI_Prefab;
+	[Export] private PackedScene _displayUI_Prefab;
 	[Export] private Control _buildingSelectionControlNode;
 	[Export] private Control _buildingPickControlNode;
-	[Export] private BuildingInfo _BuildingInfoPanel;
+	[Export] private InfoScreen _infoScreenScreen;
+
+	public override void _Ready() => PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateInitialized);
+
+	private void OnStateInitialized(StateParameters State)
+	{
+		State.BuildingSelectedID.AddObserver(i => Visible = !i.HasValue);
+		State.IsMouseRightDown.AddObserver(b => { if (b) Visible = true; });
+	}
 
 	public void Initialize(Action<int?> dataChanged)
 	{
@@ -27,7 +36,7 @@ public partial class BuildingScreen : Control
 		Building[] buildings = ItemDatabase.GetAllOfType<Building>();
 		foreach (Building building in buildings)
 		{
-			if (_buildingPickUI_Prefab.Instantiate() is not BuildingUI uiItem)
+			if (_displayUI_Prefab.Instantiate() is not BuildingUI uiItem)
 				continue;
 			
 			uiItem.InitializeValues(building);
@@ -36,10 +45,10 @@ public partial class BuildingScreen : Control
 			uiItem.MouseEntered += () =>
 			{
 				Building _currentBuilding = ItemDatabase.Get<Building>(uiItem.ID);
-				_BuildingInfoPanel?.ShowDisplayPanel(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
+				_infoScreenScreen?.ShowDisplayPanel(_currentBuilding.Sprite, _currentBuilding.DisplayName, _currentBuilding.Description);
 			};
 			
-			uiItem.MouseExited += () => _BuildingInfoPanel?.HideInfoPanel();
+			uiItem.MouseExited += () => _infoScreenScreen?.HideInfoPanel();
 			uiItem.Pressed += () => dataChanged?.Invoke(uiItem.ID);
 			
 			_buildingPickControlNode.AddChild(uiItem);

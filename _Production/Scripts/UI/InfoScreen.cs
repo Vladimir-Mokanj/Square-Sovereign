@@ -2,7 +2,7 @@ using Godot;
 
 namespace FT.UI;
 
-public partial class BuildingInfo : Panel
+public partial class InfoScreen : Panel
 {
     [Export] private TextureRect _buildingTexture;
     [Export] private Label _buildingDisplayName;
@@ -18,8 +18,5 @@ public partial class BuildingInfo : Panel
         _buildingDisplayDescription.Text = displayDescription;
     }
 
-    public void HideInfoPanel()
-    {
-        Visible = false;
-    }
+    public void HideInfoPanel() => Visible = false;
 }

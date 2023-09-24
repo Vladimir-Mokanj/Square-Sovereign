@@ -1,5 +1,7 @@
-MeshInstance3D
+Node3D
 Node
+Control
+MeshInstance3D
 Panel
 TextureRect
 HBoxContainer
@@ -7,7 +9,6 @@ VBoxContainer
 Label
 Button
 Container
-Control
 StaticBody3D
 CollisionShape3D
 MultiMeshInstance3D
@@ -15,7 +16,6 @@ OmniLight3D
 GPUParticlesAttractorVectorField3D
 DirectionalLight3D
 SpotLight3D
-Node3D
 PanelContainer
 BoxContainer
 RichTextLabel

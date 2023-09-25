@@ -13,5 +13,5 @@ WaterTexture = ExtResource("3_quqbx")
 DirtTexture = ExtResource("1_r7oy8")
 StoneTexture = ExtResource("2_6xq2d")
 Seed = 123456789
-Rows = 100
-Cols = 100
+Rows = 10
+Cols = 10

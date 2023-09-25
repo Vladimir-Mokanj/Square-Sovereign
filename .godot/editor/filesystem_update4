@@ -1,7 +1,7 @@
-res://_Production/Art/2D/UI/Screen/InfoScreen.tscn
+res://_Production/_Scenes/TestScene.tscn
 res://_Production/Shaders/heightShader.gdshader
 res://Resources/Terrain/DebugTerrainData.tres
-res://_Production/_Scenes/TestScene.tscn
+res://_Production/Art/2D/UI/Screen/InfoScreen.tscn
 res://_Production/Art/2D/UI/Screen/BuildingScreen.tscn
 res://_Production/Art/2D/UI/Screen/SelectionScreen.tscn
 res://Resources/Items/Building/Prefabs/Market_Prefab.tscn
@@ -34,3 +34,4 @@ res://_Production/Scripts/UI/PlayerUI.cs
 res://_Production/Scripts/UI/Screen/BuildingScreen.cs
 res://_Production/Scripts/UI/Screen/DebugTestUI.cs
 res://_Production/Scripts/UI/Screen/SelectionScreen.cs
+res://_Production/_Scenes/ResourceDisplayScreen.cs

@@ -1,10 +1,11 @@
+TextureRect
+Control
+MeshInstance3D
+MeshInstance2D
 GridContainer
 Node3D
 Node
-Control
-MeshInstance3D
 Panel
-TextureRect
 HBoxContainer
 VBoxContainer
 Label

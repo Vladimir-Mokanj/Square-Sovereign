@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=16 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/PlayerManager.cs" id="1_qv3y3"]
 [ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://Resources/Terrain/DebugTerrainData.tres" id="2_286pr"]
@@ -6,12 +6,15 @@
 [ext_resource type="Script" path="res://_Production/Scripts/UI/PlayerUI.cs" id="6_dt4mp"]
 [ext_resource type="Script" path="res://_Production/_Scenes/ResourceDisplayScreen.cs" id="7_ejfcw"]
 [ext_resource type="PackedScene" uid="uid://dah75jl5535af" path="res://_Production/Art/2D/UI/Screen/DebugScreen.tscn" id="7_v3q85"]
+[ext_resource type="PackedScene" uid="uid://p7f2h0g8u521" path="res://_Production/Art/2D/UI/ResourceDisplayUI_Prefab.tscn" id="8_85v5r"]
 [ext_resource type="PackedScene" uid="uid://cma8bvrngsyq5" path="res://_Production/Art/2D/UI/Screen/BuildingScreen.tscn" id="8_weerq"]
 [ext_resource type="PackedScene" uid="uid://dopgb14p2rroi" path="res://_Production/Art/2D/UI/Screen/InfoScreen.tscn" id="9_02mao"]
+[ext_resource type="Texture2D" uid="uid://dwjyu3xnm10lt" path="res://_Production/Art/2D/Icons/Fish_Sprite.png" id="9_87ry0"]
 [ext_resource type="PackedScene" uid="uid://b63nvebsnutyq" path="res://_Production/Art/2D/UI/Screen/SelectionScreen.tscn" id="9_clutq"]
 [ext_resource type="Script" path="res://_Production/Scripts/Inputs/InputController.cs" id="9_kal1k"]
+[ext_resource type="Texture2D" uid="uid://c5djvngceujb5" path="res://_Production/Art/2D/Icons/Food_Sprite.png" id="10_701lq"]
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/StateController.cs" id="10_ctvlv"]
-[ext_resource type="Texture2D" uid="uid://bowycyvevnff" path="res://Resources/Items/Building/Icons/Market_Sprite.png" id="11_kvgm6"]
+[ext_resource type="Texture2D" uid="uid://cvbuvoeo0ttst" path="res://_Production/Art/2D/Icons/Ore_Sprite.png" id="11_1st8j"]
 
 [node name="Node3D" type="Node3D" groups=["RootNode"]]
 
@@ -45,7 +48,7 @@ DebugTestUi = NodePath("DebugScreen")
 BuildingScreen = NodePath("BuildingScreen")
 SelectionScreen = NodePath("SelectionScreen")
 
-[node name="ResourceDisplayScreen" type="Control" parent="PlayerUI" node_paths=PackedStringArray("_resourceTexture")]
+[node name="ResourceDisplayScreen" type="Control" parent="PlayerUI"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -53,22 +56,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("7_ejfcw")
-_resourceTexture = NodePath("TextureRect")
-
-[node name="TextureRect" type="TextureRect" parent="PlayerUI/ResourceDisplayScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_right = 35.0
-offset_bottom = 35.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("11_kvgm6")
-expand_mode = 1
-stretch_mode = 5
+_resourcePackedScene = ExtResource("8_85v5r")
+_resourceTexture = Array[CompressedTexture2D]([ExtResource("9_87ry0"), ExtResource("10_701lq"), ExtResource("11_1st8j")])
 
 [node name="DebugScreen" parent="PlayerUI" instance=ExtResource("7_v3q85")]
 

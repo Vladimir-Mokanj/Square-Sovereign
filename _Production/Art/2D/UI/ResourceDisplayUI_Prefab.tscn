@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://p7f2h0g8u521"]
+
+[ext_resource type="Texture2D" uid="uid://dpwjh3qp8q1ye" path="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png" id="1_o221p"]
+
+[node name="ResourceDisplayUI_Prefab" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_o221p")
+expand_mode = 1
+stretch_mode = 5

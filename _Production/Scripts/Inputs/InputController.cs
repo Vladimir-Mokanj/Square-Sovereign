@@ -13,15 +13,19 @@ public partial class InputController : Node, IInputController
 
     public override void _Input(InputEvent @event)
     {
-        _dataParameters.isLeftMousePressed = @event.IsActionPressed("OnPressLeft");
-        _dataParameters.isRightMousePressed = @event.IsActionPressed("OnPressRight");
-            
+        if (@event.IsActionPressed("OnResourcesRevealed"))
+            _dataParameters.areResourcesRevealed = !_dataParameters.areResourcesRevealed;
+        
         if (@event is InputEventMouseMotion mouseMotionEvent)
             _dataParameters.mousePosition = mouseMotionEvent.Position;
     }
 
-    public override void _Process(double delta) => 
+    public override void _Process(double delta)
+    {
+        _dataParameters.isLeftMousePressed = Godot.Input.IsActionJustPressed("OnPressLeft");
+        _dataParameters.isRightMousePressed = Godot.Input.IsActionJustPressed("OnPressRight");
         _inputParameters.Action?.Invoke(_dataParameters);
+    }
 }
 
 public interface IInputController

@@ -10,7 +10,8 @@ public partial class DebugTestUI : Node
     [Export] private Label _resourceTypeLabel;
     [Export] private Label _isOccupiedLabel;
 
-    public override void _Ready() => PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateAssigned);
+    public override void _Ready() => 
+        PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateAssigned);
     private void OnStateAssigned(StateParameters State)
     {
         State.RowCol.AddObserver(AssignValues);

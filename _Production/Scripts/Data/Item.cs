@@ -25,5 +25,18 @@ public partial class Item : ItemBase
         SpriteName = data.Parse<string>(nameof(SpriteName));
         Sprite = GD.Load<Texture2D>($"res://Resources/Items/{GetType().Name}/Icons/{SpriteName}.png");
     }
+
+    protected int[] SetupProperties(string properties)
+    {
+        if (string.IsNullOrEmpty(properties))
+            return null;
+        
+        string[] splitNames = properties.Split(',');
+        int[] ids = new int[splitNames.Length];
+        for (int i = 0; i < splitNames.Length; i++)
+            ids[i] = NameToId(splitNames[i]);
+
+        return ids;
+    }
 #endif
 }

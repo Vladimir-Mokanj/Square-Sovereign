@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace FT.Managers;
 
@@ -60,6 +61,22 @@ public class CellManager
         return new UnpackedCellData(terrainType, resourceType, isOccupied);
     }
 
+    public static (byte row, byte col, ResourceType resourceType)[] GetResourceData(byte rows, byte cols)
+    {
+        List<(byte row, byte col, ResourceType resourceType)> resources = new();
+        
+        for (byte row = 0; row < rows; row++)
+            for (byte col = 0; col < cols; col++)
+            {
+                byte packedData = _instance._cells[row * cols + col];
+                ResourceType resourceType = (ResourceType)((packedData >> 1) & 0xF);
+                if (resourceType != ResourceType.NONE)
+                    resources.Add((row, col, resourceType));
+            }
+        
+        return resources.ToArray();
+    }
+    
     public static void SetIsOccupied(byte row, byte col) => _instance._cells[row * _instance._cols + col] |= 0x1;
 
     private static byte PackData(TerrainType terrainType, ResourceType resourceType, bool isOccupied) => 

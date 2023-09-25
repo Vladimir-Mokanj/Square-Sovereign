@@ -4,7 +4,7 @@ namespace FT.Data;
 
 public partial class ItemBase : Resource
 {
-    [Export] public string Name { get; protected set; }
+    [Export, ReadOnly] public string Name { get; protected set; }
     
     public int Id => GetHashCode();
     

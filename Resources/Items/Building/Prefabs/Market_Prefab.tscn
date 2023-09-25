@@ -9,7 +9,7 @@ albedo_color = Color(0.278431, 0.0862745, 0.415686, 1)
 albedo_color = Color(0.792157, 0.392157, 0.117647, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6kect"]
-size = Vector3(30, 1, 30)
+size = Vector3(20, 1, 20)
 
 [node name="Market_Prefab" type="Node3D"]
 

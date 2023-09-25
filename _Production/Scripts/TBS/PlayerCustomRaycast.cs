@@ -15,6 +15,7 @@ public class PlayerCustomRaycast
 
     private readonly float _maxT;
     private readonly float _step;
+    private readonly float _startStep;
     private Vector3 _direction;
     private Vector3 _scaledDirection;
     private Vector3 _rayPosition;
@@ -28,6 +29,7 @@ public class PlayerCustomRaycast
         _cellSize = 20;
         _rows = rows;
         _cols = cols;
+        _startStep = camera.Near;
 
         _maxT = Math.Max((rows + rows) * 20, (cols + cols) * 20);
         _step = 20.0f / 5.0f;
@@ -39,7 +41,7 @@ public class PlayerCustomRaycast
     public static (byte?, byte?) GetRowCol(Vector2 mousePosition)
     {
         _instance._direction = _instance._camera.ProjectRayNormal(mousePosition);
-        float t = 0;
+        float t = _instance._startStep;
         while (t < _instance._maxT)
         {
             _instance._scaledDirection = _instance._direction * t;

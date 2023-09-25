@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://diycu04be10sx"]
+
+[ext_resource type="Texture2D" uid="uid://cmpgje04q710h" path="res://Resources/Items/Upgrade/Icons/SpearDamage_Sprite.png" id="1_n55v6"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Upgrade.cs" id="2_6c7ck"]
+
+[resource]
+script = ExtResource("2_6c7ck")
+Description = "Ah, the spear, the long-distance relationship of medieval weaponry. Pointy on one end and business on the other, it's your one-stop shop for ruining someone's day from just far enough away."
+DisplayName = "Spear Damage"
+PrefabName = "SpearDamage_Prefab"
+SpriteName = "SpearDamage_Sprite"
+Sprite = ExtResource("1_n55v6")
+Name = "SpearDamage"

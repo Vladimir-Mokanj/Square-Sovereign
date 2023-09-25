@@ -19,6 +19,8 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
 
     public static T Get(int id) => Database._items.FirstOrDefault(item => item.Id == id) as T;
     public static TT Get<TT>(int id) where TT : T => Get(id) as TT;
+    public static T Get(string name) => Database._items.FirstOrDefault(item => string.Equals(item.Name, name, StringComparison.OrdinalIgnoreCase)) as T;
+    public static TT Get<TT>(string name) where TT : Item => Get(name) as TT;
     public static TT[] GetAllOfType<TT>() where TT : T => Database._items.OfType<TT>().ToArray();
 
 #if TOOLS

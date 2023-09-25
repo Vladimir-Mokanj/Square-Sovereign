@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5djvngceujb5"
-path="res://.godot/imported/Food_Sprite.png-c6d511674247ef5398f305b579cc2c5c.ctex"
+uid="uid://cvbuvoeo0ttst"
+path="res://.godot/imported/Metal_Sprite.png-877428e4ae2dfcd82b8105aff38957cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_Production/Art/2D/Icons/Food_Sprite.png"
-dest_files=["res://.godot/imported/Food_Sprite.png-c6d511674247ef5398f305b579cc2c5c.ctex"]
+source_file="res://Resources/Items/Resource/Icons/Metal_Sprite.png"
+dest_files=["res://.godot/imported/Metal_Sprite.png-877428e4ae2dfcd82b8105aff38957cd.ctex"]
 
 [params]
 

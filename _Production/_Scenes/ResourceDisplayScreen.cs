@@ -1,3 +1,4 @@
+using FT.Data;
 using Godot;
 using FT.Managers;
 
@@ -11,12 +12,12 @@ public partial class ResourceDisplayScreen : Control
 	private (TextureRect textureRect, Vector3 texturePosition)[] resourceData;
 	public override void _Ready()
 	{
-		(byte row, byte col, ResourceType resourceType)[] cellData = CellManager.GetResourceData(10, 10);
+		(byte row, byte col, ResourceType resourceType)[] cellData = CellManager.GetResourceData(100, 100);
 		resourceData = new (TextureRect, Vector3)[cellData.Length];
 		for (int i = 0; i < cellData.Length; i++)
 		{
 			TextureRect resourceTexture = _resourcePackedScene.Instantiate<TextureRect>();
-			resourceTexture.Texture = _resourceTexture[(byte)cellData[i].resourceType - 1];
+			resourceTexture.Texture = ItemDatabase.Get<FT.Data.Items.Resource>(cellData[i].resourceType.ToString())?.Sprite;
 
 			Vector3 resource3DPosition = new(cellData[i].row * 20 + 10, 0, cellData[i].col * 20 + 10);
 

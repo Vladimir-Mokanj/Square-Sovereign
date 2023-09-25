@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ItemDatabase" load_steps=16 format=3 uid="uid://dbed4jyomodhh"]
+[gd_resource type="Resource" script_class="ItemDatabase" load_steps=19 format=3 uid="uid://dbed4jyomodhh"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="1_a561g"]
 [ext_resource type="Resource" uid="uid://cvtj36mhu4pq3" path="res://Resources/Items/Building/Building_IronMine.tres" id="1_ajnnv"]
@@ -15,8 +15,11 @@
 [ext_resource type="Resource" uid="uid://bnkvpcn7ih25a" path="res://Resources/Items/Upgrade/Upgrade_Range.tres" id="12_wvfa3"]
 [ext_resource type="Resource" uid="uid://di4ay6jmmh0of" path="res://Resources/Items/Upgrade/Upgrade_LeatherArmor.tres" id="13_4wgef"]
 [ext_resource type="Resource" uid="uid://4wdki5ry7om6" path="res://Resources/Items/Upgrade/Upgrade_ArcherDamage.tres" id="14_k6qlw"]
+[ext_resource type="Resource" uid="uid://dktcdxvnhravi" path="res://Resources/Items/Resource/Resource_Fish.tres" id="15_i41h0"]
+[ext_resource type="Resource" uid="uid://cf7j63j8623cy" path="res://Resources/Items/Resource/Resource_Food.tres" id="16_v3st0"]
+[ext_resource type="Resource" uid="uid://cyfb2os6clmv" path="res://Resources/Items/Resource/Resource_Metal.tres" id="17_7ll2i"]
 
 [resource]
 script = ExtResource("1_a561g")
-_items = [ExtResource("1_ajnnv"), ExtResource("2_f4h5u"), ExtResource("3_ph8lt"), ExtResource("5_w2yu8"), ExtResource("4_fqsi6"), ExtResource("6_xi38y"), ExtResource("7_0g5mv"), ExtResource("8_yjmx6"), ExtResource("9_i1at1"), ExtResource("10_67p3b"), ExtResource("11_6ra0b"), ExtResource("12_wvfa3"), ExtResource("13_4wgef"), ExtResource("14_k6qlw")]
+_items = [ExtResource("1_ajnnv"), ExtResource("2_f4h5u"), ExtResource("3_ph8lt"), ExtResource("5_w2yu8"), ExtResource("4_fqsi6"), ExtResource("6_xi38y"), ExtResource("7_0g5mv"), ExtResource("8_yjmx6"), ExtResource("9_i1at1"), ExtResource("10_67p3b"), ExtResource("11_6ra0b"), ExtResource("12_wvfa3"), ExtResource("13_4wgef"), ExtResource("14_k6qlw"), ExtResource("15_i41h0"), ExtResource("16_v3st0"), ExtResource("17_7ll2i")]
 _spreadsheetId = "1p4E7VJH4C_pD-b-xlXRijAjn7Q29zmo6Av0JlZX6SYw"

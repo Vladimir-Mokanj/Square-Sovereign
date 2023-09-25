@@ -8,4 +8,5 @@ public class StateParameters
     public ObservableProperty<int?> BuildingSelectedID { get; } = new(null);
     public ObservableProperty<bool> IsMouseLeftDown { get; } = new(false);
     public ObservableProperty<bool> IsMouseRightDown { get; } = new(false);
+    public ObservableProperty<bool> AreResourcesRevealed { get; } = new(true);
 }

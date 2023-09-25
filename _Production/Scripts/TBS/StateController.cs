@@ -23,10 +23,10 @@ public partial class StateController : Node3D
         
         if (data.isLeftMousePressed && !isOverButton) _state.BuildingSelectedID.Set(PhysicsRaycast(data.mousePosition, _state.BuildingSelectedID.Value));
         if (data.isRightMousePressed) _state.BuildingSelectedID.Set(null);
-        
         if (!isOverButton) _state.IsMouseLeftDown.Set(data.isLeftMousePressed);
         _state.IsMouseRightDown.Set(data.isRightMousePressed);
         _state.RowCol.Set(PlayerCustomRaycast.GetRowCol(data.mousePosition));
+        _state.AreResourcesRevealed.Set(data.areResourcesRevealed);
     }
 
     public void Initialize(StateParameters stateParameters) => 

@@ -11,10 +11,14 @@ public partial class SelectionScreen : Control
 	[Export] private PackedScene _displayUI_Prefab;
 	[Export] private GridContainer _unitContainer;
 	[Export] private GridContainer _upgradeContainer;
+	[Export] private Label _titleLabel;
 	[Export] private InfoScreen _infoScreenScreen;
 
-	public override void _Ready() => 
+	public override void _Ready()
+	{
+		Visible = false;
 		PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateInitialized);
+	}
 
 	private void OnStateInitialized(StateParameters State)
 	{
@@ -26,10 +30,16 @@ public partial class SelectionScreen : Control
 	{
 		if (!value.HasValue)
 			return;
-
-		Visible = true;
+		
+		Building building = ItemDatabase.Get<Building>(value.Value);
+		if (building == null)
+			return;
+		
 		DisposeChildren();
-		AddItemsToContainers((ItemDatabase.Get(value.Value) as Building)?.BuildingProperties);
+		
+		Visible = true;
+		_titleLabel.Text = building.DisplayName;
+		AddItemsToContainers(building.BuildingProperties);
 	}
 	
 	private void AddItemsToContainers(IEnumerable<int> buildingProperties)

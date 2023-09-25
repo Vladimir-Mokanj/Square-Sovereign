@@ -3,29 +3,73 @@
 [ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/SelectionScreen.cs" id="1_yndg0"]
 [ext_resource type="PackedScene" uid="uid://coaccj8xna8wg" path="res://_Production/Art/2D/UI/DisplayUI_Prefab.tscn" id="2_ys1vw"]
 
-[node name="SelectionScreen" type="Control" node_paths=PackedStringArray("_unitContainer", "_upgradeContainer")]
+[node name="SelectionScreen" type="Control" node_paths=PackedStringArray("_unitContainer", "_upgradeContainer", "_titleLabel")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.00193, 1.00053)
 mouse_filter = 2
 script = ExtResource("1_yndg0")
 _displayUI_Prefab = ExtResource("2_ys1vw")
-_unitContainer = NodePath("UnitContainer")
-_upgradeContainer = NodePath("UpgradeContainer")
+_unitContainer = NodePath("BackgroundPanel/UnitContainer")
+_upgradeContainer = NodePath("BackgroundPanel/UpgradeContainer")
+_titleLabel = NodePath("TitleBackgroundPanel/TitleLabel")
 
-[node name="UnitContainer" type="GridContainer" parent="."]
+[node name="TitleBackgroundPanel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -271.0
+offset_left = -100.0
+offset_top = -127.276
+offset_right = 100.0
+offset_bottom = -107.226
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="TitleLabel" type="Label" parent="TitleBackgroundPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 15
+text = "Broken"
+horizontal_alignment = 1
+vertical_alignment = 1
+clip_text = true
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -269.0
 offset_top = -107.0
-offset_right = -1.99976
+offset_right = 270.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="UnitContainer" type="GridContainer" parent="BackgroundPanel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -269.5
+offset_top = -107.0
+offset_right = -0.499756
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
@@ -33,7 +77,7 @@ theme_override_constants/h_separation = 1
 theme_override_constants/v_separation = 1
 columns = 2
 
-[node name="UpgradeContainer" type="GridContainer" parent="."]
+[node name="UpgradeContainer" type="GridContainer" parent="BackgroundPanel"]
 layout_direction = 3
 layout_mode = 1
 anchors_preset = 7
@@ -41,9 +85,9 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -268.0
+offset_left = -269.5
 offset_top = -107.0
-offset_right = 1.0
+offset_right = -0.499969
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2

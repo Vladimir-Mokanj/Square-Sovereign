@@ -1,6 +1,7 @@
 using FT.Data;
 using Godot;
 using FT.Managers;
+using FT.TBS;
 
 namespace FT.UI;
 
@@ -12,6 +13,8 @@ public partial class ResourceDisplayScreen : Control
 	private (TextureRect textureRect, Vector3 texturePosition)[] resourceData;
 	public override void _Ready()
 	{
+		PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateInitialized);
+		
 		(byte row, byte col, ResourceType resourceType)[] cellData = CellManager.GetResourceData(100, 100);
 		resourceData = new (TextureRect, Vector3)[cellData.Length];
 		for (int i = 0; i < cellData.Length; i++)
@@ -25,6 +28,9 @@ public partial class ResourceDisplayScreen : Control
 			AddChild(resourceTexture);
 		}
 	}
+
+	private void OnStateInitialized(StateParameters State) => 
+		State.AreResourcesRevealed.AddObserver(b => Visible = b);
 
 	public override void _Process(double delta)
 	{

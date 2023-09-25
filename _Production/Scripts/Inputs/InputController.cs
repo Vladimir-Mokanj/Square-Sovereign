@@ -13,6 +13,9 @@ public partial class InputController : Node, IInputController
 
     public override void _Input(InputEvent @event)
     {
+        if (@event.IsActionPressed("OnResourcesRevealed"))
+            _dataParameters.areResourcesRevealed = !_dataParameters.areResourcesRevealed;
+        
         if (@event is InputEventMouseMotion mouseMotionEvent)
             _dataParameters.mousePosition = mouseMotionEvent.Position;
     }

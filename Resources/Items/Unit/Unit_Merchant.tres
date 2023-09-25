@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cl52qlk40jrib"]
+
+[ext_resource type="PackedScene" uid="uid://ckuj7brt1b5js" path="res://Resources/Items/Unit/Prefabs/Merchant_Prefab.tscn" id="1_ilhjf"]
+[ext_resource type="Texture2D" uid="uid://cu2hpq477icn6" path="res://Resources/Items/Unit/Icons/Merchant_Sprite.png" id="2_abn8w"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Unit.cs" id="3_3xnu5"]
+
+[resource]
+script = ExtResource("3_3xnu5")
+Description = "Meet the merchant who can sell sand in the desert and ice in Antarctica. So charismatic, they once convinced a mirror to buy a reflection."
+DisplayName = "Merchant"
+PrefabName = "Merchant_Prefab"
+Prefab = ExtResource("1_ilhjf")
+SpriteName = "Merchant_Sprite"
+Sprite = ExtResource("2_abn8w")
+Name = "Merchant"

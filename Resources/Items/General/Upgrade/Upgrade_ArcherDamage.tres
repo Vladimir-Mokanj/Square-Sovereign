@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://ch40c2j5f2vte"]
+
+[ext_resource type="Texture2D" uid="uid://cammwtadhp5pf" path="res://Resources/Items/General/Upgrade/Icons/ArcherDamage_Sprite.png" id="1_hiq51"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Upgrade.cs" id="2_8woqp"]
+
+[resource]
+script = ExtResource("2_8woqp")
+Description = "The numerical expression of 'ouch!' from a distance. Increasing this stat is directly proportional to your enemy's regret in not taking Archery 101."
+DisplayName = "Archer Damage"
+PrefabName = "ArcherDamage_Prefab"
+SpriteName = "ArcherDamage_Sprite"
+Sprite = ExtResource("1_hiq51")
+Name = "ArcherDamage"

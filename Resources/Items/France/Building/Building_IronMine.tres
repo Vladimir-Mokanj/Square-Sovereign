@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cghiigam2o6is"]
+
+[ext_resource type="PackedScene" uid="uid://bj2nr3h48ljja" path="res://Resources/Items/France/Building/Prefabs/IronMine_Prefab.tscn" id="1_oqr4m"]
+[ext_resource type="Texture2D" uid="uid://ck1bjhj7xune3" path="res://Resources/Items/General/Building/Icons/IronMine_Sprite.png" id="2_omf44"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="3_j1c2g"]
+
+[resource]
+script = ExtResource("3_j1c2g")
+TabType = 3
+ResourceType = 3
+Description = "Ah, the Iron mine—where rocks go to fulfill their dreams of becoming swords. You know what they say: it's not just a phase, it's a metamorphic lifestyle!"
+Properties = ""
+BuildingProperties = PackedInt32Array()
+DisplayName = "Iron Mine"
+PrefabName = "IronMine_Prefab"
+Prefab = ExtResource("1_oqr4m")
+SpriteName = "IronMine_Sprite"
+Sprite = ExtResource("2_omf44")
+Name = "IronMine"

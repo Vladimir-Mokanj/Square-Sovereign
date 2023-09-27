@@ -20,7 +20,7 @@ public partial class ResourceDisplayScreen : Control
 		for (int i = 0; i < cellData.Length; i++)
 		{
 			TextureRect resourceTexture = _resourcePackedScene.Instantiate<TextureRect>();
-			resourceTexture.Texture = ItemDatabase.Get<FT.Data.Items.Resource>(cellData[i].resourceType.ToString())?.Sprite;
+			resourceTexture.Texture = ItemDatabase.Get<FT.Data.Items.General.Resource>(cellData[i].resourceType.ToString())?.Sprite;
 
 			Vector3 resource3DPosition = new(cellData[i].row * 20 + 10, 0, cellData[i].col * 20 + 10);
 

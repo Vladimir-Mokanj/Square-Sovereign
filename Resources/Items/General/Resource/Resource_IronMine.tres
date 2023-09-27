@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://yopfa3lfv1t1"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Resource.cs" id="1_7w8k1"]
+
+[resource]
+script = ExtResource("1_7w8k1")
+DisplayName = "Iron Mine"
+PrefabName = "IronMine_Prefab"
+SpriteName = "IronMine_Sprite"
+Name = "IronMine"

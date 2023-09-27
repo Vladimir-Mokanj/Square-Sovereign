@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://deupbpxwfr01a"]
+
+[ext_resource type="PackedScene" uid="uid://8iyobq2ctv56" path="res://Resources/Items/England/Building/Prefabs/FishingDock_Prefab.tscn" id="1_m73n8"]
+[ext_resource type="Texture2D" uid="uid://cr554ctviaktd" path="res://Resources/Items/General/Building/Icons/FishingDock_Sprite.png" id="2_uc2v2"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="3_wkor1"]
+
+[resource]
+script = ExtResource("3_wkor1")
+TabType = 3
+ResourceType = 1
+Description = "The Fishing dock: Where fish learn to play 'Hide and Seek'—and lose. Guaranteed to have fish stories you won't have to exaggerate."
+Properties = ""
+BuildingProperties = PackedInt32Array()
+DisplayName = "Fishing Dock"
+PrefabName = "FishingDock_Prefab"
+Prefab = ExtResource("1_m73n8")
+SpriteName = "FishingDock_Sprite"
+Sprite = ExtResource("2_uc2v2")
+Name = "FishingDock"

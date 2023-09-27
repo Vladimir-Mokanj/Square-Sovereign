@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://c4j2dfuxnl84m"]
+
+[ext_resource type="PackedScene" uid="uid://b5637l52g3vxo" path="res://Resources/Items/France/Building/Prefabs/Market_Prefab.tscn" id="1_trpng"]
+[ext_resource type="Texture2D" uid="uid://bowycyvevnff" path="res://Resources/Items/General/Building/Icons/Market_Sprite.png" id="2_gycwv"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="3_55vt5"]
+
+[resource]
+script = ExtResource("3_55vt5")
+TabType = 1
+ResourceType = 0
+Description = "The Market: Your one-stop shop for all your impulse buying needs! Come get your health potions, mana crystals, and—wait, is that a rubber chicken?!"
+Properties = "Merchant,MerchantSpeed,MerchantCarry,MerchantReputation"
+BuildingProperties = PackedInt32Array(-1079941110, 863768285, -197999443, -24860687)
+DisplayName = "Market"
+PrefabName = "Market_Prefab"
+Prefab = ExtResource("1_trpng")
+SpriteName = "Market_Sprite"
+Sprite = ExtResource("2_gycwv")
+Name = "Market"

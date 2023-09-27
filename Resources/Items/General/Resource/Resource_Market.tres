@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ccig750t0dsjf"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Resource.cs" id="1_i0dg3"]
+
+[resource]
+script = ExtResource("1_i0dg3")
+DisplayName = "Market"
+PrefabName = "Market_Prefab"
+SpriteName = "Market_Sprite"
+Name = "Market"

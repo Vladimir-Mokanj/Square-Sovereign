@@ -3,18 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text.RegularExpressions;
-#endif 
+#endif
 
+using System.Text.RegularExpressions;
 using Godot;
 
 namespace FT.Data;
 
 public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where TI : ItemDatabaseBase<T, TI>
 {
+    public static string civName = "England";
     [Export] protected Item[] _items;
-
-    public static TI Database => _database ??= GD.Load("Resources/" + typeof(TI).Name + ".tres") as TI;
+    
+    public static TI Database => _database ??= GD.Load($"Resources/{civName}{typeof(TI).Name}.tres") as TI;
     private static TI _database;
 
     public static T Get(int id) => Database._items.FirstOrDefault(item => item.Id == id) as T;
@@ -22,52 +23,57 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
     public static T Get(string name) => Database._items.FirstOrDefault(item => string.Equals(item.Name, name, StringComparison.OrdinalIgnoreCase)) as T;
     public static TT Get<TT>(string name) where TT : Item => Get(name) as TT;
     public static TT[] GetAllOfType<TT>() where TT : T => Database._items.OfType<TT>().ToArray();
-
+    
+    
 #if TOOLS
     [ExportCategory("Editor Only")]
     [Export] protected string _spreadsheetId;
-    [Export] protected string _downloadItemsLocation;
+    [Export] protected string _typesToDownloadFolderLocation;
     [Export] protected string _itemDatabaseLocation;
     [Export] protected string _downloadLocation;
-    
-    private class ItemEqualityComparer : IEqualityComparer<T>
-    {
-        public bool Equals(T x, T y)
-        {
-            if (ReferenceEquals(x, y)) return true;
-            if (ReferenceEquals(x, null) || ReferenceEquals(y, null) || x.GetType() != y.GetType()) return false;
-            return x.Id == y.Id;
-        }
-        
-        public int GetHashCode(T obj) => obj.GetHashCode();
-    }
 
-    protected void Load(List<T> values, T[] targets, string targetsPath, Func<T, bool> filter)
+    protected void CheckAndCreateDirectories(string directoryPath)
     {
+        string pathWithoutRes = directoryPath[6..];
+        string[] folders = pathWithoutRes.Split('/', '\\');
+        string globalizedPath = ProjectSettings.GlobalizePath("res://");
+        foreach (string folder in folders)
+        {
+            globalizedPath = Path.Combine(globalizedPath, folder);
+            if (Directory.Exists(globalizedPath))
+                continue;
+
+            try
+            {
+                Directory.CreateDirectory(globalizedPath);
+            }
+            catch (Exception e)
+            {
+                GD.PrintErr($"Failed to create directory: {globalizedPath}. Error: {e.Message}");
+                return;
+            }
+        }
+    }
+    
+    protected void Load(List<T> values, string databaseName, string targetsPath, Func<T, bool> filter)
+    {
+        ItemDatabase itemDatabase = GD.Load<ItemDatabase>($"{_itemDatabaseLocation}{databaseName}{nameof(ItemDatabase)}.tres");
+        T[] targets = itemDatabase._items as T[];
+
         if (!values.Any())
             return;
 
-        List<Type> types = values.Select(x => x.GetType()).Distinct().ToList();
-        if (types.Count != 1)
+        Type[] types = values.Select(x => x.GetType()).Distinct().ToArray();
+        if (types.Length != 1)
         {
-            GD.PrintErr("Assertion failed: types.Count should be 1 but is " + types.Count);
+            GD.PrintErr("Assertion failed: types.Count should be 1 but is " + types.Length);
             return;
         }
         
         string CreateItemPath(T item)
         {
             string itemName = $"{item.GetType().Name}_{item.Name.Replace(" ", "")}.tres";
-
-            // Generate a unique path for the resource
-            int counter = 0;
             string uniquePath = Path.Combine(targetsPath, itemName);
-    
-            while (File.Exists(uniquePath))
-            {
-                counter++;
-                uniquePath = Path.Combine(targetsPath, $"{item.GetType().Name}_{item.Name.Replace(" ", "")}_{counter}.tres");
-            }
-    
             return uniquePath;
         }
         
@@ -78,10 +84,10 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
             return Path.Combine($"res://Resources/Items/{itemType}/{itemType}_{itemName}.tres");    // Extend path later on
         }
 
-        ItemEqualityComparer comparer = new();
-        Dictionary<T, string> itemPaths = new();
-        foreach (T item in targets.Where(filter))
-            itemPaths.TryAdd(item, GetItemPath(item as Item));
+       ItemEqualityComparer comparer = new();
+       Dictionary<T, string> itemPaths = new();
+       foreach (T item in targets.Where(filter))
+           itemPaths.TryAdd(item, GetItemPath(item as Item));
 
         List<(T item, string)> itemsToAdd = values.Except(targets, comparer)
             .Select(item => (item, CreateItemPath(item))).ToList();
@@ -103,25 +109,24 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
            
            ResourceSaver.Save(item, path);
         }
-        
-        const string pathToTres = "res://Resources/ItemDatabase.tres";  // Ugh, terrible
+
         foreach ((T item, string path) in itemsToDelete)
         {
            int index = Array.FindIndex(_items, i => i?.Name == item.Name);
            if (index == -1) 
                continue;
-
+        
            _items[index] = null;
-
+        
            string globalizedPath = ProjectSettings.GlobalizePath(path);
            if (File.Exists(globalizedPath))
                File.Delete(globalizedPath);
-
-           string globalizedPathToTres = ProjectSettings.GlobalizePath(pathToTres);
+        
+           string globalizedPathToTres = ProjectSettings.GlobalizePath(itemDatabase.ResourcePath);
            string content = File.ReadAllText(globalizedPathToTres);
            string pattern = $@"\[\w+_resource type=""Resource"".*path=""{Regex.Escape(path)}"".*\]";
            string newContent = Regex.Replace(content, pattern, "");
-
+        
            File.WriteAllText(globalizedPathToTres, newContent);
         }
        
@@ -130,7 +135,20 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
                 (T item, string path) = itemAndPath;
                 return ResourceSaver.Save(item, path) == Error.Ok ? (Item)ResourceLoader.Load(path) : null;
             }).Where(item => item != null).ToList();
-        _items = _items.Where(item => item != null).Concat(savedItems).ToArray();
+
+        itemDatabase._items = itemDatabase._items.Where(item => item != null).Concat(savedItems).ToArray();
+    }
+    
+    private class ItemEqualityComparer : IEqualityComparer<T>
+    {
+        public bool Equals(T x, T y)
+        {
+            if (ReferenceEquals(x, y)) return true;
+            if (ReferenceEquals(x, null) || ReferenceEquals(y, null) || x.GetType() != y.GetType()) return false;
+            return x.Id == y.Id;
+        }
+        
+        public int GetHashCode(T obj) => obj.GetHashCode();
     }
     
 #endif

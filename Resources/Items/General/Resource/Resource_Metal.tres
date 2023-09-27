@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dw6kgmufbwoy5"]
+
+[ext_resource type="Texture2D" uid="uid://cvbuvoeo0ttst" path="res://Resources/Items/General/Resource/Icons/Metal_Sprite.png" id="1_b2y33"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Resource.cs" id="2_jk0ev"]
+
+[resource]
+script = ExtResource("2_jk0ev")
+DisplayName = "Metal"
+PrefabName = ""
+SpriteName = "Metal_Sprite"
+Sprite = ExtResource("1_b2y33")
+Name = "Metal"

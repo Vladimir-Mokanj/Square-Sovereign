@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dnvs67lv6ryy6"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Upgrade.cs" id="1_16yo1"]
+
+[resource]
+script = ExtResource("1_16yo1")
+Description = "The ancient art of turning trees into something slightly more menacing. Because sticks and stones can definitely break your bones—if you shoot them fast enough."
+DisplayName = "Archery"
+PrefabName = "Archery_Prefab"
+SpriteName = "Archery_Sprite"
+Name = "Archery"

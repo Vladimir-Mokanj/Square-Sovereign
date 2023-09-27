@@ -21,9 +21,10 @@ public partial class Item : ItemBase
         Name = data.Parse<string>(nameof(Name));
         DisplayName = data.Parse<string>(nameof(DisplayName));
         PrefabName = data.Parse<string>(nameof(PrefabName));
-        Prefab = GD.Load<PackedScene>($"res://Resources/Items/{GetType().Name}/Prefabs/{PrefabName}.tscn");
+        Prefab = GD.Load<PackedScene>($"res://Resources/Items/{ItemDatabase.civName}/{GetType().Name}/Prefabs/{PrefabName}.tscn");
         SpriteName = data.Parse<string>(nameof(SpriteName));
-        Sprite = GD.Load<Texture2D>($"res://Resources/Items/{GetType().Name}/Icons/{SpriteName}.png");
+        GD.PrintErr($"res://Resources/Items/General/{GetType().Name}/Icons/{SpriteName}.png");
+        Sprite = GD.Load<Texture2D>($"res://Resources/Items/General/{GetType().Name}/Icons/{SpriteName}.png");
     }
 
     protected int[] SetupProperties(string properties)

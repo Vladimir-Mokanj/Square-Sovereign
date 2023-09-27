@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cp7l442r3fnc0"]
+
+[ext_resource type="Texture2D" uid="uid://b7o03wjntil3j" path="res://Resources/Items/General/Upgrade/Icons/MerchantCarry_Sprite.PNG" id="1_c1v2y"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Upgrade.cs" id="2_1li58"]
+
+[resource]
+script = ExtResource("2_1li58")
+Description = "With carrying capacity so enormous, this merchant could lug around your hopes and dreams... and still have room for a kitchen sink."
+DisplayName = "Merchant Carry"
+PrefabName = "MerchantCarry_Prefab"
+SpriteName = "MerchantCarry_Sprite"
+Sprite = ExtResource("1_c1v2y")
+Name = "MerchantCarry"

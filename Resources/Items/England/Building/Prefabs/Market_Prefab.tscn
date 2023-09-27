@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://px2y4ty2t8wx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_feve5"]
+albedo_color = Color(0.278431, 0.0862745, 0.415686, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3xjam"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_py0th"]
+albedo_color = Color(0.792157, 0.392157, 0.117647, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6kect"]
+size = Vector3(20, 1, 20)
+
+[node name="Market_Prefab" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(9.79817, 0, 3.19837, 0, 5, 0, -1.99898, 0, 15.6771, 0, 2.5, 0)
+material_overlay = SubResource("StandardMaterial3D_feve5")
+mesh = SubResource("BoxMesh_3xjam")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.8789, 0, 0.599694, 0, 6, 0, -1.19939, 0, 2.93945, 1.39929, 3, 6.85872)
+material_overlay = SubResource("StandardMaterial3D_py0th")
+mesh = SubResource("BoxMesh_3xjam")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.8789, 0, 0.599694, 0, 6, 0, -1.19939, 0, 2.93945, -1.39929, 3, -6.85872)
+material_overlay = SubResource("StandardMaterial3D_py0th")
+mesh = SubResource("BoxMesh_3xjam")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_6kect")

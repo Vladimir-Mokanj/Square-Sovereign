@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dlvfnbmjp73jn"]
+
+[ext_resource type="Texture2D" uid="uid://np5a722nxm67" path="res://Resources/Items/General/Upgrade/Icons/LeatherArmor_Sprite.png" id="1_haep1"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Upgrade.cs" id="2_53q5p"]
+
+[resource]
+script = ExtResource("2_53q5p")
+Description = "Cowhide's second most popular form, right after barbecue. Provides almost adequate protection against zippers and papercuts."
+DisplayName = "Leather Armor"
+PrefabName = "LeatherArmor_Prefab"
+SpriteName = "LeatherArmor_Sprite"
+Sprite = ExtResource("1_haep1")
+Name = "LeatherArmor"

@@ -6,8 +6,8 @@ res://_Production/Scripts/Data/ItemBase.cs
 res://_Production/Scripts/Data/ItemDatabase.cs
 res://_Production/Scripts/Data/Item/Civilization/Building.cs
 res://_Production/Scripts/Data/Item/Civilization/Unit.cs
-res://_Production/Scripts/Data/Item/Resource.cs
-res://_Production/Scripts/Data/Item/Upgrade.cs
+res://_Production/Scripts/Data/Item/General/Resource.cs
+res://_Production/Scripts/Data/Item/General/Upgrade.cs
 res://_Production/Scripts/Data/TerrainGenerationData.cs
 res://_Production/Scripts/Inputs/InputController.cs
 res://_Production/Scripts/TBS/BuildingController.cs
@@ -23,5 +23,3 @@ res://_Production/_Scenes/ResourceDisplayScreen.cs
 res://_Production/_Scenes/TestScene.tscn
 res://_Production/Shaders/heightShader.gdshader
 res://Resources/Terrain/DebugTerrainData.tres
-res://Resources/EnglandItemDatabase.tres
-res://Resources/FranceItemDatabase.tres

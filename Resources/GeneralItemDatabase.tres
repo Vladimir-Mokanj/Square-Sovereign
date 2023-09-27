@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="ItemDatabase" load_steps=13 format=3 uid="uid://c6t2v60e7mrkq"]
+
+[ext_resource type="Resource" uid="uid://iekqkcsrxc0f" path="res://Resources/Items/General/Resource/Resource_Fish.tres" id="1_e72ig"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="1_g1y4p"]
+[ext_resource type="Resource" uid="uid://dfxgme4h7ae5j" path="res://Resources/Items/General/Resource/Resource_Food.tres" id="2_5a2ds"]
+[ext_resource type="Resource" uid="uid://dw6kgmufbwoy5" path="res://Resources/Items/General/Resource/Resource_Metal.tres" id="3_gbshv"]
+[ext_resource type="Resource" uid="uid://55rfpdkey86r" path="res://Resources/Items/General/Upgrade/Upgrade_ClubDamage.tres" id="4_vjyyi"]
+[ext_resource type="Resource" uid="uid://cu2hw4mrpv8ch" path="res://Resources/Items/General/Upgrade/Upgrade_SpearDamage.tres" id="5_r3hdx"]
+[ext_resource type="Resource" uid="uid://bbaxodanudo4l" path="res://Resources/Items/General/Upgrade/Upgrade_Range.tres" id="6_bh5rq"]
+[ext_resource type="Resource" uid="uid://dlvfnbmjp73jn" path="res://Resources/Items/General/Upgrade/Upgrade_LeatherArmor.tres" id="7_7hh1m"]
+[ext_resource type="Resource" uid="uid://ch40c2j5f2vte" path="res://Resources/Items/General/Upgrade/Upgrade_ArcherDamage.tres" id="8_4brsu"]
+[ext_resource type="Resource" uid="uid://dvecm8i8vm4ex" path="res://Resources/Items/General/Upgrade/Upgrade_MerchantSpeed.tres" id="9_0hlp7"]
+[ext_resource type="Resource" uid="uid://cp7l442r3fnc0" path="res://Resources/Items/General/Upgrade/Upgrade_MerchantCarry.tres" id="10_dl1ca"]
+[ext_resource type="Resource" uid="uid://bogij5ubx22s2" path="res://Resources/Items/General/Upgrade/Upgrade_MerchantReputation.tres" id="11_m0rff"]
+
+[resource]
+resource_name = "General"
+script = ExtResource("1_g1y4p")
+_items = [ExtResource("1_e72ig"), ExtResource("2_5a2ds"), ExtResource("3_gbshv"), ExtResource("4_vjyyi"), ExtResource("5_r3hdx"), ExtResource("6_bh5rq"), ExtResource("7_7hh1m"), ExtResource("8_4brsu"), ExtResource("9_0hlp7"), ExtResource("10_dl1ca"), ExtResource("11_m0rff")]
+_spreadsheetId = "1p4E7VJH4C_pD-b-xlXRijAjn7Q29zmo6Av0JlZX6SYw"
+_typesToDownloadFolderLocation = "General"
+_itemDatabaseLocation = "res://Resources/"
+_downloadLocation = "res://Resources/Items/"

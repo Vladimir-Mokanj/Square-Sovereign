@@ -1,12 +1,32 @@
-[gd_resource type="Resource" script_class="ItemDatabase" load_steps=2 format=3 uid="uid://cqh3fgeoej4t"]
+[gd_resource type="Resource" script_class="ItemDatabase" load_steps=22 format=3 uid="uid://cqh3fgeoej4t"]
 
+[ext_resource type="Resource" uid="uid://bdwxw7yu7iwc0" path="res://Resources/Items/England/Building/Building_IronMine.tres" id="1_x23th"]
+[ext_resource type="Resource" uid="uid://bt4qlqsxqnmnu" path="res://Resources/Items/England/Building/Building_Farm.tres" id="2_wsy15"]
+[ext_resource type="Resource" uid="uid://deupbpxwfr01a" path="res://Resources/Items/England/Building/Building_FishingDock.tres" id="3_ju66u"]
+[ext_resource type="Resource" uid="uid://c0j57sw5bhbeh" path="res://Resources/Items/England/Building/Building_Barracks.tres" id="4_bjit5"]
+[ext_resource type="Resource" uid="uid://cm6ne4b6nugsl" path="res://Resources/Items/England/Building/Building_Market.tres" id="5_8gtjt"]
+[ext_resource type="Resource" uid="uid://gdpp4q0q4lek" path="res://Resources/Items/England/Building/Building_Archery.tres" id="6_b3qxs"]
+[ext_resource type="Resource" uid="uid://tfcvcix7md3n" path="res://Resources/Items/England/Unit/Unit_Clubman.tres" id="7_inl0a"]
+[ext_resource type="Resource" uid="uid://ck0fylgjnqfcs" path="res://Resources/Items/England/Unit/Unit_Spearman.tres" id="8_56twb"]
+[ext_resource type="Resource" uid="uid://br6tp08b0mayo" path="res://Resources/Items/England/Unit/Unit_Archer.tres" id="9_syrbn"]
+[ext_resource type="Resource" uid="uid://iekqkcsrxc0f" path="res://Resources/Items/General/Resource/Resource_Fish.tres" id="10_5yuxo"]
+[ext_resource type="Resource" uid="uid://dfxgme4h7ae5j" path="res://Resources/Items/General/Resource/Resource_Food.tres" id="11_ug7y7"]
+[ext_resource type="Resource" uid="uid://dw6kgmufbwoy5" path="res://Resources/Items/General/Resource/Resource_Metal.tres" id="12_mv0y2"]
+[ext_resource type="Resource" uid="uid://55rfpdkey86r" path="res://Resources/Items/General/Upgrade/Upgrade_ClubDamage.tres" id="13_r5i0u"]
+[ext_resource type="Resource" uid="uid://cu2hw4mrpv8ch" path="res://Resources/Items/General/Upgrade/Upgrade_SpearDamage.tres" id="14_gf7qc"]
+[ext_resource type="Resource" uid="uid://bbaxodanudo4l" path="res://Resources/Items/General/Upgrade/Upgrade_Range.tres" id="15_j7fon"]
+[ext_resource type="Resource" uid="uid://dlvfnbmjp73jn" path="res://Resources/Items/General/Upgrade/Upgrade_LeatherArmor.tres" id="16_vltyt"]
+[ext_resource type="Resource" uid="uid://ch40c2j5f2vte" path="res://Resources/Items/General/Upgrade/Upgrade_ArcherDamage.tres" id="17_fuow6"]
+[ext_resource type="Resource" uid="uid://dvecm8i8vm4ex" path="res://Resources/Items/General/Upgrade/Upgrade_MerchantSpeed.tres" id="18_5ycty"]
+[ext_resource type="Resource" uid="uid://cp7l442r3fnc0" path="res://Resources/Items/General/Upgrade/Upgrade_MerchantCarry.tres" id="19_475ku"]
+[ext_resource type="Resource" uid="uid://bogij5ubx22s2" path="res://Resources/Items/General/Upgrade/Upgrade_MerchantReputation.tres" id="20_l3o54"]
 [ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="22_odpoy"]
 
 [resource]
 resource_name = "England"
 script = ExtResource("22_odpoy")
-_items = []
-_spreadsheetId = "1p4E7VJH4C_pD-b-xlXRijAjn7Q29zmo6Av0JlZX6SYw"
-_downloadItemsLocation = "Civilization"
+_items = [ExtResource("1_x23th"), ExtResource("2_wsy15"), ExtResource("3_ju66u"), ExtResource("4_bjit5"), ExtResource("5_8gtjt"), ExtResource("6_b3qxs"), ExtResource("7_inl0a"), ExtResource("8_56twb"), ExtResource("9_syrbn"), ExtResource("10_5yuxo"), ExtResource("11_ug7y7"), ExtResource("12_mv0y2"), ExtResource("13_r5i0u"), ExtResource("14_gf7qc"), ExtResource("15_j7fon"), ExtResource("16_vltyt"), ExtResource("17_fuow6"), ExtResource("18_5ycty"), ExtResource("19_475ku"), ExtResource("20_l3o54")]
+_spreadsheetId = "143JkHpmNL-hALYAq51Q90diWMBp11ctYWGLOuxo-Os8"
+_typesToDownloadFolderLocation = "Civilization"
 _itemDatabaseLocation = "res://Resources/"
 _downloadLocation = "res://Resources/Items/"

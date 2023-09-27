@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://bc15jdjec0mv2"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Upgrade.cs" id="1_aukdj"]
+
+[resource]
+script = ExtResource("1_aukdj")
+Description = "Welcome to the Farm, where our crops listen to motivational podcasts all day. Why? Because we believe in 'growth mindset,' that's why!"
+DisplayName = "Farm"
+PrefabName = "Farm_Prefab"
+SpriteName = "Farm_Sprite"
+Name = "Farm"

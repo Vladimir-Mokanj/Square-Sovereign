@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://dyiy3j75so0yo"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Resource.cs" id="1_bw5aw"]
+
+[resource]
+script = ExtResource("1_bw5aw")
+DisplayName = "Archery"
+PrefabName = "Archery_Prefab"
+SpriteName = "Archery_Sprite"
+Name = "Archery"

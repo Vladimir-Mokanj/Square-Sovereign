@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bbaxodanudo4l"]
+
+[ext_resource type="Texture2D" uid="uid://dqg5bk455w8ck" path="res://Resources/Items/General/Upgrade/Icons/Range_Sprite.png" id="1_i211t"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Upgrade.cs" id="2_vnebv"]
+
+[resource]
+script = ExtResource("2_vnebv")
+Description = "The distance between you and that apple on your friend's head. Spoiler: you're going to need a new friend soon."
+DisplayName = "Range"
+PrefabName = "Range_Prefab"
+SpriteName = "Range_Sprite"
+Sprite = ExtResource("1_i211t")
+Name = "Range"

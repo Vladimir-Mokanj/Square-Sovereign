@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ctcq1bc2gb50i"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Upgrade.cs" id="1_lqwgx"]
+
+[resource]
+script = ExtResource("1_lqwgx")
+Description = "Ah, the Iron mine—where rocks go to fulfill their dreams of becoming swords. You know what they say: it's not just a phase, it's a metamorphic lifestyle!"
+DisplayName = "Iron Mine"
+PrefabName = "IronMine_Prefab"
+SpriteName = "IronMine_Sprite"
+Name = "IronMine"

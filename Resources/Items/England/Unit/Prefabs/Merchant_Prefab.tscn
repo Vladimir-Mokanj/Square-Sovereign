@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmkp4wj28lr17"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xbha7"]
+albedo_color = Color(1, 0, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_101o6"]
+
+[node name="Merchant_Prefab" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_xbha7")
+mesh = SubResource("CapsuleMesh_101o6")

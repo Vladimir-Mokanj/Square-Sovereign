@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://dunrdch3lr15s"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k80g5"]
+albedo_color = Color(1, 0.129412, 0.14902, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8mq0x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x6p6y"]
+albedo_color = Color(0.831373, 0.305882, 0, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vxmam"]
+size = Vector3(20, 1, 20)
+
+[node name="Barracks_Prefab" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 16, 0, 2.5, 0)
+material_overlay = SubResource("StandardMaterial3D_k80g5")
+mesh = SubResource("BoxMesh_8mq0x")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 7, 0, 0, 0, 3, 5, 3.5, 8)
+material_overlay = SubResource("StandardMaterial3D_x6p6y")
+mesh = SubResource("BoxMesh_8mq0x")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 7, 0, 0, 0, 3, -5, 3.5, 8)
+material_overlay = SubResource("StandardMaterial3D_x6p6y")
+mesh = SubResource("BoxMesh_8mq0x")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 7, 0, 0, 0, 3, 5, 3.5, -8)
+material_overlay = SubResource("StandardMaterial3D_x6p6y")
+mesh = SubResource("BoxMesh_8mq0x")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 7, 0, 0, 0, 3, -5, 3.5, -8)
+material_overlay = SubResource("StandardMaterial3D_x6p6y")
+mesh = SubResource("BoxMesh_8mq0x")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+shape = SubResource("BoxShape3D_vxmam")

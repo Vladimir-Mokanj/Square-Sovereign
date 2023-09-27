@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cwbn178bk5dan"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Upgrade.cs" id="1_sp3wv"]
+
+[resource]
+script = ExtResource("1_sp3wv")
+Description = "The Fishing dock: Where fish learn to play 'Hide and Seek'—and lose. Guaranteed to have fish stories you won't have to exaggerate."
+DisplayName = "Fishing Dock"
+PrefabName = "FishingDock_Prefab"
+SpriteName = "FishingDock_Sprite"
+Name = "FishingDock"

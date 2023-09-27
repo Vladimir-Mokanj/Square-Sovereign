@@ -1,0 +1,12 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://dfxgme4h7ae5j"]
+
+[ext_resource type="Texture2D" uid="uid://c5djvngceujb5" path="res://Resources/Items/General/Resource/Icons/Food_Sprite.png" id="1_mgt54"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/General/Resource.cs" id="2_b5a78"]
+
+[resource]
+script = ExtResource("2_b5a78")
+DisplayName = "Food"
+PrefabName = ""
+SpriteName = "Food_Sprite"
+Sprite = ExtResource("1_mgt54")
+Name = "Food"

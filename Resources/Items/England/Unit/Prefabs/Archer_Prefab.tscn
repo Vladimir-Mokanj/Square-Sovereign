@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhu3qds6yb4h5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4nt0d"]
+albedo_color = Color(0.705882, 0.952941, 0.447059, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gd5b8"]
+
+[node name="Archer_Prefab" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+material_override = SubResource("StandardMaterial3D_4nt0d")
+mesh = SubResource("CapsuleMesh_gd5b8")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://cb0fg77ttf2yj"]
+
+[ext_resource type="PackedScene" uid="uid://b30wp8hvvst6y" path="res://Resources/Items/France/Unit/Prefabs/Clubman_Prefab.tscn" id="1_lxagi"]
+[ext_resource type="Texture2D" uid="uid://c4w5dd86160vu" path="res://Resources/Items/General/Unit/Icons/Clubman_Sprite.png" id="2_4fqus"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Unit.cs" id="3_mw0w8"]
+
+[resource]
+script = ExtResource("3_mw0w8")
+Description = "Ah, the Clubman: Your go-to guy for a philosophy lesson wrapped in a concussion. Specializing in the art of \"SmackFu,\" he ponders life's deepest questions, like \"Is oak or pine the ultimate club material?\" Not just a brawler, but a thinker—with a really big stick."
+DisplayName = "Clubman"
+PrefabName = "Clubman_Prefab"
+Prefab = ExtResource("1_lxagi")
+SpriteName = "Clubman_Sprite"
+Sprite = ExtResource("2_4fqus")
+Name = "Clubman"

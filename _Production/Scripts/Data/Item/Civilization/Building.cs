@@ -6,7 +6,7 @@ using FT.Tools;
 using FT.Managers;
 using Godot;
 
-namespace FT.Data.Items;
+namespace FT.Data.Items.Civilization;
 
 public enum BuildingType : byte {NONE, ECONOMY, BATTLE, RESOURCE }
 

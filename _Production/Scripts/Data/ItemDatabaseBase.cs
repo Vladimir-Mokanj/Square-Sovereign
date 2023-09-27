@@ -26,6 +26,10 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
 #if TOOLS
     [ExportCategory("Editor Only")]
     [Export] protected string _spreadsheetId;
+    [Export] protected string _downloadItemsLocation;
+    [Export] protected string _itemDatabaseLocation;
+    [Export] protected string _downloadLocation;
+    
     private class ItemEqualityComparer : IEqualityComparer<T>
     {
         public bool Equals(T x, T y)

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://cbi3knpmus31c"]
 
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Building.cs" id="1_54gq8"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="1_54gq8"]
 [ext_resource type="PackedScene" uid="uid://c2krdhawgr28t" path="res://Resources/Items/Building/Prefabs/Farm_Prefab.tscn" id="1_pytrv"]
 [ext_resource type="Texture2D" uid="uid://6u8mw4r4lc55" path="res://Resources/Items/Building/Icons/Farm_Sprite.png" id="2_qdpu8"]
 

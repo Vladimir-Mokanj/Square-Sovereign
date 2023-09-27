@@ -2,7 +2,7 @@ using System.Data;
 using FT.Tools;
 using Godot;
 
-namespace FT.Data.Items;
+namespace FT.Data.Items.Civilization;
 
 [Tool]
 public partial class Unit : Item

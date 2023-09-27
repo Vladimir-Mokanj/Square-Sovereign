@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemDatabase" load_steps=2 format=3 uid="uid://pbdmt3s6ad00"]
+
+[ext_resource type="Script" path="res://_Production/Scripts/Data/ItemDatabase.cs" id="22_yl3ko"]
+
+[resource]
+resource_name = "France"
+script = ExtResource("22_yl3ko")
+_items = []
+_spreadsheetId = "17gnrYwiV90ObBHVGBWImoAByogfSOa9wGnlBx5vjN7Q"
+_downloadItemsLocation = "Civilization"
+_itemDatabaseLocation = "res://Resources/"
+_downloadLocation = "res://Resources/Items/"

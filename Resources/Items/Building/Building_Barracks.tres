@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://bxkcemp53mb5s"]
 
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Building.cs" id="1_scvyu"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="1_scvyu"]
 [ext_resource type="PackedScene" uid="uid://c03de4krle11s" path="res://Resources/Items/Building/Prefabs/Barracks_Prefab.tscn" id="1_ur1y8"]
 [ext_resource type="Texture2D" uid="uid://c7pqvw6n705pr" path="res://Resources/Items/Building/Icons/Barracks_Sprite.png" id="2_ks72y"]
 

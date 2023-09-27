@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using FT.Data;
 using FT.Data.Items;
+using FT.Data.Items.Civilization;
 using FT.TBS;
 using Godot;
 

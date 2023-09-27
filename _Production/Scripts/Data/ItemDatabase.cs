@@ -18,8 +18,8 @@ public partial class ItemDatabase : ItemDatabaseBase<Item, ItemDatabase>
     public string GetDownloadUrl(Type type) => 
         $"https://docs.google.com/spreadsheets/d/{_spreadsheetId}/gviz/tq?tqx=out:csv&sheet={type.Name}";
 
-    public static IEnumerable<Type> GetAllItemTypes() => 
-        typeof(Item).Assembly.GetTypes().Where(type => type.IsSubclassOf(typeof(Item))).ToList();
+    public Type[] GetAllItemTypes() => 
+        typeof(Item).Assembly.GetTypes().Where(type => type.IsSubclassOf(typeof(Item)) && type.FullName.Contains(_downloadItemsLocation)).ToArray();
     
     public static void LoadImportedData(DataTable csvFile, Type dataType) => Database.Load(csvFile, dataType);
 

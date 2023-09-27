@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Godot;
 using FT.Data;
-using FT.Data.Items;
+using FT.Data.Items.Civilization;
 using FT.TBS;
 
 namespace FT.UI;

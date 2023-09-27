@@ -1,6 +1,6 @@
 using System;
 using FT.Data;
-using FT.Data.Items;
+using FT.Data.Items.Civilization;
 using FT.Managers;
 using FT.UI;
 using Godot;

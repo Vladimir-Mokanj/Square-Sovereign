@@ -1,3 +1,4 @@
+using FT.Data;
 using FT.Managers;
 using FT.TBS;
 using Godot;
@@ -10,8 +11,25 @@ public partial class DebugTestUI : Node
     [Export] private Label _resourceTypeLabel;
     [Export] private Label _isOccupiedLabel;
 
-    public override void _Ready() => 
+    [Export] private Button _englandButton;
+    [Export] private Button _franceButton;
+    
+    public override void _Ready()
+    {
         PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateAssigned);
+
+        _englandButton.Pressed += () =>
+        {
+            ItemDatabase.SetCivDebug("England");
+            ((BuildingController)GetTree().GetFirstNodeInGroup(nameof(BuildingController)))?.InitializeBuildScreen();
+        };
+        _franceButton.Pressed += () =>
+        {
+            ItemDatabase.SetCivDebug("France");
+            ((BuildingController)GetTree().GetFirstNodeInGroup(nameof(BuildingController)))?.InitializeBuildScreen();
+        };
+    }
+
     private void OnStateAssigned(StateParameters State)
     {
         State.RowCol.AddObserver(AssignValues);
@@ -27,4 +45,5 @@ public partial class DebugTestUI : Node
         _resourceTypeLabel.Text = $"Resource Type: {(isNull ? data.resourceType : "Null")}";
         _isOccupiedLabel.Text = isNull ? (data.isOccupied ? "Is Occupied: True" : "Is Occupied: False") : "Is Occupied: Null";
     }
+    
 }

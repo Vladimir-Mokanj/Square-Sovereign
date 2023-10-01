@@ -23,14 +23,15 @@ public partial class ItemDatabaseBase<T, TI> : Resource where T : ItemBase where
     public static T Get(string name) => Database._items.FirstOrDefault(item => string.Equals(item.Name, name, StringComparison.OrdinalIgnoreCase)) as T;
     public static TT Get<TT>(string name) where TT : Item => Get(name) as TT;
     public static TT[] GetAllOfType<TT>() where TT : T => Database._items.OfType<TT>().ToArray();
-    
-    
+
 #if TOOLS
     [ExportCategory("Editor Only")]
     [Export] protected string _spreadsheetId;
     [Export] protected string _typesToDownloadFolderLocation;
     [Export] protected string _itemDatabaseLocation;
     [Export] protected string _downloadLocation;
+
+    public static void SetCivDebug(string civ) => _database = GD.Load($"Resources/{civ}{typeof(TI).Name}.tres") as TI;
 
     protected void CheckAndCreateDirectories(string directoryPath)
     {

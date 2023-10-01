@@ -22,10 +22,6 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="Square-Sovereign"
 
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/data_importer/plugin.cfg")
-
 [input]
 
 OnPressLeft={

@@ -16,10 +16,15 @@ public partial class BuildingController : Node
 
     public override void _Ready()
     {
-        _onBuildingIdChanged = OnBuildingIdChanged;
-        ((PlayerUI)GetTree().GetFirstNodeInGroup(nameof(PlayerUI)))?.BuildingScreen.Initialize(_onBuildingIdChanged);
-        
+        InitializeBuildScreen();
         GetParent<PlayerManager>().OnStateInitialized.AddObserver(OnStateAssigned);
+    }
+
+    public void InitializeBuildScreen()
+    {
+        _onBuildingIdChanged -= OnBuildingIdChanged;
+        _onBuildingIdChanged += OnBuildingIdChanged;
+        ((PlayerUI)GetTree().GetFirstNodeInGroup(nameof(PlayerUI)))?.BuildingScreen.Initialize(_onBuildingIdChanged);
     }
 
     private void OnBuildingIdChanged(int? value)
@@ -73,7 +78,9 @@ public partial class BuildingController : Node
         if (!value.row.HasValue || !value.col.HasValue)
             return;
         
-        _ghostBuilding.Visible = CanPlaceBuilding((value.row.Value, value.col.Value));
+        if (!CanPlaceBuilding((value.row.Value, value.col.Value)))
+            ;
+        
         _ghostBuilding.Position = new Vector3(value.row.Value * 20 + 10, 0, value.col.Value * 20 + 10);
     }
 
@@ -92,6 +99,28 @@ public partial class BuildingController : Node
         _ghostBuilding = null;
     }
 
+    private void SetTransparency()
+    {
+        // Cast the node to a MeshInstance to see if it's what we're looking for
+        if (_ghostBuilding is MeshInstance3D meshInstance)
+        {
+            Material material = meshInstance.GetSurfaceMaterial(0);
+            ShaderMaterial shaderMaterial = material as ShaderMaterial;
+
+            if (shaderMaterial != null)
+            {
+                // Assuming the shader has a parameter named "alpha"
+                shaderMaterial.SetShaderParam("alpha", 0.5f);
+            }
+        }
+
+        // Loop through all the node's children and call the function recursively
+        foreach (Node child in node.GetChildren())
+        {
+            _SetAlphaTo50Recursive(child);
+        }
+    }
+    
     private bool CanPlaceBuilding((byte row, byte col) value)
     {
         Building _building = _buildingId.HasValue ? ItemDatabase.Get<Building>(_buildingId.Value) : null;

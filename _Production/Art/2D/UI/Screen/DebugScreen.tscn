@@ -2,17 +2,20 @@
 
 [ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/DebugTestUI.cs" id="1_vuwvu"]
 
-[node name="DebugScreen" type="Control" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel")]
+[node name="DebugScreen" type="Control" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel", "_englandButton", "_franceButton")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_vuwvu")
 _terrainTypeLabel = NodePath("DebugUI/TerrainTypeContainer/TerrainTypeLabel")
 _resourceTypeLabel = NodePath("DebugUI/ResourceTypeContainer/ResourceTypeLabel")
 _isOccupiedLabel = NodePath("DebugUI/IsOccupiedContainer/IsOccupedLabel")
+_englandButton = NodePath("TerrainTypeContainer/VBoxContainer/EnglandButton")
+_franceButton = NodePath("TerrainTypeContainer/VBoxContainer/FranceButton")
 
 [node name="DebugUI" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -56,3 +59,38 @@ text = "Terrain Type: Null"
 horizontal_alignment = 1
 vertical_alignment = 1
 clip_text = true
+
+[node name="TerrainTypeContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -45.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_vertical = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TerrainTypeContainer"]
+custom_minimum_size = Vector2(190, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+alignment = 1
+
+[node name="EnglandButton" type="Button" parent="TerrainTypeContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+mouse_default_cursor_shape = 8
+action_mode = 0
+text = "England"
+
+[node name="FranceButton" type="Button" parent="TerrainTypeContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+mouse_default_cursor_shape = 8
+action_mode = 0
+text = "France
+"

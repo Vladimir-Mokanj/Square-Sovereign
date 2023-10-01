@@ -1,3 +1,13 @@
+res://_Production/_Scenes/TestScene.tscn
+res://_Production/Shaders/heightShader.gdshader
+res://Resources/Terrain/DebugTerrainData.tres
+res://Resources/Items/France/Building/Prefabs/Market_Prefab.tscn
+res://Resources/Items/France/Building/Prefabs/IronMine_Prefab.tscn
+res://Resources/Items/France/Building/Prefabs/FishingDock_Prefab.tscn
+res://Resources/Items/France/Building/Prefabs/Farm_Prefab.tscn
+res://Resources/Items/France/Building/Prefabs/Barracks_Prefab.tscn
+res://Resources/Items/England/Building/Prefabs/Archery_Prefab.tscn
+res://Resources/Items/France/Building/Prefabs/Archery_Prefab.tscn
 res://addons/data_importer/DataImporter.cs
 res://addons/data_importer/ReadOnlyInspector.cs
 res://addons/data_importer/Tools/DataSheetLoader.cs
@@ -19,7 +29,5 @@ res://_Production/Scripts/UI/PlayerUI.cs
 res://_Production/Scripts/UI/Screen/BuildingScreen.cs
 res://_Production/Scripts/UI/Screen/DebugTestUI.cs
 res://_Production/Scripts/UI/Screen/SelectionScreen.cs
+res://_Production/_Scenes/CameraController.cs
 res://_Production/_Scenes/ResourceDisplayScreen.cs
-res://_Production/_Scenes/TestScene.tscn
-res://_Production/Shaders/heightShader.gdshader
-res://Resources/Terrain/DebugTerrainData.tres

@@ -1,6 +1,5 @@
 using System.Linq;
 using FT.Input;
-using FT.Player;
 using FT.UI;
 using Godot;
 using Godot.Collections;
@@ -19,26 +18,27 @@ public partial class StateController : Node3D
 
     private void ControlState(InputDataParameters data)
     {
-        bool isOverButton = IsButtonPressed(data.mousePosition);
+        bool isOverButton = IsButtonPressed();
         
-        if (data.isLeftMousePressed && !isOverButton) _state.BuildingSelectedID.Set(PhysicsRaycast(data.mousePosition, _state.BuildingSelectedID.Value));
+        if (data.isLeftMousePressed && !isOverButton) _state.BuildingSelectedID.Set(PhysicsRaycast(_state.BuildingSelectedID.Value));
         if (data.isRightMousePressed) _state.BuildingSelectedID.Set(null);
         if (!isOverButton) _state.IsMouseLeftDown.Set(data.isLeftMousePressed);
         _state.IsMouseRightDown.Set(data.isRightMousePressed);
-        _state.RowCol.Set(PlayerCustomRaycast.GetRowCol(data.mousePosition));
+        _state.RowCol.Set(data.rowCol);
         _state.AreResourcesRevealed.Set(data.areResourcesRevealed);
+        _state.IsMouseDrag.Set(data.isMouseDragging);
     }
 
     public void Initialize(StateParameters stateParameters) => 
         _state = stateParameters;
 
-    private bool IsButtonPressed(Vector2 mousePosition) => 
-        GetViewport().GuiGetFocusOwner() is DisplayUI control && control.GetGlobalRect().HasPoint(mousePosition);
+    private bool IsButtonPressed() => 
+        GetViewport().GuiGetFocusOwner() is DisplayUI control && control.GetGlobalRect().HasPoint(GetViewport().GetMousePosition());
 
-    private int? PhysicsRaycast(Vector2 mousePosition, int? value)
+    private int? PhysicsRaycast(int? value)
     {
         Camera3D camera = GetViewport().GetCamera3D();
-        Vector3 rayTo = camera.ProjectRayOrigin(mousePosition) + camera.ProjectRayNormal(mousePosition) * 1000.0f;
+        Vector3 rayTo = camera.ProjectRayOrigin(GetViewport().GetMousePosition()) + camera.ProjectRayNormal(GetViewport().GetMousePosition()) * 1000.0f;
 
         PhysicsDirectSpaceState3D spaceState = PhysicsServer3D.SpaceGetDirectState(GetWorld3D().Space);
         Dictionary hitResult = spaceState.IntersectRay(PhysicsRayQueryParameters3D.Create(camera.GlobalPosition, rayTo));

@@ -1,3 +1,7 @@
+Sprite2D
+Node2D
+Button
+VBoxContainer
 Label
 Panel
 TextureRect
@@ -8,8 +12,6 @@ GridContainer
 Node3D
 Node
 HBoxContainer
-VBoxContainer
-Button
 Container
 StaticBody3D
 CollisionShape3D

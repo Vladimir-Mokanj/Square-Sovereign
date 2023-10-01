@@ -1,31 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsv61pikx60gs"]
+[gd_scene load_steps=3 format=3 uid="uid://dsv61pikx60gs"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_qcnel"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7dvwh"]
-albedo_color = Color(0.552941, 0.14902, 1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jkov4"]
-albedo_color = Color(0.552941, 0.14902, 1, 1)
+[ext_resource type="PackedScene" uid="uid://b3yclir40xgkb" path="res://Resources/Items/France/Building/GLBs/ArcheryRange_Model.glb" id="1_rpwjk"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_m7a3x"]
 size = Vector3(20, 1, 20)
 
 [node name="Archery_Prefab" type="Node3D"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.64996, 0, 11.9496, 0, 5, 0, -7.46847, 0, 10.6399, 0.113329, 2.40776, 0.0841751)
-mesh = SubResource("BoxMesh_qcnel")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.99499, 0, 2.24054, 0, 7, 0, -2.24054, 0, 1.99499, 2.76313, 3.40776, 9.13838)
-material_override = SubResource("StandardMaterial3D_7dvwh")
-mesh = SubResource("BoxMesh_qcnel")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
-transform = Transform3D(1.99499, 0, 2.24054, 0, 7, 0, -2.24054, 0, 1.99499, -2.53647, 3.40776, -8.97003)
-material_override = SubResource("StandardMaterial3D_jkov4")
-mesh = SubResource("BoxMesh_qcnel")
+[node name="ArcheryRange_Model" parent="." instance=ExtResource("1_rpwjk")]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 

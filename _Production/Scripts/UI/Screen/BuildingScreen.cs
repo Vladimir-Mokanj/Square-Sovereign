@@ -25,6 +25,9 @@ public partial class BuildingScreen : Control
 
 	public void Initialize(Action<int?> dataChanged)
 	{
+		foreach (Node node in _buildingPickControlNode.GetChildren())
+			node.QueueFree();
+
 		List<DisplayUI> createdBuildingUI = InitializeBuildingPicks(dataChanged);
 		InitializeBuildingSelection(createdBuildingUI, dataChanged);
 	}

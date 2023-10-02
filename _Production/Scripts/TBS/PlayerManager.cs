@@ -13,7 +13,7 @@ namespace FT.TBS;
 public partial class PlayerManager : Node
 {
     [Export] private TerrainGenerationData _tgd;
-    
+
     public static PlayerManager Instance { get; private set; }
 
     public IObservableAction<Action<StateParameters>> OnStateInitialized => _onStateInitialized;

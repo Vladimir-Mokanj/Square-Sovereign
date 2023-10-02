@@ -60,8 +60,8 @@ Farm_Sprite.png::CompressedTexture2D::2219167999272974378::1695365312::169617697
 FishingDock_Sprite.png::CompressedTexture2D::6029856475023612817::1695365312::1696176975::1::::<><>::
 IronMine_Sprite.png::CompressedTexture2D::5528480797562151976::1695365312::1696176975::1::::<><>::
 Market_Sprite.png::CompressedTexture2D::100468908171785067::1695365312::1696176975::1::::<><>::
-::res://Resources/Items/France/Building/Prefabs/::1696248875
-Archery_Prefab.tscn::PackedScene::2796211466819770738::1696248875::0::1::::<><>::uid://7pklcqt6wkju::::res://Resources/Items/General/Building/Materials/ColorPalette_Material.tres<>uid://cnxdwt320vwos::::res://Resources/Items/General/Building/Models/ArcheryRange_Model.obj
+::res://Resources/Items/France/Building/Prefabs/::1696248883
+Archery_Prefab.tscn::PackedScene::2796211466819770738::1696248883::0::1::::<><>::uid://7pklcqt6wkju::::res://Resources/Items/General/Building/Materials/ColorPalette_Material.tres<>uid://cnxdwt320vwos::::res://Resources/Items/General/Building/Models/ArcheryRange_Model.obj
 Barracks_Prefab.tscn::PackedScene::5118547745305215002::1696248875::0::1::::<><>::uid://7pklcqt6wkju::::res://Resources/Items/General/Building/Materials/ColorPalette_Material.tres<>uid://umw7g0ba5pma::::res://Resources/Items/General/Building/Models/Barracks_Model.obj
 Farm_Prefab.tscn::PackedScene::6689621838084167689::1696248673::0::1::::<><>::
 FishingDock_Prefab.tscn::PackedScene::5212572003330228811::1696248673::0::1::::<><>::
@@ -80,9 +80,9 @@ Spearman_Prefab.tscn::PackedScene::2794020420882473371::1695825343::0::1::::<><>
 ::res://Resources/Items/General/Building/::1696248879
 ::res://Resources/Items/General/Building/Materials/::1696248881
 ColorPalette_Material.tres::StandardMaterial3D::2277635607057698414::1696248881::0::1::::<><>::uid://qrdf1u7yhhae::::res://Resources/Items/General/Building/Textures/ColorPalette_Texture.png
-::res://Resources/Items/General/Building/Models/::1696248881
-ArcheryRange_Model.obj::Mesh::5732999503927397598::1696247450::1696247459::1::::<><>::
-Barracks_Model.obj::Mesh::1429942678862027428::1696248013::1696248013::1::::<><>::
+::res://Resources/Items/General/Building/Models/::1696249593
+ArcheryRange_Model.obj::Mesh::937458525968924188::1696249593::1696249593::1::::<><>::
+Barracks_Model.obj::Mesh::6875312050836077557::1696249593::1696249593::1::::<><>::
 ::res://Resources/Items/General/Building/Textures/::1696248881
 ColorPalette_Texture.png::CompressedTexture2D::1158308397964839128::1696246949::1696248881::1::::<><>::
 ::res://Resources/Items/General/Resource/::1695838753
@@ -196,8 +196,8 @@ PlayerUI.cs::CSharpScript::-1::1695664143::0::1::::<><>::
 BuildingScreen.cs::CSharpScript::-1::1695845831::0::1::::<><>::
 DebugTestUI.cs::CSharpScript::-1::1695845934::0::1::::<><>::
 SelectionScreen.cs::CSharpScript::-1::1695837243::0::1::::<><>::
-::res://_Production/Shaders/::1696248875
-heightShader.gdshader::Shader::-1::1696248875::0::1::::<><>::
+::res://_Production/Shaders/::1696248883
+heightShader.gdshader::Shader::-1::1696248883::0::1::::<><>::
 ::res://_Production/_Scenes/::1696248673
 CameraController.cs::CSharpScript::-1::1696067477::0::1::::<><>::
 ResourceDisplayScreen.cs::CSharpScript::-1::1696175631::0::1::::<><>::

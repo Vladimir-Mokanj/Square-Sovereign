@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bf3rguv3bygva"]
+[gd_scene load_steps=5 format=3 uid="uid://bf3rguv3bygva"]
 
+[ext_resource type="Material" uid="uid://b8xjtv4s6obej" path="res://Resources/Items/General/Building/Materials/CivColor_Material.tres" id="2_8p3le"]
 [ext_resource type="Material" uid="uid://7pklcqt6wkju" path="res://Resources/Items/General/Building/Materials/ColorPalette_Material.tres" id="2_fdwyl"]
-[ext_resource type="ArrayMesh" uid="uid://cnxdwt320vwos" path="res://Resources/Items/General/Building/Models/ArcheryRange_Model.obj" id="2_jywku"]
+[ext_resource type="ArrayMesh" uid="uid://nmd2msc023hw" path="res://Resources/Items/General/Building/Models/ArcheryRange_Model.obj" id="2_jywku"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hv4pc"]
 size = Vector3(20, 1, 20)
 
 [node name="Archery_Prefab" type="MeshInstance3D"]
 mesh = ExtResource("2_jywku")
-surface_material_override/0 = ExtResource("2_fdwyl")
+surface_material_override/0 = ExtResource("2_8p3le")
+surface_material_override/1 = ExtResource("2_fdwyl")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 

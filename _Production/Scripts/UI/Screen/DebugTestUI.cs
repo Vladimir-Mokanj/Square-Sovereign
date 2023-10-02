@@ -14,6 +14,9 @@ public partial class DebugTestUI : Node
     [Export] private Button _englandButton;
     [Export] private Button _franceButton;
     
+    
+    [Export] private Material _civColor;
+    
     public override void _Ready()
     {
         PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateAssigned);
@@ -22,11 +25,13 @@ public partial class DebugTestUI : Node
         {
             ItemDatabase.SetCivDebug("England");
             ((BuildingController)GetTree().GetFirstNodeInGroup(nameof(BuildingController)))?.InitializeBuildScreen();
+            _civColor.Set("albedo_color", new Color(0.67f, 0.152f, 0.114f));
         };
         _franceButton.Pressed += () =>
         {
             ItemDatabase.SetCivDebug("France");
             ((BuildingController)GetTree().GetFirstNodeInGroup(nameof(BuildingController)))?.InitializeBuildScreen();
+            _civColor.Set("albedo_color", new Color(0.294f, 0.576f, 0.721f));
         };
     }
 

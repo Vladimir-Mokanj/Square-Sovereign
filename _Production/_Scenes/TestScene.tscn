@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=15 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Script" path="res://_Production/_Scenes/CameraController.cs" id="1_2otla"]
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/PlayerManager.cs" id="1_qv3y3"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://b63nvebsnutyq" path="res://_Production/Art/2D/UI/Screen/SelectionScreen.tscn" id="9_clutq"]
 [ext_resource type="Script" path="res://_Production/Scripts/Inputs/InputController.cs" id="9_kal1k"]
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/StateController.cs" id="10_ctvlv"]
+[ext_resource type="Material" uid="uid://b8xjtv4s6obej" path="res://Resources/Items/General/Building/Materials/CivColor_Material.tres" id="12_dxtlr"]
 
 [node name="Node3D" type="Node3D" groups=["RootNode"]]
 
@@ -35,6 +36,7 @@ script = ExtResource("10_ctvlv")
 
 [node name="BuildingController" type="Node" parent="PlayerManager"]
 script = ExtResource("4_akd0p")
+_transparentValue = null
 
 [node name="InputController" type="Node" parent="PlayerManager"]
 script = ExtResource("9_kal1k")
@@ -62,6 +64,7 @@ _infoScreenScreen = NodePath("../InfoScreen")
 _infoScreenScreen = NodePath("../InfoScreen")
 
 [node name="DebugScreen" parent="PlayerUI" instance=ExtResource("7_v3q85")]
+_civColor = ExtResource("12_dxtlr")
 
 [node name="InfoScreen" parent="PlayerUI" instance=ExtResource("9_02mao")]
 

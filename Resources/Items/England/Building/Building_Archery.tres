@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_i4y84")
-TabType = 2
+TabType = 1
 ResourceType = 0
 Description = "The ancient art of turning trees into something slightly more menacing. Because sticks and stones can definitely break your bones—if you shoot them fast enough."
 Hotkey = "N"

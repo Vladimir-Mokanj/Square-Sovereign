@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_kfoxy")
-TabType = 2
+TabType = 1
 ResourceType = 0
 Description = "Barracks: A 5-star resort for your troops, if the stars were made of iron and discipline. Come for the training, stay for the endless push-ups!"
 Hotkey = "B"

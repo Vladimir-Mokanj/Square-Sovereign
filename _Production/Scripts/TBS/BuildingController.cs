@@ -35,17 +35,31 @@ public partial class BuildingController : Node
             return;
         
         _buildingId = value;
-        if (!value.HasValue)
+        Vector3 buildingPos = Vector3.Zero;
+        float transparency = 0.0f;
+        if (_ghostBuilding != null)
         {
-            if (_ghostBuilding != null)
-                RemoveChild(_ghostBuilding);
-
+            buildingPos = _ghostBuilding.GlobalPosition;
+            if (_ghostBuilding is MeshInstance3D instance3D)
+                transparency = instance3D.Transparency;
+            
+            RemoveChild(_ghostBuilding);
             _ghostBuilding = null;
-            return;
         }
+        
+        if (!value.HasValue)
+            return;
 
         _ghostBuilding = ItemDatabase.Get<Building>(value.Value).Prefab.Instantiate() as Node3D;
         AddChild(_ghostBuilding);
+
+        if (_ghostBuilding == null) 
+            return;
+        
+        _ghostBuilding.GlobalPosition = buildingPos;
+        if (_ghostBuilding is MeshInstance3D instance)
+            instance.Transparency = transparency;
+        
     }
 
     private void OnStateAssigned(StateParameters State)

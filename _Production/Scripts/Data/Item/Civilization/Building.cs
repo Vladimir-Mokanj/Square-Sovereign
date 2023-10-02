@@ -8,7 +8,7 @@ using Godot;
 
 namespace FT.Data.Items.Civilization;
 
-public enum BuildingType : byte {NONE, ECONOMY, BATTLE, RESOURCE }
+public enum BuildingType : byte {NONE, BATTLE, ECONOMY, RESOURCE }
 
 [Tool]
 public partial class Building : Item

@@ -64,8 +64,6 @@ public partial class BuildingScreen : Control
 	private void InitializeBuildingPicks(Action<int?> dataChanged)
 	{
 		_dataChanged = dataChanged;
-		List<DisplayUI> buildingsUI = new();
-		
 		Building[] buildings = ItemDatabase.GetAllOfType<Building>();
 		foreach (Building building in buildings)
 		{
@@ -81,7 +79,10 @@ public partial class BuildingScreen : Control
 
 			_hotkeys.TryAdd(building.Hotkey, building.Id);
 			_buildingPickContainers[(byte)building.TabType - 1].AddChild(uiItem);
-			buildingsUI.Add(uiItem);
+			SetColumnSize(_buildingPickContainers[(byte)building.TabType - 1]);
 		}
 	}
+	
+	private void SetColumnSize(GridContainer container) => 
+		container.Columns = Mathf.CeilToInt(container.GetChildCount() / 2.0f);
 }

@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("2_qelqv")
-TabType = 1
+TabType = 2
 ResourceType = 0
 Description = "The Market: Your one-stop shop for all your impulse buying needs! Come get your health potions, mana crystals, and—wait, is that a rubber chicken?!"
 Hotkey = "A"

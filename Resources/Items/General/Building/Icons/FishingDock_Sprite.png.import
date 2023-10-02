@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6u8mw4r4lc55"
-path="res://.godot/imported/Farm_Sprite.png-13d1989c2bb11fb2ac85110f43944f7b.ctex"
+uid="uid://cr554ctviaktd"
+path="res://.godot/imported/FishingDock_Sprite.png-27beef7b51dfe09191f55e4684d46062.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Items/France/Building/Building/Icons/Farm_Sprite.png"
-dest_files=["res://.godot/imported/Farm_Sprite.png-13d1989c2bb11fb2ac85110f43944f7b.ctex"]
+source_file="res://Resources/Items/General/Building/Icons/FishingDock_Sprite.png"
+dest_files=["res://.godot/imported/FishingDock_Sprite.png-27beef7b51dfe09191f55e4684d46062.ctex"]
 
 [params]
 

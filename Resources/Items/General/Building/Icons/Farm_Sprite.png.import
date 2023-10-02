@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl2lmey7jktn1"
-path="res://.godot/imported/Archery_Sprite.png-cf5c7a72553687089a8856dc26b097d3.ctex"
+uid="uid://6u8mw4r4lc55"
+path="res://.godot/imported/Farm_Sprite.png-12c7da9d3666a5ccdfde57ededab04a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Items/France/Building/Building/Icons/Archery_Sprite.png"
-dest_files=["res://.godot/imported/Archery_Sprite.png-cf5c7a72553687089a8856dc26b097d3.ctex"]
+source_file="res://Resources/Items/General/Building/Icons/Farm_Sprite.png"
+dest_files=["res://.godot/imported/Farm_Sprite.png-12c7da9d3666a5ccdfde57ededab04a0.ctex"]
 
 [params]
 

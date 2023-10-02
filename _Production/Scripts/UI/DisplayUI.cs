@@ -5,11 +5,13 @@ namespace FT.UI;
 
 public partial class DisplayUI : Button
 {
-    public int ID { get; private set; } = -1;
-    
-    public void InitializeValues(Item building)
+    [Export] private Label _hotkeyLabel;
+    public int Id { get; private set; } = -1;
+
+    public void InitializeValues(Item building, string hotkey = "")
     {
         Icon = building.Sprite;
-        ID = building.Id;
+        Id = building.Id;
+        _hotkeyLabel.Text = hotkey;
     }
 }

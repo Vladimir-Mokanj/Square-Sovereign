@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cma8bvrngsyq5"]
+[gd_scene load_steps=3 format=3 uid="uid://cma8bvrngsyq5"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/BuildingScreen.cs" id="1_34tpj"]
-[ext_resource type="PackedScene" uid="uid://cy18rrpicu2th" path="res://_Production/Art/2D/UI/BuildingSelectionUI_Prefab.tscn" id="2_8mohe"]
 [ext_resource type="PackedScene" uid="uid://coaccj8xna8wg" path="res://_Production/Art/2D/UI/DisplayUI_Prefab.tscn" id="3_5vbpe"]
 
-[node name="BuildScreen" type="Control" node_paths=PackedStringArray("_buildingSelectionControlNode", "_buildingPickControlNode")]
+[node name="BuildScreen" type="Control" node_paths=PackedStringArray("_buildingPickContainers")]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,30 +13,43 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_34tpj")
-_buildingSelectionUI_Prefab = ExtResource("2_8mohe")
 _displayUI_Prefab = ExtResource("3_5vbpe")
-_buildingSelectionControlNode = NodePath("VBoxContainer/BuildingSelectionHBox")
-_buildingPickControlNode = NodePath("VBoxContainer/BuildingPickHBox")
+_buildingPickContainers = [NodePath("HBoxContainer/BattlePanel/BattleGrid"), NodePath("HBoxContainer/EconomyPanel/EconomyGrid"), NodePath("HBoxContainer/ResourcesPanel/ResourcesGrid")]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_top = -4.0
+offset_left = -55.0
+offset_top = -110.0
+offset_right = 55.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1
 
-[node name="BuildingPickHBox" type="HBoxContainer" parent="VBoxContainer"]
+[node name="BattlePanel" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 2
-alignment = 1
 
-[node name="BuildingSelectionHBox" type="HBoxContainer" parent="VBoxContainer"]
+[node name="BattleGrid" type="GridContainer" parent="HBoxContainer/BattlePanel"]
+custom_minimum_size = Vector2(224, 110)
 layout_mode = 2
-mouse_filter = 2
-theme_override_constants/separation = 2
-alignment = 1
+columns = 4
+
+[node name="EconomyPanel" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="EconomyGrid" type="GridContainer" parent="HBoxContainer/EconomyPanel"]
+custom_minimum_size = Vector2(224, 110)
+layout_mode = 2
+columns = 4
+
+[node name="ResourcesPanel" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+
+[node name="ResourcesGrid" type="GridContainer" parent="HBoxContainer/ResourcesPanel"]
+custom_minimum_size = Vector2(224, 110)
+layout_mode = 2
+columns = 4

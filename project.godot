@@ -23,6 +23,10 @@ window/stretch/aspect="keep_height"
 
 project/assembly_name="Square-Sovereign"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/data_importer/plugin.cfg")
+
 [input]
 
 OnPressLeft={

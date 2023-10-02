@@ -36,10 +36,13 @@ public partial class BuildingController : Node
         
         _buildingId = value;
         if (!value.HasValue)
+        {
+            if (_ghostBuilding != null)
+                RemoveChild(_ghostBuilding);
+
+            _ghostBuilding = null;
             return;
-        
-        if (_ghostBuilding != null)
-            RemoveChild(_ghostBuilding);
+        }
 
         _ghostBuilding = ItemDatabase.Get<Building>(value.Value).Prefab.Instantiate() as Node3D;
         AddChild(_ghostBuilding);

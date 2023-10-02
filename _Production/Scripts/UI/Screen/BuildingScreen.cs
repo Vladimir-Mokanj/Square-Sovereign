@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Godot;
 using FT.Data;
 using FT.Data.Items.Civilization;
@@ -9,11 +10,12 @@ namespace FT.UI;
 
 public partial class BuildingScreen : Control
 {
-	[Export] private PackedScene _buildingSelectionUI_Prefab;
 	[Export] private PackedScene _displayUI_Prefab;
-	[Export] private Control _buildingSelectionControlNode;
-	[Export] private Control _buildingPickControlNode;
+	[Export] private GridContainer[] _buildingPickContainers;
 	[Export] private InfoScreen _infoScreenScreen;
+
+	private Action<int?> _dataChanged;
+	private readonly Dictionary<string, int> _hotkeys = new();
 
 	public override void _Ready() => PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateInitialized);
 
@@ -25,15 +27,43 @@ public partial class BuildingScreen : Control
 
 	public void Initialize(Action<int?> dataChanged)
 	{
-		foreach (Node node in _buildingPickControlNode.GetChildren())
-			node.QueueFree();
+		foreach (GridContainer buildingPickContainer in _buildingPickContainers)
+			foreach (Node node in buildingPickContainer.GetChildren())
+				node.QueueFree();
 
-		List<DisplayUI> createdBuildingUI = InitializeBuildingPicks(dataChanged);
-		InitializeBuildingSelection(createdBuildingUI, dataChanged);
+		InitializeBuildingPicks(dataChanged);
 	}
 
-	private List<DisplayUI> InitializeBuildingPicks(Action<int?> dataChanged)
+	public override void _Input(InputEvent @event)
 	{
+		if (@event is not InputEventKey { Pressed: true } eventKey) 
+			return;
+		
+		switch (Visible)
+		{
+			case false when eventKey.Keycode == Key.B:
+				Visible = true;
+				return;
+			case true when eventKey.Keycode == Key.Escape:
+				Visible = false;
+				_dataChanged?.Invoke(null);
+				break;
+		}
+
+		if (!_hotkeys.TryGetValue(eventKey.Keycode.ToString(), out int hotkey)) 
+			return;
+
+		foreach (GridContainer buildingPickContainer in _buildingPickContainers)
+			if (buildingPickContainer.GetChildren().FirstOrDefault(child => child.Name == hotkey.ToString()) is DisplayUI buttonUI)
+			{
+				_dataChanged?.Invoke(buttonUI.Id);
+				break;
+			}
+	}
+
+	private void InitializeBuildingPicks(Action<int?> dataChanged)
+	{
+		_dataChanged = dataChanged;
 		List<DisplayUI> buildingsUI = new();
 		
 		Building[] buildings = ItemDatabase.GetAllOfType<Building>();
@@ -42,39 +72,16 @@ public partial class BuildingScreen : Control
 			if (_displayUI_Prefab.Instantiate() is not DisplayUI uiItem)
 				continue;
 			
-			uiItem.InitializeValues(building);
-			uiItem.Visible = false;
+			uiItem.InitializeValues(building, building.Hotkey);
+			uiItem.Name = building.Id.ToString();
 
 			uiItem.MouseEntered += () => _infoScreenScreen?.ShowDisplayPanel(building.Sprite, building.DisplayName, building.Description);
 			uiItem.MouseExited += () => _infoScreenScreen?.HideInfoPanel();
-			uiItem.Pressed += () => dataChanged?.Invoke(uiItem.ID);
-			
-			_buildingPickControlNode.AddChild(uiItem);
+			uiItem.Pressed += () => _dataChanged?.Invoke(uiItem.Id);
+
+			_hotkeys.TryAdd(building.Hotkey, building.Id);
+			_buildingPickContainers[(byte)building.TabType - 1].AddChild(uiItem);
 			buildingsUI.Add(uiItem);
-		}
-
-		return buildingsUI;
-	}
-
-	private void InitializeBuildingSelection(List<DisplayUI> createdBuildingUI, Action<int?> dataChanged)
-	{
-		BuildingType _buildingType = BuildingType.NONE;
-		foreach (BuildingType type in (BuildingType[]) Enum.GetValues(typeof(BuildingType)))
-		{
-			if (type == BuildingType.NONE)
-				continue;
-
-			if (_buildingSelectionUI_Prefab.Instantiate() is not Button selection)
-				continue;
-			
-			selection.Text = type.ToString();
-			_buildingSelectionControlNode.AddChild(selection);
-			selection!.Pressed += () =>
-			{
-				_buildingType = _buildingType.ToString() == selection.Text ? BuildingType.NONE : type;
-				dataChanged?.Invoke(null);
-				createdBuildingUI.ForEach(buildingUi => buildingUi.Visible = _buildingType == ItemDatabase.Get<Building>(buildingUi.ID).TabType);
-			};
 		}
 	}
 }

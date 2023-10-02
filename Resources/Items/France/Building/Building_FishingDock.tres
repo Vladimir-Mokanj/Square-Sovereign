@@ -1,19 +1,20 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://buplskcje7ci4"]
 
-[ext_resource type="PackedScene" uid="uid://cgjakga2rrb7p" path="res://Resources/Items/France/Building/Prefabs/FishingDock_Prefab.tscn" id="1_e05cx"]
-[ext_resource type="Texture2D" uid="uid://cr554ctviaktd" path="res://Resources/Items/General/Building/Icons/FishingDock_Sprite.png" id="2_f6dn5"]
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="3_wlp3h"]
+[ext_resource type="PackedScene" uid="uid://cgjakga2rrb7p" path="res://Resources/Items/France/Building/Prefabs/FishingDock_Prefab.tscn" id="1_ykxjr"]
+[ext_resource type="Texture2D" uid="uid://cr554ctviaktd" path="res://Resources/Items/General/Building/Icons/FishingDock_Sprite.png" id="2_gklgt"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="2_qcpjc"]
 
 [resource]
-script = ExtResource("3_wlp3h")
+script = ExtResource("2_qcpjc")
 TabType = 3
 ResourceType = 1
 Description = "The Fishing dock: Where fish learn to play 'Hide and Seek'—and lose. Guaranteed to have fish stories you won't have to exaggerate."
+Hotkey = "D"
 Properties = ""
 BuildingProperties = PackedInt32Array()
 DisplayName = "Fishing Dock"
 PrefabName = "FishingDock_Prefab"
-Prefab = ExtResource("1_e05cx")
+Prefab = ExtResource("1_ykxjr")
 SpriteName = "FishingDock_Sprite"
-Sprite = ExtResource("2_f6dn5")
+Sprite = ExtResource("2_gklgt")
 Name = "FishingDock"

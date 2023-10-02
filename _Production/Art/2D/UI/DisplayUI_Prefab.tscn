@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dpwjh3qp8q1ye" path="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png" id="1_0jxbx"]
 [ext_resource type="Script" path="res://_Production/Scripts/UI/DisplayUI.cs" id="2_44cbe"]
 
-[node name="BuildingUI_Prefab" type="Button"]
+[node name="BuildingUI_Prefab" type="Button" node_paths=PackedStringArray("_hotkeyLabel")]
 offset_right = 80.0
 offset_bottom = 80.0
 size_flags_horizontal = 4
@@ -11,5 +11,21 @@ size_flags_vertical = 4
 mouse_filter = 1
 theme_override_constants/icon_max_width = 45
 icon = ExtResource("1_0jxbx")
+alignment = 0
 icon_alignment = 1
 script = ExtResource("2_44cbe")
+_hotkeyLabel = NodePath("PanelContainer/Hotkey")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_right = 17.0
+offset_bottom = 17.0
+
+[node name="Hotkey" type="Label" parent="PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Q"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true

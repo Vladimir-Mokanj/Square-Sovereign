@@ -36,7 +36,6 @@ script = ExtResource("10_ctvlv")
 
 [node name="BuildingController" type="Node" parent="PlayerManager"]
 script = ExtResource("4_akd0p")
-_transparentValue = null
 
 [node name="InputController" type="Node" parent="PlayerManager"]
 script = ExtResource("9_kal1k")
@@ -44,7 +43,7 @@ script = ExtResource("9_kal1k")
 [node name="PlayerUI" type="Node" parent="." node_paths=PackedStringArray("DebugTestUi", "BuildingScreen", "SelectionScreen") groups=["PlayerUI"]]
 script = ExtResource("6_dt4mp")
 DebugTestUi = NodePath("DebugScreen")
-BuildingScreen = NodePath("BuildingScreen")
+BuildingScreen = NodePath("BuildScreen")
 SelectionScreen = NodePath("SelectionScreen")
 
 [node name="ResourceDisplayScreen" type="Control" parent="PlayerUI"]
@@ -57,8 +56,7 @@ grow_vertical = 2
 script = ExtResource("7_ejfcw")
 _resourcePackedScene = ExtResource("8_85v5r")
 
-[node name="BuildingScreen" parent="PlayerUI" node_paths=PackedStringArray("_infoScreenScreen") instance=ExtResource("8_weerq")]
-_infoScreenScreen = NodePath("../InfoScreen")
+[node name="BuildScreen" parent="PlayerUI" instance=ExtResource("8_weerq")]
 
 [node name="SelectionScreen" parent="PlayerUI" node_paths=PackedStringArray("_infoScreenScreen") instance=ExtResource("9_clutq")]
 _infoScreenScreen = NodePath("../InfoScreen")

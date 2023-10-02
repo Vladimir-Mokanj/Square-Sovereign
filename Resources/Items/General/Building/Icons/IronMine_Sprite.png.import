@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ck1bjhj7xune3"
-path="res://.godot/imported/IronMine_Sprite.png-1b5f6e46d78f1dbe28d709c8ae42af07.ctex"
+path="res://.godot/imported/IronMine_Sprite.png-df60c684b83d6f393f3e50a98d26be1f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Items/France/Building/Building/Icons/IronMine_Sprite.png"
-dest_files=["res://.godot/imported/IronMine_Sprite.png-1b5f6e46d78f1dbe28d709c8ae42af07.ctex"]
+source_file="res://Resources/Items/General/Building/Icons/IronMine_Sprite.png"
+dest_files=["res://.godot/imported/IronMine_Sprite.png-df60c684b83d6f393f3e50a98d26be1f.ctex"]
 
 [params]
 

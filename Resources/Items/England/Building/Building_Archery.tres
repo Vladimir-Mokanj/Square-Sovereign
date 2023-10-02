@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://gdpp4q0q4lek"]
 
 [ext_resource type="PackedScene" uid="uid://boqasuhrm6ldq" path="res://Resources/Items/England/Building/Prefabs/Archery_Prefab.tscn" id="1_uysyf"]
-[ext_resource type="Texture2D" uid="uid://bl2lmey7jktn1" path="res://Resources/Items/France/Building/Building/Icons/Archery_Sprite.png" id="2_d5b2t"]
+[ext_resource type="Texture2D" uid="uid://bl2lmey7jktn1" path="res://Resources/Items/General/Building/Icons/Archery_Sprite.png" id="2_n0xno"]
 [ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="3_i4y84"]
 
 [resource]
@@ -9,11 +9,12 @@ script = ExtResource("3_i4y84")
 TabType = 2
 ResourceType = 0
 Description = "The ancient art of turning trees into something slightly more menacing. Because sticks and stones can definitely break your bones—if you shoot them fast enough."
+Hotkey = "N"
 Properties = "Archer,Range,LeatherArmor,ArcherDamage"
 BuildingProperties = PackedInt32Array(284003939, 1353023627, -851951846, 2105173364)
 DisplayName = "Archery"
 PrefabName = "Archery_Prefab"
 Prefab = ExtResource("1_uysyf")
 SpriteName = "Archery_Sprite"
-Sprite = ExtResource("2_d5b2t")
+Sprite = ExtResource("2_n0xno")
 Name = "Archery"

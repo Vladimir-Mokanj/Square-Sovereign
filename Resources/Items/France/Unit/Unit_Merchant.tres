@@ -1,15 +1,15 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://ktjf0ud1rcd4"]
 
-[ext_resource type="PackedScene" uid="uid://ckuj7brt1b5js" path="res://Resources/Items/France/Unit/Prefabs/Merchant_Prefab.tscn" id="1_oibvj"]
-[ext_resource type="Texture2D" uid="uid://cu2hpq477icn6" path="res://Resources/Items/General/Unit/Icons/Merchant_Sprite.png" id="2_sfex4"]
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Unit.cs" id="3_b7gxq"]
+[ext_resource type="PackedScene" uid="uid://ckuj7brt1b5js" path="res://Resources/Items/France/Unit/Prefabs/Merchant_Prefab.tscn" id="1_wp6c8"]
+[ext_resource type="Texture2D" uid="uid://cu2hpq477icn6" path="res://Resources/Items/General/Unit/Icons/Merchant_Sprite.png" id="2_pul0y"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Unit.cs" id="3_l6llg"]
 
 [resource]
-script = ExtResource("3_b7gxq")
+script = ExtResource("3_l6llg")
 Description = "Meet the merchant who can sell sand in the desert and ice in Antarctica. So charismatic, they once convinced a mirror to buy a reflection."
 DisplayName = "Merchant"
 PrefabName = "Merchant_Prefab"
-Prefab = ExtResource("1_oibvj")
+Prefab = ExtResource("1_wp6c8")
 SpriteName = "Merchant_Sprite"
-Sprite = ExtResource("2_sfex4")
+Sprite = ExtResource("2_pul0y")
 Name = "Merchant"

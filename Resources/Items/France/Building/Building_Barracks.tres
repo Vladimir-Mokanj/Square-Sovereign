@@ -1,19 +1,20 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://bmtd0bl8ntrln"]
 
-[ext_resource type="PackedScene" uid="uid://ce6py675s3cny" path="res://Resources/Items/France/Building/Prefabs/Barracks_Prefab.tscn" id="1_r3lhn"]
-[ext_resource type="Texture2D" uid="uid://c7pqvw6n705pr" path="res://Resources/Items/France/Building/Building/Icons/Barracks_Sprite.png" id="2_6adio"]
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="3_ssg8p"]
+[ext_resource type="PackedScene" uid="uid://ce6py675s3cny" path="res://Resources/Items/France/Building/Prefabs/Barracks_Prefab.tscn" id="1_64q1a"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="2_kfoxy"]
+[ext_resource type="Texture2D" uid="uid://c7pqvw6n705pr" path="res://Resources/Items/General/Building/Icons/Barracks_Sprite.png" id="2_qdv3r"]
 
 [resource]
-script = ExtResource("3_ssg8p")
+script = ExtResource("2_kfoxy")
 TabType = 2
 ResourceType = 0
 Description = "Barracks: A 5-star resort for your troops, if the stars were made of iron and discipline. Come for the training, stay for the endless push-ups!"
+Hotkey = "B"
 Properties = "Clubman,Spearman,ClubDamage,SpearDamage"
 BuildingProperties = PackedInt32Array(1909291234, 607427827, -1721530749, 1911672006)
 DisplayName = "Barracks"
 PrefabName = "Barracks_Prefab"
-Prefab = ExtResource("1_r3lhn")
+Prefab = ExtResource("1_64q1a")
 SpriteName = "Barracks_Sprite"
-Sprite = ExtResource("2_6adio")
+Sprite = ExtResource("2_qdv3r")
 Name = "Barracks"

@@ -1,19 +1,20 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://dr5q7gbpgmhhp"]
 
-[ext_resource type="PackedScene" uid="uid://bf3rguv3bygva" path="res://Resources/Items/France/Building/Prefabs/Archery_Prefab.tscn" id="1_67s6u"]
-[ext_resource type="Texture2D" uid="uid://bl2lmey7jktn1" path="res://Resources/Items/France/Building/Building/Icons/Archery_Sprite.png" id="2_ikq7g"]
-[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="3_1tb4b"]
+[ext_resource type="PackedScene" uid="uid://bf3rguv3bygva" path="res://Resources/Items/France/Building/Prefabs/Archery_Prefab.tscn" id="1_222ck"]
+[ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="2_btc4l"]
+[ext_resource type="Texture2D" uid="uid://bl2lmey7jktn1" path="res://Resources/Items/General/Building/Icons/Archery_Sprite.png" id="2_c63q8"]
 
 [resource]
-script = ExtResource("3_1tb4b")
+script = ExtResource("2_btc4l")
 TabType = 2
 ResourceType = 0
 Description = "The ancient art of turning trees into something slightly more menacing. Because sticks and stones can definitely break your bones—if you shoot them fast enough."
+Hotkey = "N"
 Properties = "Range,LeatherArmor,ArcherDamage"
 BuildingProperties = PackedInt32Array(1353023627, -851951846, 2105173364)
 DisplayName = "Archery"
 PrefabName = "Archery_Prefab"
-Prefab = ExtResource("1_67s6u")
+Prefab = ExtResource("1_222ck")
 SpriteName = "Archery_Sprite"
-Sprite = ExtResource("2_ikq7g")
+Sprite = ExtResource("2_c63q8")
 Name = "Archery"

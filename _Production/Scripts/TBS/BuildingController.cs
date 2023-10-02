@@ -9,6 +9,8 @@ namespace FT.TBS;
 
 public partial class BuildingController : Node
 {
+    [Export] private float _transparentValue = 0.8f;
+    
     private Action<int?> _onBuildingIdChanged;
     
     private int? _buildingId;
@@ -40,7 +42,6 @@ public partial class BuildingController : Node
             RemoveChild(_ghostBuilding);
 
         _ghostBuilding = ItemDatabase.Get<Building>(value.Value).Prefab.Instantiate() as Node3D;
-        _ghostBuilding.Visible = false;
         AddChild(_ghostBuilding);
     }
 
@@ -77,11 +78,9 @@ public partial class BuildingController : Node
 
         if (!value.row.HasValue || !value.col.HasValue)
             return;
-        
-        if (!CanPlaceBuilding((value.row.Value, value.col.Value)))
-            ;
-        
-        _ghostBuilding.Position = new Vector3(value.row.Value * 20 + 10, 0, value.col.Value * 20 + 10);
+
+        SetTransparency(CanPlaceBuilding((value.row.Value, value.col.Value)) ? 0.0f : _transparentValue);
+        _ghostBuilding.Position = new Vector3(value.row.Value * 20 + 10, CellManager.GetHeight(value.row.Value, value.col.Value), value.col.Value * 20 + 10);
     }
 
     private void TryBuild((byte? row, byte? col) value)
@@ -99,26 +98,12 @@ public partial class BuildingController : Node
         _ghostBuilding = null;
     }
 
-    private void SetTransparency()
+    private void SetTransparency(float transparencyValue)
     {
-        // Cast the node to a MeshInstance to see if it's what we're looking for
-        if (_ghostBuilding is MeshInstance3D meshInstance)
-        {
-            Material material = meshInstance.GetSurfaceMaterial(0);
-            ShaderMaterial shaderMaterial = material as ShaderMaterial;
+        if (_ghostBuilding is not MeshInstance3D instance3D)
+            return;
 
-            if (shaderMaterial != null)
-            {
-                // Assuming the shader has a parameter named "alpha"
-                shaderMaterial.SetShaderParam("alpha", 0.5f);
-            }
-        }
-
-        // Loop through all the node's children and call the function recursively
-        foreach (Node child in node.GetChildren())
-        {
-            _SetAlphaTo50Recursive(child);
-        }
+        instance3D.Transparency = transparencyValue;
     }
     
     private bool CanPlaceBuilding((byte row, byte col) value)

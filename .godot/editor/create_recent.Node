@@ -1,3 +1,4 @@
+MeshInstance3D
 Sprite2D
 Node2D
 Button
@@ -6,7 +7,6 @@ Label
 Panel
 TextureRect
 Control
-MeshInstance3D
 MeshInstance2D
 GridContainer
 Node3D

@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 [display]
 
 window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_height"
 
 [dotnet]
 

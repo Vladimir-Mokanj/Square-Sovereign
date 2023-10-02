@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://c0j57sw5bhbeh"]
 
-[ext_resource type="PackedScene" uid="uid://dunrdch3lr15s" path="res://Resources/Items/England/Building/Prefabs/Barracks_Prefab.tscn" id="1_67ile"]
-[ext_resource type="Texture2D" uid="uid://c7pqvw6n705pr" path="res://Resources/Items/General/Building/Icons/Barracks_Sprite.png" id="2_uelx4"]
+[ext_resource type="PackedScene" uid="uid://cu3ubltupp28w" path="res://Resources/Items/England/Building/Prefabs/Barracks_Prefab.tscn" id="1_67ile"]
+[ext_resource type="Texture2D" uid="uid://c7pqvw6n705pr" path="res://Resources/Items/France/Building/Building/Icons/Barracks_Sprite.png" id="2_uelx4"]
 [ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="3_d040t"]
 
 [resource]

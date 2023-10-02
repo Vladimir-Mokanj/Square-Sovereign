@@ -66,8 +66,9 @@ _infoScreenScreen = NodePath("../InfoScreen")
 [node name="InfoScreen" parent="PlayerUI" instance=ExtResource("9_02mao")]
 
 [node name="Camera3D" type="Camera3D" parent="." groups=["MainCamera"]]
-transform = Transform3D(-4.37114e-08, 0.939693, -0.34202, 0, 0.34202, 0.939693, 1, 4.10753e-08, -1.49502e-08, 18.445, 100, 100)
+transform = Transform3D(-4.37114e-08, 0.866026, -0.5, 0, 0.5, 0.866026, 1, 3.78552e-08, -2.18557e-08, 18.445, 100, 100)
 fov = 60.0
+size = 982.84
 near = 70.0
 far = 500.0
 script = ExtResource("1_2otla")

@@ -1,12 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://b5637l52g3vxo"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yje0w"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dpswn"]
+transparency = 1
+depth_draw_mode = 1
 albedo_color = Color(0.278431, 0.0862745, 0.415686, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3xjam"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nw8dl"]
-albedo_color = Color(0.792157, 0.392157, 0.117647, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_je1tr"]
+transparency = 1
+depth_draw_mode = 1
+albedo_color = Color(0.737255, 0.290196, 0.0745098, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_6kect"]
 size = Vector3(20, 1, 20)
@@ -15,12 +19,12 @@ size = Vector3(20, 1, 20)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(9.79817, 0, 1.99898, 0, 5, 0, -1.99898, 0, 9.79817, 0, 2.5, 0)
-material_override = SubResource("StandardMaterial3D_yje0w")
+material_override = SubResource("StandardMaterial3D_dpswn")
 mesh = SubResource("BoxMesh_3xjam")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(5.8789, 0, 0.999492, 0, 8, 0, -1.19939, 0, 4.89908, 0.011, 4, 0.052)
-material_override = SubResource("StandardMaterial3D_nw8dl")
+material_override = SubResource("StandardMaterial3D_je1tr")
 mesh = SubResource("BoxMesh_3xjam")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

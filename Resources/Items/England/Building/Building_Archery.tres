@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://gdpp4q0q4lek"]
 
-[ext_resource type="PackedScene" uid="uid://du0ccb5ickyt1" path="res://Resources/Items/England/Building/Prefabs/Archery_Prefab.tscn" id="1_uysyf"]
-[ext_resource type="Texture2D" uid="uid://bl2lmey7jktn1" path="res://Resources/Items/General/Building/Icons/Archery_Sprite.png" id="2_d5b2t"]
+[ext_resource type="PackedScene" uid="uid://boqasuhrm6ldq" path="res://Resources/Items/England/Building/Prefabs/Archery_Prefab.tscn" id="1_uysyf"]
+[ext_resource type="Texture2D" uid="uid://bl2lmey7jktn1" path="res://Resources/Items/France/Building/Building/Icons/Archery_Sprite.png" id="2_d5b2t"]
 [ext_resource type="Script" path="res://_Production/Scripts/Data/Item/Civilization/Building.cs" id="3_i4y84"]
 
 [resource]

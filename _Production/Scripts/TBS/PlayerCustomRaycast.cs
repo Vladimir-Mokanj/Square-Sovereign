@@ -19,8 +19,12 @@ public class PlayerCustomRaycast
     private Vector3 _direction;
     private Vector3 _scaledDirection;
     private Vector3 _rayPosition;
+    private readonly Vector2 _originalSize;
+    private Vector2 _currentSize;
+    private float _aspectRationCorrection = 1.0f;
     
-    public PlayerCustomRaycast(byte rows, byte cols, Camera3D camera, byte[] yHeights)
+    
+    public PlayerCustomRaycast(byte rows, byte cols, Camera3D camera, byte[] yHeights, Viewport viewport)
     {
         _instance = this;
         
@@ -33,6 +37,14 @@ public class PlayerCustomRaycast
 
         _maxT = Math.Max((rows + rows) * 20, (cols + cols) * 20);
         _step = 20.0f / 5.0f;
+        
+        _originalSize = viewport.GetWindow().Size;
+        _currentSize = viewport.GetWindow().Size;
+        viewport.SizeChanged += () =>
+        {
+            _currentSize = viewport.GetWindow().Size;
+            _aspectRationCorrection = _instance._currentSize.Aspect() / _instance._originalSize.Aspect();
+        };
     }
 
     /// Gets the row and column based on the projected ray towards the mouse position.
@@ -40,7 +52,16 @@ public class PlayerCustomRaycast
     /// <returns>Returns Row and Column if it hits something. Otherwise it returns null!</returns>
     public static (byte?, byte?) GetRowCol(Vector2 mousePosition)
     {
-        _instance._direction = _instance._camera.ProjectRayNormal(mousePosition);
+        float aspectRatioX = _instance._currentSize.X / _instance._originalSize.X;
+        float aspectRatioY = _instance._currentSize.Y / _instance._originalSize.Y;
+        
+        Vector2 adjustedMousePos = new(
+            mousePosition.X / aspectRatioX * _instance._aspectRationCorrection,
+            mousePosition.Y / aspectRatioY
+        );
+        
+        _instance._direction = _instance._camera.ProjectRayNormal(adjustedMousePos);
+
         float t = _instance._startStep;
         while (t < _instance._maxT)
         {

@@ -1,12 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://dunrdch3lr15s"]
+[gd_scene load_steps=4 format=3 uid="uid://cu3ubltupp28w"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_vxmam"]
+[ext_resource type="Material" uid="uid://7pklcqt6wkju" path="res://Resources/Items/General/Building/Materials/ColorPalette_Material.tres" id="2_mg0i8"]
+[ext_resource type="ArrayMesh" uid="uid://umw7g0ba5pma" path="res://Resources/Items/General/Building/Models/Barracks_Model.obj" id="2_w0eky"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dd7s6"]
 size = Vector3(20, 1, 20)
 
-[node name="Barracks_Prefab" type="Node3D"]
+[node name="Barracks_Prefab" type="MeshInstance3D"]
+mesh = ExtResource("2_w0eky")
+surface_material_override/0 = ExtResource("2_mg0i8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_vxmam")
+shape = SubResource("BoxShape3D_dd7s6")

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Godot;
 
 namespace FT.Managers;
 
@@ -25,6 +26,7 @@ public class CellManager
     private readonly byte[] _cells;
     private readonly byte _cols;
     private static CellManager _instance;
+    
     
     public CellManager(byte rows, byte cols)
     {
@@ -79,6 +81,19 @@ public class CellManager
     
     public static void SetIsOccupied(byte row, byte col) => _instance._cells[row * _instance._cols + col] |= 0x1;
 
+    public static byte GetHeight(byte row, byte col)
+    {
+        byte packedData = _instance._cells[row * _instance._cols + col];
+        TerrainType terrainType = (TerrainType)((packedData >> 5) & 0x7);
+
+        return terrainType switch
+        {
+            TerrainType.WATER => 0,
+            TerrainType.LAND => 1,
+            _ => 20
+        };
+    }
+    
     private static byte PackData(TerrainType terrainType, ResourceType resourceType, bool isOccupied) => 
         (byte)(((byte)terrainType << 5) | ((byte)resourceType << 1) | (isOccupied ? 1 : 0));
 

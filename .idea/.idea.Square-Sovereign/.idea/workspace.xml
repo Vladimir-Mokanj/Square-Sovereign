@@ -5,111 +5,168 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange.glb-4ffff8cc125646878206f2934eb7fa90.scn-folding-14477a817aaf87f2dc26701982cdf137.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange.glb-7d3717ce2ee40071468d9ab7f1c7d913.scn-folding-66ba5b213f5448ec5d5b44a8d6625c0b.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange.glb-de074eb8175632696bfcf6c7ae3be513.scn-folding-c64878b835646f48720e7982fd59751e.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange.glb-e021edea9c4d286776d3013e22ac3937.scn-folding-81d93e72e83bf5456f1eaff8a96b3a72.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange_Model.001.glb-4068d7aea6036a3d5f9b83964b3e9e94.scn-folding-5b4ea48752eb90372e6cc8677b97b8d5.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange_Model.glb-5088909ba713f370bcf7d3fc69176544.scn-folding-0e8b4a1091e102517aa6ec4cebd8016d.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange_Model.glb-6cc7d84db4e0c1d63d6c03829d00381a.scn-folding-abdb0534e6bc158bf441fce0a9479d1c.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange_Model.glb-fc66c9bf3a4a62851b3d24922e46a828.scn-folding-bda3ae2222bc3b3d911146c0ccee5364.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-editstate-57ea2c4403b0fa990c578bedc2948300.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-editstate-66e15400303724028f17b659975309ab.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-folding-66e15400303724028f17b659975309ab.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks.glb-230215cea8bf7809b29c0381cb11357e.scn-folding-710de720ce7aaaceef193468d17a6156.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks.glb-d1e9efa1007561ab1e859213e25270d0.scn-folding-709260c0c35d4601676d4227c745a025.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks.glb-e6cb5f8b1b2e29bb2f20d7c653ff119d.scn-folding-2bb663f41a0fd9ea365fa729d38358b0.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-editstate-349567a84f4979a10069705daef017a9.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-editstate-55beb5d6265af69038451a9a9bc36bda.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-folding-55beb5d6265af69038451a9a9bc36bda.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/CameraController.cs-folding-60cbf6432ab4e16b517d0b242b9a71ee.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-editstate-0948cd9e684e48c908a294d7a9fb31fc.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-folding-0948cd9e684e48c908a294d7a9fb31fc.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-editstate-ebeae844420886c771d240e256bfa551.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-folding-ebeae844420886c771d240e256bfa551.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-editstate-52656a4f0dd6a2b7479125a8767f5acb.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-folding-52656a4f0dd6a2b7479125a8767f5acb.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-editstate-20a4cf7ede3a3ff672aa6dc35ccec6f8.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-folding-20a4cf7ede3a3ff672aa6dc35ccec6f8.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange.glb-4ffff8cc125646878206f2934eb7fa90.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange.glb-7d3717ce2ee40071468d9ab7f1c7d913.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange.glb-7d3717ce2ee40071468d9ab7f1c7d913.scn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange.glb-de074eb8175632696bfcf6c7ae3be513.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange.glb-e021edea9c4d286776d3013e22ac3937.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_ColorPalette_Texture.png-2c0d7742c9a1f30963108499f1618cea.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_ColorPalette_Texture.png-2c0d7742c9a1f30963108499f1618cea.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_ColorPalette_Texture.png-382e2252f10d210a1afcd4e3f11cbdaa.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_ColorPalette_Texture.png-e82567ab183cacae410af00b118b70f2.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_ColorPalette_Texture.png-e82567ab183cacae410af00b118b70f2.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.001.glb-4068d7aea6036a3d5f9b83964b3e9e94.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.001.glb-4068d7aea6036a3d5f9b83964b3e9e94.scn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.glb-5088909ba713f370bcf7d3fc69176544.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.glb-5088909ba713f370bcf7d3fc69176544.scn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.glb-6cc7d84db4e0c1d63d6c03829d00381a.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.glb-6cc7d84db4e0c1d63d6c03829d00381a.scn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.glb-fc66c9bf3a4a62851b3d24922e46a828.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.glb-fc66c9bf3a4a62851b3d24922e46a828.scn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model_ColorPalette_Texture.png-8b121a8b47c26d40196b5076a9481a52.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model_ColorPalette_Texture.png-8b121a8b47c26d40196b5076a9481a52.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model_ColorPalette_Texture.png-b471648e5a92b6ee22b96b27d9c396dd.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model_ColorPalette_Texture.png-b471648e5a92b6ee22b96b27d9c396dd.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.glb-230215cea8bf7809b29c0381cb11357e.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.glb-230215cea8bf7809b29c0381cb11357e.scn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.glb-d1e9efa1007561ab1e859213e25270d0.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.glb-d1e9efa1007561ab1e859213e25270d0.scn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.glb-e6cb5f8b1b2e29bb2f20d7c653ff119d.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.glb-e6cb5f8b1b2e29bb2f20d7c653ff119d.scn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_ColorPalette_Texture.png-0b116660defeb65bcd358840fcfaf1b2.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_ColorPalette_Texture.png-0b116660defeb65bcd358840fcfaf1b2.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_ColorPalette_Texture.png-c259230c27e5e856138dd4c55d5bbff8.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_ColorPalette_Texture.png-c259230c27e5e856138dd4c55d5bbff8.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ColorPalette_Texture.png-841bfbc34b4e01c58695bc96ea0f50d2.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/ColorPalette_Texture.png-d14a3ff32ec90ee5b708426e132c8744.md5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/imported/Spearman_Sprite.png-bf8e7436566e6466b33b10352b158865.s3tc.ctex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/1a73b976b437e336c834c2e5176434e6f06f7251.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/England/Building/GLBs/ArcheryRange_Model.glb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/England/Building/GLBs/ArcheryRange_Model.glb.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/GLBs/ArcheryRange_Model.glb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/GLBs/ArcheryRange_Model.glb.import" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_Production/_Scenes/CameraController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange.glb-d2292f454ecb87743b00ecfb35414e6c.scn-folding-6d14f4706f2c1d4b695cd7d022917a04.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange_Model.obj-14bbd5b296dcd4a8f74fe8921b7b57ff.mesh-folding-a74e40de5e91ce1836d7f477d5755e7b.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange_Model.obj-80077d0a294b2997e28463f6fb4a6dba.mesh-folding-b9c001783b7cdfb7d9256d40b2e0878c.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/ArcheryRange_Model.obj-c93b60d85691b52f51ce794b84c545c1.mesh-folding-32b3608b908664684b2399c3211f52e7.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-editstate-450096f495fdfefa5b1bf00f51eb34d3.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-folding-450096f495fdfefa5b1bf00f51eb34d3.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks.glb-c753f8ffa07c09ec3e6662cce0ed9e0d.scn-folding-c9050ab08e5708c00716299909f1b345.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks.obj-0a767277cffd2e6016e8b4677b3e3515.mesh-folding-5b3649932d8a89da53243e21c2261cbd.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks.obj-2f9b298f54fcd8d257d7af8baeb5f7f0.mesh-folding-681b3734819438af3888632fb8a03e4f.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks.obj-a294accb166b82ceca2c2e6604010b59.mesh-folding-b53a63d5bf3fa8e2ba4e673d83438521.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Model.obj-334d44b0a81f55a8664e325f32692135.mesh-folding-22c3cf3d4fbf537bf4004be0034999a2.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Model.obj-d037e09702e9bd7ecf1d2fb5885fe9fc.mesh-folding-698e7d4f4ac5d9eb00cb00915f74694a.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-editstate-b0091ef7b6fef4889559ffba4ddbe3f2.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-folding-b0091ef7b6fef4889559ffba4ddbe3f2.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_Archery.tres-folding-7dd198893fda8fc4cdaf3d9ac147999c.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_Archery.tres-folding-8c9d9159c19aef10b6c33d41dfa11cb8.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_Barracks.tres-folding-5ce8037e6bea9005bf40e9b481fa3f5a.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Building_Barracks.tres-folding-7bbbc334a893b773ee528addd2814b96.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Buildings.obj-dfa29cc2090371faf23d6af124961a5a.mesh-folding-2402ff675fcf5eb98f529f0319292da9.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/ColorPalette_Material.tres-folding-12bf8b0be8d68997c663e446fd9cd647.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-editstate-85a8823e1d6c1948a17a8e5af12442c3.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-editstate-1a33348e7b5f50f5608c38986766ff22.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-editstate-97a3265d1707313066ece61e327e58c8.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-editstate-4ccb422f7db486d3b046cb42177743e4.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange.glb-d2292f454ecb87743b00ecfb35414e6c.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_ColorPalette_Texture.png-8d6aa987fd4f6e82f7f55ba3824ff958.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_ColorPalette_Texture.png-8d6aa987fd4f6e82f7f55ba3824ff958.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.obj-14bbd5b296dcd4a8f74fe8921b7b57ff.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.obj-14bbd5b296dcd4a8f74fe8921b7b57ff.mesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.obj-80077d0a294b2997e28463f6fb4a6dba.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.obj-80077d0a294b2997e28463f6fb4a6dba.mesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.obj-c93b60d85691b52f51ce794b84c545c1.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ArcheryRange_Model.obj-c93b60d85691b52f51ce794b84c545c1.mesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Archery_Sprite.png-cf5c7a72553687089a8856dc26b097d3.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Archery_Sprite.png-cf5c7a72553687089a8856dc26b097d3.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.glb-c753f8ffa07c09ec3e6662cce0ed9e0d.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.obj-0a767277cffd2e6016e8b4677b3e3515.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.obj-0a767277cffd2e6016e8b4677b3e3515.mesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.obj-2f9b298f54fcd8d257d7af8baeb5f7f0.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.obj-2f9b298f54fcd8d257d7af8baeb5f7f0.mesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.obj-a294accb166b82ceca2c2e6604010b59.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks.obj-a294accb166b82ceca2c2e6604010b59.mesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_ColorPalette_Texture.png-2dc16ce41807c82cd200311a20afdd84.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_ColorPalette_Texture.png-2dc16ce41807c82cd200311a20afdd84.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_Model.obj-334d44b0a81f55a8664e325f32692135.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_Model.obj-334d44b0a81f55a8664e325f32692135.mesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_Model.obj-d037e09702e9bd7ecf1d2fb5885fe9fc.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_Model.obj-d037e09702e9bd7ecf1d2fb5885fe9fc.mesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_Sprite.png-f7118fb1e46be7acd4ae609e6afd9847.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Barracks_Sprite.png-f7118fb1e46be7acd4ae609e6afd9847.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Buildings.obj-dfa29cc2090371faf23d6af124961a5a.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Buildings.obj-dfa29cc2090371faf23d6af124961a5a.mesh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ColorPalette_Texture.png-d03e9a95417a1bd97aee0bc1d58e28e5.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ColorPalette_Texture.png-d03e9a95417a1bd97aee0bc1d58e28e5.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ColorPalette_Texture.png-e03e6a1d3d1fb2fb281904c1471c4518.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ColorPalette_Texture.png-e03e6a1d3d1fb2fb281904c1471c4518.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/ColorPalette_Texture.png-e03e6a1d3d1fb2fb281904c1471c4518.s3tc.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Farm_Sprite.png-13d1989c2bb11fb2ac85110f43944f7b.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Farm_Sprite.png-13d1989c2bb11fb2ac85110f43944f7b.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/FishingDock_Sprite.png-be1c6ca4b1b8f0045b1ea57d69b07cf0.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/FishingDock_Sprite.png-be1c6ca4b1b8f0045b1ea57d69b07cf0.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/IronMine_Sprite.png-1b5f6e46d78f1dbe28d709c8ae42af07.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/IronMine_Sprite.png-1b5f6e46d78f1dbe28d709c8ae42af07.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Market_Sprite.png-9092e3820ce9eedf583ee302459863a4.md5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/imported/Market_Sprite.png-9092e3820ce9eedf583ee302459863a4.s3tc.ctex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/1d2398676e70a390bb50636156ece6fcfc190d6f.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/464bb56e1745b9b43b36e0352bc1b7b27a563ad2.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/b36236235cf95f496b71ce62e01985ef3e0cce2f.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/c11b85fc995c405bf237d74ed9c033dd1e3afea4.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/shader_cache/SceneForwardClusteredShaderRD/5a630ea5a33829193ef3a40dc4da0e39f17ce3a8c77e8a7ac789b99982144f61/c93d271e58af3a25586008d2346f49fbe0396e4b.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/Archery_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/Archery_Sprite.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/Barracks_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/Barracks_Sprite.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/Farm_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/Farm_Sprite.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/FishingDock_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/FishingDock_Sprite.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/IronMine_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/IronMine_Sprite.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/Market_Sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building/Icons/Market_Sprite.png.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/General/Building/Models/ArcheryRange_Model.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/General/Building/Models/ArcheryRange_Model.obj.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/General/Building/Models/Barracks_Model.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/General/Building/Models/Barracks_Model.obj.import" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/General/Building/Models/ColorPalette_Material.tres" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/General/Building/Models/ColorPalette_Texture.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resources/Items/General/Building/Models/ColorPalette_Texture.png.import" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-editstate-57ea2c4403b0fa990c578bedc2948300.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-editstate-57ea2c4403b0fa990c578bedc2948300.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-editstate-66e15400303724028f17b659975309ab.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-editstate-66e15400303724028f17b659975309ab.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-folding-57ea2c4403b0fa990c578bedc2948300.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-folding-57ea2c4403b0fa990c578bedc2948300.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-folding-66e15400303724028f17b659975309ab.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Archery_Prefab.tscn-folding-66e15400303724028f17b659975309ab.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-editstate-349567a84f4979a10069705daef017a9.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-editstate-349567a84f4979a10069705daef017a9.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-editstate-55beb5d6265af69038451a9a9bc36bda.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-editstate-55beb5d6265af69038451a9a9bc36bda.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-folding-349567a84f4979a10069705daef017a9.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-folding-349567a84f4979a10069705daef017a9.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-editstate-255497b61ed40cbd2909e1ad2747cc46.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-editstate-255497b61ed40cbd2909e1ad2747cc46.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-folding-255497b61ed40cbd2909e1ad2747cc46.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-folding-255497b61ed40cbd2909e1ad2747cc46.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-folding-55beb5d6265af69038451a9a9bc36bda.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-folding-55beb5d6265af69038451a9a9bc36bda.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-editstate-0948cd9e684e48c908a294d7a9fb31fc.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-editstate-0948cd9e684e48c908a294d7a9fb31fc.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-folding-0948cd9e684e48c908a294d7a9fb31fc.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-folding-0948cd9e684e48c908a294d7a9fb31fc.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-folding-85a8823e1d6c1948a17a8e5af12442c3.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Farm_Prefab.tscn-folding-85a8823e1d6c1948a17a8e5af12442c3.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-editstate-ebeae844420886c771d240e256bfa551.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-editstate-ebeae844420886c771d240e256bfa551.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-folding-1a33348e7b5f50f5608c38986766ff22.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-folding-1a33348e7b5f50f5608c38986766ff22.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-folding-ebeae844420886c771d240e256bfa551.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/FishingDock_Prefab.tscn-folding-ebeae844420886c771d240e256bfa551.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-editstate-52656a4f0dd6a2b7479125a8767f5acb.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-editstate-52656a4f0dd6a2b7479125a8767f5acb.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-folding-52656a4f0dd6a2b7479125a8767f5acb.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-folding-52656a4f0dd6a2b7479125a8767f5acb.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-folding-97a3265d1707313066ece61e327e58c8.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/IronMine_Prefab.tscn-folding-97a3265d1707313066ece61e327e58c8.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-editstate-20a4cf7ede3a3ff672aa6dc35ccec6f8.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-editstate-20a4cf7ede3a3ff672aa6dc35ccec6f8.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-folding-20a4cf7ede3a3ff672aa6dc35ccec6f8.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-folding-20a4cf7ede3a3ff672aa6dc35ccec6f8.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-folding-4ccb422f7db486d3b046cb42177743e4.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Market_Prefab.tscn-folding-4ccb422f7db486d3b046cb42177743e4.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-folding-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Resource" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Resource" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/imported/Spearman_Sprite.png-bf8e7436566e6466b33b10352b158865.md5" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/imported/Spearman_Sprite.png-bf8e7436566e6466b33b10352b158865.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/recent_dirs" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/recent_dirs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/uid_cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/uid_cache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Archery.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Archery.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Barracks.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Barracks.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/GLBs/ArcheryRange_Model.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/GLBs/ArcheryRange_Model.glb.import" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/Archery_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/Archery_Prefab.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/Barracks_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/Barracks_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/Farm_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/Farm_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/FishingDock_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/FishingDock_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/IronMine_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/IronMine_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/Market_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Prefabs/Market_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Archery.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Archery.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Barracks.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Barracks.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/GLBs/ArcheryRange_Model.glb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/GLBs/ArcheryRange_Model.glb.import" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/Archery_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/Archery_Prefab.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/Barracks_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/Barracks_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/Farm_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/Farm_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/FishingDock_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/FishingDock_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/IronMine_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/IronMine_Prefab.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/Market_Prefab.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Prefabs/Market_Prefab.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Unit/Icons/Spearman_Sprite.png.import" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/General/Unit/Icons/Spearman_Sprite.png.import" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/DebugScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/DebugScreen.tscn" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/ItemDatabaseBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputDataParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputDataParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/Archery_Sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/Archery_Sprite.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/Barracks_Sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/Barracks_Sprite.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/Farm_Sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/Farm_Sprite.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/FishingDock_Sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/FishingDock_Sprite.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/IronMine_Sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/IronMine_Sprite.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/Market_Sprite.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/General/Building/Icons/Market_Sprite.png.import" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Managers/CellManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Managers/CellManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/DebugTestUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/DebugTestUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/ResourceDisplayScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/ResourceDisplayScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/PlayerCustomRaycast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/PlayerCustomRaycast.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/PlayerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/PlayerManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
@@ -242,7 +299,8 @@
       <workItem from="1695844763362" duration="1358000" />
       <workItem from="1695999517422" duration="7020000" />
       <workItem from="1696061764388" duration="18314000" />
-      <workItem from="1696168700337" duration="2742000" />
+      <workItem from="1696168700337" duration="14123000" />
+      <workItem from="1696248079037" duration="344000" />
     </task>
     <servers />
   </component>

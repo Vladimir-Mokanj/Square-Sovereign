@@ -1,12 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c8js6c4u2x14q"]
+[gd_scene load_steps=4 format=3 uid="uid://c8js6c4u2x14q"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwd7r"]
-albedo_color = Color(0.2, 0.223529, 0.376471, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8wg17"]
+transparency = 1
+albedo_color = Color(0.0980392, 0.133333, 0.262745, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_a2pnr"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71xvq"]
-albedo_color = Color(0.0980392, 0.133333, 0.262745, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_hui6s"]
 size = Vector3(20, 1, 20)
@@ -15,17 +13,17 @@ size = Vector3(20, 1, 20)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(8.81425, 0, 1.81909, 0, 18, 0, -1.81909, 0, 8.81425, -6.956, 9, -5.175)
-material_overlay = SubResource("StandardMaterial3D_gwd7r")
+material_override = SubResource("StandardMaterial3D_8wg17")
 mesh = SubResource("BoxMesh_a2pnr")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.15445, -0.0509816, -3.33499, 0.0147098, 14.9999, -0.0227911, 3.33505, 0.0279214, 6.15445, 6.169, 7.5, -5.175)
-material_overlay = SubResource("StandardMaterial3D_71xvq")
+material_override = SubResource("StandardMaterial3D_8wg17")
 mesh = SubResource("BoxMesh_a2pnr")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(5.99928, -0.0258143, -0.0922024, 0.0126084, 11.9999, -0.0195353, 0.0922437, 0.0386783, 5.99926, -1.676, 6, 5.09)
-material_overlay = SubResource("StandardMaterial3D_71xvq")
+material_override = SubResource("StandardMaterial3D_8wg17")
 mesh = SubResource("BoxMesh_a2pnr")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

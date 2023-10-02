@@ -1,16 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsv61pikx60gs"]
+[gd_scene load_steps=4 format=3 uid="uid://bf3rguv3bygva"]
 
-[ext_resource type="PackedScene" uid="uid://b3yclir40xgkb" path="res://Resources/Items/France/Building/GLBs/ArcheryRange_Model.glb" id="1_rpwjk"]
+[ext_resource type="Material" uid="uid://7pklcqt6wkju" path="res://Resources/Items/General/Building/Materials/ColorPalette_Material.tres" id="2_fdwyl"]
+[ext_resource type="ArrayMesh" uid="uid://cnxdwt320vwos" path="res://Resources/Items/General/Building/Models/ArcheryRange_Model.obj" id="2_jywku"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_m7a3x"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_hv4pc"]
 size = Vector3(20, 1, 20)
 
-[node name="Archery_Prefab" type="Node3D"]
-
-[node name="ArcheryRange_Model" parent="." instance=ExtResource("1_rpwjk")]
+[node name="Archery_Prefab" type="MeshInstance3D"]
+mesh = ExtResource("2_jywku")
+surface_material_override/0 = ExtResource("2_fdwyl")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
-shape = SubResource("BoxShape3D_m7a3x")
+shape = SubResource("BoxShape3D_hv4pc")

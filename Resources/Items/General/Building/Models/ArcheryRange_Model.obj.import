@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cnxdwt320vwos"
+path="res://.godot/imported/ArcheryRange_Model.obj-14bbd5b296dcd4a8f74fe8921b7b57ff.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ArcheryRange_Model.obj-14bbd5b296dcd4a8f74fe8921b7b57ff.mesh"]
+
+source_file="res://Resources/Items/General/Building/Models/ArcheryRange_Model.obj"
+dest_files=["res://.godot/imported/ArcheryRange_Model.obj-14bbd5b296dcd4a8f74fe8921b7b57ff.mesh", "res://.godot/imported/ArcheryRange_Model.obj-14bbd5b296dcd4a8f74fe8921b7b57ff.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

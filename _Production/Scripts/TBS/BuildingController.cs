@@ -65,7 +65,7 @@ public partial class BuildingController : Node
     private void OnStateAssigned(StateParameters State)
     {
         State.RowCol.AddObserver(PlaceGhostBuilding);
-        State.IsMouseLeftDown.AddObserver(value => { if (value) TryBuild(State.RowCol.Value); });
+        State.IsMouseLeftDown.AddObserver(value => { if (value && !State.IsMouseDrag.Value) TryBuild(State.RowCol.Value); });
         State.IsMouseRightDown.AddObserver(value =>
         {
             if (value && _buildingId.HasValue) 

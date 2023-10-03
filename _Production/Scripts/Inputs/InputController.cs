@@ -14,10 +14,10 @@ public partial class InputController : Node, IInputController
 
     public override void _Input(InputEvent @event)
     {
-        if (@event is InputEventMouseButton { Pressed: true, ButtonIndex: MouseButton.Right }) 
+        if (@event is InputEventMouseButton { Pressed: true, ButtonIndex: MouseButton.Middle }) 
             _dataParameters.isMouseDragging = true;
 
-        if (@event is InputEventMouseButton { Pressed: false, ButtonIndex: MouseButton.Right })
+        if (@event is InputEventMouseButton { Pressed: false, ButtonIndex: MouseButton.Middle })
             _dataParameters.isMouseDragging = false;
 
         

@@ -39,7 +39,7 @@ public partial class ResourceDisplayScreen : Control
 		foreach ((byte row, byte col, ResourceType resourceType) data in _cellData)
 		{
 			Vector3 worldPosition = new(data.row * 20 + 10, 0, data.col * 20 + 10);
-			Vector2 screenPosition = _camera3D.UnprojectPosition(worldPosition);
+			Vector2 screenPosition = _camera3D.UnprojectPosition(worldPosition) - new Vector2(20, 30);;
 			Rect2 textureRectGlobal = new(screenPosition, textureSize);
 
 			if (!GetViewportRect().Intersects(textureRectGlobal))
@@ -71,7 +71,7 @@ public partial class ResourceDisplayScreen : Control
 		foreach ((byte row, byte col, ResourceType resourceType) data in _cellData)
 		{
 			Vector3 worldPosition = new(data.row * 20 + 10, 0, data.col * 20 + 10);
-			Vector2 screenPosition = _camera3D.UnprojectPosition(worldPosition);
+			Vector2 screenPosition = _camera3D.UnprojectPosition(worldPosition) - new Vector2(20, 30);
 			Rect2 textureRectGlobal = new(screenPosition - textureSize / 2, textureSize);
 
 			if (!GetViewportRect().Intersects(textureRectGlobal))

@@ -5,25 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-editstate-d54545fd005b652b05fea8b82bd1e2ec.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-editstate-d54545fd005b652b05fea8b82bd1e2ec.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-folding-d54545fd005b652b05fea8b82bd1e2ec.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingScreen.tscn-folding-d54545fd005b652b05fea8b82bd1e2ec.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingSelectionUI_Prefab.tscn-editstate-3e8a936b0962e23fa393b7cfa2890da9.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingSelectionUI_Prefab.tscn-editstate-3e8a936b0962e23fa393b7cfa2890da9.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/DisplayUI_Prefab.tscn-editstate-f9f61c56879bd9efefb1244732f0713d.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/DisplayUI_Prefab.tscn-editstate-f9f61c56879bd9efefb1244732f0713d.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/BuildingScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/BuildingScreen.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputDataParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Inputs/InputDataParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/BuildingScreen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project.godot" beforeDir="false" afterPath="$PROJECT_DIR$/project.godot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +151,7 @@
       <workItem from="1696248079037" duration="4960000" />
       <workItem from="1696271193346" duration="4744000" />
       <workItem from="1696328534216" duration="3071000" />
-      <workItem from="1696332841258" duration="2820000" />
+      <workItem from="1696332841258" duration="3992000" />
     </task>
     <servers />
   </component>

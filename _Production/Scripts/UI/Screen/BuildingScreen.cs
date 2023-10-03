@@ -39,12 +39,13 @@ public partial class BuildingScreen : Control
 		InitializeBuildingPicks(dataChanged);
 	}
 
+	
 	public override void _Input(InputEvent @event)
 	{
 		if (@event is not InputEventKey { Pressed: true } eventKey) 
 			return;
 
-		if (_tween != null)
+		if (_tween != null || !Visible)
 			return;
 		
 		_dataChanged?.Invoke(null);

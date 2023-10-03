@@ -15,6 +15,7 @@ public partial class BuildingController : Node
     
     private int? _buildingId;
     private Node3D _ghostBuilding;
+    private (byte? row, byte? col) rowCol;
 
     public override void _Ready()
     {
@@ -35,14 +36,8 @@ public partial class BuildingController : Node
             return;
         
         _buildingId = value;
-        Vector3 buildingPos = Vector3.Zero;
-        float transparency = 0.0f;
         if (_ghostBuilding != null)
         {
-            buildingPos = _ghostBuilding.GlobalPosition;
-            if (_ghostBuilding is MeshInstance3D instance3D)
-                transparency = instance3D.Transparency;
-            
             RemoveChild(_ghostBuilding);
             _ghostBuilding = null;
         }
@@ -53,17 +48,16 @@ public partial class BuildingController : Node
         _ghostBuilding = ItemDatabase.Get<Building>(value.Value).Prefab.Instantiate() as Node3D;
         AddChild(_ghostBuilding);
 
-        if (_ghostBuilding == null) 
+        if (_ghostBuilding == null || !rowCol.row.HasValue || !rowCol.col.HasValue)
             return;
         
-        _ghostBuilding.GlobalPosition = buildingPos;
-        if (_ghostBuilding is MeshInstance3D instance)
-            instance.Transparency = transparency;
-        
+        SetTransparency(CanPlaceBuilding((rowCol.row.Value, rowCol.col.Value)) ? 0.0f : _transparentValue);
+        _ghostBuilding.GlobalPosition = new Vector3(rowCol.row.Value * 20 + 10, CellManager.GetHeight(rowCol.row.Value, rowCol.col.Value), rowCol.col.Value * 20 + 10);
     }
 
     private void OnStateAssigned(StateParameters State)
     {
+        State.BuildingSelectedID.AddObserver(RemoveGhostBuilding);
         State.RowCol.AddObserver(PlaceGhostBuilding);
         State.IsMouseLeftDown.AddObserver(value => { if (value && !State.IsMouseDrag.Value) TryBuild(State.RowCol.Value); });
         State.IsMouseRightDown.AddObserver(value =>
@@ -76,7 +70,6 @@ public partial class BuildingController : Node
 
             _ghostBuilding = null;
         });
-        State.BuildingSelectedID.AddObserver(RemoveGhostBuilding);
     }
 
     private void RemoveGhostBuilding(int? value)
@@ -90,6 +83,7 @@ public partial class BuildingController : Node
 
     private void PlaceGhostBuilding((byte? row, byte? col) value)
     {
+        rowCol = value;
         if (_ghostBuilding == null)
             return;
 

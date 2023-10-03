@@ -10,14 +10,19 @@ namespace FT.UI;
 
 public partial class BuildingScreen : Control
 {
+	[Export] private Button _buildButton;
+	[Export] private HBoxContainer _buildingsContainer;
+	
 	[Export] private PackedScene _displayUI_Prefab;
 	[Export] private GridContainer[] _buildingPickContainers;
 	[Export] private InfoScreen _infoScreenScreen;
 
 	private Action<int?> _dataChanged;
 	private readonly Dictionary<string, int> _hotkeys = new();
+	private Tween _tween;
 
-	public override void _Ready() => PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateInitialized);
+	public override void _Ready() => 
+		PlayerManager.Instance.OnStateInitialized.AddObserver(OnStateInitialized);
 
 	private void OnStateInitialized(StateParameters State)
 	{
@@ -38,15 +43,18 @@ public partial class BuildingScreen : Control
 	{
 		if (@event is not InputEventKey { Pressed: true } eventKey) 
 			return;
+
+		if (_tween != null)
+			return;
 		
-		switch (Visible)
+		_dataChanged?.Invoke(null);
+		switch (_buildingsContainer.Visible)
 		{
 			case false when eventKey.Keycode == Key.B:
-				Visible = true;
+				ToggleVisibility();
 				return;
 			case true when eventKey.Keycode == Key.Escape:
-				Visible = false;
-				_dataChanged?.Invoke(null);
+				ToggleVisibility();
 				break;
 		}
 
@@ -57,8 +65,25 @@ public partial class BuildingScreen : Control
 			if (buildingPickContainer.GetChildren().FirstOrDefault(child => child.Name == hotkey.ToString()) is DisplayUI buttonUI)
 			{
 				_dataChanged?.Invoke(buttonUI.Id);
+				ToggleVisibility();
 				break;
 			}
+	}
+
+	private void ToggleVisibility()
+	{
+		Vector2 buildingsContainerPosition = _buildingsContainer.Visible ? _buildingsContainer.Position + new Vector2(0, 112) : _buildingsContainer.Position - new Vector2(0, 112);
+		Vector2 buildButtonPosition = _buildButton.Visible ? _buildButton.Position + new Vector2(0, 80) : _buildButton.Position - new Vector2(0, 80);
+
+		Control visibleNode = _buildButton.Visible ? _buildButton : _buildingsContainer;
+		_buildButton.Visible = true;
+		_buildingsContainer.Visible = true;
+		
+		_tween?.Kill();
+		_tween = CreateTween().SetParallel();
+		_tween.TweenProperty(_buildingsContainer, "position", buildingsContainerPosition, 0.04f);
+		_tween.TweenProperty(_buildButton, "position", buildButtonPosition, 0.04f);
+		_tween.Finished += () => { visibleNode.Visible = false; _tween = null; };
 	}
 
 	private void InitializeBuildingPicks(Action<int?> dataChanged)
@@ -75,7 +100,7 @@ public partial class BuildingScreen : Control
 
 			uiItem.MouseEntered += () => _infoScreenScreen?.ShowDisplayPanel(building.Sprite, building.DisplayName, building.Description);
 			uiItem.MouseExited += () => _infoScreenScreen?.HideInfoPanel();
-			uiItem.Pressed += () => _dataChanged?.Invoke(uiItem.Id);
+			uiItem.Pressed += () => { ToggleVisibility(); _dataChanged?.Invoke(uiItem.Id); };
 
 			_hotkeys.TryAdd(building.Hotkey, building.Id);
 			_buildingPickContainers[(byte)building.TabType - 1].AddChild(uiItem);

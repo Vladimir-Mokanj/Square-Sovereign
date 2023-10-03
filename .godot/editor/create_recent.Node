@@ -1,3 +1,4 @@
+Button
 PanelContainer
 HBoxContainer
 GridContainer
@@ -5,7 +6,6 @@ Label
 MeshInstance3D
 Sprite2D
 Node2D
-Button
 VBoxContainer
 Panel
 TextureRect

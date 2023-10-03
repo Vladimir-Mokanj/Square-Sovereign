@@ -56,7 +56,8 @@ grow_vertical = 2
 script = ExtResource("7_ejfcw")
 _resourcePackedScene = ExtResource("8_85v5r")
 
-[node name="BuildScreen" parent="PlayerUI" instance=ExtResource("8_weerq")]
+[node name="BuildScreen" parent="PlayerUI" node_paths=PackedStringArray("_infoScreenScreen") instance=ExtResource("8_weerq")]
+_infoScreenScreen = NodePath("../InfoScreen")
 
 [node name="SelectionScreen" parent="PlayerUI" node_paths=PackedStringArray("_infoScreenScreen") instance=ExtResource("9_clutq")]
 _infoScreenScreen = NodePath("../InfoScreen")

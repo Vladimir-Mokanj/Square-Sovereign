@@ -1,10 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cma8bvrngsyq5"]
+[gd_scene load_steps=5 format=3 uid="uid://cma8bvrngsyq5"]
 
 [ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/BuildingScreen.cs" id="1_34tpj"]
 [ext_resource type="PackedScene" uid="uid://coaccj8xna8wg" path="res://_Production/Art/2D/UI/DisplayUI_Prefab.tscn" id="3_5vbpe"]
+[ext_resource type="Texture2D" uid="uid://dpwjh3qp8q1ye" path="res://_Production/Art/2D/Icons/BrokenIcon_Sprite.png" id="3_rkfiu"]
+[ext_resource type="Script" path="res://_Production/Scripts/UI/DisplayUI.cs" id="4_pnqyg"]
 
-[node name="BuildScreen" type="Control" node_paths=PackedStringArray("_buildingPickContainers")]
-visible = false
+[node name="BuildScreen" type="Control" node_paths=PackedStringArray("_buildButton", "_buildingsContainer", "_buildingPickContainers")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -13,19 +14,54 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_34tpj")
+_buildButton = NodePath("BuildButton")
+_buildingsContainer = NodePath("HBoxContainer")
 _displayUI_Prefab = ExtResource("3_5vbpe")
 _buildingPickContainers = [NodePath("HBoxContainer/BattlePanel/BattleGrid"), NodePath("HBoxContainer/EconomyPanel/EconomyGrid"), NodePath("HBoxContainer/ResourcesPanel/ResourcesGrid")]
 
-[node name="HBoxContainer" type="HBoxContainer" parent="."]
+[node name="BuildButton" type="Button" parent="." node_paths=PackedStringArray("_hotkeyLabel")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -55.0
-offset_top = -110.0
-offset_right = 55.0
+offset_left = -40.0
+offset_top = -80.0
+offset_right = 40.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/icon_max_width = 45
+icon = ExtResource("3_rkfiu")
+icon_alignment = 1
+script = ExtResource("4_pnqyg")
+_hotkeyLabel = NodePath("PanelContainer/Hotkey")
+
+[node name="PanelContainer" type="PanelContainer" parent="BuildButton"]
+self_modulate = Color(0, 0, 0, 1)
+offset_right = 17.0
+offset_bottom = 17.0
+
+[node name="Hotkey" type="Label" parent="BuildButton/PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "B"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -340.0
+offset_top = 2.0
+offset_right = 340.0
+offset_bottom = 112.0
 grow_horizontal = 2
 grow_vertical = 0
 alignment = 1

@@ -19,7 +19,6 @@ public partial class InputController : Node, IInputController
 
         if (@event is InputEventMouseButton { Pressed: false, ButtonIndex: MouseButton.Middle })
             _dataParameters.isMouseDragging = false;
-
         
         if (@event.IsActionPressed("OnResourcesRevealed"))
             _dataParameters.areResourcesRevealed = !_dataParameters.areResourcesRevealed;
@@ -31,7 +30,7 @@ public partial class InputController : Node, IInputController
     public override void _Process(double delta)
     {
         _dataParameters.isLeftMousePressed = Godot.Input.IsActionJustPressed("OnPressLeft");
-        _dataParameters.isRightMousePressed = Godot.Input.IsActionJustPressed("OnPressRight");
+        _dataParameters.isRightMousePressed = Godot.Input.IsActionJustPressed("OnEscape") || Godot.Input.IsActionJustPressed("OnPressRight");
         _inputParameters.Action?.Invoke(_dataParameters);
     }
     

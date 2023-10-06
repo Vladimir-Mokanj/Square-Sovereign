@@ -19,6 +19,7 @@ public partial class Building : Item
     [Export, ReadOnly] public string Hotkey { get; private set; }
     [Export, ReadOnly] public string Properties { get; private set; }
     [Export] public int[] BuildingProperties { get; private set; }
+    [Export] public byte Duration { get; private set; }
 
 #if TOOLS
     public override void Setup(DataRow data)
@@ -31,6 +32,7 @@ public partial class Building : Item
         Hotkey = data.Parse<string>(nameof(Hotkey));
         Properties = data.Parse<string>(nameof(Properties));
         BuildingProperties = SetupProperties(Properties);
+        Duration = data.Parse<byte>(nameof(Duration));
     }
 #endif
 }

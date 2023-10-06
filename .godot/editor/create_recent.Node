@@ -1,13 +1,13 @@
+MeshInstance3D
+Panel
+Label
 Button
 PanelContainer
 HBoxContainer
 GridContainer
-Label
-MeshInstance3D
 Sprite2D
 Node2D
 VBoxContainer
-Panel
 TextureRect
 Control
 MeshInstance2D

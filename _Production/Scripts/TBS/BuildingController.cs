@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using FT.Data;
 using FT.Data.Items.Civilization;
 using FT.Managers;
@@ -7,15 +9,29 @@ using Godot;
 
 namespace FT.TBS;
 
+internal struct WhileBuilding
+{
+    internal readonly Node3D originalBuilding;
+    internal readonly Node3D tempBuilding;
+
+    public WhileBuilding(Node3D originalBuilding, Node3D tempBuilding)
+    {
+        this.originalBuilding = originalBuilding;
+        this.tempBuilding = tempBuilding;
+    }
+}
+
 public partial class BuildingController : Node
 {
     [Export] private float _transparentValue = 0.8f;
+    [Export] private PackedScene _tempBuilding;
     
     private Action<int?> _onBuildingIdChanged;
     
     private int? _buildingId;
     private Node3D _ghostBuilding;
     private (byte? row, byte? col) rowCol;
+    private readonly List<(ushort buildingDone, WhileBuilding building)> _buildings = new();
 
     public override void _Ready()
     {
@@ -57,9 +73,10 @@ public partial class BuildingController : Node
 
     private void OnStateAssigned(StateParameters State)
     {
+        State.TurnNumber.AddObserver(CheckForBuilds);
         State.BuildingSelectedID.AddObserver(RemoveGhostBuilding);
         State.RowCol.AddObserver(PlaceGhostBuilding);
-        State.IsMouseLeftDown.AddObserver(value => { if (value && !State.IsMouseDrag.Value) TryBuild(State.RowCol.Value); });
+        State.IsMouseLeftDown.AddObserver(value => { if (value && !State.IsMouseDrag.Value) TryBuild(State.RowCol.Value, State.TurnNumber.Value); });
         State.IsMouseRightDown.AddObserver(value =>
         {
             if (value && _buildingId.HasValue) 
@@ -70,6 +87,18 @@ public partial class BuildingController : Node
 
             _ghostBuilding = null;
         });
+    }
+
+    private void CheckForBuilds(ushort turn)
+    {
+        if (_buildings.Count <= 0)
+            return;
+
+        foreach ((ushort buildingDone, WhileBuilding building) building in _buildings.Where(building => turn == building.buildingDone))
+        {
+            building.building.originalBuilding.Visible = true;
+            building.building.tempBuilding.QueueFree();
+        }
     }
 
     private void RemoveGhostBuilding(int? value)
@@ -94,7 +123,7 @@ public partial class BuildingController : Node
         _ghostBuilding.Position = new Vector3(value.row.Value * 20 + 10, CellManager.GetHeight(value.row.Value, value.col.Value), value.col.Value * 20 + 10);
     }
 
-    private void TryBuild((byte? row, byte? col) value)
+    private void TryBuild((byte? row, byte? col) value, ushort currentTurn)
     {
         if (!_buildingId.HasValue || !value.row.HasValue || !value.col.HasValue)
             return;
@@ -104,6 +133,13 @@ public partial class BuildingController : Node
 
         CellManager.SetIsOccupied(value.row.Value, value.col.Value);
         _ghostBuilding.Name = $"{_buildingId.Value.ToString()}|";
+        _ghostBuilding.Visible = false;
+
+        byte duration = ItemDatabase.Get<Building>(_buildingId.Value).Duration;
+        Node3D building = _tempBuilding.Instantiate() as Node3D;
+        AddChild(building);
+        building!.GlobalPosition = _ghostBuilding.GlobalPosition;
+        _buildings.Add(((ushort)(currentTurn + duration), new WhileBuilding(_ghostBuilding, building)));
 
         _buildingId = null;
         _ghostBuilding = null;

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://_Production/Scripts/UI/Screen/DebugTestUI.cs" id="1_vuwvu"]
 
-[node name="DebugScreen" type="Control" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel", "_englandButton", "_franceButton")]
+[node name="DebugScreen" type="Control" node_paths=PackedStringArray("_terrainTypeLabel", "_resourceTypeLabel", "_isOccupiedLabel", "_englandButton", "_franceButton", "_endTurnButton", "_turnNumber")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,6 +16,8 @@ _resourceTypeLabel = NodePath("DebugUI/ResourceTypeContainer/ResourceTypeLabel")
 _isOccupiedLabel = NodePath("DebugUI/IsOccupiedContainer/IsOccupedLabel")
 _englandButton = NodePath("TerrainTypeContainer/VBoxContainer/EnglandButton")
 _franceButton = NodePath("TerrainTypeContainer/VBoxContainer/FranceButton")
+_endTurnButton = NodePath("EndTurnContainer/VBoxContainer/EndTurnButton")
+_turnNumber = NodePath("EndTurnContainer/VBoxContainer/TurnNumber")
 
 [node name="DebugUI" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -93,4 +95,41 @@ layout_mode = 2
 mouse_default_cursor_shape = 8
 action_mode = 0
 text = "France
+"
+
+[node name="EndTurnContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -75.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EndTurnContainer"]
+custom_minimum_size = Vector2(100, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+alignment = 1
+
+[node name="TurnNumber" type="Label" parent="EndTurnContainer/VBoxContainer"]
+layout_mode = 2
+text = "0
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EndTurnButton" type="Button" parent="EndTurnContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+mouse_default_cursor_shape = 8
+action_mode = 0
+text = "End Turn
 "

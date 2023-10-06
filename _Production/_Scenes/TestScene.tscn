@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://bebloy85m45i6"]
+[gd_scene load_steps=16 format=3 uid="uid://bebloy85m45i6"]
 
 [ext_resource type="Script" path="res://_Production/_Scenes/CameraController.cs" id="1_2otla"]
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/PlayerManager.cs" id="1_qv3y3"]
 [ext_resource type="Resource" uid="uid://cdepm6jh8ak1" path="res://Resources/Terrain/DebugTerrainData.tres" id="2_286pr"]
 [ext_resource type="Script" path="res://_Production/Scripts/TBS/BuildingController.cs" id="4_akd0p"]
+[ext_resource type="PackedScene" uid="uid://bcujrmuiqon20" path="res://TempBuilding_Prefab.tscn" id="5_yhm7h"]
 [ext_resource type="Script" path="res://_Production/Scripts/UI/PlayerUI.cs" id="6_dt4mp"]
 [ext_resource type="Script" path="res://_Production/_Scenes/ResourceDisplayScreen.cs" id="7_ejfcw"]
 [ext_resource type="PackedScene" uid="uid://dah75jl5535af" path="res://_Production/Art/2D/UI/Screen/DebugScreen.tscn" id="7_v3q85"]
@@ -36,6 +37,7 @@ script = ExtResource("10_ctvlv")
 
 [node name="BuildingController" type="Node" parent="PlayerManager"]
 script = ExtResource("4_akd0p")
+_tempBuilding = ExtResource("5_yhm7h")
 
 [node name="InputController" type="Node" parent="PlayerManager"]
 script = ExtResource("9_kal1k")

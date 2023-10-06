@@ -12,6 +12,8 @@ public partial class DisplayUI : Button
     {
         Icon = building.Sprite;
         Id = building.Id;
+
+        _hotkeyLabel.Visible = hotkey == "" ? !Visible : Visible;
         _hotkeyLabel.Text = hotkey;
     }
 }

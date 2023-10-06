@@ -12,6 +12,7 @@ Description = "The ancient art of turning trees into something slightly more men
 Hotkey = "N"
 Properties = "Archer,Range,LeatherArmor,ArcherDamage"
 BuildingProperties = PackedInt32Array(284003939, 1353023627, -851951846, 2105173364)
+Duration = 2
 DisplayName = "Archery"
 PrefabName = "Archery_Prefab"
 Prefab = ExtResource("1_uysyf")

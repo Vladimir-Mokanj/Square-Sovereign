@@ -12,6 +12,7 @@ Description = "Welcome to the Farm, where our crops listen to motivational podca
 Hotkey = "F"
 Properties = ""
 BuildingProperties = PackedInt32Array()
+Duration = 1
 DisplayName = "Farm"
 PrefabName = "Farm_Prefab"
 Prefab = ExtResource("1_oqbo0")

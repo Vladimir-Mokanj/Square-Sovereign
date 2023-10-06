@@ -12,6 +12,7 @@ Description = "Ah, the Iron mine—where rocks go to fulfill their dreams of bec
 Hotkey = "R"
 Properties = ""
 BuildingProperties = PackedInt32Array()
+Duration = 1
 DisplayName = "Iron Mine"
 PrefabName = "IronMine_Prefab"
 Prefab = ExtResource("1_ovr80")

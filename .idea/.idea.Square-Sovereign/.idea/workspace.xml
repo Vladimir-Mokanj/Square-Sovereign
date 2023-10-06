@@ -5,10 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e57d54a3-48bb-4ae0-839c-d5f707330788" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.godot/editor/BuildingSelectionUI_Prefab.tscn-editstate-3e8a936b0962e23fa393b7cfa2890da9.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/BuildingSelectionUI_Prefab.tscn-editstate-3e8a936b0962e23fa393b7cfa2890da9.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.godot/editor/DisplayUI_Prefab.tscn-editstate-f9f61c56879bd9efefb1244732f0713d.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/DisplayUI_Prefab.tscn-editstate-f9f61c56879bd9efefb1244732f0713d.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/TempBuilding_Prefab.tscn-editstate-be4c7aa76f3bf3b43367f64c0590f87e.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.godot/editor/TempBuilding_Prefab.tscn-folding-be4c7aa76f3bf3b43367f64c0590f87e.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TempBuilding_Prefab.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-editstate-55beb5d6265af69038451a9a9bc36bda.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/Barracks_Prefab.tscn-editstate-55beb5d6265af69038451a9a9bc36bda.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-editstate-255497b61ed40cbd2909e1ad2747cc46.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-editstate-255497b61ed40cbd2909e1ad2747cc46.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-folding-255497b61ed40cbd2909e1ad2747cc46.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/DebugScreen.tscn-folding-255497b61ed40cbd2909e1ad2747cc46.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/TestScene.tscn-editstate-9b16c190ecfdd7d80560df3fe0ce0392.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/ResourceDisplayScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/ResourceDisplayScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/create_recent.Node" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/create_recent.Node" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/editor_layout.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_cache8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/filesystem_update4" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/filesystem_update4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/editor/project_metadata.cfg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/metadata/ide_messaging_meta.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/bin/Debug/Square-Sovereign.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/Square-Sovereign.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/ref/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/mono/temp/obj/Debug/refint/Square-Sovereign.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.godot/uid_cache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.godot/uid_cache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Square-Sovereign/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Archery.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Archery.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Barracks.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Barracks.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Farm.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Farm.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Building_FishingDock.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Building_FishingDock.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Building_IronMine.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Building_IronMine.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Market.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Building/Building_Market.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/England/Unit/Unit_Archer.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/England/Unit/Unit_Archer.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Archery.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Archery.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Barracks.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Barracks.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Farm.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Farm.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Building_FishingDock.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building_FishingDock.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Building_IronMine.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building_IronMine.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Market.tres" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Items/France/Building/Building_Market.tres" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/BuildingScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/BuildingScreen.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/DebugScreen.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Art/2D/UI/Screen/DebugScreen.tscn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Civilization/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/Data/Item/Civilization/Building.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/BuildingController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/TBS/StateParameters.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/DisplayUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/DisplayUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/DebugTestUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/Scripts/UI/Screen/DebugTestUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" beforeDir="false" afterPath="$PROJECT_DIR$/_Production/_Scenes/TestScene.tscn" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +182,10 @@
       <workItem from="1696248079037" duration="4960000" />
       <workItem from="1696271193346" duration="4744000" />
       <workItem from="1696328534216" duration="3071000" />
-      <workItem from="1696332841258" duration="4704000" />
+      <workItem from="1696332841258" duration="6569000" />
+      <workItem from="1696416904976" duration="5000" />
+      <workItem from="1696416913105" duration="23000" />
+      <workItem from="1696586353768" duration="3483000" />
     </task>
     <servers />
   </component>

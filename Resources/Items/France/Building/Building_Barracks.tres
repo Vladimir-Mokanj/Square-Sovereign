@@ -12,6 +12,7 @@ Description = "Barracks: A 5-star resort for your troops, if the stars were made
 Hotkey = "B"
 Properties = "Clubman,Spearman,ClubDamage,SpearDamage"
 BuildingProperties = PackedInt32Array(1909291234, 607427827, -1721530749, 1911672006)
+Duration = 2
 DisplayName = "Barracks"
 PrefabName = "Barracks_Prefab"
 Prefab = ExtResource("1_64q1a")

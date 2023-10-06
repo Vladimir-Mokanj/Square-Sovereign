@@ -12,6 +12,7 @@ Description = "The Market: Your one-stop shop for all your impulse buying needs!
 Hotkey = "A"
 Properties = "Merchant,MerchantSpeed,MerchantCarry,MerchantReputation"
 BuildingProperties = PackedInt32Array(-1079941110, 863768285, -197999443, -24860687)
+Duration = 3
 DisplayName = "Market"
 PrefabName = "Market_Prefab"
 Prefab = ExtResource("1_o4djq")

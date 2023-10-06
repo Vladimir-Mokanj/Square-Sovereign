@@ -13,7 +13,9 @@ public partial class DebugTestUI : Node
 
     [Export] private Button _englandButton;
     [Export] private Button _franceButton;
-    
+
+    [Export] private Button _endTurnButton;
+    [Export] private Label _turnNumber;
     
     [Export] private Material _civColor;
     
@@ -39,6 +41,8 @@ public partial class DebugTestUI : Node
     {
         State.RowCol.AddObserver(AssignValues);
         State.IsMouseLeftDown.AddObserver(value => { if (value) AssignValues(State.RowCol); });
+        State.TurnNumber.AddObserver(value => _turnNumber.Text = value.ToString());
+        _endTurnButton.Pressed += () => State.TurnNumber.Set((ushort)(State.TurnNumber.Value + 1));
     }
 
     private void AssignValues((byte? row, byte? col) value)

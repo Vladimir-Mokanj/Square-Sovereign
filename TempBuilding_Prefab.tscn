@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcujrmuiqon20"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0cck6"]
+albedo_color = Color(1, 0.227451, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_drfo3"]
+
+[node name="TempBuilding_Prefab" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 5, 0, 0, 0, 10, 0, 2.5, 0)
+material_override = SubResource("StandardMaterial3D_0cck6")
+mesh = SubResource("BoxMesh_drfo3")
